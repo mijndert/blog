@@ -1,0 +1,42 @@
+{{- $respSizes := slice "960" "1280" "1600" "1920" -}}
+{{- $imgBase := "images/" -}}
+{{- $src := resources.Get (printf "%s%s" $imgBase (.Get "src")) -}}
+{{- $alt := .Get "alt" -}}
+{{- $divClass := "" -}}{{/* Init'g */}}
+{{- $imgClass := "w-full h-auto animate-fade" -}}
+{{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
+{{- $actualImg := $src.Resize "640x jpg" -}}
+<picture>
+	<source
+		type="image/webp"
+		srcset="
+		{{- with $respSizes -}}
+			{{- range $i, $e := . -}}
+				{{- if ge $src.Width . -}}
+					{{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " webp") ).RelPermalink }} {{ . }}w
+				{{- end -}}
+			{{- end -}}
+		{{- end -}}"
+		sizes="{{ $dataSzes }}"
+	/>
+	<source
+		type="image/jpeg"
+		srcset="
+		{{- with $respSizes -}}
+			{{- range $i, $e := . -}}
+				{{- if ge $src.Width . -}}
+					{{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " jpg") ).RelPermalink }} {{ . }}w
+				{{- end -}}
+			{{- end -}}
+		{{- end -}}"\
+		sizes="{{ $dataSzes }}"
+	/>
+	<img class="{{ $imgClass }}"
+		src="{{ $actualImg.RelPermalink }}"
+		width="{{ $src.Width }}"
+		height="{{ $src.Height }}"
+		alt="{{ $alt }}"
+		loading="lazy"
+	/>
+</picture>
+</div>
