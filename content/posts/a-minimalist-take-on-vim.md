@@ -20,7 +20,7 @@ Let's dig deeper into my setup.
 
 Installing [vim-terraform](https://github.com/hashivim/vim-terraform) and [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim) is as easy as cloning their repositories into the pack directory.
 
-```bash
+```
 git clone https://github.com/hashivim/vim-terraform.git ~/.vim/pack/plugins/start/vim-terraform
 git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/pack/plugins/start/editorconfig-vim
 ```
