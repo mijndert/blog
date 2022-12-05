@@ -2,6 +2,7 @@
 title: "Status update, November 2022"
 date: 2022-11-30 
 description: "What's currently happening, November 2022."
+tags: [personal]
 ---
 
 The last time I published something on here [was in April](https://mijndertstuij.nl/writing/a-minimalist-take-on-vim) - not because I didn't have enough to write about, I had multiple drafts almost ready to go, but rather because it was quite an intense year. In January I got a promotion at work to senior solutions architect, something I wanted to achieve for many years. I think I did pretty well in my new role; I've been helping out junior and medior colleagues with technical challenges, I've been writing proposals for new clients and projects, I've been pushing forward internal initiatives, and many more things. Another reason I couldn't find the time, nor motivation, to write more on this website. My new role completely occupied my mind because I wanted to do well, I wanted to push myself and find my limits so I can improve even further next year.

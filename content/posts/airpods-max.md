@@ -2,6 +2,7 @@
 title: "AirPods Max"
 date: 2022-03-04 
 description: "Some thoughts on AirPods Max and headphones in general."
+tags: [apple]
 ---
 
 {{< imgh src="airpods-max.jpg" alt="Top down view of Apple AirPods Max next to a plant" >}}

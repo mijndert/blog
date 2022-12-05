@@ -2,6 +2,7 @@
 title: "Scaling a Mastodon community to 27k people"
 date: 2022-12-04 
 description: "Scaling a Mastodon community to 27k people using Kubernetes and Digitalocean."
+tags: [mastodon]
 ---
 
 {{< imgh src="mastodon.jpg" alt="A smartphone running the Mastodon app" >}}
