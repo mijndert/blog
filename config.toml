@@ -24,7 +24,7 @@ I'm an AWS solutions architect with over 14 years of experience building highly 
 🤓
 """
 
-  [[params.links]]
+[[params.links]]
   [[params.links.link]]
       name = "Uses"
       href = "/uses"
@@ -36,6 +36,10 @@ I'm an AWS solutions architect with over 14 years of experience building highly 
     [[params.links.link]]
       name = "Mastodon"
       href = "https://toot.community/@mijndert"
+      new_tab = true
+    [[params.links.link]]
+      name = "GitHub"
+      href = "https://github.com/mijndert"
       new_tab = true
     [[params.links.link]]
       name = "RSS"
