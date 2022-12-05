@@ -1,4 +1,4 @@
-{{- $respSizes := slice "960" "1280" "1600" "1920" -}}
+{{- $respSizes := slice "960" "1280" "1920" -}}
 {{- $imgBase := "images/" -}}
 {{- $src := resources.Get (printf "%s%s" $imgBase (.Get "src")) -}}
 {{- $alt := .Get "alt" -}}

@@ -4,6 +4,8 @@ date: 2022-03-04
 description: "Some thoughts on AirPods Max and headphones in general."
 ---
 
+{{< imgh src="airpods-max.jpg" alt="Top down view of Apple AirPods Max next to a plant" >}}
+
 To be clear right off the bat: I don't do well in busy offices. I get distracted easily, I don't like it when people can see what I'm doing, I don't like people talking and radio's blaring. The open office plan truly is the bane of my existence. Therefore, noise cancelling headphones are a Godsend.
 
 I've owned just about every popular pair of noise cancelling headphones out there. That doesn't mean I'm an expert or anything, it just means I know what I like and don't like.
