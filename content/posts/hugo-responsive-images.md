@@ -1,5 +1,5 @@
 ---
-title: "Responsive image generation on a static Hugo website"
+title: "Generating responsive images on a static Hugo website"
 date: 2022-12-06
 description: "Serving optimized responsive images using Hugo"
 tags: [hugo]
