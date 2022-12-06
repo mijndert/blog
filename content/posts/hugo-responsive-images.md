@@ -76,7 +76,5 @@ Create a file called `/layouts/shortcodes/imgh.html` in the root of your project
 Now in order to use the above shortcode you can simply drop an image into `/assets/images` and insert this line of code in your MarkDown file.
 
 ```
-{{\< imgh src="my-example-file.jpeg" alt="My example file" >}}
+{{</* imgh src="my-example-file.jpeg" alt="My example file" */>}}
 ```
-
-<sub>Make sure you remove the forward slash at the beginning. This is because I had to escape this sequence for Hugo to ignore it.</sub>
