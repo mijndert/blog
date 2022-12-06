@@ -7,36 +7,36 @@
 {{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
 {{- $actualImg := $src.Resize "640x jpg" -}}
 <picture>
-	<source
-		type="image/webp"
-		srcset="
-		{{- with $respSizes -}}
-			{{- range $i, $e := . -}}
-				{{- if ge $src.Width . -}}
-					{{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " webp") ).RelPermalink }} {{ . }}w
-				{{- end -}}
-			{{- end -}}
-		{{- end -}}"
-		sizes="{{ $dataSzes }}"
-	/>
-	<source
-		type="image/jpeg"
-		srcset="
-		{{- with $respSizes -}}
-			{{- range $i, $e := . -}}
-				{{- if ge $src.Width . -}}
-					{{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " jpg") ).RelPermalink }} {{ . }}w
-				{{- end -}}
-			{{- end -}}
-		{{- end -}}"\
-		sizes="{{ $dataSzes }}"
-	/>
-	<img class="{{ $imgClass }}"
-		src="{{ $actualImg.RelPermalink }}"
-		width="{{ $src.Width }}"
-		height="{{ $src.Height }}"
-		alt="{{ $alt }}"
-		loading="lazy"
-	/>
+  <source
+    type="image/webp"
+    srcset="
+      {{- with $respSizes -}}
+        {{- range $i, $e := . -}}
+        {{- if ge $src.Width . -}}
+          {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " webp") ).RelPermalink }} {{ . }}w
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}"
+    sizes="{{ $dataSzes }}"
+  />
+  <source
+    type="image/jpeg"
+    srcset="
+      {{- with $respSizes -}}
+        {{- range $i, $e := . -}}
+          {{- if ge $src.Width . -}}
+            {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " jpg") ).RelPermalink }} {{ . }}w
+          {{- end -}}
+      {{- end -}}
+    {{- end -}}"\
+    sizes="{{ $dataSzes }}"
+  />
+  <img class="{{ $imgClass }}"
+    src="{{ $actualImg.RelPermalink }}"
+    width="{{ $src.Width }}"
+    height="{{ $src.Height }}"
+    alt="{{ $alt }}"
+    loading="lazy"
+  />
 </picture>
 </div>
