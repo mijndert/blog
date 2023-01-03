@@ -5,7 +5,7 @@ Description: "A living document of the tools that I use to do my work."
 
 ## Software
 
-- Safari
+- Firefox
 - Alacritty
 - Tmux
 - VS Code
@@ -16,6 +16,11 @@ Description: "A living document of the tools that I use to do my work."
 - [Rectangle](https://rectangleapp.com)
 - [Scroll Reverser](https://pilotmoon.com/scrollreverser/)
 - [Reflex](https://stuntsoftware.com/reflex/)
+
+## Services
+
+- [Fathom](https://mijndertstuij.nl/fathom) (aff. link, $10 in credits)
+- [Digitalocean](https://mijndertstuij.nl/digitalocean) (aff. link, $200 in credits over 60 days)
 
 ## Hardware
 
