@@ -6,6 +6,7 @@ summary: "Stop creating resources yourself, use import blocks instead. A new fea
 tags:
   - post
 publish: true
+permalink: /posts/terraform-import-blocks
 ---
 
 Anyone who uses Terraform must be familiar with the `import` command; it allows you to gather existing resources and put them into your statefile. This way, existing resources which were previously not created using Terraform are now under management of your infrastructure as code.
