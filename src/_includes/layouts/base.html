@@ -8,6 +8,9 @@
     <title>{{ title }}</title>
   </head>
   <body>
-    {% block content %}{% endblock %}
+    {% include "partials/head.html" %}
+    <main id="main">
+      {% block content %}{% endblock %}
+    </main>
   </body>
 </html>

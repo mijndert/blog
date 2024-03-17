@@ -1,6 +1,6 @@
 ---
 title: 'Vision'
-layout: 'layouts/home.html'
+layout: 'layouts/page.html'
 ---
 
 Hi there!
