@@ -6,7 +6,7 @@ layout: 'layouts/page.html'
 Hi there!
 
 <ul role="list">
-  {%- for post in collections.post | reverse | head(-5) -%}
+  {%- for post in collections.post | head(-5) | reverse -%}
   <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
   <time datetime="{{ post.date | w3DateFilter }}" class="small">
     {{ post.date | dateFilter }}
