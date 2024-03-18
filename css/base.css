@@ -12,16 +12,30 @@
 header[role=banner] {
   background-color: #f8f8f8;
   padding: 1rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
 }
 
 main#main {
   padding: 1rem;
 }
 
+nav ul {
+  margin: 1rem 0;
+}
+
+nav ul li:first-child {
+  font-weight: bold;
+  margin: 0 1rem 0 0;
+}
+
 nav ul li {
   display: inline;
   padding-right: 0.5em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
 }
 
 p {

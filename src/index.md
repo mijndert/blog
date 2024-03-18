@@ -1,5 +1,5 @@
 ---
-title: 'Vision'
+title: 'Mijndert Stuij'
 layout: 'layouts/page.html'
 ---
 
