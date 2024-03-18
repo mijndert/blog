@@ -2,9 +2,6 @@
 title: "On running with a watch"
 date: 2023-12-08
 summary: "I switched to a Garmin Forerunner 255S. Some thoughts."
-layout: layouts/page.html
-tags:
-  - post
 publish: true
 ---
 

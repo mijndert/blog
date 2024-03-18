@@ -2,9 +2,6 @@
 title: "AirPods Max"
 date: 2022-03-04 
 summary: "Some thoughts on AirPods Max and headphones in general."
-layout: layouts/page.html
-tags:
-  - post
 publish: true
 ---
 

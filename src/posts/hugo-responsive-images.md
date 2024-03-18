@@ -2,9 +2,6 @@
 title: "Generating responsive images on a static Hugo website"
 date: 2022-12-06
 summary: "Serving optimized responsive images using Hugo"
-layout: layouts/page.html
-tags:
-  - post
 publish: true
 ---
 

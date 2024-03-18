@@ -2,9 +2,6 @@
 title: "How I do to-dos"
 date: 2024-01-11
 summary: "I got rid of Things for a more simple approach."
-layout: layouts/page.html
-tags:
-  - post
 publish: true
 ---
 

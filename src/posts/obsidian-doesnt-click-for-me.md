@@ -2,9 +2,6 @@
 title: "Obsidian doesn't click for me"
 date: 2023-10-12
 summary: "I really want to like and use Obsidian, but I'm unable to."
-layout: layouts/page.html
-tags:
-  - post
 publish: true
 ---
 

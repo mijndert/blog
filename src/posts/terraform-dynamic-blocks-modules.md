@@ -2,9 +2,6 @@
 title: "Dynamic blocks are the key to reusable Terraform modules"
 date: 2022-12-08
 summary: "Stop repeating yourself and use Dynamic blocks in your Terraform resources"
-layout: layouts/page.html
-tags:
-  - post
 publish: true
 ---
 

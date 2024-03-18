@@ -2,9 +2,6 @@
 title: "My Tmux setup"
 date: 2020-04-16 
 summary: "A quick Tmux tutorial."
-layout: layouts/page.html
-tags:
-  - post
 publish: true
 ---
 

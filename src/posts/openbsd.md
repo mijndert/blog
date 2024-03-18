@@ -2,9 +2,6 @@
 title: "OpenBSD"
 date: 2021-11-01
 summary: "Getting to know OpenBSD after 22+ years of using Linux."
-layout: layouts/page.html
-tags:
-  - post
 publish: true
 ---
 

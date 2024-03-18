@@ -2,9 +2,6 @@
 title: "40 questions"
 date: 2022-03-18
 summary: "40 questions to ask yourself every day."
-layout: layouts/page.html
-tags:
-  - post
 publish: true
 ---
 

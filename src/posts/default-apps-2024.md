@@ -2,9 +2,6 @@
 title: "Default apps 2024"
 date: 2024-02-19
 summary: "Joining the bandwagon of sharing my default apps for 2024."
-layout: layouts/page.html
-tags:
-  - post
 publish: true
 ---
 
