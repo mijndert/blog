@@ -1,19 +1,16 @@
 ---
 title: "Saving time using Terraform import blocks"
-layout: layouts/page.html
 date: 2023-06-15
 summary: "Stop creating resources yourself, use import blocks instead. A new feature in Terraform 1.5."
+layout: layouts/page.html
 tags:
   - post
 publish: true
-permalink: /posts/terraform-import-blocks
 ---
 
 Anyone who uses Terraform must be familiar with the `import` command; it allows you to gather existing resources and put them into your statefile. This way, existing resources which were previously not created using Terraform are now under management of your infrastructure as code.
 
 You can import your resources in the terminal, but you still have to write the code for the resources you import. With Terraform version 1.5 there's a better solution: import blocks.
-
-<!--more-->
 
 Let's take a DigitalOcean Spaces bucket as an example here.
 
