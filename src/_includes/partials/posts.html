@@ -1,9 +1,9 @@
-<ul role="list">
-  {%- for post in collections.post | reverse -%}
-  <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+{%- for post in collections.post | reverse -%}
+<article role="list">
+  <a class="title" href="{{ post.url }}">{{ post.data.title }}</a>
   <time datetime="{{ post.date | w3DateFilter }}" class="small">
     {{ post.date | dateFilter }}
   </time>
-  <p class="font-serif">{{ post.data.summary }}</p>
-  {%- endfor -%}
-</ul>
+  <!-- <p class="font-serif">{{ post.data.summary }}</p> -->
+</article>
+{%- endfor -%}
