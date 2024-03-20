@@ -5,8 +5,6 @@ layout: "layouts/page.html"
 date: Last Modified
 ---
 
-{% include "partials/timestamp.html" %}
-
 ## Hardware
 
 - **13" MacBook Air** (2020, M1, 8GB RAM, 256GB SSD) – This is the cheapest laptop Apple sells (I got mine for €900,-), but by no means is it slow. I use this thing as my couch computer and is more than capable of running all the software I need.

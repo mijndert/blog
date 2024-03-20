@@ -3,18 +3,19 @@ title: 'Mijndert Stuij'
 layout: 'layouts/page.html'
 ---
 
-Hi there!
+test test test.... lalal la lalala
 
-<ul role="list">
-  {%- for post in collections.post | head(-5) | reverse -%}
-  <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-  <time datetime="{{ post.date | w3DateFilter }}" class="small">
-    {{ post.date | dateFilter }}
-  </time>
-  <p class="font-serif">{{ post.data.summary }}</p>
-  {%- endfor -%}
-</ul>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a0bb883b-9b5c-4235-93f0-ab66ce0651b8/deploy-status)](https://app.netlify.com/sites/mijndert-vision/deploys)
 
-[rss feed](/feed.xml)
+{%- for post in collections.post | reverse -%}
+  <div class="post">
+    <a class="title" href="{{ post.url }}">{{ post.data.title }}</a>
+    <span class="meta">
+      <time datetime="{{ post.date | w3DateFilter }}" class="small">
+        {{ post.date | dateFilter }}
+      </time>
+      &#183; {{ post.content | readingTime }}. read
+    </span>
+    <p>{{ post.data.summary }}</p>
+  </div>
+{%- endfor -%}
