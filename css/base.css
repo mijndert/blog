@@ -2,7 +2,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* font-family: Inter, -apple-system, "system-ui", noto, arial, sans-serif; */
-  font-family: monospace;
+  font-family: "JetBrains Mono", monospace;
+  /* font-family: monospace; */
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 * {
@@ -36,6 +40,11 @@ time {
 
 .post {
   margin: 2em 0;
+}
+
+.listposts {
+  border-top: 1px dashed #badae229;
+  border-bottom: 1px dashed #badae229;
 }
 
 footer {
