@@ -1,7 +1,6 @@
 const dateFilter = require("./src/filters/date-filter.js");
 const w3DateFilter = require("./src/filters/w3-date-filter.js");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const readingTime = require('eleventy-plugin-reading-time');
 
 module.exports = (config) => {
   config.addFilter("dateFilter", dateFilter);
@@ -14,7 +13,6 @@ module.exports = (config) => {
   });
   config.addPassthroughCopy("css");
   config.addPlugin(pluginRss);
-  config.addPlugin(readingTime);
   return {
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",

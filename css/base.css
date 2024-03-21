@@ -9,28 +9,29 @@
   margin: 0 auto;
   max-width: 600px;
   padding: 0;
+  background-color: #141516;
+  color: #a4bec5;
+  font-size: 13px;
+  line-height: 1.6rem;
+  font-weight: 400;
 }
 
 nav {
   margin: 2em 0 2em 0;
 }
 
-nav ul li:first-child {
-  font-weight: bold;
-}
-
-nav ul li a {
-  display: inline;
-  padding-right: .5em;
-}
-
-span.meta {
+time {
   display: block;
-  font-size: small;
+  font-size: 1rem;
+  color: #95aeb49c;
+}
+
+.post a {
+  text-decoration: none;
 }
 
 .muted {
-  color: #686868;
+  color: #95aeb49c;
 }
 
 .post {
