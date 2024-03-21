@@ -1,12 +1,13 @@
 :root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: Inter, -apple-system, "system-ui", noto, arial, sans-serif;
+  /* font-family: Inter, -apple-system, "system-ui", noto, arial, sans-serif; */
+  font-family: monospace;
 }
 
 * {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 600px;
   padding: 0;
 }
 
@@ -18,7 +19,7 @@ nav ul li:first-child {
   font-weight: bold;
 }
 
-nav ul li {
+nav ul li a {
   display: inline;
   padding-right: .5em;
 }
@@ -47,26 +48,28 @@ picture {
   margin: 8px 0;
 }
 
-/* Responsive CSS for mobile */
-@media (max-width: 600px) {
-  * {
-    max-width: 100%;
-  }
-
-  nav ul li {
-    display: block;
-    padding-right: 0;
-    margin-bottom: 0.5em;
-  }
-
-  .post,
-  footer {
-    margin: 1em 0;
-  }
+pre {
+  background-color: #f4f4f4;
+  padding: 1em;
+  border-radius: 5px;
+  font-size: .9em;
+  overflow: scroll;
 }
 
-/* Responsive CSS for tablets */
-@media (min-width: 601px) and (max-width: 1024px) {
+p {
+  margin: 0 0 1em 0;
+}
+
+ul {
+  margin: 0 0 .5em 1em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 1em 0 .5em 0;
+}
+
+/* Responsive CSS for mobile */
+@media (max-width: 600px) {
   * {
     max-width: 100%;
   }

@@ -1,6 +1,5 @@
 ---
 title: "Uses"
-Description: "A living document of the tools that I use to do my work."
 layout: "layouts/page.html"
 date: Last Modified
 ---

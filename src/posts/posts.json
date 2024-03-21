@@ -1,4 +1,4 @@
 {
-  "layout": "layouts/page.html",
+  "layout": "layouts/post.html",
   "tags": ["post"]
 }

@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="/css/base.css" />
     <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
     <title>{{ title }}</title>
+    {% if summary %}<meta name="description" content="{{ summary }}" />{% endif %}
   </head>
   <body>
     {% include "partials/head.html" %}
-    <main id="main">
+    <main>
       {% block content %}{% endblock %}
     </main>
     {% include "partials/footer.html" %}

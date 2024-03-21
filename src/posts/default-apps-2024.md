@@ -9,28 +9,28 @@ Here's a fun new thing in the blogosphere: sharing your default apps. I saw a fe
 
 I've always been a minimalist since having too much _stuff_ doesn't fit in my brain. The same is true on my electronic devices; having too many apps gives me a headache. As a result, this might be a rather boring list for most people, but I'm eager to see how it evolves over time.
 
-- 📨 Mail Client: Apple Mail
-- 📮 Mail Server: iCloud+
-- 📝 Notes: Apple Notes
-- ✅ To-Do: Apple Reminders
-- 📷 Photo Shooting: iPhone, Sony RX100 IV
-- 🎨 Photo Editing: Apple Photos
-- 📆 Calendar: Apple Calendar
-- 📁 Cloud File Storage: iCloud
-- 📖 RSS: NetNewsWire
-- 🙍🏻‍♂️ Contacts: Apple Contacts
-- 🌐 Browser: Firefox
-- 💬 Chat: Apple Messages, Whatsapp
-- 🔖 Bookmarks: Firefox
-- 📑 Read It Later: Pocket
-- 📜 Word Processing: Google Docs, Word
-- 📈 Spreadsheets: Google Sheets, Excel
-- 📊 Presentations: Google Slides
-- 🛒 Shopping Lists: Apple Reminders
-- 💰 Budgeting and Personal Finance: Excel
-- 📰 News: Brutalist Report
-- 🎵 Music: Spotify
-- 🎤 Podcasts: Overcast
-- 🔐 Password Management: 1Password
-- 🧑‍💻 Code Editor: Visual Studio Code
-- ✈️ VPN: none
+- **📨 Mail Client**: Apple Mail
+- **📮 Mail Server**: iCloud+
+- **📝 Notes**: Apple Notes
+- **✅ To-Do**: Apple Reminders
+- **📷 Photo Shooting**: iPhone, Sony RX100 IV
+- **🎨 Photo Editing**: Apple Photos
+- **📆 Calendar**: Apple Calendar
+- **📁 Cloud File Storage**: iCloud
+- **📖 RSS**: NetNewsWire
+- **🙍🏻‍♂️ Contacts**: Apple Contacts
+- **🌐 Browser**: Firefox
+- **💬 Chat**: Apple Messages, Whatsapp
+- **🔖 Bookmarks**: Firefox
+- **📑 Read It Later**: Pocket
+- **📜 Word Processing**: Google Docs, Word
+- **📈 Spreadsheets**: Google Sheets, Excel
+- **📊 Presentations**: Google Slides
+- **🛒 Shopping Lists**: Apple Reminders
+- **💰 Budgeting and Personal Finance**: Excel
+- **📰 News**: Brutalist Report
+- **🎵 Music**: Spotify
+- **🎤 Podcasts**: Overcast
+- **🔐 Password Management**: 1Password
+- **🧑‍💻 Code Editor**: Visual Studio Code
+- **✈️ VPN**: none

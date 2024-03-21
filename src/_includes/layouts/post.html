@@ -1,8 +1,6 @@
 {% extends "layouts/base.html" %} 
 {% block content %}
-{% if page.url == "/" %}
-{% else %}
 <h1>{{ title }}</h1>
-{% endif %}
+<p>{{ post.date | dateFilter }}</p>
 <article>{{ content | safe }}</article>
 {% endblock %}

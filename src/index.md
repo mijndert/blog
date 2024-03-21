@@ -3,19 +3,8 @@ title: 'Mijndert Stuij'
 layout: 'layouts/page.html'
 ---
 
-test test test.... lalal la lalala
+I’m a Senior DevOps Engineer with over 15 years of experience building highly scalable, high performance infrastructure on top of AWS. My passion is scaling out infrastructure from 0 to millions of users while adhering to industry best-practices in a cost-effective manner.
 
+You can find me on <a rel="me" href="https://fosstodon.org/@mijndert">Mastodon</a>, [GitHub](https://github.com/mijndert) and some other places as @mijndert.
 
-
-{%- for post in collections.post | reverse -%}
-  <div class="post">
-    <a class="title" href="{{ post.url }}">{{ post.data.title }}</a>
-    <span class="meta">
-      <time datetime="{{ post.date | w3DateFilter }}" class="small">
-        {{ post.date | dateFilter }}
-      </time>
-      &#183; {{ post.content | readingTime }}. read
-    </span>
-    <p>{{ post.data.summary }}</p>
-  </div>
-{%- endfor -%}
+{% include 'partials/posts.html' %}

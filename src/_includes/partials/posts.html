@@ -1,8 +1,12 @@
 {%- for post in collections.post | reverse -%}
-<div role="list">
+<div class="post">
   <a class="title" href="{{ post.url }}">{{ post.data.title }}</a>
-  <time datetime="{{ post.date | w3DateFilter }}" class="small">{{ post.date | dateFilter }}</time>
-  <p>{{ post.content | readingTime }}</p>
+  <span class="meta">
+    <time datetime="{{ post.date | w3DateFilter }}" class="small">
+      {{ post.date | dateFilter }}
+    </time>
+    &#183; {{ post.content | readingTime }}. read
+  </span>
   <p>{{ post.data.summary }}</p>
 </div>
 {%- endfor -%}
