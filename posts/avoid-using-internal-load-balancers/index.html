@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap')</style>
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+    <title>Avoid using internal load balancers</title>
+    <meta name="description" content="On avoiding internal load balancers in liue of AWS CloudMap." />
+  </head>
+  <body>
+    <header>
+  <a class="muted" href="/">Mijndert Stuij</a>
+</header>
+    <main>
+      
+<h1>Avoid using internal load balancers</h1>
+<p class="muted">2022.03.15</p>
+<article><p>One of the most well-known patterns in infrastructure is having an internal load balancer in front of backend services like application servers. When you're migrating your workloads to say AWS Fargate it's easy to just carry over that same pattern because, well, it works. But, as with all things in the cloud, internal load balancers cost money and add complexity. When you're just migrating to using containers for the first time, adding complexity to an already steep learning curve might not be the best way to go about things.</p>
+<p>That's where <em>Service Discovery</em> comes in.</p>
+<p>Service Discovery is a thing where you let the backend servers register themselves in some kind of database, so the requestor knows where the targets are. This has been done in all kinds of scenarios; from DHCP to XMPP, as well as DNS in Kubernetes.</p>
+<p>While I agree that adding Service Discovery to your architecture does add a little bit of an up-front learning curve, in the long run it's kind of a set-and-forget thing.</p>
+<p>A great service for such a use-case is <a href="https://aws.amazon.com/cloud-map/">AWS CloudMap</a> which integrates really well with AWS Fargate. Say you have a backend service running on AWS Fargate that accepts traffic on port 4000 that you can to be able to horizontally scale, it's pretty easy to implement in CloudFormation.</p>
+<p>First we need to create a namespace to register targets in.</p>
+<pre><code>PrivateNamespace:
+  Type: AWS::ServiceDiscovery::PrivateDnsNamespace
+  Properties:
+    Name: my-backend-service.aws
+    Vpc: !Ref VPCId
+</code></pre>
+<p>Now we can create a Service which is a collection of backend servers that Fargate knows how to register itself into.</p>
+<pre><code>DiscoveryService:
+  Type: AWS::ServiceDiscovery::Service
+  Properties: 
+    Description: Discovery Service for my-backend-service
+    DnsConfig:
+      RoutingPolicy: MULTIVALUE
+      DnsRecords:
+        - TTL: 0
+          Type: A
+        - TTL: 0
+          Type: SRV
+    HealthCheckCustomConfig: 
+      FailureThreshold: 1
+    Name: app
+    NamespaceId: !Ref PrivateNamespace
+</code></pre>
+<p>To connect your Fargate service (<code>AWS::ECS::Service</code>) to CloudMap we can simply specify the DiscoveryService resource.</p>
+<pre><code>ServiceRegistries:
+  - RegistryArn: !GetAtt DiscoveryService.Arn
+    Port: 4000
+</code></pre>
+<p>Anyone who needs to access your backend server can now simply use the hostname <code>app.my-backend-service.aws:4000</code> without every having to deploy a load balancer.</p>
+<p>Of course AWS CloudMap also has the ability to specify exactly which services can access certain backends by integrating IAM into it. But that's for another day to discuss.</p>
+</article>
+
+    </main>
+    <footer>
+  <hr>
+  <p class="muted">Receive updates</p>
+  <p>Follow me via <a href="/feed.xml">RSS</a>, <a rel="me" href="https://fosstodon.org/@mijndert">Mastodon</a>, or other options.</p>
+  <!-- <a href="https://app.netlify.com/sites/mijndert-vision/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/a0bb883b-9b5c-4235-93f0-ab66ce0651b8/deploy-status" alt="">
+  </a> -->
+</footer>
+  </body>
+</html>

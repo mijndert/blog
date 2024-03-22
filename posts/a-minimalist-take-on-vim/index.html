@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap')</style>
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+    <title>A minimalist take on Vim</title>
+    <meta name="description" content="How I use Vim without any (well, almost) plugins." />
+  </head>
+  <body>
+    <header>
+  <a class="muted" href="/">Mijndert Stuij</a>
+</header>
+    <main>
+      
+<h1>A minimalist take on Vim</h1>
+<p class="muted">2022.04.15</p>
+<article><p>I've been a Vim user for as long as I can remember, but in the last few years VS Code kind of took over as the defacto choice for us DevOps engineers. VS Code is great at offering all kinds of plugins that should, in theory, make life a little easier. It's funny actually, because plugins are the sole reason I never quite got into using Vim fulltime. To me, plugins in Vim just added to the complexity of remembering all of the keyboard shortcuts and quite frankly, the many ways of installing a plugin didn't help me make sense of things either.</p>
+<p>But then Vim 8 was released.</p>
+<p><a href="https://github.com/vim/vim/releases/tag/v8.0.0000">Vim 8</a> introduced a really simple <em>pack</em> system for installing plugins. You can just drop a directory in the designated pack directory and Vim will automatically load everything that's there. When you <code>git clone</code> a plugin it's quite easy to update it whenever a new version is released.</p>
+<p>That's not to say I've gone crazy and I'm now running 20 plugins. I only have a plugin for working with <a href="https://www.terraform.io/">Terraform</a> and one for loading <a href="https://editorconfig.org/">EditorConfig</a> files installed. And for me that's more than enough. Not because I can't handle complexity but mostly because Vim can do so much out of the box that most people are not aware of.</p>
+<p>Let's dig deeper into my setup.</p>
+<h2>Installing plugins</h2>
+<p>Installing <a href="https://github.com/hashivim/vim-terraform">vim-terraform</a> and <a href="https://github.com/editorconfig/editorconfig-vim">editorconfig-vim</a> is as easy as cloning their repositories into the pack directory.</p>
+<pre><code>git clone https://github.com/hashivim/vim-terraform.git ~/.vim/pack/plugins/start/vim-terraform
+git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/pack/plugins/start/editorconfig-vim
+</code></pre>
+<p>Within Vim you can execute <code>:scriptnames</code> to list all loaded plugins.</p>
+<h2>My .vimrc</h2>
+<p>My .vimrc is exactly what I need and nothing more.</p>
+<pre><code>syntax on                           # enable syntax highlighting
+set tabstop=2                       # set 1 tab to 2 spaces
+set shiftwidth=2                    # set an indent to 2 spaces
+set expandtab                       # convert tabs to spaces
+set ai                              # automatic indentation
+set number                          # enable line numbers
+set hlsearch                        # highlight search matches
+set ruler                           # show current row and column position
+set backspace=2                     # fix backspace behaviour 
+set wildmenu                        # enable autocompletion
+set path=$PWD/**                    # set search path
+set wildmode=longest:list,full      # set autocompletion mode
+set pastetoggle=&lt;leader&gt;p           # toggle paste mode using \p
+set nuw=3                           # set left margin
+set noswapfile                       # disable swapfiles
+set clipboard=unnamed               # copy to system clipboard
+highlight LineNr ctermfg=DarkGrey   # set linenumbers to grey
+nnoremap &lt;esc&gt;&lt;esc&gt; :noh&lt;return&gt;    # clear search results using esc-esc
+colorscheme nord                    # set colorscheme to nord
+</code></pre>
+<h2>Keyboard shortcuts</h2>
+<p>Some of the common ones I use are <strong>i</strong> for insert mode and <strong>v</strong> for visual mode. Then there's <strong>u</strong> for undo, <strong>y</strong> for copy (yank), <strong>d</strong> for delete, and <strong>aB</strong> for selecting a block with accolades. And of course a bunch more, but I think you're good to go with just these ones.</p>
+<p>Even after years of use and some amount of muscle memory, it still feels like I've only touched the surface of what's possible. When you're just starting out I highly recommend keeping a cheatsheet at hand, like <a href="https://vim.rtorr.com/">this one</a>.</p>
+</article>
+
+    </main>
+    <footer>
+  <hr>
+  <p class="muted">Receive updates</p>
+  <p>Follow me via <a href="/feed.xml">RSS</a>, <a rel="me" href="https://fosstodon.org/@mijndert">Mastodon</a>, or other options.</p>
+  <!-- <a href="https://app.netlify.com/sites/mijndert-vision/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/a0bb883b-9b5c-4235-93f0-ab66ce0651b8/deploy-status" alt="">
+  </a> -->
+</footer>
+  </body>
+</html>

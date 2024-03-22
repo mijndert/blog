@@ -1,0 +1,167 @@
+:root {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  padding: 0;
+  color: #a4bec5;
+  line-height: 1.5em;
+  font-size: 13px;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 600px;
+  height: 100%;
+  background-color: #141516; 
+}
+
+header { 
+  margin: 3em 0 2em 0;
+}
+
+header a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post a {
+  text-decoration: none;
+}
+
+.post {
+  margin: 0 0 1em 0;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  white-space: nowrap;
+}
+
+footer {
+  margin: 2em 0 3em 0;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 1em 0 .5em 0;
+  color: #a4bec5;
+}
+
+h1 {
+  font-size: 1.4em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+p.links a {
+  margin: 0 .5em 0 0;
+}
+
+ul {
+  margin: 0 0 1em 1em;
+}
+
+.muted {
+  color: #95aeb49c;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed #badae229;
+  margin: 2em 0 2em 0;
+}
+
+time {
+  margin: 0 .25em 0 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  margin: 8px 0;
+}
+
+pre {
+  overflow: scroll;
+  background-color: #badae229;
+  padding: .5em;
+}
+
+blockquote {
+  margin: 1em 0;
+  padding: 0 1em;
+  border-left: 3px solid #badae229;
+}
+
+/* Responsive CSS for Tablet */
+@media (max-width: 768px) {
+  body {
+    max-width: 100%;
+    padding: .5em;
+  }
+  
+  header {
+    margin: 2em 0 1em 0;
+  }
+  
+  ul {
+    margin-left: 0;
+  }
+  
+  img,
+  picture {
+    margin: 4px 0;
+  }
+  
+  pre {
+    overflow: auto;
+  }
+}
+
+/* Responsive CSS for Mobile */
+@media (max-width: 480px) {
+  body {
+    max-width: 100%;
+    padding: .5em;
+  }
+  
+  header {
+    margin: 1em 0 0.5em 0;
+  }
+  
+  h1 {
+    font-size: 1em;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+  
+  img,
+  picture {
+    margin: 2px 0;
+  }
+  
+  pre {
+    overflow: auto;
+    font-size: 12px;
+  }
+  
+  blockquote {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border-left: 2px solid #badae229;
+  }
+}

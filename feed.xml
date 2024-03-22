@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://mijndertstuij.nl" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mijndert Stuij</title>
+    <link>https://mijndertstuij.nl</link>
+    <atom:link href="https://mijndertstuij.nl/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Senior DevOps Engineer. Runner. Minimalist.</description>
+    <language>en</language>
+    <item>
+      <title>Default apps 2024</title>
+      <link>https://mijndertstuij.nl/posts/default-apps-2024/</link>
+      <description>&lt;p&gt;Here&#39;s a fun new thing in the blogosphere: sharing your default apps. I saw a few people I follow do it and borrowed the format, as one does. A ton more pages like this to look at are catalogued by &lt;a href=&quot;https://defaults.rknight.me/&quot;&gt;Robb Knight&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I&#39;ve always been a minimalist since having too much &lt;em&gt;stuff&lt;/em&gt; doesn&#39;t fit in my brain. The same is true on my electronic devices; having too many apps gives me a headache. As a result, this might be a rather boring list for most people, but I&#39;m eager to see how it evolves over time.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;📨 Mail Client&lt;/strong&gt;: Apple Mail&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;📮 Mail Server&lt;/strong&gt;: iCloud+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;📝 Notes&lt;/strong&gt;: Apple Notes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;✅ To-Do&lt;/strong&gt;: Apple Reminders&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;📷 Photo Shooting&lt;/strong&gt;: iPhone, Sony RX100 IV&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🎨 Photo Editing&lt;/strong&gt;: Apple Photos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;📆 Calendar&lt;/strong&gt;: Apple Calendar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;📁 Cloud File Storage&lt;/strong&gt;: iCloud&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;📖 RSS&lt;/strong&gt;: NetNewsWire&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🙍🏻‍♂️ Contacts&lt;/strong&gt;: Apple Contacts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🌐 Browser&lt;/strong&gt;: Firefox&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💬 Chat&lt;/strong&gt;: Apple Messages, Whatsapp&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🔖 Bookmarks&lt;/strong&gt;: Firefox&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;📑 Read It Later&lt;/strong&gt;: Pocket&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;📜 Word Processing&lt;/strong&gt;: Google Docs, Word&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;📈 Spreadsheets&lt;/strong&gt;: Google Sheets, Excel&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;📊 Presentations&lt;/strong&gt;: Google Slides&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🛒 Shopping Lists&lt;/strong&gt;: Apple Reminders&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;💰 Budgeting and Personal Finance&lt;/strong&gt;: Excel&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;📰 News&lt;/strong&gt;: Brutalist Report&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🎵 Music&lt;/strong&gt;: Spotify&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🎤 Podcasts&lt;/strong&gt;: Overcast&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🔐 Password Management&lt;/strong&gt;: 1Password&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;🧑‍💻 Code Editor&lt;/strong&gt;: Visual Studio Code&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;✈️ VPN&lt;/strong&gt;: none&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      <pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/default-apps-2024/</guid>
+    </item>
+    <item>
+      <title>Config-driven Terraform</title>
+      <link>https://mijndertstuij.nl/posts/config-driven-terraform/</link>
+      <description>&lt;p&gt;Some time ago I wrote about &lt;a href=&quot;https://mijndertstuij.nl/posts/terraform-import-blocks/&quot;&gt;config-driven import&lt;/a&gt; which became available in Terraform 1.5. Import blocks are a way to import existing resources into the statefile, which is useful when you have a bunch of infrastructure that was created manually. Yesterday &lt;a href=&quot;https://www.hashicorp.com/blog/terraform-1-7-adds-test-mocking-and-config-driven-remove&quot;&gt;Terraform 1.7 was released&lt;/a&gt; that extends this functionality with a &lt;code&gt;for_each&lt;/code&gt; argument.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Terraform 1.7 also includes an enhancement for config-driven import: the ability to expand import blocks using for_each loops. Previously you could target a particular instance of a resource in the to attribute of an import block, but you had to write a separate import block for each instance.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Expanding on my previous blogpost about Import blocks, here&#39;s a quick example of how to use the new &lt;code&gt;for_each&lt;/code&gt; argument on a list to import multiple Digitalocean Spaces buckets at once.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;terraform {
+  required_providers {
+    digitalocean = {
+      source = &amp;quot;digitalocean/digitalocean&amp;quot;
+    }
+  }
+}
+
+locals {
+  buckets = {
+    &amp;quot;test&amp;quot; = &amp;quot;bucket-test&amp;quot;
+    &amp;quot;staging&amp;quot; = &amp;quot;bucket-staging&amp;quot;
+    &amp;quot;prod&amp;quot;    = &amp;quot;bucket-prod&amp;quot;
+  }
+}
+
+import {
+  for_each = local.buckets
+  to       = digitalocean_spaces_bucket.mybucket[each.key]
+}
+
+
+resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;mybucket&amp;quot; {
+  for_each = local.buckets
+  bucket   = each.value
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Another great addition in Terraform 1.7 are Remove blocks. There are times when you need to remove a resource from your Statefile, optionally without removing the underlying resource itself. Of course there are CLI commands to accomplish this, but having it available as a Remove block means we can run &lt;code&gt;terraform apply&lt;/code&gt; and check the changes before executing them.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As an alternative to the terraform state rm command, the removed block addresses all of these challenges. Just like the moved and import blocks, state removal can now be performed in bulk and is plannable, so you can be confident that the operation will have the intended effect before modifying state.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;removed {
+  from = digitalocean_spaces_bucket.mybucket
+
+  # Instruct Terraform not to destroy the underlying resource
+  lifecycle {
+    destroy = false
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Both of these additions are great improvements to Terraform, and I&#39;m looking forward to using them in my projects. They will ensure I&#39;m much more confident in working with the Statefile which has always been a bit daunting.&lt;/p&gt;
+</description>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/config-driven-terraform/</guid>
+    </item>
+    <item>
+      <title>How I do to-dos</title>
+      <link>https://mijndertstuij.nl/posts/how-i-do-todos/</link>
+      <description>&lt;p&gt;I tried every single to do list app under the sun – the one I stuck with the longest is Things, an awesome native app on Apple platforms. But the tool at hand isn&#39;t what I want to talk about today. The app doesn&#39;t matter, it&#39;s just that all of those apps try to push you towards a certain way of doing things. And using an app like Things, I&#39;m pretty much stuck in the Apple ecosystem, unless I meticulously export all my data.&lt;/p&gt;
+&lt;p&gt;In an effort to ween myself off of being stuck to a particular ecosystem, I&#39;m trying to implement &lt;a href=&quot;https://stephango.com/file-over-app&quot;&gt;File over App&lt;/a&gt; as much as I can.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Today, we are creating innumerable digital artifacts, but most of these artifacts are out of our control. They are stored on servers, in databases, gated behind an internet connection, and login to a cloud service. Even the files on your hard drive use proprietary formats that make them incompatible with older systems and other tools.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now I have a folder in iCloud Drive called &#39;to-dos&#39; with a sub-folder per year. I create a single note per week in which I write down my to-dos for that particular week. Since the notes are just text files I can open them in any editor (currently Vim or BBedit). If any items didn’t get done I move them over to the next note.&lt;/p&gt;
+&lt;p&gt;Yes, this approach adds a bit more friction but I&#39;m really happy to have a little freedom.&lt;/p&gt;
+</description>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/how-i-do-todos/</guid>
+    </item>
+    <item>
+      <title>On running with a watch</title>
+      <link>https://mijndertstuij.nl/posts/running-with-a-watch/</link>
+      <description>&lt;p&gt;Anyone that knows me well can attest to me being a dreadful sports person in almost every category; except for one: running. I&#39;ve been running for a very long time, I could at one point run a 5k in 20 minutes and a 10k in less than 50 minutes. I never really had a plan, I just go out for a run and don&#39;t think about it too much. To the chagrin of some of my friends, running comes natural to me. I naturally have a rather high vo2max and I&#39;m not super prone to injuries so I can just keep running for a good while before I hit my limits.&lt;/p&gt;
+&lt;p&gt;Because of all this, I never had a use-case for a better watch than my Apple Watch SE. But as I get older I do need a little more hand holding to get my old form back. I finally decided to get a Garmin Forerunner 255S and I&#39;ve been using it for 2 weeks now.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;First things first, there&#39;s absolutely no way to compare an Apple Watch to a Garmin Forerunnner. They are for completely different use-cases. The Apple Watch is a smart watch with some fitness features, the Garmin is a fitness watch with some smart features. That&#39;s not to say I don&#39;t wear my Garmin throughout the day, on the contrary; I wear it as much as possible to give it as much information as I can. I even use it to track my sleep, which is something I never did with my Apple Watch.&lt;/p&gt;
+&lt;p&gt;Another thing that&#39;s incomparable between the two is the ease of use and the user interface. My new Garmin has an app called Garmin Connect and the UI just isn&#39;t as pretty. Because of the UI the entire experience takes a while to get used to, factor in the huge amount of data that&#39;s being collected and presented in the app, and you have a recipe for a steep learning curve. Luckily every single metric has a &#39;help&#39; button which describes exactly what it is and why I should care about it.&lt;/p&gt;
+&lt;p&gt;What I like most about the Garmin as compared to the Apple Watch is how well it ties all the data together to create a comprehensive overview of how your training is affecting you and your overall health. Something the Apple Watch did not do, it just showed you all the individual data points and left it up to you to figure out what it all meant. It really does take out all the guesswork out of training for say a half marathon which I&#39;m doing right now.&lt;/p&gt;
+&lt;p&gt;Speaking of training, the Garmin does give me daily suggestions on what I should be doing that day. Today I got a recommendation to do interval sprints, and tomorrow is long run day. Due to personal circumstances I can&#39;t always follow the recommendations, but it&#39;s nice to have a little guidance when I am able to get a run in.&lt;/p&gt;
+&lt;p&gt;All in all, I&#39;m really happy with my move to Garmin. Even though I&#39;m currently not following the recommendations closely, I do feel like I can get much more out of my runs with this watch than I ever could with my Apple Watch. This thing gives me the confidence to reclaiming my old form, run a half marathon and do well in it.&lt;/p&gt;
+</description>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/running-with-a-watch/</guid>
+    </item>
+    <item>
+      <title>Obsidian doesn&#39;t click for me</title>
+      <link>https://mijndertstuij.nl/posts/obsidian-doesnt-click-for-me/</link>
+      <description>&lt;p&gt;The idea of a personal wiki has always appealed to me. I tried a few times to incorporate one into my &amp;quot;workflow&amp;quot; if I even have one. I tried all sorts of different tools but the latest one that&#39;s been keeping me occupied is &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;. I really want to like and use Obsidian, but I&#39;m unable to. Let me explain.&lt;/p&gt;
+&lt;p&gt;I&#39;ve implemented the &lt;a href=&quot;https://fortelabs.com/blog/para/&quot;&gt;PARA method&lt;/a&gt; into my personal wiki. It&#39;s a way of organizing all information into four buckets:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Projects for any ongoing stuff&lt;/li&gt;
+&lt;li&gt;Areas for anything that&#39;s going on in your life like your car, finances, mental health, etc.&lt;/li&gt;
+&lt;li&gt;Resources for anything that you might want to reference later&lt;/li&gt;
+&lt;li&gt;Archives for anything that&#39;s no longer relevant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Gotta say, I love this so much and it&#39;s not really relevant to any one tool. I&#39;ve been using this method for a while now and it&#39;s been working great.&lt;/p&gt;
+&lt;p&gt;But, even with this organisation of information going on, Obsidian still doesn&#39;t click for me.&lt;/p&gt;
+&lt;p&gt;To be frank, Obsidian just... feels wrong. It&#39;s undeniably an Electron app and that just makes the experience really cumbersome to me. The application always feels a little sluggish and is never truly at home on any platform. You can make Obsidian look a little better using the great &lt;a href=&quot;https://github.com/kepano/obsidian-minimal&quot;&gt;Minimal theme&lt;/a&gt; but its core problems remain. The entire ecosystem of themes and plugins is also a little overwhelming and are prone to break in any subsequent release. I don&#39;t want to spend hours tweaking my personal wiki, I just want to use it. The barrier between my thoughts and putting them into writing needs to be as low as possible.&lt;/p&gt;
+&lt;p&gt;I know there are many people out there who love Obsidian, people who spend dozens of hours making it just right. I however will be reluctantly looking elsewhere.&lt;/p&gt;
+</description>
+      <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/obsidian-doesnt-click-for-me/</guid>
+    </item>
+    <item>
+      <title>Saving time using Terraform import blocks</title>
+      <link>https://mijndertstuij.nl/posts/terraform-import-blocks/</link>
+      <description>&lt;p&gt;Anyone who uses Terraform must be familiar with the &lt;code&gt;import&lt;/code&gt; command; it allows you to gather existing resources and put them into your statefile. This way, existing resources which were previously not created using Terraform are now under management of your infrastructure as code.&lt;/p&gt;
+&lt;p&gt;You can import your resources in the terminal, but you still have to write the code for the resources you import. With Terraform version 1.5 there&#39;s a better solution: import blocks.&lt;/p&gt;
+&lt;p&gt;Let&#39;s take a DigitalOcean Spaces bucket as an example here.&lt;/p&gt;
+&lt;p&gt;Before &lt;a href=&quot;https://www.hashicorp.com/blog/terraform-1-5-brings-config-driven-import-and-checks&quot;&gt;Terraform 1.5&lt;/a&gt; you first had to import the resource into your statefile:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;terraform import digitalocean_spaces_bucket.mybucket `region`,`name`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, using a bit of &lt;code&gt;terraform plan&lt;/code&gt; trial and error, you could write the code for the resource until no changes were found anymore.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;mybucket&amp;quot; {
+  name   = &amp;quot;mybucket&amp;quot;
+  region = &amp;quot;ams3&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using &lt;a href=&quot;https://developer.hashicorp.com/terraform/tutorials/state/state-import&quot;&gt;import blocks&lt;/a&gt; you can basically skip the last step for the most part. You can now import resources using code, and have a basic skeleton of the resource code be created for you.&lt;/p&gt;
+&lt;p&gt;First we get the DigitalOcean Terraform provider and define our first import block.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;terraform {
+  required_providers {
+    digitalocean = {
+      source = &amp;quot;digitalocean/digitalocean&amp;quot;
+    }
+  }
+}
+
+import {
+  id = &amp;quot;ams3,mybucket&amp;quot;
+  to = digitalocean_spaces_bucket.mybucket
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using &lt;code&gt;terraform plan&lt;/code&gt; with the &lt;code&gt;-generate-config-out&lt;/code&gt; flag, Terraform will generate configuration for the resource and outputs the plan.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;terraform plan -generate-config-out=generated.tf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Of course, the code it generates isn&#39;t perfect, but it&#39;s a very good starting point. Now, finally, we don&#39;t have to go back and forth between our code and &lt;code&gt;terraform plan&lt;/code&gt; to guess the arguments of the resource. You can go ahead and take the output and put it in the correct place in your own codebase.&lt;/p&gt;
+&lt;p&gt;The above import block will generate something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;mybucket&amp;quot; {
+  acl           = null
+  force_destroy = null
+  name          = &amp;quot;mybucket&amp;quot;
+  region        = &amp;quot;ams3&amp;quot;
+  lifecycle_rule {
+    abort_incomplete_multipart_upload_days = 0
+    enabled                                = true
+    prefix                                 = null
+    expiration {
+      date                         = null
+      days                         = 7
+      expired_object_delete_marker = false
+    }
+    noncurrent_version_expiration {
+      days = 7
+    }
+  }
+  versioning {
+    enabled = false
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/terraform-import-blocks/</guid>
+    </item>
+    <item>
+      <title>Reusable Terraform modules using Dynamic blocks</title>
+      <link>https://mijndertstuij.nl/posts/terraform-dynamic-blocks-modules/</link>
+      <description>&lt;p&gt;In the realm of Amazon Web Services there&#39;s this thing called a &lt;a href=&quot;https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-aws-environment/understanding-landing-zones.html&quot;&gt;Landing Zone&lt;/a&gt;, a set of infrastructure as code modules built to deploy new environments faster. You can build a Landing Zone using &lt;a href=&quot;https://aws.amazon.com/cloudformation/&quot;&gt;CloudFormation&lt;/a&gt;, &lt;a href=&quot;https://aws.amazon.com/cdk/&quot;&gt;CDK&lt;/a&gt;, &lt;a href=&quot;https://www.terraform.io/&quot;&gt;Terraform&lt;/a&gt;, or any other tool you like. The point is that you have a starting point for as many use-cases as possible. For a Landing Zone to work you have to write reusable generalized code that could work for any client and any combination of infrastructure.&lt;/p&gt;
+&lt;p&gt;While trying to create a Landing Zone in Terraform I found that it&#39;s very hard to make them follow the &lt;a href=&quot;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&quot;&gt;DRY principle&lt;/a&gt; (Don&#39;t Repeat Yourself). After a while the code started to be really hard to maintain. But then I found Dynamic blocks.&lt;/p&gt;
+&lt;p&gt;Terraform provides &lt;a href=&quot;https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks&quot;&gt;Dynamic blocks&lt;/a&gt; as a way to create repeatable nested code within a resource, it&#39;s kind of similar to a for loop but for stuff within a resource. But Dynamic blocks also allow you to conditionally create certain properties on a resource.&lt;/p&gt;
+&lt;p&gt;As an example, let&#39;s take the &lt;a href=&quot;https://github.com/toot-community/platform&quot;&gt;platform code for toot.community&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here I wanted to create multiple &lt;a href=&quot;https://www.digitalocean.com/products/spaces&quot;&gt;Digitalocean Spaces&lt;/a&gt;, one for storing user files, one for backups, one for Terraform state management, etc. On some of these Spaces I want to create a lifecycle rule to automatically delete files older than a given threshold. But of course I don&#39;t want to apply that same lifecycle policy to everything; it would be a stupid idea to delete Terraform statefiles after all. At the same time, I really want to define the Digitalocean Spaces resource only once, for DRY reasons.&lt;/p&gt;
+&lt;p&gt;In this example you see a Dynamic block for the property &lt;code&gt;lifecycle_rule&lt;/code&gt;. There&#39;s a &lt;code&gt;for_each&lt;/code&gt; that needs the variable &lt;code&gt;expiration_enabled&lt;/code&gt; to be set to &lt;code&gt;true&lt;/code&gt;, else the &lt;code&gt;for_each&lt;/code&gt; loop will be empty and the property will not be created.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;this&amp;quot; {
+  name   = var.spaces_name
+  region = var.region
+  acl    = &amp;quot;private&amp;quot;
+
+  dynamic &amp;quot;lifecycle_rule&amp;quot; {
+    for_each = var.expiration_enabled == true ? [1] : []
+    content {
+      id      = &amp;quot;${var.spaces_name}-lifecycle-rule&amp;quot;
+      enabled = true
+      expiration {
+        days = 7
+      }
+      noncurrent_version_expiration {
+        days = 7
+      }
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now if I don&#39;t specify the variable &lt;code&gt;expiration_enabled&lt;/code&gt; the &lt;code&gt;lifecycle_rule&lt;/code&gt; property isn&#39;t created and I just get a standard &lt;code&gt;digitalocean_spaces_bucket&lt;/code&gt;. I don&#39;t have to repeat myself anymore and it makes my module a lot cleaner.&lt;/p&gt;
+&lt;p&gt;A word of warning though, overuse of Dynamic blocks will eventually lead to code being unreadable and not very easy to understand. Only use Dynamic blocks if there&#39;s no other way to avoid repeating the same code. If you have to repeat a few lines once or twice, stop and think if you really need a Dynamic block or if you can live with it in that instance.&lt;/p&gt;
+&lt;p&gt;Speaking of Terraform modules, that&#39;s something I want to talk about in another blog post as well. A question I get asked a lot is &amp;quot;how do I organize my environments and modules?&amp;quot;. More on that later. If you want to get notified of new posts you can import the &lt;a href=&quot;https://mijndertstuij.nl/feed.xml&quot;&gt;RSS feed&lt;/a&gt; for this website in your reader.&lt;/p&gt;
+</description>
+      <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/terraform-dynamic-blocks-modules/</guid>
+    </item>
+    <item>
+      <title>Responsive images on a static Hugo website</title>
+      <link>https://mijndertstuij.nl/posts/hugo-responsive-images/</link>
+      <description>&lt;p&gt;For years and years I&#39;ve been using &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; as my static site generator of choice, mostly because I like their templating engine and I&#39;m a fan of Ruby as a programming language. I&#39;ve been experimenting with Hugo as well, but it never really clicked for me. Well, until I found &lt;a href=&quot;https://github.com/mavidser/hugo-rocinante&quot;&gt;the perfect theme&lt;/a&gt; for my needs. The same theme is now used here and on the &lt;a href=&quot;https://blog.toot.community/&quot;&gt;toot.community blog&lt;/a&gt; so I wanted to set mine apart a little bit by adding banner images on some posts. Downloading an image from Unsplash and manually resizing it wasn&#39;t an option though - I need things to be frictionless when I want to add a blog entry.&lt;/p&gt;
+&lt;p&gt;I started looking for ways to automatically generate multiple sizes of an image and came across a lot of different solutions. Most didn&#39;t work anymore or were very convoluted. That&#39;s to say, until I found &lt;a href=&quot;https://www.brycewray.com/posts/2022/06/responsive-optimized-images-hugo/&quot;&gt;Bryce Wray&#39;s entry&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I quickly adapted his code to my needs and had it working on no-time, you can see it in action &lt;a href=&quot;https://mijndertstuij.nl/posts/scaling-mastodon-community/&quot;&gt;right here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here&#39;s how I did it.&lt;/p&gt;
+&lt;h2&gt;Assets directory&lt;/h2&gt;
+&lt;p&gt;In order to leverage the built-in image resizing capabilities of Hugo, you have to create an &lt;code&gt;assets/images&lt;/code&gt; directory in the root of your project. Any other place doesn&#39;t work, unless of course you customize the directory. But I like using defaults to avoid breakage later down the line.&lt;/p&gt;
+&lt;h2&gt;Shortcodes&lt;/h2&gt;
+&lt;p&gt;The following Hugo shortcode will generate multiple sizes of a given image and spit out .webp and .jpeg files.&lt;/p&gt;
+&lt;p&gt;Create a file called &lt;code&gt;/layouts/shortcodes/imgh.html&lt;/code&gt; in the root of your project with the following contents.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{- $respSizes := slice &amp;quot;960&amp;quot; &amp;quot;1280&amp;quot; &amp;quot;1920&amp;quot; -}}
+{{- $imgBase := &amp;quot;images/&amp;quot; -}}
+{{- $src := resources.Get (printf &amp;quot;%s%s&amp;quot; $imgBase (.Get &amp;quot;src&amp;quot;)) -}}
+{{- $alt := .Get &amp;quot;alt&amp;quot; -}}
+{{- $divClass := &amp;quot;&amp;quot; -}}{{/* Init&#39;g */}}
+{{- $imgClass := &amp;quot;w-full h-auto animate-fade&amp;quot; -}}
+{{- $dataSzes := &amp;quot;(min-width: 1024px) 100vw, 50vw&amp;quot; -}}
+{{- $actualImg := $src.Resize &amp;quot;640x jpg&amp;quot; -}}
+&amp;lt;picture&amp;gt;
+  &amp;lt;source
+    type=&amp;quot;image/webp&amp;quot;
+    srcset=&amp;quot;
+      {{- with $respSizes -}}
+        {{- range $i, $e := . -}}
+        {{- if ge $src.Width . -}}
+          {{- if $i }}, {{ end -}}{{- ($src.Resize (printf &amp;quot;%sx%s&amp;quot; . &amp;quot; webp&amp;quot;) ).RelPermalink }} {{ . }}w
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}&amp;quot;
+    sizes=&amp;quot;{{ $dataSzes }}&amp;quot;
+  /&amp;gt;
+  &amp;lt;source
+    type=&amp;quot;image/jpeg&amp;quot;
+    srcset=&amp;quot;
+      {{- with $respSizes -}}
+        {{- range $i, $e := . -}}
+          {{- if ge $src.Width . -}}
+            {{- if $i }}, {{ end -}}{{- ($src.Resize (printf &amp;quot;%sx%s&amp;quot; . &amp;quot; jpg&amp;quot;) ).RelPermalink }} {{ . }}w
+          {{- end -}}
+      {{- end -}}
+    {{- end -}}&amp;quot;&#92;
+    sizes=&amp;quot;{{ $dataSzes }}&amp;quot;
+  /&amp;gt;
+  &amp;lt;img class=&amp;quot;{{ $imgClass }}&amp;quot;
+    src=&amp;quot;{{ $actualImg.RelPermalink }}&amp;quot;
+    width=&amp;quot;{{ $src.Width }}&amp;quot;
+    height=&amp;quot;{{ $src.Height }}&amp;quot;
+    alt=&amp;quot;{{ $alt }}&amp;quot;
+    loading=&amp;quot;lazy&amp;quot;
+  /&amp;gt;
+&amp;lt;/picture&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Using the shortcode&lt;/h2&gt;
+&lt;p&gt;Now in order to use the above shortcode you can simply drop an image into &lt;code&gt;/assets/images&lt;/code&gt; and insert this line of code in your MarkDown file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{{&amp;lt;/* imgh src=&amp;quot;my-example-file.jpeg&amp;quot; alt=&amp;quot;My example file&amp;quot; */&amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+      <pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/hugo-responsive-images/</guid>
+    </item>
+    <item>
+      <title>Stop doing DevOps teams if you want to scale</title>
+      <link>https://mijndertstuij.nl/posts/stop-doing-devops-teams/</link>
+      <description>&lt;p&gt;If you&#39;re serious about scaling your company you should stop doing DevOps teams. I realise this is probably a controversial opinion and one I&#39;m most likely almost alone in thinking, but it&#39;s something I&#39;ve been thinking about a lot as of late.&lt;/p&gt;
+&lt;p&gt;DevOps teams are developers and IT operations people who work together collaboratively in order to increase the speed and quality of software development and deployment. Development and Operations are not working in their own bubble but rather work closely across the entire lifecycle of an application. Anyone who ever worked in such a team must be familiar with the DevOps loop of infinity.&lt;/p&gt;
+&lt;p&gt;I&#39;m here to argue that, while this model of integrated DevOps teams works well for smaller companies, it&#39;s absolutely awful for scaling a company beyond what would be considered medium sized. I think eventually the integrated nature of DevOps inhibits a team&#39;s ability to execute projects while adhering to set standards for quality, stability, and speed.&lt;/p&gt;
+&lt;p&gt;My preliminary conclusion is that in order to scale, a company needs to embrace the silos of development and operations again. Now, I&#39;m not arguing for dev and ops not to talk to each other anymore - to the contrary, I think operations needs to be serving the development team with pre-baked building blocks for any and all use-case. While we&#39;re at it, the operations team needs to be called the platform team as they provide the platform for the developers to build applications on. The developers should be able to use the building blocks like Lego and the platform team needs to be empowering the former.&lt;/p&gt;
+&lt;p&gt;Again, DevOps teams are still the right solution for a lot of companies. But if you&#39;re serious about scaling your operation, you need to be thinking about seperating the two again. There&#39;s always the possibility that in a few years time I&#39;ll look back at this and come to the conclusion I was wrong, but for now it sounds like the right solution.&lt;/p&gt;
+&lt;p&gt;Just a thought for now, I&#39;ll get back to this topic. I&#39;d love to hear what others think so &lt;a href=&quot;https://fosstodon.org/@mijndert&quot;&gt;send me a message&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/stop-doing-devops-teams/</guid>
+    </item>
+    <item>
+      <title>Scaling a Mastodon community to 27k people</title>
+      <link>https://mijndertstuij.nl/posts/scaling-mastodon-community/</link>
+      <description>&lt;p&gt;Tomorrow marks the first full month of my move to &lt;a href=&quot;https://toot.community/&quot;&gt;toot.community&lt;/a&gt;, a Mastodon instance initially set up by my friend &lt;a href=&quot;https://jorijn.com/&quot;&gt;Jorijn&lt;/a&gt;. My move to Mastodon wasn&#39;t motivated by what&#39;s going at Twitter right now, but rather the technical challenges of scaling the shit out of it. In the first week we welcomed thousands of people and we certainly had to put out a fire or two, but most of the time we had the time to focus on optimization.&lt;/p&gt;
+&lt;p&gt;If you look at the &lt;code&gt;#MastoAdmin&lt;/code&gt; hashtag on Mastodon you&#39;ll see a lot of messages from other admins sharing scaling tips and tricks. There I got the idea to &lt;a href=&quot;https://blog.toot.community/posts/open-sourcing-toot-community/&quot;&gt;open source everything&lt;/a&gt; we were doing so that others could hopefully benefit from it. Open source software has shaped my carreer and giving back is the least I could do. While we were working on making the scaling of toot.community fully event-driven, I got to work to write &lt;a href=&quot;https://github.com/toot-community/platform&quot;&gt;Terraform code for the infrastructure&lt;/a&gt;. Since I have a lot of experience with Terraform, I made sure to create modules for every part of the platform so we can easily rip out and replace every part of it without any hassle at all.&lt;/p&gt;
+&lt;p&gt;At the same time we were also working on a &lt;a href=&quot;https://github.com/toot-community/kubernetes&quot;&gt;fully event-driven scaling setup&lt;/a&gt; on top of Kubernetes. Currently we run between 3 and 7 nodes in the Kubernetes cluster depending on the requests to the web server and the amount of messages in the queues. This way we&#39;re never overspending on infrastructure, something that&#39;s incredibly important while running a Mastodon community because it&#39;s fully supported by donations. Of course we don&#39;t want to squander the money so we&#39;re constantly optimizing and tweaking to be able to handle more people on the same amount of infrastructure; now at 27k people we&#39;re paying about the same amount of money per month as we were at 15k people.&lt;/p&gt;
+&lt;p&gt;We now have an event-driven, self-healing Mastodon instance that can basically scale into infinity given enough funds. That doesn&#39;t mean we sit back and relax however, we still have a ton of ideas to optimize further. Some things we want to do over the coming months include: getting our CloudFlare setup into Terraform, turning the screws on security, more visibility into key metrics, and database optimizations.&lt;/p&gt;
+&lt;p&gt;On the &lt;a href=&quot;https://blog.toot.community/&quot;&gt;toot.community blog&lt;/a&gt; we will publish updates on financials and some deepdives into the technical implementation of it all. There&#39;s an RSS feed it you want to follow along.&lt;/p&gt;
+</description>
+      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/scaling-mastodon-community/</guid>
+    </item>
+    <item>
+      <title>A minimalist take on Vim</title>
+      <link>https://mijndertstuij.nl/posts/a-minimalist-take-on-vim/</link>
+      <description>&lt;p&gt;I&#39;ve been a Vim user for as long as I can remember, but in the last few years VS Code kind of took over as the defacto choice for us DevOps engineers. VS Code is great at offering all kinds of plugins that should, in theory, make life a little easier. It&#39;s funny actually, because plugins are the sole reason I never quite got into using Vim fulltime. To me, plugins in Vim just added to the complexity of remembering all of the keyboard shortcuts and quite frankly, the many ways of installing a plugin didn&#39;t help me make sense of things either.&lt;/p&gt;
+&lt;p&gt;But then Vim 8 was released.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/vim/vim/releases/tag/v8.0.0000&quot;&gt;Vim 8&lt;/a&gt; introduced a really simple &lt;em&gt;pack&lt;/em&gt; system for installing plugins. You can just drop a directory in the designated pack directory and Vim will automatically load everything that&#39;s there. When you &lt;code&gt;git clone&lt;/code&gt; a plugin it&#39;s quite easy to update it whenever a new version is released.&lt;/p&gt;
+&lt;p&gt;That&#39;s not to say I&#39;ve gone crazy and I&#39;m now running 20 plugins. I only have a plugin for working with &lt;a href=&quot;https://www.terraform.io/&quot;&gt;Terraform&lt;/a&gt; and one for loading &lt;a href=&quot;https://editorconfig.org/&quot;&gt;EditorConfig&lt;/a&gt; files installed. And for me that&#39;s more than enough. Not because I can&#39;t handle complexity but mostly because Vim can do so much out of the box that most people are not aware of.&lt;/p&gt;
+&lt;p&gt;Let&#39;s dig deeper into my setup.&lt;/p&gt;
+&lt;h2&gt;Installing plugins&lt;/h2&gt;
+&lt;p&gt;Installing &lt;a href=&quot;https://github.com/hashivim/vim-terraform&quot;&gt;vim-terraform&lt;/a&gt; and &lt;a href=&quot;https://github.com/editorconfig/editorconfig-vim&quot;&gt;editorconfig-vim&lt;/a&gt; is as easy as cloning their repositories into the pack directory.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/hashivim/vim-terraform.git ~/.vim/pack/plugins/start/vim-terraform
+git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/pack/plugins/start/editorconfig-vim
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Within Vim you can execute &lt;code&gt;:scriptnames&lt;/code&gt; to list all loaded plugins.&lt;/p&gt;
+&lt;h2&gt;My .vimrc&lt;/h2&gt;
+&lt;p&gt;My .vimrc is exactly what I need and nothing more.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;syntax on                           # enable syntax highlighting
+set tabstop=2                       # set 1 tab to 2 spaces
+set shiftwidth=2                    # set an indent to 2 spaces
+set expandtab                       # convert tabs to spaces
+set ai                              # automatic indentation
+set number                          # enable line numbers
+set hlsearch                        # highlight search matches
+set ruler                           # show current row and column position
+set backspace=2                     # fix backspace behaviour 
+set wildmenu                        # enable autocompletion
+set path=$PWD/**                    # set search path
+set wildmode=longest:list,full      # set autocompletion mode
+set pastetoggle=&amp;lt;leader&amp;gt;p           # toggle paste mode using &#92;p
+set nuw=3                           # set left margin
+set noswapfile                       # disable swapfiles
+set clipboard=unnamed               # copy to system clipboard
+highlight LineNr ctermfg=DarkGrey   # set linenumbers to grey
+nnoremap &amp;lt;esc&amp;gt;&amp;lt;esc&amp;gt; :noh&amp;lt;return&amp;gt;    # clear search results using esc-esc
+colorscheme nord                    # set colorscheme to nord
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Keyboard shortcuts&lt;/h2&gt;
+&lt;p&gt;Some of the common ones I use are &lt;strong&gt;i&lt;/strong&gt; for insert mode and &lt;strong&gt;v&lt;/strong&gt; for visual mode. Then there&#39;s &lt;strong&gt;u&lt;/strong&gt; for undo, &lt;strong&gt;y&lt;/strong&gt; for copy (yank), &lt;strong&gt;d&lt;/strong&gt; for delete, and &lt;strong&gt;aB&lt;/strong&gt; for selecting a block with accolades. And of course a bunch more, but I think you&#39;re good to go with just these ones.&lt;/p&gt;
+&lt;p&gt;Even after years of use and some amount of muscle memory, it still feels like I&#39;ve only touched the surface of what&#39;s possible. When you&#39;re just starting out I highly recommend keeping a cheatsheet at hand, like &lt;a href=&quot;https://vim.rtorr.com/&quot;&gt;this one&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <pubDate>Fri, 15 Apr 2022 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/a-minimalist-take-on-vim/</guid>
+    </item>
+    <item>
+      <title>40 questions</title>
+      <link>https://mijndertstuij.nl/posts/40-questions/</link>
+      <description>&lt;p&gt;The end of the year or your own birthday are both for reflection on the days and months that came before. We try to look back on all the things that went right and the things that maybe could&#39;ve been better. The highs and the lows, the moments where we experienced stress, where we felt love. We try to make new resolutions for the year ahead. But sometimes we fail to notice trends as the years go by quicker and quicker.&lt;/p&gt;
+&lt;p&gt;I&#39;m 34 years old and 35 is quickly approaching. Someone should have told me that your 30s will fly by; it&#39;s like I only just turned 30 but I&#39;m almost half way through. We still can&#39;t slow down time, except for maybe orbiting a black hole, and everything&#39;s relative. But I somehow feel like I&#39;m losing my grip as the years go by.&lt;/p&gt;
+&lt;p&gt;Recently I came across &lt;a href=&quot;https://github.com/kepano/40-questions/&quot;&gt;Stephan Ango&#39;s 40 questions&lt;/a&gt;. It&#39;s a list of questions you can ask yourself every year and you can keep the answers around to maybe spot trends and you can share the questions with family and friends to have a conversation about what it&#39;s been like for them. You certainly don&#39;t have to have an immediate answer to everything then and there - instead, take your time. It might take a week or two to answer them all and that&#39;s perfectly fine.&lt;/p&gt;
+&lt;p&gt;The world is a loud place that never stops moving. Sometimes it&#39;s good to step out of it for a little bit to sit down and reflect on everything that happened and everything that awaits you. Ask yourself these 40 questions, it might help you understand yourself and the world around you just a bit more.&lt;/p&gt;
+</description>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/40-questions/</guid>
+    </item>
+    <item>
+      <title>Avoid using internal load balancers</title>
+      <link>https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/</link>
+      <description>&lt;p&gt;One of the most well-known patterns in infrastructure is having an internal load balancer in front of backend services like application servers. When you&#39;re migrating your workloads to say AWS Fargate it&#39;s easy to just carry over that same pattern because, well, it works. But, as with all things in the cloud, internal load balancers cost money and add complexity. When you&#39;re just migrating to using containers for the first time, adding complexity to an already steep learning curve might not be the best way to go about things.&lt;/p&gt;
+&lt;p&gt;That&#39;s where &lt;em&gt;Service Discovery&lt;/em&gt; comes in.&lt;/p&gt;
+&lt;p&gt;Service Discovery is a thing where you let the backend servers register themselves in some kind of database, so the requestor knows where the targets are. This has been done in all kinds of scenarios; from DHCP to XMPP, as well as DNS in Kubernetes.&lt;/p&gt;
+&lt;p&gt;While I agree that adding Service Discovery to your architecture does add a little bit of an up-front learning curve, in the long run it&#39;s kind of a set-and-forget thing.&lt;/p&gt;
+&lt;p&gt;A great service for such a use-case is &lt;a href=&quot;https://aws.amazon.com/cloud-map/&quot;&gt;AWS CloudMap&lt;/a&gt; which integrates really well with AWS Fargate. Say you have a backend service running on AWS Fargate that accepts traffic on port 4000 that you can to be able to horizontally scale, it&#39;s pretty easy to implement in CloudFormation.&lt;/p&gt;
+&lt;p&gt;First we need to create a namespace to register targets in.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;PrivateNamespace:
+  Type: AWS::ServiceDiscovery::PrivateDnsNamespace
+  Properties:
+    Name: my-backend-service.aws
+    Vpc: !Ref VPCId
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can create a Service which is a collection of backend servers that Fargate knows how to register itself into.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;DiscoveryService:
+  Type: AWS::ServiceDiscovery::Service
+  Properties: 
+    Description: Discovery Service for my-backend-service
+    DnsConfig:
+      RoutingPolicy: MULTIVALUE
+      DnsRecords:
+        - TTL: 0
+          Type: A
+        - TTL: 0
+          Type: SRV
+    HealthCheckCustomConfig: 
+      FailureThreshold: 1
+    Name: app
+    NamespaceId: !Ref PrivateNamespace
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To connect your Fargate service (&lt;code&gt;AWS::ECS::Service&lt;/code&gt;) to CloudMap we can simply specify the DiscoveryService resource.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ServiceRegistries:
+  - RegistryArn: !GetAtt DiscoveryService.Arn
+    Port: 4000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Anyone who needs to access your backend server can now simply use the hostname &lt;code&gt;app.my-backend-service.aws:4000&lt;/code&gt; without every having to deploy a load balancer.&lt;/p&gt;
+&lt;p&gt;Of course AWS CloudMap also has the ability to specify exactly which services can access certain backends by integrating IAM into it. But that&#39;s for another day to discuss.&lt;/p&gt;
+</description>
+      <pubDate>Tue, 15 Mar 2022 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/</guid>
+    </item>
+    <item>
+      <title>AirPods Max</title>
+      <link>https://mijndertstuij.nl/posts/airpods-max/</link>
+      <description>&lt;p&gt;To be clear right off the bat: I don&#39;t do well in busy offices. I get distracted easily, I don&#39;t like it when people can see what I&#39;m doing, I don&#39;t like people talking and radio&#39;s blaring. The open office plan truly is the bane of my existence. Therefore, noise cancelling headphones are a Godsend.&lt;/p&gt;
+&lt;p&gt;I&#39;ve owned just about every popular pair of noise cancelling headphones out there. That doesn&#39;t mean I&#39;m an expert or anything, it just means I know what I like and don&#39;t like.&lt;/p&gt;
+&lt;p&gt;The latest pair that I bought are AirPods Max - yes, the expensive Apple ones. Luckily I didn&#39;t pay full price for them; no pair of headphones is worth that much money. Even though I use them almost every day and, spoiler alert, they are pretty awesome, I&#39;m glad I paid about 60% of MSRP. And yes, even AirPods Max have problems and because it&#39;s Apple about everyone and their mom knows about them.&lt;/p&gt;
+&lt;h2&gt;The case&lt;/h2&gt;
+&lt;p&gt;Many things have been said about the case so I&#39;ll avoid repeating all that. What I can say though, is that the case isn&#39;t as bad as people on the internet make it out to be. It&#39;s easy to get AirPods Max in and out of, it&#39;s made of nice materials and after getting used to it, the case doesn&#39;t look weird to me anymore.&lt;/p&gt;
+&lt;p&gt;Of course it does have issues.&lt;/p&gt;
+&lt;p&gt;The case doesn&#39;t protect the headband, which makes travelling with it that much more awkward. I have to really keep it in a safe place in my backpack. But the most damning thing to me is that, when you retract the headband to fit your head, the charging port doesn&#39;t line up with the hole for the cable to go through. This means that I usually charge my AirPods Max while they are out of the case. For me, that&#39;s the biggest design flaw.&lt;/p&gt;
+&lt;h2&gt;Weight&lt;/h2&gt;
+&lt;p&gt;When you use your headphones as much as I do, one of the most important aspects is weight. Well, not really the weight but rather the comfort levels after having them on for hours on end. The issue I always had with other headphones was that, after some amount of time, the headband would get really painful. It always felt like the headband was trying to force itself into my skull.&lt;/p&gt;
+&lt;p&gt;Not so much with AirPods Max. Yes, on paper they are on the heavy side, but in real life I don&#39;t notice the weight just because the headband is really good at distributing all that weight. This is the first pair of headphones that I can truly wear for hours without any discomfort.&lt;/p&gt;
+&lt;h2&gt;Condensation&lt;/h2&gt;
+&lt;p&gt;Condensation inside of the earcups, I bet every type of closed-back noise cancelling headphones have the issue. It&#39;s just that on AirPods Max it&#39;s really easy to get the earcups off and have a look inside. Mine sometimes have a little bit of condensation inside the earcups as well, but will it be a problem long-term? We&#39;ll have to wait and see.&lt;/p&gt;
+&lt;h2&gt;Verdict?&lt;/h2&gt;
+&lt;p&gt;The problems listed about don&#39;t detere me from declaring AirPods Max an awesome pair of headphones. They are mostly about the integration with the Apple eco-system of course. Previous headphones I owned came with an awful mobile app to control things like EQ and NC levels, and app that never worked properly and felt out of place on iOS.&lt;/p&gt;
+&lt;p&gt;I&#39;ve had AirPods Max for a solid 2 months now so the jury&#39;s still out on durability but I bet they will hold up pretty well.&lt;/p&gt;
+&lt;p&gt;I still wouldn&#39;t recommend anyone buying them at full price. But if you can find them at a discount I highly recommend you at leat give them a try.&lt;/p&gt;
+</description>
+      <pubDate>Fri, 04 Mar 2022 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/airpods-max/</guid>
+    </item>
+    <item>
+      <title>OpenBSD</title>
+      <link>https://mijndertstuij.nl/posts/openbsd/</link>
+      <description>&lt;p&gt;I&#39;ve been an avid user of various Linux distributions for 22+ years now and I will forever love everything about it and what it brought me. I have my entire carreer built on Linux and open source software. I&#39;ve also known about BSD for about as long, but I never quite got into it, until now. I&#39;m as much a minimalist as I am a nerd and I love simple software that does one thing well. I want all of my software to Just Work, no hassle or needless features added. After coming across &lt;a href=&quot;https://openbsd.amsterdam/&quot;&gt;OpenBSD.ams&lt;/a&gt; I decided to read up on OpenBSD and its &lt;a href=&quot;https://www.openbsd.org/goals.html&quot;&gt;goals&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Long story short, I&#39;m currently in the process of moving some workloads from Linux VM&#39;s to OpenBSD ones. It&#39;s been quite a journey so far because unlearning 22 years of Linux experience is... hard. Luckily the community is awesome and the available documentation even more so. But what makes OpenBSD such a joy to use are the sane defaults and the completely empty config files that are just there for me to fill out as I see fit. It feels like the system was designed to fit whatever purpose I have in mind without ever getting in the way. Stuff like &lt;a href=&quot;https://man.openbsd.org/httpd.8&quot;&gt;httpd(8)&lt;/a&gt;, &lt;a href=&quot;https://man.openbsd.org/relayd.8&quot;&gt;relayd(8)&lt;/a&gt;, &lt;a href=&quot;https://man.openbsd.org/acme-client.1&quot;&gt;acme-client(1)&lt;/a&gt; and &lt;a href=&quot;https://man.openbsd.org/pf.4&quot;&gt;pf(4)&lt;/a&gt; make the entire system feel very robust and well thought out.&lt;/p&gt;
+&lt;p&gt;Over in the Linux world everything just seems to be strung together with little sense of direction. It always felt like a pile of software that happens to sometimes work together. OpenBSD is the opposite of that and I love it. I just wish I could run it on my laptop as well, with all the bells and whistles working. But that&#39;s a bit of a pipe dream as bluetooth support is currently completely missing.&lt;/p&gt;
+&lt;p&gt;For now it&#39;s a great operating system for servers for me. If you also want to play around with OpenBSD and indirectly &lt;a href=&quot;https://www.openbsdfoundation.org/&quot;&gt;support the foundation&lt;/a&gt; I would highly recommend getting a VM over at &lt;a href=&quot;https://openbsd.amsterdam/&quot;&gt;OpenBSD.ams&lt;/a&gt;.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/openbsd/</guid>
+    </item>
+    <item>
+      <title>Information processing</title>
+      <link>https://mijndertstuij.nl/posts/information-processing/</link>
+      <description>&lt;p&gt;Ever since this COVID-19 thing hit I&#39;ve been working from home non-stop. That&#39;s almost a full year of working remotely and being fully in charge of my own productivity. To be honest, I could keep this going forever - I&#39;ve never been more productive in my life.&lt;/p&gt;
+&lt;p&gt;The last few months have also been perfect to optimize certain aspects of my work, the most important one being information processing. I&#39;ve been horrible at keeping track of todo items before since I could never make it stick. Due to WFH I had the time to create a system for myself and I&#39;ve never been more productive, stress-free and happy.&lt;/p&gt;
+&lt;p&gt;My system hinges on categorizing all of my information into 4 silo&#39;s: articles, todo items, quick notes and knowledge. Let&#39;s go through them one by one.&lt;/p&gt;
+&lt;h2&gt;Articles&lt;/h2&gt;
+&lt;p&gt;One of the websites I visit (almost) daily is &lt;a href=&quot;https://news.ycombinator.com/&quot;&gt;Hacker News&lt;/a&gt;. Before, I would open a bunch of links and have something like 10 tabs open until I got around to reading the articles. In practice this meant I&#39;d probably read 2 and skim through the rest. I always hated myself for it because I know a lot of these articles would&#39;ve added a lot of value to my life.&lt;/p&gt;
+&lt;p&gt;Over a year ago my wife gifted me a &lt;a href=&quot;https://gl.kobobooks.com/collections/all&quot;&gt;Kobo e-reader&lt;/a&gt; which has the ability to connect to a &lt;a href=&quot;https://getpocket.com/&quot;&gt;Pocket&lt;/a&gt; account. Firefox has built-in support for saving articles to Pocket as well, no extensions required. Now, instead of opening 10 articles in tabs and keeping them open for a few days, I save everything I want to read to Pocket which then automatically &lt;a href=&quot;https://help.getpocket.com/article/1006-getting-started-with-kobo&quot;&gt;syncs to my Kobo&lt;/a&gt;. There&#39;s absolutely no manual action required which I like a lot. Of course, an e-ink display is a much more enjoyable way of reading long-form articles than the LCD screen of my laptop or phone.&lt;/p&gt;
+&lt;p&gt;It&#39;s nothing novel but this simple action enriches my life with new insights I glean from all of the artices my Kobo safeguards for me.&lt;/p&gt;
+&lt;h2&gt;Todo items&lt;/h2&gt;
+&lt;p&gt;Many years ago I subscribed to the idea of &lt;a href=&quot;https://gettingthingsdone.com/&quot;&gt;Getting Things Done&lt;/a&gt;, but only a subset of the concept ever stuck with me. I think GTD is way too complicated for a single person with a limited amount of todo items at any given time. Since then, I&#39;ve been trying just about every todo application, but one that always appealed to me was &lt;a href=&quot;https://culturedcode.com/things/&quot;&gt;Things&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Things is only as powerful as you want it to be since it has &lt;a href=&quot;https://culturedcode.com/things/guide/&quot;&gt;many features&lt;/a&gt; I never really used before: headings, tags, sub-items, etcetera. I basically used Things as a glorified list of todo&#39;s without any context apart from projects.&lt;/p&gt;
+&lt;p&gt;Things deserves its own blog post because I can talk for hours about the &lt;a href=&quot;https://www.youtube.com/watch?v=9oBuOrrBskw&quot;&gt;many ways&lt;/a&gt; you can process information inside the app. I&#39;ll tell you about the most important things I do inside of Things so I&#39;ll, hopefully, never forget something again.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I added an &lt;a href=&quot;https://culturedcode.com/things/support/articles/2803567/&quot;&gt;iOS widget&lt;/a&gt; that points to my Inbox to make adding a new task as easy as possible&lt;/li&gt;
+&lt;li&gt;I created new areas to categorize projects under and added emoji in the title of the area for easier visual grepping&lt;/li&gt;
+&lt;li&gt;Each project now has a description in the notes field that outlines my goals&lt;/li&gt;
+&lt;li&gt;I&#39;ve added a recurring task for a daily review to have a look at any new tasks from the Inbox and add new tasks I want to work on to Today&lt;/li&gt;
+&lt;li&gt;I started &lt;a href=&quot;https://culturedcode.com/things/support/articles/2803581/&quot;&gt;adding Tags&lt;/a&gt; to todo items to easily filter on priority and assumed effort&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Quick notes&lt;/h2&gt;
+&lt;p&gt;I&#39;ve always had a bit of a love-hate relationship with digital note taking tools and I&#39;ve again tried most of them. At the end of the day I want the least amount of friction between my thoughts and putting them in writing for later reference. I also like it when a tool feels a well crafted Mac app instead of some janky web app. That&#39;s why I always found apps like &lt;a href=&quot;https://bear.app/&quot;&gt;Bear&lt;/a&gt; to be very cumbersome. Since I&#39;m already knees deep in the Apple ecosystem I&#39;m currently using the default &lt;a href=&quot;https://www.icloud.com/notes&quot;&gt;Apple Notes&lt;/a&gt; app across my devices.&lt;/p&gt;
+&lt;p&gt;Since WFH I have a lot of meetings with all of my different clients. During those meetings I make quick notes of everything we talk about. Right after the meeting I review my notes and distill everything into action items which I jot down in Things. After that the note basically becomes useless again as the information is processed.&lt;/p&gt;
+&lt;h2&gt;Knowledge&lt;/h2&gt;
+&lt;p&gt;You&#39;ve probably found yourself Googling a Git command or something about &lt;a href=&quot;https://en.wikipedia.org/wiki/Regular_expression&quot;&gt;regex&lt;/a&gt; more than once. I&#39;ve been there, doesn&#39;t feel great.&lt;/p&gt;
+&lt;p&gt;Recently I got into the concept of a &lt;a href=&quot;https://www.youtube.com/watch?v=OP3dA2GcAh8&quot;&gt;Second Brain&lt;/a&gt;, Digital Brain or whatever you wanna call it. It&#39;s a collection of, in my case, Markdown files with stuff I want to keep around for future reference. Notes that I want to keep around for a short period of time are in Notes, my Digital Brain is for keeping knowledge around that will prove its worth over time.&lt;/p&gt;
+&lt;p&gt;The tool I&#39;ve chosen to create my Digital Brain is &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;, but there are of course others as well like &lt;a href=&quot;https://roamresearch.com/&quot;&gt;Roam Research&lt;/a&gt;. The latter is way too complicated for my taste as I just to have a bunch of Markdown files and I want to link certain pages together to create a cortex of sorts.&lt;/p&gt;
+&lt;p&gt;At first it&#39;s quite time consuming to jot down every little piece of knowledge I can think of. But in the end I hope it&#39;ll lessen the amount of Google searches for trivial stuff. Obsidian allows me to very quickly search the contents of my Digital Brain so that&#39;s awesome as well.&lt;/p&gt;
+&lt;p&gt;Another reason I&#39;m building this is because I want to have this as my part of my legacy - a small window into what it was like when I was alive. I hope it&#39;s going to be one of those &lt;a href=&quot;https://en.wikipedia.org/wiki/Time_capsule&quot;&gt;time capsules&lt;/a&gt; they put in the ground to be recovered a hundred years from now.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/information-processing/</guid>
+    </item>
+    <item>
+      <title>My Tmux setup</title>
+      <link>https://mijndertstuij.nl/posts/my-tmux-setup/</link>
+      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/tmux/tmux/wiki&quot;&gt;Tmux&lt;/a&gt; is a terminal multiplexer. It lets you switch between several programs through windows and panes, detach your session and reattach to it on a different computer. I reckon it&#39;s mostly used on servers where people have long running jobs and such running in a tmux session.&lt;/p&gt;
+&lt;p&gt;The learning curve is what always withheld me from just diving in and giving Tmux a chance to get integrated into my workflow. I wanted to share some of the small changes I made to &lt;a href=&quot;https://github.com/mijndert/dotfiles&quot;&gt;my Tmux configuration&lt;/a&gt; to make life a little easier.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;I now work in Tmux fulltime and I&#39;m loving everything about it. Mostly because Tmux can be configured just the way I like it and because I can have this exact same configuration on all of my computers and servers.&lt;/p&gt;
+&lt;p&gt;And when I&#39;m stuck there&#39;s always the &lt;a href=&quot;https://tmuxcheatsheet.com/&quot;&gt;Tmux cheat sheet&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Meta key&lt;/h2&gt;
+&lt;p&gt;One thing I struggled with is getting my meta key right. The meta key is the prefix you use before issuing other commands that control Tmux. Commands such as creating and closing windows, splitting panes, moving between panes, etc. I finally landed on &lt;code&gt;ctrl + a&lt;/code&gt; for my meta key, but you can pick anything you like really.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;unbind C-b
+set -g prefix C-a
+bind-key C-a send-prefix
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;The status bar&lt;/h2&gt;
+&lt;p&gt;By default the Tmux status bar is green. This hurt my eyes so I figured out a way to change its colors a little bit. You can put all kinds of stuff in the status bar like your load averages, battery status, and much more. I like to keep it clean though.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set -g status-bg &#39;#666666&#39;
+set -g status-fg &#39;white&#39;
+set -g status-left &#39;&#39;
+set -g status-right &#39;&#39;
+setw -g window-status-current-style &#39;fg=white bg=colour19&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Count from 1&lt;/h2&gt;
+&lt;p&gt;The status bar shows your currently open windows. One minor annoyance I faced was that it counted from zero and wouldn&#39;t rearrange its count as I closed windows. I change that behaviour so it&#39;s much easier to switch between windows using &lt;code&gt;ctrl + a&lt;/code&gt; and the number of the window that I want to switch to.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set -g base-index 1
+set -g renumber-windows on
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Start new windows in the same path&lt;/h2&gt;
+&lt;p&gt;When I open a new window I usually want to start off in the same directory as the window I came from. Or at least close to it.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bind c new-window -c &amp;quot;#{pane_current_path}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Easier window splits&lt;/h2&gt;
+&lt;p&gt;How to split a window into two different panes has quite the learning curve as, for me, the defaults were a little hard to work with. Now I can split windows using the &lt;code&gt;|&lt;/code&gt; and &lt;code&gt;-&lt;/code&gt; keys.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;unbind &#39;&amp;quot;&#39;
+unbind %
+bind | split-window -h
+bind - split-window -v
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/my-tmux-setup/</guid>
+    </item>
+    <item>
+      <title>On minimalism</title>
+      <link>https://mijndertstuij.nl/posts/minimalism/</link>
+      <description>&lt;p&gt;Places like Reddit and Twitter are filled with people who practice their version of minimalism. The most prevalent method is to just have less of everything. Some groups of people even go so far as to think they can only have a fixed amount of things in their lives.&lt;/p&gt;
+&lt;p&gt;Don&#39;t let anyone tell you this is the spirit of minimalism because it&#39;s not. Let me explain.&lt;/p&gt;
+&lt;p&gt;I&#39;ve always practiced minimalism, even way before I knew about the term. This was born from a desire to have a less complicated relationship with technology. I genuinely hate having a lot of stuff because nowadays, more so than say 10 years ago, everything needs updates and needs to be charged all the time for it to be useful. Gadgets are outdated the minute you buy them. Keeping track of where everything is and making sure everything gets its maintenance is nauseating to me.&lt;/p&gt;
+&lt;p&gt;The burden of having to keep track of all of these things is what led me to practice minimalism. Unfortunately, talking about minimalism is hard because a lot of lies and misinformation is thrown around.&lt;/p&gt;
+&lt;p&gt;Minimalism is never about simply owning less. It&#39;s also not about having just blue jeans and grey sweaters. It&#39;s certainly not about being able to fit all of your belongings in a backpack.&lt;/p&gt;
+&lt;p&gt;Don&#39;t get me wrong, owning less stuff is a great endeavor and one that the Earth sorely needs. But just owning less without a clear goal in mind is not very productive.&lt;/p&gt;
+&lt;p&gt;To me minimalism is about making more deliberate choices about what to buy and, more importantly, what not to buy. If I truly think something will bring me joy I will buy it. I have no hesitation about buying things because I don&#39;t keep track of how many things I own. I want everything I own to have a purpose, even if that&#39;s to just bring joy into my life. If something doesn&#39;t fulfill its intended purpose anymore I will gladly put it up for sale, or give it away.&lt;/p&gt;
+&lt;p&gt;I love cleaning out drawers because it means less stuff to keep track of.&lt;/p&gt;
+</description>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      <dc:creator>Mijndert Stuij</dc:creator>
+      <guid>https://mijndertstuij.nl/posts/minimalism/</guid>
+    </item>
+  </channel>
+</rss>

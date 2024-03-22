@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <url>
+            <loc>/posts/minimalism/</loc>
+            <lastmod>2019-01-28T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/my-tmux-setup/</loc>
+            <lastmod>2020-04-16T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/information-processing/</loc>
+            <lastmod>2021-02-15T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/openbsd/</loc>
+            <lastmod>2021-11-01T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/airpods-max/</loc>
+            <lastmod>2022-03-04T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/avoid-using-internal-load-balancers/</loc>
+            <lastmod>2022-03-15T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/40-questions/</loc>
+            <lastmod>2022-03-18T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/a-minimalist-take-on-vim/</loc>
+            <lastmod>2022-04-15T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/scaling-mastodon-community/</loc>
+            <lastmod>2022-12-04T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/stop-doing-devops-teams/</loc>
+            <lastmod>2022-12-05T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/hugo-responsive-images/</loc>
+            <lastmod>2022-12-06T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/terraform-dynamic-blocks-modules/</loc>
+            <lastmod>2022-12-08T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/terraform-import-blocks/</loc>
+            <lastmod>2023-06-15T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/obsidian-doesnt-click-for-me/</loc>
+            <lastmod>2023-10-12T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/running-with-a-watch/</loc>
+            <lastmod>2023-12-08T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/how-i-do-todos/</loc>
+            <lastmod>2024-01-11T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/config-driven-terraform/</loc>
+            <lastmod>2024-01-18T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/posts/default-apps-2024/</loc>
+            <lastmod>2024-02-19T00:00:00.000Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/colophon/</loc>
+            <lastmod>2024-03-22T19:20:54.647Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/</loc>
+            <lastmod>2024-03-22T19:20:54.647Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/links/</loc>
+            <lastmod>2024-03-22T19:20:54.647Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/now/</loc>
+            <lastmod>2024-03-22T19:20:54.647Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/uses/</loc>
+            <lastmod>2024-03-22T19:20:54.651Z</lastmod>
+        </url>
+    
+</urlset>
