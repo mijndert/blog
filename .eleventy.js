@@ -13,6 +13,7 @@ module.exports = (config) => {
   });
   config.addPassthroughCopy("css");
   config.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+  config.addPassthroughCopy({ 'src/CNAME': '/CNAME' });
   config.addPlugin(pluginRss);
   return {
     markdownTemplateEngine: "njk",
