@@ -1,5 +1,5 @@
 ---
-title: "Blogroll"
+title: "Links"
 layout: "layouts/page.html"
 date: Last Modified
 ---

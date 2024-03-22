@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %} 
 {% block content %}
 <h1>{{ title }}</h1>
-<p>{{ post.date | dateFilter }}</p>
+<p class="muted">{{ page.date | dateFilter }}</p>
 <article>{{ content | safe }}</article>
 {% endblock %}
