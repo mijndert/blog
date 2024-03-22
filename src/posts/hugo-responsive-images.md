@@ -1,5 +1,5 @@
 ---
-title: "Generating responsive images on a static Hugo website"
+title: "Responsive images on a static Hugo website"
 date: 2022-12-06
 summary: "Serving optimized responsive images using Hugo"
 publish: true
@@ -24,8 +24,7 @@ The following Hugo shortcode will generate multiple sizes of a given image and s
 Create a file called `/layouts/shortcodes/imgh.html` in the root of your project with the following contents.
 
 ```
-{% raw %}
-{{- $respSizes := slice "960" "1280" "1920" -}}
+{% raw %}{{- $respSizes := slice "960" "1280" "1920" -}}
 {{- $imgBase := "images/" -}}
 {{- $src := resources.Get (printf "%s%s" $imgBase (.Get "src")) -}}
 {{- $alt := .Get "alt" -}}
@@ -66,8 +65,7 @@ Create a file called `/layouts/shortcodes/imgh.html` in the root of your project
     loading="lazy"
   />
 </picture>
-</div>
-{% endraw %}
+</div>{% endraw %}
 ```
 
 ## Using the shortcode
@@ -75,7 +73,5 @@ Create a file called `/layouts/shortcodes/imgh.html` in the root of your project
 Now in order to use the above shortcode you can simply drop an image into `/assets/images` and insert this line of code in your MarkDown file.
 
 ```
-{% raw %}
-{{</* imgh src="my-example-file.jpeg" alt="My example file" */>}}
-{% endraw %}
+{% raw %}{{</* imgh src="my-example-file.jpeg" alt="My example file" */>}}{% endraw %}
 ```

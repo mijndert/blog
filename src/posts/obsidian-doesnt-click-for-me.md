@@ -9,10 +9,10 @@ The idea of a personal wiki has always appealed to me. I tried a few times to in
 
 I've implemented the [PARA method](https://fortelabs.com/blog/para/) into my personal wiki. It's a way of organizing all information into four buckets:
 
-1. Projects for any ongoing stuff
-2. Areas for anything that's going on in your life like your car, finances, mental health, etc.
-3. Resources for anything that you might want to reference later
-4. Archives for anything that's no longer relevant
+- Projects for any ongoing stuff
+- Areas for anything that's going on in your life like your car, finances, mental health, etc.
+- Resources for anything that you might want to reference later
+- Archives for anything that's no longer relevant
 
 Gotta say, I love this so much and it's not really relevant to any one tool. I've been using this method for a while now and it's been working great.
 
