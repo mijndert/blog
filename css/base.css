@@ -28,15 +28,19 @@ header a {
   font-weight: bold;
 }
 
+.post {
+  margin: 0 0 .75em 0;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  white-space: nowrap;
+}
+
 .post a {
   text-decoration: none;
 }
 
-.post {
-  margin: 0 0 1em 0;
-  text-overflow: ellipsis;
-  overflow: hidden; 
-  white-space: nowrap;
+.post a:hover {
+  text-decoration: underline;
 }
 
 footer {
