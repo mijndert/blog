@@ -1,0 +1,27 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: 21
+          cache: 'npm'
+      - name: Install packages
+        run: npm ci
+      - name: Run npm build
+        run: npm run build:prod
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+      - name: Deploy to gh-pages
+        uses: actions/deploy-pages@v4
