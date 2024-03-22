@@ -12,6 +12,7 @@ module.exports = (config) => {
     return array.slice(0, n);
   });
   config.addPassthroughCopy("css");
+  config.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
   config.addPlugin(pluginRss);
   return {
     markdownTemplateEngine: "njk",

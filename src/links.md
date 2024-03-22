@@ -2,6 +2,7 @@
 title: "Links"
 layout: "layouts/page.html"
 date: Last Modified
+summary: "A collection of links to interesting blogs. A blogroll if you will."
 ---
 
 I follow people, not corporations. Here's some great people to follow and a link to their RSS feed because RSS is awesome. Want to get added? [Drop me a message](https://fosstodon.org/@mijndert).
