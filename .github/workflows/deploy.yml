@@ -18,7 +18,7 @@ jobs:
       - name: Install packages
         run: npm ci
       - name: Run npm build
-        run: npm run build:prod
+        run: DEBUG=* npx eleventy
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
