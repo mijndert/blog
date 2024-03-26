@@ -98,9 +98,12 @@ picture {
 }
 
 pre {
-  overflow: scroll;
   background-color: #badae229;
   padding: .5em;
+}
+
+code {
+  overflow: scroll;
 }
 
 blockquote {
@@ -121,16 +124,12 @@ blockquote {
   }
   
   ul {
-    margin-left: 0;
+    margin-left: 2em;
   }
   
   img,
   picture {
     margin: 4px 0;
-  }
-  
-  pre {
-    overflow: auto;
   }
 }
 
@@ -148,6 +147,10 @@ blockquote {
   h1 {
     font-size: 1em;
   }
+
+  ul {
+    margin-left: 1em;
+  }
   
   img,
   picture {
@@ -155,7 +158,6 @@ blockquote {
   }
   
   pre {
-    overflow: auto;
     font-size: 12px;
   }
   
