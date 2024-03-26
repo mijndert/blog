@@ -47,7 +47,6 @@ footer {
   margin: 2em 0 3em 0;
 }
 
-
 h1,
 h2,
 h3,
@@ -100,6 +99,7 @@ picture {
 pre {
   background-color: #badae229;
   padding: .5em;
+  overflow-x: auto;
 }
 
 code {
