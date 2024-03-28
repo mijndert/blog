@@ -1,7 +1,7 @@
 ---
-title: "Obsidian doesn't click for me"
+title: Obsidian doesn't click for me
 date: 2023-10-12
-summary: "I really want to like and use Obsidian, but I'm unable to."
+summary: I really want to like and use Obsidian, but I'm unable to.
 publish: true
 ---
 
