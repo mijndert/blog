@@ -1,7 +1,7 @@
 ---
-title: "Scaling a Mastodon community to 27k people"
-date: 2022-12-04 
-summary: "Scaling a Mastodon community to 27k people using Kubernetes and Digitalocean."
+title: Scaling a Mastodon community to 27k people
+date: 2022-12-04
+summary: Scaling a Mastodon community to 27k people using Kubernetes and Digitalocean.
 publish: true
 ---
 
