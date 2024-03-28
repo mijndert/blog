@@ -1,7 +1,7 @@
 ---
-title: "My Tmux setup"
-date: 2020-04-16 
-summary: "A quick Tmux tutorial."
+title: My Tmux setup
+date: 2020-04-16
+summary: A quick Tmux tutorial.
 publish: true
 ---
 
