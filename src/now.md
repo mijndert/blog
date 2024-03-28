@@ -1,8 +1,9 @@
 ---
-title: "Now"
-layout: "layouts/page.html"
+title: Now
+layout: layouts/page.html
 date: Last Modified
-summary: 'What I am focused on now.'
+summary: What I am focused on now.
+publish: true
 ---
 
 My answer to the question, “what are you focused on now?”.
