@@ -1,7 +1,7 @@
 ---
-title: "On minimalism"
+title: On minimalism
 date: 2019-01-28
-summary: "There's a lot of misinformation about minimalism. My thoughts."
+summary: There's a lot of misinformation about minimalism. My thoughts.
 publish: true
 ---
 
