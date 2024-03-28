@@ -1,7 +1,6 @@
 ---
 title: Links
 layout: layouts/page.html
-date: Last Modified
 summary: A collection of links to interesting blogs. A blogroll if you will.
 publish: true
 ---
