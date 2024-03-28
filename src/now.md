@@ -1,7 +1,6 @@
 ---
 title: Now
 layout: layouts/page.html
-date: Last Modified
 summary: What I am focused on now.
 publish: true
 ---
