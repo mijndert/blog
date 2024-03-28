@@ -1,8 +1,9 @@
 ---
-title: "Contact"
-layout: "layouts/page.html"
+title: Contact
+layout: layouts/page.html
 date: Last Modified
-summary: 'How and where to reach me.'
+summary: How and where to reach me.
+publish: true
 ---
 
 Due to my busy life and priorities, I prefer asynchronous communication. You can reach me via the following means:
