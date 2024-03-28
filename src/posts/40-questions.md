@@ -1,7 +1,7 @@
 ---
-title: "40 questions"
+title: 40 questions
 date: 2022-03-18
-summary: "40 questions to ask yourself every day."
+summary: 40 questions to ask yourself every day.
 publish: true
 ---
 
