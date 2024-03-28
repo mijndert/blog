@@ -1,7 +1,7 @@
 ---
-title: "AirPods Max"
-date: 2022-03-04 
-summary: "Some thoughts on AirPods Max and headphones in general."
+title: AirPods Max
+date: 2022-03-04
+summary: Some thoughts on AirPods Max and headphones in general.
 publish: true
 ---
 
