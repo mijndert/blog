@@ -1,7 +1,7 @@
 ---
-title: "Reusable Terraform modules using Dynamic blocks"
+title: Reusable Terraform modules using Dynamic blocks
 date: 2022-12-08
-summary: "Stop repeating yourself and use Dynamic blocks in your Terraform resources"
+summary: Stop repeating yourself and use Dynamic blocks in your Terraform resources
 publish: true
 ---
 
