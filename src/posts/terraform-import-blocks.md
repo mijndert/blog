@@ -1,7 +1,7 @@
 ---
-title: "Saving time using Terraform import blocks"
+title: Saving time using Terraform import blocks
 date: 2023-06-15
-summary: "Stop creating resources yourself, use import blocks instead. A new feature in Terraform 1.5."
+summary: Stop creating resources yourself, use import blocks instead. A new feature in Terraform 1.5.
 publish: true
 ---
 
