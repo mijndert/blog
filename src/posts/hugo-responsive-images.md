@@ -1,7 +1,7 @@
 ---
-title: "Responsive images on a static Hugo website"
+title: Responsive images on a static Hugo website
 date: 2022-12-06
-summary: "Serving optimized responsive images using Hugo"
+summary: Serving optimized responsive images using Hugo
 publish: true
 ---
 
