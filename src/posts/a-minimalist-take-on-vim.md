@@ -1,7 +1,7 @@
 ---
-title: "A minimalist take on Vim"
+title: A minimalist take on Vim
 date: 2022-04-15
-summary: "How I use Vim without any (well, almost) plugins."
+summary: How I use Vim without any (well, almost) plugins.
 publish: true
 ---
 
