@@ -1,7 +1,6 @@
 ---
 title: Contact
 layout: layouts/page.html
-date: Last Modified
 summary: How and where to reach me.
 publish: true
 ---
