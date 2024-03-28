@@ -12,6 +12,7 @@ module.exports = (config) => {
     return array.slice(0, n);
   });
   config.addPassthroughCopy("css");
+  config.addPassthroughCopy("src/favicon/");
   config.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
   config.addPassthroughCopy({ 'src/CNAME': '/CNAME' });
   config.addPlugin(pluginRss);
