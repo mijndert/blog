@@ -1,7 +1,7 @@
 ---
-title: "Information processing"
+title: Information processing
 date: 2021-02-15
-summary: "The apps that I use to keep track of knowledge and todo items."
+summary: The apps that I use to keep track of knowledge and todo items.
 publish: true
 ---
 
