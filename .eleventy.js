@@ -5,12 +5,6 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 module.exports = (config) => {
   config.addFilter("dateFilter", dateFilter);
   config.addFilter("w3DateFilter", w3DateFilter);
-  config.addFilter("head", (array, n) => {
-    if (n < 0) {
-      return array.slice(n);
-    }
-    return array.slice(0, n);
-  });
   config.addPassthroughCopy("css");
   config.addPassthroughCopy("src/favicon/");
   config.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
