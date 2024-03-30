@@ -116,20 +116,11 @@ blockquote {
 @media (max-width: 768px) {
   body {
     max-width: 100%;
-    padding: .5em;
-  }
-  
-  header {
-    margin: 2em 0 1em 0;
+    padding: 1em;
   }
   
   ul {
     margin-left: 2em;
-  }
-  
-  img,
-  picture {
-    margin: 4px 0;
   }
 }
 
@@ -140,21 +131,12 @@ blockquote {
     padding: .5em;
   }
   
-  header {
-    margin: 1em 0 0.5em 0;
-  }
-  
   h1 {
     font-size: 1em;
   }
 
   ul {
     margin-left: 1em;
-  }
-  
-  img,
-  picture {
-    margin: 2px 0;
   }
   
   pre {
