@@ -12,11 +12,14 @@
   font-size: 13px;
 }
 
+html {
+  background-color: #141516; 
+}
+
 body {
   margin: 0 auto;
   max-width: 600px;
   height: 100%;
-  background-color: #141516; 
 }
 
 header { 
