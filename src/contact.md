@@ -1,11 +1,11 @@
 ---
 title: Contact
 layout: layouts/page.html
-summary: How and where to reach me.
+summary: How and where to reach/follow me.
 publish: true
 ---
 
-Due to my busy life and priorities, I prefer asynchronous communication. You can reach me via the following means:
+Due to my busy life and priorities, I prefer asynchronous communication. You can reach/follow me via the following means:
 
 - **Email**: [mijndert@mijndertstuij.nl](mailto:mijndert@mijndertstuij.nl)
 - **RSS feed**: [mijndertstuij.nl/feed.xml](/feed.xml)
