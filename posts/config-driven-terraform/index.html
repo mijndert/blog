@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/base.css" />
-    <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap')</style>
-    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml" />
-    <title>Config-driven Terraform</title>
-    <meta name="description" content="Some improvements in Terraform 1.7: Config-driven Remove and Import block for_each." />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-  </head>
-  <body>
-    <header>
-  <a class="muted" href="/">Mijndert Stuij</a>
-</header>
-    <main>
-      
-<h1>Config-driven Terraform</h1>
-<p class="muted">2024.01.18</p>
-<article><p>Some time ago I wrote about <a href="https://mijndertstuij.nl/posts/terraform-import-blocks/">config-driven import</a> which became available in Terraform 1.5. Import blocks are a way to import existing resources into the statefile, which is useful when you have a bunch of infrastructure that was created manually. Yesterday <a href="https://www.hashicorp.com/blog/terraform-1-7-adds-test-mocking-and-config-driven-remove">Terraform 1.7 was released</a> that extends this functionality with a <code>for_each</code> argument.</p>
-<blockquote>
-<p>Terraform 1.7 also includes an enhancement for config-driven import: the ability to expand import blocks using for_each loops. Previously you could target a particular instance of a resource in the to attribute of an import block, but you had to write a separate import block for each instance.</p>
-</blockquote>
-<p>Expanding on my previous blogpost about Import blocks, here's a quick example of how to use the new <code>for_each</code> argument on a list to import multiple Digitalocean Spaces buckets at once.</p>
-<pre><code>terraform {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/base.css"><style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap')</style><link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml"><title>Config-driven Terraform</title><meta name="description" content="Some improvements in Terraform 1.7: Config-driven Remove and Import block for_each."><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"><link rel="manifest" href="favicon/site.webmanifest"></head><body><header><a class="muted" href="/">Mijndert Stuij</a></header><main><h1>Config-driven Terraform</h1><p class="muted">2024.01.18</p><article><p>Some time ago I wrote about <a href="https://mijndertstuij.nl/posts/terraform-import-blocks/">config-driven import</a> which became available in Terraform 1.5. Import blocks are a way to import existing resources into the statefile, which is useful when you have a bunch of infrastructure that was created manually. Yesterday <a href="https://www.hashicorp.com/blog/terraform-1-7-adds-test-mocking-and-config-driven-remove">Terraform 1.7 was released</a> that extends this functionality with a <code>for_each</code> argument.</p><blockquote><p>Terraform 1.7 also includes an enhancement for config-driven import: the ability to expand import blocks using for_each loops. Previously you could target a particular instance of a resource in the to attribute of an import block, but you had to write a separate import block for each instance.</p></blockquote><p>Expanding on my previous blogpost about Import blocks, here's a quick example of how to use the new <code>for_each</code> argument on a list to import multiple Digitalocean Spaces buckets at once.</p><pre><code>terraform {
   required_providers {
     digitalocean = {
       source = &quot;digitalocean/digitalocean&quot;
@@ -52,12 +24,7 @@ resource &quot;digitalocean_spaces_bucket&quot; &quot;mybucket&quot; {
   for_each = local.buckets
   bucket   = each.value
 }
-</code></pre>
-<p>Another great addition in Terraform 1.7 are Remove blocks. There are times when you need to remove a resource from your Statefile, optionally without removing the underlying resource itself. Of course there are CLI commands to accomplish this, but having it available as a Remove block means we can run <code>terraform apply</code> and check the changes before executing them.</p>
-<blockquote>
-<p>As an alternative to the terraform state rm command, the removed block addresses all of these challenges. Just like the moved and import blocks, state removal can now be performed in bulk and is plannable, so you can be confident that the operation will have the intended effect before modifying state.</p>
-</blockquote>
-<pre><code>removed {
+</code></pre><p>Another great addition in Terraform 1.7 are Remove blocks. There are times when you need to remove a resource from your Statefile, optionally without removing the underlying resource itself. Of course there are CLI commands to accomplish this, but having it available as a Remove block means we can run <code>terraform apply</code> and check the changes before executing them.</p><blockquote><p>As an alternative to the terraform state rm command, the removed block addresses all of these challenges. Just like the moved and import blocks, state removal can now be performed in bulk and is plannable, so you can be confident that the operation will have the intended effect before modifying state.</p></blockquote><pre><code>removed {
   from = digitalocean_spaces_bucket.mybucket
 
   # Instruct Terraform not to destroy the underlying resource
@@ -65,15 +32,4 @@ resource &quot;digitalocean_spaces_bucket&quot; &quot;mybucket&quot; {
     destroy = false
   }
 }
-</code></pre>
-<p>Both of these additions are great improvements to Terraform, and I'm looking forward to using them in my projects. They will ensure I'm much more confident in working with the Statefile which has always been a bit daunting.</p>
-</article>
-
-    </main>
-    <footer>
-  <hr>
-  <p class="muted">Receive updates</p>
-  <p>Follow me via <a href="/feed.xml">RSS</a>, <a rel="me" href="https://fosstodon.org/@mijndert">Mastodon</a>, or <a href="/contact">other options</a>.</p>
-</footer>
-  </body>
-</html>
+</code></pre><p>Both of these additions are great improvements to Terraform, and I'm looking forward to using them in my projects. They will ensure I'm much more confident in working with the Statefile which has always been a bit daunting.</p></article></main><footer><hr><p class="muted">Receive updates</p><p>Follow me via <a href="/feed.xml">RSS</a>, <a rel="me" href="https://fosstodon.org/@mijndert">Mastodon</a>, or <a href="/contact">other options</a>.</p></footer></body></html>

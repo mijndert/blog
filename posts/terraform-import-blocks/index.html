@@ -1,41 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/base.css" />
-    <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap')</style>
-    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml" />
-    <title>Saving time using Terraform import blocks</title>
-    <meta name="description" content="Stop creating resources yourself, use import blocks instead. A new feature in Terraform 1.5." />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-  </head>
-  <body>
-    <header>
-  <a class="muted" href="/">Mijndert Stuij</a>
-</header>
-    <main>
-      
-<h1>Saving time using Terraform import blocks</h1>
-<p class="muted">2023.06.15</p>
-<article><p>Anyone who uses Terraform must be familiar with the <code>import</code> command; it allows you to gather existing resources and put them into your statefile. This way, existing resources which were previously not created using Terraform are now under management of your infrastructure as code.</p>
-<p>You can import your resources in the terminal, but you still have to write the code for the resources you import. With Terraform version 1.5 there's a better solution: import blocks.</p>
-<p>Let's take a DigitalOcean Spaces bucket as an example here.</p>
-<p>Before <a href="https://www.hashicorp.com/blog/terraform-1-5-brings-config-driven-import-and-checks">Terraform 1.5</a> you first had to import the resource into your statefile:</p>
-<pre><code>terraform import digitalocean_spaces_bucket.mybucket `region`,`name`
-</code></pre>
-<p>Now, using a bit of <code>terraform plan</code> trial and error, you could write the code for the resource until no changes were found anymore.</p>
-<pre><code>resource &quot;digitalocean_spaces_bucket&quot; &quot;mybucket&quot; {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/base.css"><style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap')</style><link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml"><title>Saving time using Terraform import blocks</title><meta name="description" content="Stop creating resources yourself, use import blocks instead. A new feature in Terraform 1.5."><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"><link rel="manifest" href="favicon/site.webmanifest"></head><body><header><a class="muted" href="/">Mijndert Stuij</a></header><main><h1>Saving time using Terraform import blocks</h1><p class="muted">2023.06.15</p><article><p>Anyone who uses Terraform must be familiar with the <code>import</code> command; it allows you to gather existing resources and put them into your statefile. This way, existing resources which were previously not created using Terraform are now under management of your infrastructure as code.</p><p>You can import your resources in the terminal, but you still have to write the code for the resources you import. With Terraform version 1.5 there's a better solution: import blocks.</p><p>Let's take a DigitalOcean Spaces bucket as an example here.</p><p>Before <a href="https://www.hashicorp.com/blog/terraform-1-5-brings-config-driven-import-and-checks">Terraform 1.5</a> you first had to import the resource into your statefile:</p><pre><code>terraform import digitalocean_spaces_bucket.mybucket `region`,`name`
+</code></pre><p>Now, using a bit of <code>terraform plan</code> trial and error, you could write the code for the resource until no changes were found anymore.</p><pre><code>resource &quot;digitalocean_spaces_bucket&quot; &quot;mybucket&quot; {
   name   = &quot;mybucket&quot;
   region = &quot;ams3&quot;
 }
-</code></pre>
-<p>Using <a href="https://developer.hashicorp.com/terraform/tutorials/state/state-import">import blocks</a> you can basically skip the last step for the most part. You can now import resources using code, and have a basic skeleton of the resource code be created for you.</p>
-<p>First we get the DigitalOcean Terraform provider and define our first import block.</p>
-<pre><code>terraform {
+</code></pre><p>Using <a href="https://developer.hashicorp.com/terraform/tutorials/state/state-import">import blocks</a> you can basically skip the last step for the most part. You can now import resources using code, and have a basic skeleton of the resource code be created for you.</p><p>First we get the DigitalOcean Terraform provider and define our first import block.</p><pre><code>terraform {
   required_providers {
     digitalocean = {
       source = &quot;digitalocean/digitalocean&quot;
@@ -47,13 +15,8 @@ import {
   id = &quot;ams3,mybucket&quot;
   to = digitalocean_spaces_bucket.mybucket
 }
-</code></pre>
-<p>Using <code>terraform plan</code> with the <code>-generate-config-out</code> flag, Terraform will generate configuration for the resource and outputs the plan.</p>
-<pre><code>terraform plan -generate-config-out=generated.tf
-</code></pre>
-<p>Of course, the code it generates isn't perfect, but it's a very good starting point. Now, finally, we don't have to go back and forth between our code and <code>terraform plan</code> to guess the arguments of the resource. You can go ahead and take the output and put it in the correct place in your own codebase.</p>
-<p>The above import block will generate something like this:</p>
-<pre><code>resource &quot;digitalocean_spaces_bucket&quot; &quot;mybucket&quot; {
+</code></pre><p>Using <code>terraform plan</code> with the <code>-generate-config-out</code> flag, Terraform will generate configuration for the resource and outputs the plan.</p><pre><code>terraform plan -generate-config-out=generated.tf
+</code></pre><p>Of course, the code it generates isn't perfect, but it's a very good starting point. Now, finally, we don't have to go back and forth between our code and <code>terraform plan</code> to guess the arguments of the resource. You can go ahead and take the output and put it in the correct place in your own codebase.</p><p>The above import block will generate something like this:</p><pre><code>resource &quot;digitalocean_spaces_bucket&quot; &quot;mybucket&quot; {
   acl           = null
   force_destroy = null
   name          = &quot;mybucket&quot;
@@ -75,14 +38,4 @@ import {
     enabled = false
   }
 }
-</code></pre>
-</article>
-
-    </main>
-    <footer>
-  <hr>
-  <p class="muted">Receive updates</p>
-  <p>Follow me via <a href="/feed.xml">RSS</a>, <a rel="me" href="https://fosstodon.org/@mijndert">Mastodon</a>, or <a href="/contact">other options</a>.</p>
-</footer>
-  </body>
-</html>
+</code></pre></article></main><footer><hr><p class="muted">Receive updates</p><p>Follow me via <a href="/feed.xml">RSS</a>, <a rel="me" href="https://fosstodon.org/@mijndert">Mastodon</a>, or <a href="/contact">other options</a>.</p></footer></body></html>
