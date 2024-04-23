@@ -1,4 +1,33 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/base.css"><style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap')</style><link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml"><title>Reusable Terraform modules using Dynamic blocks</title><meta name="description" content="Stop repeating yourself and use Dynamic blocks in your Terraform resources"><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"><link rel="manifest" href="favicon/site.webmanifest"></head><body><header><a class="muted" href="/">Mijndert Stuij</a></header><main><h1>Reusable Terraform modules using Dynamic blocks</h1><p class="muted">2022.12.08</p><article><p>In the realm of Amazon Web Services there's this thing called a <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-aws-environment/understanding-landing-zones.html">Landing Zone</a>, a set of infrastructure as code modules built to deploy new environments faster. You can build a Landing Zone using <a href="https://aws.amazon.com/cloudformation/">CloudFormation</a>, <a href="https://aws.amazon.com/cdk/">CDK</a>, <a href="https://www.terraform.io">Terraform</a>, or any other tool you like. The point is that you have a starting point for as many use-cases as possible. For a Landing Zone to work you have to write reusable generalized code that could work for any client and any combination of infrastructure.</p><p>While trying to create a Landing Zone in Terraform I found that it's very hard to make them follow the <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY principle</a> (Don't Repeat Yourself). After a while the code started to be really hard to maintain. But then I found Dynamic blocks.</p><p>Terraform provides <a href="https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks">Dynamic blocks</a> as a way to create repeatable nested code within a resource, it's kind of similar to a for loop but for stuff within a resource. But Dynamic blocks also allow you to conditionally create certain properties on a resource.</p><p>As an example, let's take the <a href="https://github.com/toot-community/platform">platform code for toot.community</a>.</p><p>Here I wanted to create multiple <a href="https://www.digitalocean.com/products/spaces">Digitalocean Spaces</a>, one for storing user files, one for backups, one for Terraform state management, etc. On some of these Spaces I want to create a lifecycle rule to automatically delete files older than a given threshold. But of course I don't want to apply that same lifecycle policy to everything; it would be a stupid idea to delete Terraform statefiles after all. At the same time, I really want to define the Digitalocean Spaces resource only once, for DRY reasons.</p><p>In this example you see a Dynamic block for the property <code>lifecycle_rule</code>. There's a <code>for_each</code> that needs the variable <code>expiration_enabled</code> to be set to <code>true</code>, else the <code>for_each</code> loop will be empty and the property will not be created.</p><pre><code>resource &quot;digitalocean_spaces_bucket&quot; &quot;this&quot; {
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap')</style>
+    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml" />
+    <title>Reusable Terraform modules using Dynamic blocks</title>
+    <meta name="description" content="Stop repeating yourself and use Dynamic blocks in your Terraform resources" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+  <body>
+    <header>
+  <a class="muted" href="/">Mijndert Stuij</a>
+</header>
+    <main>
+      
+<h1>Reusable Terraform modules using Dynamic blocks</h1>
+<p class="muted">2022.12.08</p>
+<article><p>In the realm of Amazon Web Services there's this thing called a <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-aws-environment/understanding-landing-zones.html">Landing Zone</a>, a set of infrastructure as code modules built to deploy new environments faster. You can build a Landing Zone using <a href="https://aws.amazon.com/cloudformation/">CloudFormation</a>, <a href="https://aws.amazon.com/cdk/">CDK</a>, <a href="https://www.terraform.io">Terraform</a>, or any other tool you like. The point is that you have a starting point for as many use-cases as possible. For a Landing Zone to work you have to write reusable generalized code that could work for any client and any combination of infrastructure.</p>
+<p>While trying to create a Landing Zone in Terraform I found that it's very hard to make them follow the <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY principle</a> (Don't Repeat Yourself). After a while the code started to be really hard to maintain. But then I found Dynamic blocks.</p>
+<p>Terraform provides <a href="https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks">Dynamic blocks</a> as a way to create repeatable nested code within a resource, it's kind of similar to a for loop but for stuff within a resource. But Dynamic blocks also allow you to conditionally create certain properties on a resource.</p>
+<p>As an example, let's take the <a href="https://github.com/toot-community/platform">platform code for toot.community</a>.</p>
+<p>Here I wanted to create multiple <a href="https://www.digitalocean.com/products/spaces">Digitalocean Spaces</a>, one for storing user files, one for backups, one for Terraform state management, etc. On some of these Spaces I want to create a lifecycle rule to automatically delete files older than a given threshold. But of course I don't want to apply that same lifecycle policy to everything; it would be a stupid idea to delete Terraform statefiles after all. At the same time, I really want to define the Digitalocean Spaces resource only once, for DRY reasons.</p>
+<p>In this example you see a Dynamic block for the property <code>lifecycle_rule</code>. There's a <code>for_each</code> that needs the variable <code>expiration_enabled</code> to be set to <code>true</code>, else the <code>for_each</code> loop will be empty and the property will not be created.</p>
+<pre><code>resource &quot;digitalocean_spaces_bucket&quot; &quot;this&quot; {
   name   = var.spaces_name
   region = var.region
   acl    = &quot;private&quot;
@@ -17,4 +46,17 @@
     }
   }
 }
-</code></pre><p>Now if I don't specify the variable <code>expiration_enabled</code> the <code>lifecycle_rule</code> property isn't created and I just get a standard <code>digitalocean_spaces_bucket</code>. I don't have to repeat myself anymore and it makes my module a lot cleaner.</p><p>A word of warning though, overuse of Dynamic blocks will eventually lead to code being unreadable and not very easy to understand. Only use Dynamic blocks if there's no other way to avoid repeating the same code. If you have to repeat a few lines once or twice, stop and think if you really need a Dynamic block or if you can live with it in that instance.</p><p>Speaking of Terraform modules, that's something I want to talk about in another blog post as well. A question I get asked a lot is &quot;how do I organize my environments and modules?&quot;. More on that later. If you want to get notified of new posts you can import the <a href="https://mijndertstuij.nl/feed.xml">RSS feed</a> for this website in your reader.</p></article></main><footer><hr><p class="muted">Receive updates</p><p>Follow me via <a href="/feed.xml">RSS</a>, <a rel="me" href="https://fosstodon.org/@mijndert">Mastodon</a>, or <a href="/contact">other options</a>.</p></footer></body></html>
+</code></pre>
+<p>Now if I don't specify the variable <code>expiration_enabled</code> the <code>lifecycle_rule</code> property isn't created and I just get a standard <code>digitalocean_spaces_bucket</code>. I don't have to repeat myself anymore and it makes my module a lot cleaner.</p>
+<p>A word of warning though, overuse of Dynamic blocks will eventually lead to code being unreadable and not very easy to understand. Only use Dynamic blocks if there's no other way to avoid repeating the same code. If you have to repeat a few lines once or twice, stop and think if you really need a Dynamic block or if you can live with it in that instance.</p>
+<p>Speaking of Terraform modules, that's something I want to talk about in another blog post as well. A question I get asked a lot is &quot;how do I organize my environments and modules?&quot;. More on that later. If you want to get notified of new posts you can import the <a href="https://mijndertstuij.nl/feed.xml">RSS feed</a> for this website in your reader.</p>
+</article>
+
+    </main>
+    <footer>
+  <hr>
+  <p class="muted">Receive updates</p>
+  <p>Follow me via <a href="/feed.xml">RSS</a>, <a rel="me" href="https://fosstodon.org/@mijndert">Mastodon</a>, or <a href="/contact">other options</a>.</p>
+</footer>
+  </body>
+</html>

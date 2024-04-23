@@ -1,16 +1,68 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/css/base.css"><style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap')</style><link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml"><title>My Tmux setup</title><meta name="description" content="A quick Tmux tutorial."><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png"><link rel="manifest" href="favicon/site.webmanifest"></head><body><header><a class="muted" href="/">Mijndert Stuij</a></header><main><h1>My Tmux setup</h1><p class="muted">2020.04.16</p><article><p><a href="https://github.com/tmux/tmux/wiki">Tmux</a> is a terminal multiplexer. It lets you switch between several programs through windows and panes, detach your session and reattach to it on a different computer. I reckon it's mostly used on servers where people have long running jobs and such running in a tmux session.</p><p>The learning curve is what always withheld me from just diving in and giving Tmux a chance to get integrated into my workflow. I wanted to share some of the small changes I made to <a href="https://github.com/mijndert/dotfiles">my Tmux configuration</a> to make life a little easier.</p><p>I now work in Tmux fulltime and I'm loving everything about it. Mostly because Tmux can be configured just the way I like it and because I can have this exact same configuration on all of my computers and servers.</p><p>And when I'm stuck there's always the <a href="https://tmuxcheatsheet.com/">Tmux cheat sheet</a>.</p><h2>Meta key</h2><p>One thing I struggled with is getting my meta key right. The meta key is the prefix you use before issuing other commands that control Tmux. Commands such as creating and closing windows, splitting panes, moving between panes, etc. I finally landed on <code>ctrl + a</code> for my meta key, but you can pick anything you like really.</p><pre><code>unbind C-b
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap')</style>
+    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml" />
+    <title>My Tmux setup</title>
+    <meta name="description" content="A quick Tmux tutorial." />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+  <body>
+    <header>
+  <a class="muted" href="/">Mijndert Stuij</a>
+</header>
+    <main>
+      
+<h1>My Tmux setup</h1>
+<p class="muted">2020.04.16</p>
+<article><p><a href="https://github.com/tmux/tmux/wiki">Tmux</a> is a terminal multiplexer. It lets you switch between several programs through windows and panes, detach your session and reattach to it on a different computer. I reckon it's mostly used on servers where people have long running jobs and such running in a tmux session.</p>
+<p>The learning curve is what always withheld me from just diving in and giving Tmux a chance to get integrated into my workflow. I wanted to share some of the small changes I made to <a href="https://github.com/mijndert/dotfiles">my Tmux configuration</a> to make life a little easier.</p>
+<!--more-->
+<p>I now work in Tmux fulltime and I'm loving everything about it. Mostly because Tmux can be configured just the way I like it and because I can have this exact same configuration on all of my computers and servers.</p>
+<p>And when I'm stuck there's always the <a href="https://tmuxcheatsheet.com/">Tmux cheat sheet</a>.</p>
+<h2>Meta key</h2>
+<p>One thing I struggled with is getting my meta key right. The meta key is the prefix you use before issuing other commands that control Tmux. Commands such as creating and closing windows, splitting panes, moving between panes, etc. I finally landed on <code>ctrl + a</code> for my meta key, but you can pick anything you like really.</p>
+<pre><code>unbind C-b
 set -g prefix C-a
 bind-key C-a send-prefix
-</code></pre><h2>The status bar</h2><p>By default the Tmux status bar is green. This hurt my eyes so I figured out a way to change its colors a little bit. You can put all kinds of stuff in the status bar like your load averages, battery status, and much more. I like to keep it clean though.</p><pre><code>set -g status-bg '#666666'
+</code></pre>
+<h2>The status bar</h2>
+<p>By default the Tmux status bar is green. This hurt my eyes so I figured out a way to change its colors a little bit. You can put all kinds of stuff in the status bar like your load averages, battery status, and much more. I like to keep it clean though.</p>
+<pre><code>set -g status-bg '#666666'
 set -g status-fg 'white'
 set -g status-left ''
 set -g status-right ''
 setw -g window-status-current-style 'fg=white bg=colour19'
-</code></pre><h2>Count from 1</h2><p>The status bar shows your currently open windows. One minor annoyance I faced was that it counted from zero and wouldn't rearrange its count as I closed windows. I change that behaviour so it's much easier to switch between windows using <code>ctrl + a</code> and the number of the window that I want to switch to.</p><pre><code>set -g base-index 1
+</code></pre>
+<h2>Count from 1</h2>
+<p>The status bar shows your currently open windows. One minor annoyance I faced was that it counted from zero and wouldn't rearrange its count as I closed windows. I change that behaviour so it's much easier to switch between windows using <code>ctrl + a</code> and the number of the window that I want to switch to.</p>
+<pre><code>set -g base-index 1
 set -g renumber-windows on
-</code></pre><h2>Start new windows in the same path</h2><p>When I open a new window I usually want to start off in the same directory as the window I came from. Or at least close to it.</p><pre><code>bind c new-window -c &quot;#{pane_current_path}&quot;
-</code></pre><h2>Easier window splits</h2><p>How to split a window into two different panes has quite the learning curve as, for me, the defaults were a little hard to work with. Now I can split windows using the <code>|</code> and <code>-</code> keys.</p><pre><code>unbind '&quot;'
+</code></pre>
+<h2>Start new windows in the same path</h2>
+<p>When I open a new window I usually want to start off in the same directory as the window I came from. Or at least close to it.</p>
+<pre><code>bind c new-window -c &quot;#{pane_current_path}&quot;
+</code></pre>
+<h2>Easier window splits</h2>
+<p>How to split a window into two different panes has quite the learning curve as, for me, the defaults were a little hard to work with. Now I can split windows using the <code>|</code> and <code>-</code> keys.</p>
+<pre><code>unbind '&quot;'
 unbind %
 bind | split-window -h
 bind - split-window -v
-</code></pre></article></main><footer><hr><p class="muted">Receive updates</p><p>Follow me via <a href="/feed.xml">RSS</a>, <a rel="me" href="https://fosstodon.org/@mijndert">Mastodon</a>, or <a href="/contact">other options</a>.</p></footer></body></html>
+</code></pre>
+</article>
+
+    </main>
+    <footer>
+  <hr>
+  <p class="muted">Receive updates</p>
+  <p>Follow me via <a href="/feed.xml">RSS</a>, <a rel="me" href="https://fosstodon.org/@mijndert">Mastodon</a>, or <a href="/contact">other options</a>.</p>
+</footer>
+  </body>
+</html>
