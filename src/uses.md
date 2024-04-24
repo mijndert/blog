@@ -14,20 +14,19 @@ publish: true
 - **Magic Keyboard** – Keyboard nerds will winch at this, but I think the Magic Keyboard is the best keyboard ever. I like keyboards with low travel and this one is perfect in every single way for me.
 - **AirPods Max** (Space Grey) – I use these every single day for hours on end for listening to music and taking meetings. They're the best headphones I've ever had.
 - **Sonos One** – I use this speaker for some background noise while working. It's been rock solid over the years and I bet I can get another few years out of it without any issues whatsoever.
-- **Kobo Aura h2O Edition 2** – The older I get, the more I gravitate towards devices that do one thing well, preferable with almost endless battery life. An e-reader is a great example of that. 
+- **Kobo Aura h2O Edition 2** – The older I get, the more I gravitate towards devices that do one thing well, preferable with almost endless battery life. An e-reader is a great example of that.
 - **Garmin Forerunner 255S** – I don't technically use this item for work either, but I have to include it because it keeps me sane as a running companion. I recently bought the 255S even though the 265S was out as well, again to save some money. This model has 99% of the features, and I only paid €280,- for it.
 
 ## Software
 
-- **Apple Notes, Calendar, Mail** – The defaults are good enough for almost everyone.
-- **Firefox** – I use Firefox as my main browser. I like the focus on privacy compared to other offerings, and I refuse to use Chromium-based browsers. 
+- **Apple Notes, Calendar, Mail, Reminders** – The defaults are good enough for almost everyone.
+- **Safari** - Again, defaults are great. Safari has Tab Groups which I use quite extensively.
 - **Alacritty** – Together with tmux, this is just a great terminal emulator with a portable config file.
-- **Visual Studio Code** – A good, extensible editor that I use for all my coding needs.
-- **[NetNewsWire](https://netnewswire.com/)** – My RSS reader of choice. It's a native Mac app that syncs beautifully with its iOS counterpart.
+- **Zed** - I switched to Zed from vscode because it's way faster, has great defaults so I don't have to mess around with settings too much, and just kind of gets out of the way.
+- **Obsidian** - My second brain.
+- **NetNewsWire** – My RSS reader of choice. It's a native Mac app that syncs beautifully with its iOS counterpart.
 - **1Password** – I've been a customer for years and I'm very happy with the service.
-- **Things** – Not sure I use all the features, but I love the design so I happily sponsor the company.
-- **[Rectangle](https://rectangleapp.com)** – A great tiling window manager for macOS. Keeps my windows arranged nicely. Code editor to the left, terminal to the right, all evenly spaced.
-- **[Scroll Reverser](https://pilotmoon.com/scrollreverser/)** – Makes switching between trackpad (natural scrolling) and trackball (non-natural scrolling) a breeze.
-- **[Reflex](https://stuntsoftware.com/reflex/)** - macOS sometimes hijacks the media buttons, this little app prevents that.
-- **[K9S](https://k9scli.io/)** – A great terminal-based UI for Kubernetes.
-- **[Terraform](https://www.terraform.io/)** – I use Terraform to manage all my cloud infrastructure.
+- **Rectangle** – A great tiling window manager for macOS. Keeps my windows arranged nicely. Code editor to the left, terminal to the right, all evenly spaced.
+- **Scroll Reverser** – Makes switching between trackpad (natural scrolling) and trackball (non-natural scrolling) a breeze.
+- **Reflex** - macOS sometimes hijacks the media buttons, this little app prevents that.
+- **Terraform** – I use Terraform to manage all my cloud infrastructure.
