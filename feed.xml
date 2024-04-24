@@ -363,7 +363,7 @@ set ai                              # automatic indentation
 set number                          # enable line numbers
 set hlsearch                        # highlight search matches
 set ruler                           # show current row and column position
-set backspace=2                     # fix backspace behaviour 
+set backspace=2                     # fix backspace behaviour
 set wildmenu                        # enable autocompletion
 set path=$PWD/**                    # set search path
 set wildmode=longest:list,full      # set autocompletion mode
@@ -413,7 +413,7 @@ colorscheme nord                    # set colorscheme to nord
 &lt;p&gt;Now we can create a Service which is a collection of backend servers that Fargate knows how to register itself into.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;DiscoveryService:
   Type: AWS::ServiceDiscovery::Service
-  Properties: 
+  Properties:
     Description: Discovery Service for my-backend-service
     DnsConfig:
       RoutingPolicy: MULTIVALUE
@@ -422,7 +422,7 @@ colorscheme nord                    # set colorscheme to nord
           Type: A
         - TTL: 0
           Type: SRV
-    HealthCheckCustomConfig: 
+    HealthCheckCustomConfig:
       FailureThreshold: 1
     Name: app
     NamespaceId: !Ref PrivateNamespace
