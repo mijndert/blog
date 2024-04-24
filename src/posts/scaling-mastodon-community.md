@@ -2,7 +2,6 @@
 title: Scaling a Mastodon community to 27k people
 date: 2022-12-04
 summary: Scaling a Mastodon community to 27k people using Kubernetes and Digitalocean.
-publish: true
 ---
 
 Tomorrow marks the first full month of my move to [toot.community](https://toot.community/), a Mastodon instance initially set up by my friend [Jorijn](https://jorijn.com/). My move to Mastodon wasn't motivated by what's going at Twitter right now, but rather the technical challenges of scaling the shit out of it. In the first week we welcomed thousands of people and we certainly had to put out a fire or two, but most of the time we had the time to focus on optimization.

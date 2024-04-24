@@ -2,14 +2,13 @@
 title: Responsive images on a static Hugo website
 date: 2022-12-06
 summary: Serving optimized responsive images using Hugo
-publish: true
 ---
 
 For years and years I've been using [Jekyll](https://jekyllrb.com/) as my static site generator of choice, mostly because I like their templating engine and I'm a fan of Ruby as a programming language. I've been experimenting with Hugo as well, but it never really clicked for me. Well, until I found [the perfect theme](https://github.com/mavidser/hugo-rocinante) for my needs. The same theme is now used here and on the [toot.community blog](https://blog.toot.community/) so I wanted to set mine apart a little bit by adding banner images on some posts. Downloading an image from Unsplash and manually resizing it wasn't an option though - I need things to be frictionless when I want to add a blog entry.
 
 I started looking for ways to automatically generate multiple sizes of an image and came across a lot of different solutions. Most didn't work anymore or were very convoluted. That's to say, until I found [Bryce Wray's entry](https://www.brycewray.com/posts/2022/06/responsive-optimized-images-hugo/).
 
-I quickly adapted his code to my needs and had it working on no-time, you can see it in action [right here](/posts/scaling-mastodon-community/). 
+I quickly adapted his code to my needs and had it working on no-time, you can see it in action [right here](/posts/scaling-mastodon-community/).
 
 Here's how I did it.
 

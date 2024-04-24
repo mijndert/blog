@@ -2,7 +2,6 @@
 title: My Tmux setup
 date: 2020-04-16
 summary: A quick Tmux tutorial.
-publish: true
 ---
 
 [Tmux](https://github.com/tmux/tmux/wiki) is a terminal multiplexer. It lets you switch between several programs through windows and panes, detach your session and reattach to it on a different computer. I reckon it's mostly used on servers where people have long running jobs and such running in a tmux session.
@@ -11,7 +10,7 @@ The learning curve is what always withheld me from just diving in and giving Tmu
 
 <!--more-->
 
-I now work in Tmux fulltime and I'm loving everything about it. Mostly because Tmux can be configured just the way I like it and because I can have this exact same configuration on all of my computers and servers. 
+I now work in Tmux fulltime and I'm loving everything about it. Mostly because Tmux can be configured just the way I like it and because I can have this exact same configuration on all of my computers and servers.
 
 And when I'm stuck there's always the [Tmux cheat sheet](https://tmuxcheatsheet.com/).
 

@@ -2,7 +2,6 @@
 title: How I do to-dos
 date: 2024-01-11
 summary: I got rid of Things for a more simple approach.
-publish: true
 ---
 
 I tried every single to do list app under the sun – the one I stuck with the longest is Things, an awesome native app on Apple platforms. But the tool at hand isn't what I want to talk about today. The app doesn't matter, it's just that all of those apps try to push you towards a certain way of doing things. And using an app like Things, I'm pretty much stuck in the Apple ecosystem, unless I meticulously export all my data.

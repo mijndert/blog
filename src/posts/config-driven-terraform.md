@@ -2,7 +2,6 @@
 title: Config-driven Terraform
 date: 2024-01-18
 summary: "Some improvements in Terraform 1.7: Config-driven Remove and Import block for_each."
-publish: true
 ---
 
 Some time ago I wrote about [config-driven import](https://mijndertstuij.nl/posts/terraform-import-blocks/) which became available in Terraform 1.5. Import blocks are a way to import existing resources into the statefile, which is useful when you have a bunch of infrastructure that was created manually. Yesterday [Terraform 1.7 was released](https://www.hashicorp.com/blog/terraform-1-7-adds-test-mocking-and-config-driven-remove) that extends this functionality with a `for_each` argument.
@@ -42,7 +41,7 @@ resource "digitalocean_spaces_bucket" "mybucket" {
 
 Another great addition in Terraform 1.7 are Remove blocks. There are times when you need to remove a resource from your Statefile, optionally without removing the underlying resource itself. Of course there are CLI commands to accomplish this, but having it available as a Remove block means we can run `terraform apply` and check the changes before executing them.
 
-> As an alternative to the terraform state rm command, the removed block addresses all of these challenges. Just like the moved and import blocks, state removal can now be performed in bulk and is plannable, so you can be confident that the operation will have the intended effect before modifying state. 
+> As an alternative to the terraform state rm command, the removed block addresses all of these challenges. Just like the moved and import blocks, state removal can now be performed in bulk and is plannable, so you can be confident that the operation will have the intended effect before modifying state.
 
 ```
 removed {
@@ -55,4 +54,4 @@ removed {
 }
 ```
 
-Both of these additions are great improvements to Terraform, and I'm looking forward to using them in my projects. They will ensure I'm much more confident in working with the Statefile which has always been a bit daunting. 
+Both of these additions are great improvements to Terraform, and I'm looking forward to using them in my projects. They will ensure I'm much more confident in working with the Statefile which has always been a bit daunting.

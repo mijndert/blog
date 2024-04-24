@@ -2,10 +2,9 @@
 title: Information processing
 date: 2021-02-15
 summary: The apps that I use to keep track of knowledge and todo items.
-publish: true
 ---
 
-Ever since this COVID-19 thing hit I've been working from home non-stop. That's almost a full year of working remotely and being fully in charge of my own productivity. To be honest, I could keep this going forever - I've never been more productive in my life. 
+Ever since this COVID-19 thing hit I've been working from home non-stop. That's almost a full year of working remotely and being fully in charge of my own productivity. To be honest, I could keep this going forever - I've never been more productive in my life.
 
 The last few months have also been perfect to optimize certain aspects of my work, the most important one being information processing. I've been horrible at keeping track of todo items before since I could never make it stick. Due to WFH I had the time to create a system for myself and I've never been more productive, stress-free and happy.
 
@@ -21,7 +20,7 @@ It's nothing novel but this simple action enriches my life with new insights I g
 
 ## Todo items
 
-Many years ago I subscribed to the idea of [Getting Things Done](https://gettingthingsdone.com/), but only a subset of the concept ever stuck with me. I think GTD is way too complicated for a single person with a limited amount of todo items at any given time. Since then, I've been trying just about every todo application, but one that always appealed to me was [Things](https://culturedcode.com/things/). 
+Many years ago I subscribed to the idea of [Getting Things Done](https://gettingthingsdone.com/), but only a subset of the concept ever stuck with me. I think GTD is way too complicated for a single person with a limited amount of todo items at any given time. Since then, I've been trying just about every todo application, but one that always appealed to me was [Things](https://culturedcode.com/things/).
 
 Things is only as powerful as you want it to be since it has [many features](https://culturedcode.com/things/guide/) I never really used before: headings, tags, sub-items, etcetera. I basically used Things as a glorified list of todo's without any context apart from projects.
 
@@ -49,4 +48,4 @@ The tool I've chosen to create my Digital Brain is [Obsidian](https://obsidian.m
 
 At first it's quite time consuming to jot down every little piece of knowledge I can think of. But in the end I hope it'll lessen the amount of Google searches for trivial stuff. Obsidian allows me to very quickly search the contents of my Digital Brain so that's awesome as well.
 
-Another reason I'm building this is because I want to have this as my part of my legacy - a small window into what it was like when I was alive. I hope it's going to be one of those [time capsules](https://en.wikipedia.org/wiki/Time_capsule) they put in the ground to be recovered a hundred years from now. 
+Another reason I'm building this is because I want to have this as my part of my legacy - a small window into what it was like when I was alive. I hope it's going to be one of those [time capsules](https://en.wikipedia.org/wiki/Time_capsule) they put in the ground to be recovered a hundred years from now.

@@ -2,7 +2,6 @@
 title: A minimalist take on Vim
 date: 2022-04-15
 summary: How I use Vim without any (well, almost) plugins.
-publish: true
 ---
 
 I've been a Vim user for as long as I can remember, but in the last few years VS Code kind of took over as the defacto choice for us DevOps engineers. VS Code is great at offering all kinds of plugins that should, in theory, make life a little easier. It's funny actually, because plugins are the sole reason I never quite got into using Vim fulltime. To me, plugins in Vim just added to the complexity of remembering all of the keyboard shortcuts and quite frankly, the many ways of installing a plugin didn't help me make sense of things either.
@@ -39,7 +38,7 @@ set ai                              # automatic indentation
 set number                          # enable line numbers
 set hlsearch                        # highlight search matches
 set ruler                           # show current row and column position
-set backspace=2                     # fix backspace behaviour 
+set backspace=2                     # fix backspace behaviour
 set wildmenu                        # enable autocompletion
 set path=$PWD/**                    # set search path
 set wildmode=longest:list,full      # set autocompletion mode

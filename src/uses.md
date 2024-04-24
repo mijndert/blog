@@ -2,7 +2,6 @@
 title: Uses
 layout: layouts/page.html
 summary: A list of hardware and software I use on a daily basis.
-publish: true
 ---
 
 ## Hardware

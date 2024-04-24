@@ -2,7 +2,6 @@
 title: Default apps 2024
 date: 2024-02-19
 summary: Joining the bandwagon of sharing my default apps for 2024.
-publish: true
 ---
 
 Here's a fun new thing in the blogosphere: sharing your default apps. I saw a few people I follow do it and borrowed the format, as one does. A ton more pages like this to look at are catalogued by [Robb Knight](https://defaults.rknight.me/).

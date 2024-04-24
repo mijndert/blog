@@ -2,7 +2,6 @@
 title: 40 questions
 date: 2022-03-18
 summary: 40 questions to ask yourself every day.
-publish: true
 ---
 
 The end of the year or your own birthday are both for reflection on the days and months that came before. We try to look back on all the things that went right and the things that maybe could've been better. The highs and the lows, the moments where we experienced stress, where we felt love. We try to make new resolutions for the year ahead. But sometimes we fail to notice trends as the years go by quicker and quicker.
