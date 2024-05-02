@@ -20,12 +20,14 @@ summary: A list of hardware and software I use on a daily basis.
 
 - **Apple Notes, Calendar, Mail, Reminders** – The defaults are good enough for almost everyone.
 - **Safari** - Again, defaults are great. Safari has Tab Groups which I use quite extensively.
-- **Alacritty** – Together with tmux, this is just a great terminal emulator with a portable config file.
-- **Zed** - I switched to Zed from vscode because it's way faster, has great defaults so I don't have to mess around with settings too much, and just kind of gets out of the way.
-- **Obsidian** - My second brain.
+- **VS Code** – Simply the best code editor with all of its plugins.
+- **iTerm2** – I recently switched back to iTerm2 after a few years of using Alacritty + Tmux. I'm on a simplify and reduce journey.
+- **Obsidian** - My second brain. Even though I struggle to use it from time to time, so I'm always looking for a replacement.
 - **NetNewsWire** – My RSS reader of choice. It's a native Mac app that syncs beautifully with its iOS counterpart.
 - **1Password** – I've been a customer for years and I'm very happy with the service.
 - **Rectangle** – A great tiling window manager for macOS. Keeps my windows arranged nicely. Code editor to the left, terminal to the right, all evenly spaced.
 - **Scroll Reverser** – Makes switching between trackpad (natural scrolling) and trackball (non-natural scrolling) a breeze.
 - **Reflex** - macOS sometimes hijacks the media buttons, this little app prevents that.
 - **Terraform** – I use Terraform to manage all my cloud infrastructure.
+- **Orbstack** - A great replacement for Docker Desktop that also allows me to spin up a quick VM from time to time.
+- **Tailscale** – I use Tailscale to connect to my home network, sometimes with my Apple TV as the exit node which sounds weird but is awesome.
