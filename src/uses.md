@@ -21,7 +21,8 @@ summary: A list of hardware and software I use on a daily basis.
 - **Apple Notes, Calendar, Mail, Reminders** – The defaults are good enough for almost everyone.
 - **Safari** - Again, defaults are great. Safari has Tab Groups which I use quite extensively.
 - **VS Code** – Simply the best code editor with all of its plugins.
-- **iTerm2** – I recently switched back to iTerm2 after a few years of using Alacritty + Tmux. I'm on a simplify and reduce journey.
+- **Things** – For any project that's a little too complex or gets out of hand for Apple Reminders.
+- **Alacritty + Tmux** – Pretty awesome, fast terminal emulator paired with Tmux for split panes and windows.
 - **Obsidian** - My second brain. Even though I struggle to use it from time to time, so I'm always looking for a replacement.
 - **NetNewsWire** – My RSS reader of choice. It's a native Mac app that syncs beautifully with its iOS counterpart.
 - **1Password** – I've been a customer for years and I'm very happy with the service.
