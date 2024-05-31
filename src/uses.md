@@ -8,6 +8,7 @@ summary: A list of hardware and software I use on a daily basis.
 
 - **13" MacBook Air** (2020, M1, 8GB RAM, 256GB SSD) – This is the cheapest laptop Apple sells (I got mine for €900,-), but by no means is it slow. I use this thing as my couch computer and is more than capable of running all the software I need.
 - **HP Z38C** – I got this monitor for free from someone who wasn't using it. It's a great monitor, but I'm not sure I would have bought it myself. It's a bit on the expensive side, but now that I have an ultrawide, I never want to go back.
+- **Logitech Streamcam** – On top of my monitor sits this webcam. It's an awesome webcam with almost professional camera quality video. As a remote worker, I use this thing daily and I can't recommend it enough.
 - **iPhone 13 Pro** (256GB, Space Grey) – I bought the 13 when the 14 was released to save some money. It's a great phone, even for the money, the best feature is the camera which produces stunning images in every situation which is a huge plus when you have kids.
 - **Logitech MX Ergo** – Due to RSI issues, I can't use a 'normal' pointing device anymore. Luckily Logitech still makes trackballs and this latest one with a rechargeable battery is a great addition to my desk.
 - **Magic Keyboard** – Keyboard nerds will winch at this, but I think the Magic Keyboard is the best keyboard ever. I like keyboards with low travel and this one is perfect in every single way for me.
