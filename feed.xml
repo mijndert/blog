@@ -98,21 +98,6 @@ resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;mybucket&amp;q
       <guid>https://mijndertstuij.nl/posts/config-driven-terraform/</guid>
     </item>
     <item>
-      <title>How I do to-dos</title>
-      <link>https://mijndertstuij.nl/posts/how-i-do-todos/</link>
-      <description>&lt;p&gt;I tried every single to do list app under the sun – the one I stuck with the longest is Things, an awesome native app on Apple platforms. But the tool at hand isn&#39;t what I want to talk about today. The app doesn&#39;t matter, it&#39;s just that all of those apps try to push you towards a certain way of doing things. And using an app like Things, I&#39;m pretty much stuck in the Apple ecosystem, unless I meticulously export all my data.&lt;/p&gt;
-&lt;p&gt;In an effort to ween myself off of being stuck to a particular ecosystem, I&#39;m trying to implement &lt;a href=&quot;https://stephango.com/file-over-app&quot;&gt;File over App&lt;/a&gt; as much as I can.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Today, we are creating innumerable digital artifacts, but most of these artifacts are out of our control. They are stored on servers, in databases, gated behind an internet connection, and login to a cloud service. Even the files on your hard drive use proprietary formats that make them incompatible with older systems and other tools.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Now I have a folder in iCloud Drive called &#39;to-dos&#39; with a sub-folder per year. I create a single note per week in which I write down my to-dos for that particular week. Since the notes are just text files I can open them in any editor (currently Vim or BBedit). If any items didn’t get done I move them over to the next note.&lt;/p&gt;
-&lt;p&gt;Yes, this approach adds a bit more friction but I&#39;m really happy to have a little freedom.&lt;/p&gt;
-</description>
-      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/how-i-do-todos/</guid>
-    </item>
-    <item>
       <title>On running with a watch</title>
       <link>https://mijndertstuij.nl/posts/running-with-a-watch/</link>
       <description>&lt;p&gt;Anyone that knows me well can attest to me being a dreadful sports person in almost every category; except for one: running. I&#39;ve been running for a very long time, I could at one point run a 5k in 20 minutes and a 10k in less than 50 minutes. I never really had a plan, I just go out for a run and don&#39;t think about it too much. To the chagrin of some of my friends, running comes natural to me. I naturally have a rather high vo2max and I&#39;m not super prone to injuries so I can just keep running for a good while before I hit my limits.&lt;/p&gt;
