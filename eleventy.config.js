@@ -4,16 +4,16 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const embeds = require("eleventy-plugin-embed-everything");
 const { eleventyImagePlugin } = require("@11ty/eleventy-img");
 
-module.exports = (config) => {
-  config.addFilter("dateFilter", dateFilter);
-  config.addFilter("w3DateFilter", w3DateFilter);
-  config.addPassthroughCopy("css");
-  config.addPassthroughCopy("src/favicon/");
-  config.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
-  config.addPassthroughCopy({ 'src/CNAME': '/CNAME' });
-  config.addPlugin(pluginRss);
-  config.addPlugin(embeds);
-  config.addPlugin(eleventyImagePlugin, {
+module.exports = (eleventyConfig) => {
+  eleventyConfig.addFilter("dateFilter", dateFilter);
+  eleventyConfig.addFilter("w3DateFilter", w3DateFilter);
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("src/favicon/");
+  eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+  eleventyConfig.addPassthroughCopy({ 'src/CNAME': '/CNAME' });
+  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(embeds);
+  eleventyConfig.addPlugin(eleventyImagePlugin, {
     formats: ["avif", "webp", "auto"],
     widths: [368, 736, 900],
     defaultAttributes: {
