@@ -1,4 +1,3 @@
-import UpgradeHelper from "@11ty/eleventy-upgrade-help";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import dateFilter from "./src/filters/date-filter.js"
 import w3DateFilter from"./src/filters/w3-date-filter.js"
