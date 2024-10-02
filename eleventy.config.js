@@ -1,10 +1,11 @@
-const dateFilter = require("./src/filters/date-filter.js");
-const w3DateFilter = require("./src/filters/w3-date-filter.js");
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const embeds = require("eleventy-plugin-embed-everything");
-const { eleventyImagePlugin } = require("@11ty/eleventy-img");
+import UpgradeHelper from "@11ty/eleventy-upgrade-help";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import dateFilter from "./src/filters/date-filter.js"
+import w3DateFilter from"./src/filters/w3-date-filter.js"
+import embeds from "eleventy-plugin-embed-everything"
+import { eleventyImagePlugin } from "@11ty/eleventy-img"
 
-module.exports = (eleventyConfig) => {
+export default async function(eleventyConfig) {
   eleventyConfig.addFilter("dateFilter", dateFilter);
   eleventyConfig.addFilter("w3DateFilter", w3DateFilter);
   eleventyConfig.addPassthroughCopy("css");

@@ -31,6 +31,15 @@ header a {
   font-weight: bold;
 }
 
+ul.nav {
+  margin: 0;
+}
+
+li.nav-item {
+  display: inline;
+  margin: 0 1em 0 0;  
+}
+
 .post {
   margin: 0 0 .75em 0;
   text-overflow: ellipsis;
@@ -68,10 +77,6 @@ h2 {
 
 p {
   margin: 0 0 1em 0;
-}
-
-p.links a {
-  margin: 0 .5em 0 0;
 }
 
 ul {

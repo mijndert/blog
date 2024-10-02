@@ -1,7 +1,9 @@
-<p class="links">
-  <a href="/uses">uses</a>
-  <a href="/now">now</a>
-  <a href="/links">links</a>
-</p>
+<ul class="nav">
+  {% for link in nav %}
+  <li class="nav-item">
+    <a href="{{ link.url }}">{{ link.text }}</a>
+  </li>
+  {% endfor %}
+</ul>
 
 <hr>
