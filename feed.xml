@@ -39,7 +39,7 @@
 &lt;li&gt;&lt;strong&gt;✈️ VPN&lt;/strong&gt;: none&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-      <pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 19 Feb 2024 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/default-apps-2024/</guid>
     </item>
@@ -93,7 +93,7 @@ resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;mybucket&amp;q
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Both of these additions are great improvements to Terraform, and I&#39;m looking forward to using them in my projects. They will ensure I&#39;m much more confident in working with the Statefile which has always been a bit daunting.&lt;/p&gt;
 </description>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/config-driven-terraform/</guid>
     </item>
@@ -109,7 +109,7 @@ resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;mybucket&amp;q
 &lt;p&gt;Speaking of training, the Garmin does give me daily suggestions on what I should be doing that day. Today I got a recommendation to do interval sprints, and tomorrow is long run day. Due to personal circumstances I can&#39;t always follow the recommendations, but it&#39;s nice to have a little guidance when I am able to get a run in.&lt;/p&gt;
 &lt;p&gt;All in all, I&#39;m really happy with my move to Garmin. Even though I&#39;m currently not following the recommendations closely, I do feel like I can get much more out of my runs with this watch than I ever could with my Apple Watch. This thing gives me the confidence to reclaiming my old form, run a half marathon and do well in it.&lt;/p&gt;
 </description>
-      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 08 Dec 2023 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/running-with-a-watch/</guid>
     </item>
@@ -129,7 +129,7 @@ resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;mybucket&amp;q
 &lt;p&gt;To be frank, Obsidian just... feels wrong. It&#39;s undeniably an Electron app and that just makes the experience really cumbersome to me. The application always feels a little sluggish and is never truly at home on any platform. You can make Obsidian look a little better using the great &lt;a href=&quot;https://github.com/kepano/obsidian-minimal&quot;&gt;Minimal theme&lt;/a&gt; but its core problems remain. The entire ecosystem of themes and plugins is also a little overwhelming and are prone to break in any subsequent release. I don&#39;t want to spend hours tweaking my personal wiki, I just want to use it. The barrier between my thoughts and putting them into writing needs to be as low as possible.&lt;/p&gt;
 &lt;p&gt;I know there are many people out there who love Obsidian, people who spend dozens of hours making it just right. I however will be reluctantly looking elsewhere.&lt;/p&gt;
 </description>
-      <pubDate>Thu, 12 Oct 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 12 Oct 2023 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/obsidian-doesnt-click-for-me/</guid>
     </item>
@@ -192,7 +192,7 @@ import {
 }
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/terraform-import-blocks/</guid>
     </item>
@@ -229,7 +229,7 @@ import {
 &lt;p&gt;A word of warning though, overuse of Dynamic blocks will eventually lead to code being unreadable and not very easy to understand. Only use Dynamic blocks if there&#39;s no other way to avoid repeating the same code. If you have to repeat a few lines once or twice, stop and think if you really need a Dynamic block or if you can live with it in that instance.&lt;/p&gt;
 &lt;p&gt;Speaking of Terraform modules, that&#39;s something I want to talk about in another blog post as well. A question I get asked a lot is &amp;quot;how do I organize my environments and modules?&amp;quot;. More on that later. If you want to get notified of new posts you can import the &lt;a href=&quot;https://mijndertstuij.nl/feed.xml&quot;&gt;RSS feed&lt;/a&gt; for this website in your reader.&lt;/p&gt;
 </description>
-      <pubDate>Thu, 08 Dec 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 08 Dec 2022 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/terraform-dynamic-blocks-modules/</guid>
     </item>
@@ -293,7 +293,7 @@ import {
 &lt;pre&gt;&lt;code&gt;{{&amp;lt;/* imgh src=&amp;quot;my-example-file.jpeg&amp;quot; alt=&amp;quot;My example file&amp;quot; */&amp;gt;}}
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-      <pubDate>Tue, 06 Dec 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Dec 2022 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/hugo-responsive-images/</guid>
     </item>
@@ -307,7 +307,7 @@ import {
 &lt;p&gt;Again, DevOps teams are still the right solution for a lot of companies. But if you&#39;re serious about scaling your operation, you need to be thinking about seperating the two again. There&#39;s always the possibility that in a few years time I&#39;ll look back at this and come to the conclusion I was wrong, but for now it sounds like the right solution.&lt;/p&gt;
 &lt;p&gt;Just a thought for now, I&#39;ll get back to this topic. I&#39;d love to hear what others think so &lt;a href=&quot;https://fosstodon.org/@mijndert&quot;&gt;send me a message&lt;/a&gt;.&lt;/p&gt;
 </description>
-      <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 05 Dec 2022 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/stop-doing-devops-teams/</guid>
     </item>
@@ -320,7 +320,7 @@ import {
 &lt;p&gt;We now have an event-driven, self-healing Mastodon instance that can basically scale into infinity given enough funds. That doesn&#39;t mean we sit back and relax however, we still have a ton of ideas to optimize further. Some things we want to do over the coming months include: getting our CloudFlare setup into Terraform, turning the screws on security, more visibility into key metrics, and database optimizations.&lt;/p&gt;
 &lt;p&gt;On the &lt;a href=&quot;https://blog.toot.community/&quot;&gt;toot.community blog&lt;/a&gt; we will publish updates on financials and some deepdives into the technical implementation of it all. There&#39;s an RSS feed it you want to follow along.&lt;/p&gt;
 </description>
-      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 04 Dec 2022 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/scaling-mastodon-community/</guid>
     </item>
@@ -364,7 +364,7 @@ colorscheme nord                    # set colorscheme to nord
 &lt;p&gt;Some of the common ones I use are &lt;strong&gt;i&lt;/strong&gt; for insert mode and &lt;strong&gt;v&lt;/strong&gt; for visual mode. Then there&#39;s &lt;strong&gt;u&lt;/strong&gt; for undo, &lt;strong&gt;y&lt;/strong&gt; for copy (yank), &lt;strong&gt;d&lt;/strong&gt; for delete, and &lt;strong&gt;aB&lt;/strong&gt; for selecting a block with accolades. And of course a bunch more, but I think you&#39;re good to go with just these ones.&lt;/p&gt;
 &lt;p&gt;Even after years of use and some amount of muscle memory, it still feels like I&#39;ve only touched the surface of what&#39;s possible. When you&#39;re just starting out I highly recommend keeping a cheatsheet at hand, like &lt;a href=&quot;https://vim.rtorr.com/&quot;&gt;this one&lt;/a&gt;.&lt;/p&gt;
 </description>
-      <pubDate>Fri, 15 Apr 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Apr 2022 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/a-minimalist-take-on-vim/</guid>
     </item>
@@ -376,7 +376,7 @@ colorscheme nord                    # set colorscheme to nord
 &lt;p&gt;Recently I came across &lt;a href=&quot;https://github.com/kepano/40-questions/&quot;&gt;Stephan Ango&#39;s 40 questions&lt;/a&gt;. It&#39;s a list of questions you can ask yourself every year and you can keep the answers around to maybe spot trends and you can share the questions with family and friends to have a conversation about what it&#39;s been like for them. You certainly don&#39;t have to have an immediate answer to everything then and there - instead, take your time. It might take a week or two to answer them all and that&#39;s perfectly fine.&lt;/p&gt;
 &lt;p&gt;The world is a loud place that never stops moving. Sometimes it&#39;s good to step out of it for a little bit to sit down and reflect on everything that happened and everything that awaits you. Ask yourself these 40 questions, it might help you understand yourself and the world around you just a bit more.&lt;/p&gt;
 </description>
-      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/40-questions/</guid>
     </item>
@@ -420,7 +420,7 @@ colorscheme nord                    # set colorscheme to nord
 &lt;p&gt;Anyone who needs to access your backend server can now simply use the hostname &lt;code&gt;app.my-backend-service.aws:4000&lt;/code&gt; without every having to deploy a load balancer.&lt;/p&gt;
 &lt;p&gt;Of course AWS CloudMap also has the ability to specify exactly which services can access certain backends by integrating IAM into it. But that&#39;s for another day to discuss.&lt;/p&gt;
 </description>
-      <pubDate>Tue, 15 Mar 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 15 Mar 2022 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/</guid>
     </item>
@@ -444,7 +444,7 @@ colorscheme nord                    # set colorscheme to nord
 &lt;p&gt;I&#39;ve had AirPods Max for a solid 2 months now so the jury&#39;s still out on durability but I bet they will hold up pretty well.&lt;/p&gt;
 &lt;p&gt;I still wouldn&#39;t recommend anyone buying them at full price. But if you can find them at a discount I highly recommend you at leat give them a try.&lt;/p&gt;
 </description>
-      <pubDate>Fri, 04 Mar 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Mar 2022 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/airpods-max/</guid>
     </item>
@@ -456,7 +456,7 @@ colorscheme nord                    # set colorscheme to nord
 &lt;p&gt;Over in the Linux world everything just seems to be strung together with little sense of direction. It always felt like a pile of software that happens to sometimes work together. OpenBSD is the opposite of that and I love it. I just wish I could run it on my laptop as well, with all the bells and whistles working. But that&#39;s a bit of a pipe dream as bluetooth support is currently completely missing.&lt;/p&gt;
 &lt;p&gt;For now it&#39;s a great operating system for servers for me. If you also want to play around with OpenBSD and indirectly &lt;a href=&quot;https://www.openbsdfoundation.org/&quot;&gt;support the foundation&lt;/a&gt; I would highly recommend getting a VM over at &lt;a href=&quot;https://openbsd.amsterdam/&quot;&gt;OpenBSD.ams&lt;/a&gt;.&lt;/p&gt;
 </description>
-      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/openbsd/</guid>
     </item>
@@ -491,7 +491,7 @@ colorscheme nord                    # set colorscheme to nord
 &lt;p&gt;At first it&#39;s quite time consuming to jot down every little piece of knowledge I can think of. But in the end I hope it&#39;ll lessen the amount of Google searches for trivial stuff. Obsidian allows me to very quickly search the contents of my Digital Brain so that&#39;s awesome as well.&lt;/p&gt;
 &lt;p&gt;Another reason I&#39;m building this is because I want to have this as my part of my legacy - a small window into what it was like when I was alive. I hope it&#39;s going to be one of those &lt;a href=&quot;https://en.wikipedia.org/wiki/Time_capsule&quot;&gt;time capsules&lt;/a&gt; they put in the ground to be recovered a hundred years from now.&lt;/p&gt;
 </description>
-      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/information-processing/</guid>
     </item>
@@ -534,7 +534,7 @@ bind | split-window -h
 bind - split-window -v
 &lt;/code&gt;&lt;/pre&gt;
 </description>
-      <pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 16 Apr 2020 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/my-tmux-setup/</guid>
     </item>
@@ -550,7 +550,7 @@ bind - split-window -v
 &lt;p&gt;To me minimalism is about making more deliberate choices about what to buy and, more importantly, what not to buy. If I truly think something will bring me joy I will buy it. I have no hesitation about buying things because I don&#39;t keep track of how many things I own. I want everything I own to have a purpose, even if that&#39;s to just bring joy into my life. If something doesn&#39;t fulfill its intended purpose anymore I will gladly put it up for sale, or give it away.&lt;/p&gt;
 &lt;p&gt;I love cleaning out drawers because it means less stuff to keep track of.&lt;/p&gt;
 </description>
-      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
       <guid>https://mijndertstuij.nl/posts/minimalism/</guid>
     </item>
