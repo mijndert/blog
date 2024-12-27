@@ -27,6 +27,7 @@ header {
 header svg {
   width: 32px;
   height: 32px;
+  display: block;
 }
 
 ul.nav {
@@ -128,7 +129,7 @@ pre {
 
 code {
   overflow: scroll;
-  font-size: .75em;
+  font-size: 13px;
 }
 
 blockquote {
