@@ -15,16 +15,24 @@
     <link rel="stylesheet" href="/css/base.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100..800;1,100..800&display=swap')</style>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-  <a class="muted" href="/">Mijndert Stuij</a>
+  <a href="/">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="32.000000pt" height="32.000000pt" viewBox="0 0 48.000000 48.000000" preserveAspectRatio="xMidYMid meet">
+      <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+        <path d="M404 459 c-10 -12 -34 -28 -52 -36 -40 -17 -50 -39 -29 -61 19 -19 35 -9 19 11 -7 8 -9 17 -5 20 13 14 23 6 23 -16 0 -29 43 -72 64 -64 9 4 16 17 16 30 0 14 6 40 14 58 15 37 6 79 -17 79 -8 0 -22 -10 -33 -21z m36 -23 c0 -28 -13 -47 -41 -62 -27 -14 -29 -13 -29 6 0 20 44 70 61 70 5 0 9 -6 9 -14z m-20 -86 c0 -5 -7 -10 -16 -10 -8 0 -12 5 -9 10 3 6 10 10 16 10 5 0 9 -4 9 -10z"/>
+        <path d="M156 445 c-112 -40 -171 -186 -115 -285 20 -35 20 -39 5 -68 -20 -39 -21 -81 -1 -88 31 -12 70 9 134 71 62 60 180 229 168 241 -3 3 -28 -27 -55 -68 -84 -124 -188 -228 -229 -228 -16 0 -17 40 -2 74 11 23 13 24 35 9 32 -20 31 -6 -1 19 -80 63 -71 197 18 275 40 35 88 48 145 39 l37 -5 -30 14 c-38 18 -60 18 -109 0z"/>
+        <path d="M416 240 c-18 -96 -64 -152 -148 -181 l-53 -18 38 -1 c96 0 186 107 175 210 l-3 35 -9 -45z"/>
+      </g>
+    </svg>
+  </a>
 </header>
     <main>
       
 <h1>Responsive images on a static Hugo website</h1>
-<p class="muted">2022.12.06</p>
+<p class="muted">Dec 6, 2022</p>
 <article><p>For years and years I've been using <a href="https://jekyllrb.com/">Jekyll</a> as my static site generator of choice, mostly because I like their templating engine and I'm a fan of Ruby as a programming language. I've been experimenting with Hugo as well, but it never really clicked for me. Well, until I found <a href="https://github.com/mavidser/hugo-rocinante">the perfect theme</a> for my needs. The same theme is now used here and on the <a href="https://blog.toot.community/">toot.community blog</a> so I wanted to set mine apart a little bit by adding banner images on some posts. Downloading an image from Unsplash and manually resizing it wasn't an option though - I need things to be frictionless when I want to add a blog entry.</p>
 <p>I started looking for ways to automatically generate multiple sizes of an image and came across a lot of different solutions. Most didn't work anymore or were very convoluted. That's to say, until I found <a href="https://www.brycewray.com/posts/2022/06/responsive-optimized-images-hugo/">Bryce Wray's entry</a>.</p>
 <p>I quickly adapted his code to my needs and had it working on no-time, you can see it in action <a href="/posts/scaling-mastodon-community/">right here</a>.</p>
@@ -85,9 +93,8 @@
 
     </main>
     <footer>
-  <hr>
-  <p class="muted">Receive updates</p>
-  <p>Follow me via <a href="/feed.xml">RSS</a> or <a href="/contact">other options</a>.</p>
+  <h2>Connect</h2>
+  <p class="compact">Follow me via <a href="/feed.xml">RSS</a> or <a href="/contact">other options</a>.</p>
 </footer>
   </body>
 </html>
