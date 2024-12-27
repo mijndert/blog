@@ -43,4 +43,4 @@ summary: A list of hardware and software I use on a daily basis.
 
 <p class="compact">Kobo Aura h2O Edition 2</p>
 <p class="compact">Garmin Forerunner 255S</p>
-
+<p class="compact">Steam Deck OLED (1TB)</p>

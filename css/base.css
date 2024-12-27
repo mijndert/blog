@@ -16,12 +16,12 @@ html {
 
 body {
   margin: 0 auto;
-  max-width: 650px;
+  max-width: 600px;
   height: 100%;
 }
 
 header { 
-  margin: 4em 0 2em 0;
+  margin: 6em 0 4em 0;
 }
 
 header svg {
@@ -30,12 +30,19 @@ header svg {
 }
 
 ul.nav {
-  margin: 0 0 4em 0;
+  margin: 0 0 5em 0;
 }
 
 li.nav-item {
   display: inline;
-  margin: 0 1em 0 0;  
+}
+
+li.nav-item:not(:last-child)::after {
+  content: "•";
+  margin: 0 5px 0 5px;
+  color: lightgrey;
+  font-size: .5em;
+  vertical-align: middle;
 }
 
 .post {
@@ -45,12 +52,23 @@ li.nav-item {
   white-space: nowrap;
 }
 
+time {
+  float: right;
+  margin: 0 .25em 0 0;
+}
+
 .post a {
   text-decoration: none;
 }
 
 .post a:hover {
   text-decoration: underline;
+  text-decoration-thickness: 0.05rem;
+  text-underline-offset: 0.1875rem;
+}
+
+article {
+  margin: 3em 0 0 0;
 }
 
 footer {
@@ -65,11 +83,11 @@ h4 {
 }
 
 h1 {
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.25em;
 }
 
 p {
@@ -82,6 +100,8 @@ p.compact {
 
 a {
   color: inherit;
+  text-decoration-thickness: 0.05rem;
+  text-underline-offset: 0.1875rem;
 }
 
 ul {
@@ -92,10 +112,6 @@ ul {
   color: #5B5B66;
 }
 
-time {
-  margin: 0 .25em 0 0;
-}
-
 img,
 picture {
   max-width: 100%;
@@ -104,13 +120,15 @@ picture {
 }
 
 pre {
-  background-color: #badae229;
-  padding: .5em;
+  background-color: #e3e3e34f;
+  padding: .75em;
   overflow-x: auto;
+  border-radius: 1em;
 }
 
 code {
   overflow: scroll;
+  font-size: .75em;
 }
 
 blockquote {
@@ -153,6 +171,6 @@ blockquote {
   blockquote {
     margin: 0.5em 0;
     padding: 0.5em;
-    border-left: 2px solid #badae229;
+    border-left: 2px solid #5B5B66;
   }
 }
