@@ -1,5 +1,5 @@
 ---
-title: Contact
+title: Connect
 layout: layouts/page.html
 summary: How and where to reach/follow me.
 ---
