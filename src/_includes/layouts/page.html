@@ -3,6 +3,7 @@
 {% if page.url == "/" %}
 {% else %}
 <h1>{{ title }}</h1>
+<p class="muted">{{ summary }}</p>
 {% endif %}
 <article>{{ content | safe }}</article>
 {% endblock %}
