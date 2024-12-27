@@ -1,7 +1,7 @@
 ---
-title: Links
+title: Blogroll
 layout: layouts/page.html
-summary: A collection of links to interesting blogs. A blogroll if you will.
+summary: A collection of links to interesting blogs I follow.
 ---
 
 I follow people, not corporations. Here's some great people to follow and a link to their RSS feed because RSS is awesome. Want to get added? [Drop me a message](https://fosstodon.org/@mijndert).
