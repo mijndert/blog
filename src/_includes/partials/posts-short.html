@@ -1,6 +1,6 @@
 <div class="listposts">
   {%- for post in collections.post | reverse -%}
-    {% if loop.index0 < 5 %}
+    {%- if loop.index0 < 5 -%}
     <div class="post">
       <span class="meta">
         <time class="muted" datetime="{{ post.date | w3DateFilter }}">
@@ -9,6 +9,6 @@
       </span>
       <a class="title" href="{{ post.url }}">{{ post.data.title }}</a>
     </div>
-    {% endif %}
+    {%- endif -%}
   {%- endfor -%}
 </div>
