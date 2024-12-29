@@ -124,7 +124,7 @@ pre {
   background-color: #e3e3e34f;
   padding: .75em;
   overflow-x: auto;
-  border-radius: 1em;
+  border-radius: .75em;
 }
 
 code {
