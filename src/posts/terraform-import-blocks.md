@@ -12,13 +12,13 @@ Let's take a DigitalOcean Spaces bucket as an example here.
 
 Before [Terraform 1.5](https://www.hashicorp.com/blog/terraform-1-5-brings-config-driven-import-and-checks) you first had to import the resource into your statefile:
 
-```
+```bash
 terraform import digitalocean_spaces_bucket.mybucket `region`,`name`
 ```
 
 Now, using a bit of `terraform plan` trial and error, you could write the code for the resource until no changes were found anymore.
 
-```
+```hcl
 resource "digitalocean_spaces_bucket" "mybucket" {
   name   = "mybucket"
   region = "ams3"
@@ -29,7 +29,7 @@ Using [import blocks](https://developer.hashicorp.com/terraform/tutorials/state/
 
 First we get the DigitalOcean Terraform provider and define our first import block.
 
-```
+```hcl
 terraform {
   required_providers {
     digitalocean = {
@@ -46,7 +46,7 @@ import {
 
 Using `terraform plan` with the `-generate-config-out` flag, Terraform will generate configuration for the resource and outputs the plan.
 
-```
+```bash
 terraform plan -generate-config-out=generated.tf
 ```
 
@@ -54,7 +54,7 @@ Of course, the code it generates isn't perfect, but it's a very good starting po
 
 The above import block will generate something like this:
 
-```
+```hcl
 resource "digitalocean_spaces_bucket" "mybucket" {
   acl           = null
   force_destroy = null

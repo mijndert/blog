@@ -10,7 +10,7 @@ Some time ago I wrote about [config-driven import](https://mijndertstuij.nl/post
 
 Expanding on my previous blogpost about Import blocks, here's a quick example of how to use the new `for_each` argument on a list to import multiple Digitalocean Spaces buckets at once.
 
-```
+```hcl
 terraform {
   required_providers {
     digitalocean = {
@@ -43,7 +43,7 @@ Another great addition in Terraform 1.7 are Remove blocks. There are times when 
 
 > As an alternative to the terraform state rm command, the removed block addresses all of these challenges. Just like the moved and import blocks, state removal can now be performed in bulk and is plannable, so you can be confident that the operation will have the intended effect before modifying state.
 
-```
+```hcl
 removed {
   from = digitalocean_spaces_bucket.mybucket
 

@@ -29,7 +29,7 @@ Within Vim you can execute `:scriptnames` to list all loaded plugins.
 
 My .vimrc is exactly what I need and nothing more.
 
-```
+```vim
 syntax on                           # enable syntax highlighting
 set tabstop=2                       # set 1 tab to 2 spaces
 set shiftwidth=2                    # set an indent to 2 spaces

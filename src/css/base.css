@@ -115,10 +115,10 @@ ul {
 
 img,
 picture {
-  max-width: 100%;
-  display: block;
-  margin: 8px 0;
-}
+  aspect-ratio: 16/9;
+  height: auto;
+  width: 100%;
+} 
 
 pre {
   background-color: #e3e3e34f;

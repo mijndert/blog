@@ -16,7 +16,7 @@ Here I wanted to create multiple [Digitalocean Spaces](https://www.digitalocean.
 
 In this example you see a Dynamic block for the property `lifecycle_rule`. There's a `for_each` that needs the variable `expiration_enabled` to be set to `true`, else the `for_each` loop will be empty and the property will not be created.
 
-```
+```hcl
 resource "digitalocean_spaces_bucket" "this" {
   name   = var.spaces_name
   region = var.region

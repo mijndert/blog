@@ -22,7 +22,7 @@ The following Hugo shortcode will generate multiple sizes of a given image and s
 
 Create a file called `/layouts/shortcodes/imgh.html` in the root of your project with the following contents.
 
-```
+```html
 {% raw %}{{- $respSizes := slice "960" "1280" "1920" -}}
 {{- $imgBase := "images/" -}}
 {{- $src := resources.Get (printf "%s%s" $imgBase (.Get "src")) -}}

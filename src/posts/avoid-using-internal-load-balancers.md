@@ -16,7 +16,7 @@ A great service for such a use-case is [AWS CloudMap](https://aws.amazon.com/clo
 
 First we need to create a namespace to register targets in.
 
-```
+```yml
 PrivateNamespace:
   Type: AWS::ServiceDiscovery::PrivateDnsNamespace
   Properties:
@@ -26,7 +26,7 @@ PrivateNamespace:
 
 Now we can create a Service which is a collection of backend servers that Fargate knows how to register itself into.
 
-```
+```yml
 DiscoveryService:
   Type: AWS::ServiceDiscovery::Service
   Properties:
@@ -46,7 +46,7 @@ DiscoveryService:
 
 To connect your Fargate service (`AWS::ECS::Service`) to CloudMap we can simply specify the DiscoveryService resource.
 
-```
+```yml
 ServiceRegistries:
   - RegistryArn: !GetAtt DiscoveryService.Arn
     Port: 4000
