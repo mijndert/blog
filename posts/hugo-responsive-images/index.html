@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Eleventy v3.0.0">
     <meta name="fediverse:creator" content="@mijndert@fosstodon.org">
     <title>Responsive images on a static Hugo website</title>
-    <meta name="description" content="Serving optimized responsive images using Hugo" />
-    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml" />
+    <meta name="description" content="Serving optimized responsive images using Hugo">
+    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/base.css">
+    <link href="//prismjs.catppuccin.com/mocha.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -22,9 +23,9 @@
   <a href="/">
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="32.000000pt" height="32.000000pt" viewBox="0 0 48.000000 48.000000" preserveAspectRatio="xMidYMid meet">
       <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-        <path d="M404 459 c-10 -12 -34 -28 -52 -36 -40 -17 -50 -39 -29 -61 19 -19 35 -9 19 11 -7 8 -9 17 -5 20 13 14 23 6 23 -16 0 -29 43 -72 64 -64 9 4 16 17 16 30 0 14 6 40 14 58 15 37 6 79 -17 79 -8 0 -22 -10 -33 -21z m36 -23 c0 -28 -13 -47 -41 -62 -27 -14 -29 -13 -29 6 0 20 44 70 61 70 5 0 9 -6 9 -14z m-20 -86 c0 -5 -7 -10 -16 -10 -8 0 -12 5 -9 10 3 6 10 10 16 10 5 0 9 -4 9 -10z"/>
-        <path d="M156 445 c-112 -40 -171 -186 -115 -285 20 -35 20 -39 5 -68 -20 -39 -21 -81 -1 -88 31 -12 70 9 134 71 62 60 180 229 168 241 -3 3 -28 -27 -55 -68 -84 -124 -188 -228 -229 -228 -16 0 -17 40 -2 74 11 23 13 24 35 9 32 -20 31 -6 -1 19 -80 63 -71 197 18 275 40 35 88 48 145 39 l37 -5 -30 14 c-38 18 -60 18 -109 0z"/>
-        <path d="M416 240 c-18 -96 -64 -152 -148 -181 l-53 -18 38 -1 c96 0 186 107 175 210 l-3 35 -9 -45z"/>
+        <path d="M404 459 c-10 -12 -34 -28 -52 -36 -40 -17 -50 -39 -29 -61 19 -19 35 -9 19 11 -7 8 -9 17 -5 20 13 14 23 6 23 -16 0 -29 43 -72 64 -64 9 4 16 17 16 30 0 14 6 40 14 58 15 37 6 79 -17 79 -8 0 -22 -10 -33 -21z m36 -23 c0 -28 -13 -47 -41 -62 -27 -14 -29 -13 -29 6 0 20 44 70 61 70 5 0 9 -6 9 -14z m-20 -86 c0 -5 -7 -10 -16 -10 -8 0 -12 5 -9 10 3 6 10 10 16 10 5 0 9 -4 9 -10z"></path>
+        <path d="M156 445 c-112 -40 -171 -186 -115 -285 20 -35 20 -39 5 -68 -20 -39 -21 -81 -1 -88 31 -12 70 9 134 71 62 60 180 229 168 241 -3 3 -28 -27 -55 -68 -84 -124 -188 -228 -229 -228 -16 0 -17 40 -2 74 11 23 13 24 35 9 32 -20 31 -6 -1 19 -80 63 -71 197 18 275 40 35 88 48 145 39 l37 -5 -30 14 c-38 18 -60 18 -109 0z"></path>
+        <path d="M416 240 c-18 -96 -64 -152 -148 -181 l-53 -18 38 -1 c96 0 186 107 175 210 l-3 35 -9 -45z"></path>
       </g>
     </svg>
   </a>
@@ -42,49 +43,48 @@
 <h2>Shortcodes</h2>
 <p>The following Hugo shortcode will generate multiple sizes of a given image and spit out .webp and .jpeg files.</p>
 <p>Create a file called <code>/layouts/shortcodes/imgh.html</code> in the root of your project with the following contents.</p>
-<pre><code>{{- $respSizes := slice &quot;960&quot; &quot;1280&quot; &quot;1920&quot; -}}
-{{- $imgBase := &quot;images/&quot; -}}
-{{- $src := resources.Get (printf &quot;%s%s&quot; $imgBase (.Get &quot;src&quot;)) -}}
-{{- $alt := .Get &quot;alt&quot; -}}
-{{- $divClass := &quot;&quot; -}}{{/* Init'g */}}
-{{- $imgClass := &quot;w-full h-auto animate-fade&quot; -}}
-{{- $dataSzes := &quot;(min-width: 1024px) 100vw, 50vw&quot; -}}
-{{- $actualImg := $src.Resize &quot;640x jpg&quot; -}}
-&lt;picture&gt;
-  &lt;source
-    type=&quot;image/webp&quot;
-    srcset=&quot;
+<pre class="language-html"><code class="language-html">{{- $respSizes := slice "960" "1280" "1920" -}}
+{{- $imgBase := "images/" -}}
+{{- $src := resources.Get (printf "%s%s" $imgBase (.Get "src")) -}}
+{{- $alt := .Get "alt" -}}
+{{- $divClass := "" -}}{{/* Init'g */}}
+{{- $imgClass := "w-full h-auto animate-fade" -}}
+{{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
+{{- $actualImg := $src.Resize "640x jpg" -}}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>picture</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span>
+    <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/webp<span class="token punctuation">"</span></span>
+    <span class="token attr-name">srcset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>
       {{- with $respSizes -}}
         {{- range $i, $e := . -}}
         {{- if ge $src.Width . -}}
-          {{- if $i }}, {{ end -}}{{- ($src.Resize (printf &quot;%sx%s&quot; . &quot; webp&quot;) ).RelPermalink }} {{ . }}w
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}&quot;
-    sizes=&quot;{{ $dataSzes }}&quot;
-  /&gt;
-  &lt;source
-    type=&quot;image/jpeg&quot;
-    srcset=&quot;
+          {{- if $i }}, {{ end -}}{{- ($src.Resize (printf <span class="token punctuation">"</span></span><span class="token attr-name">%sx%s"</span> <span class="token attr-name">.</span> <span class="token attr-name">"</span> <span class="token attr-name">webp")</span> <span class="token attr-name">).RelPermalink</span> <span class="token attr-name">}}</span> <span class="token attr-name">{{</span> <span class="token attr-name">.</span> <span class="token attr-name">}}w</span>
+        <span class="token attr-name">{{-</span> <span class="token attr-name">end</span> <span class="token attr-name">-}}</span>
+      <span class="token attr-name">{{-</span> <span class="token attr-name">end</span> <span class="token attr-name">-}}</span>
+    <span class="token attr-name">{{-</span> <span class="token attr-name">end</span> <span class="token attr-name">-}}"</span>
+    <span class="token attr-name">sizes</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ $dataSzes }}<span class="token punctuation">"</span></span>
+  <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>source</span>
+    <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/jpeg<span class="token punctuation">"</span></span>
+    <span class="token attr-name">srcset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>
       {{- with $respSizes -}}
         {{- range $i, $e := . -}}
           {{- if ge $src.Width . -}}
-            {{- if $i }}, {{ end -}}{{- ($src.Resize (printf &quot;%sx%s&quot; . &quot; jpg&quot;) ).RelPermalink }} {{ . }}w
-          {{- end -}}
-      {{- end -}}
-    {{- end -}}&quot;\
-    sizes=&quot;{{ $dataSzes }}&quot;
-  /&gt;
-  &lt;img class=&quot;{{ $imgClass }}&quot;
-    src=&quot;{{ $actualImg.RelPermalink }}&quot;
-    width=&quot;{{ $src.Width }}&quot;
-    height=&quot;{{ $src.Height }}&quot;
-    alt=&quot;{{ $alt }}&quot;
-    loading=&quot;lazy&quot;
-  /&gt;
-&lt;/picture&gt;
-&lt;/div&gt;
-</code></pre>
+            {{- if $i }}, {{ end -}}{{- ($src.Resize (printf <span class="token punctuation">"</span></span><span class="token attr-name">%sx%s"</span> <span class="token attr-name">.</span> <span class="token attr-name">"</span> <span class="token attr-name">jpg")</span> <span class="token attr-name">).RelPermalink</span> <span class="token attr-name">}}</span> <span class="token attr-name">{{</span> <span class="token attr-name">.</span> <span class="token attr-name">}}w</span>
+          <span class="token attr-name">{{-</span> <span class="token attr-name">end</span> <span class="token attr-name">-}}</span>
+      <span class="token attr-name">{{-</span> <span class="token attr-name">end</span> <span class="token attr-name">-}}</span>
+    <span class="token attr-name">{{-</span> <span class="token attr-name">end</span> <span class="token attr-name">-}}"\</span>
+    <span class="token attr-name">sizes</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ $dataSzes }}<span class="token punctuation">"</span></span>
+  <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ $imgClass }}<span class="token punctuation">"</span></span>
+    <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ $actualImg.RelPermalink }}<span class="token punctuation">"</span></span>
+    <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ $src.Width }}<span class="token punctuation">"</span></span>
+    <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ $src.Height }}<span class="token punctuation">"</span></span>
+    <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ $alt }}<span class="token punctuation">"</span></span>
+    <span class="token attr-name">loading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazy<span class="token punctuation">"</span></span>
+  <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>picture</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
 <h2>Using the shortcode</h2>
 <p>Now in order to use the above shortcode you can simply drop an image into <code>/assets/images</code> and insert this line of code in your MarkDown file.</p>
 <pre><code>{{&lt;/* imgh src=&quot;my-example-file.jpeg&quot; alt=&quot;My example file&quot; */&gt;}}

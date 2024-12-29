@@ -66,46 +66,44 @@
 &lt;p&gt;Terraform 1.7 also includes an enhancement for config-driven import: the ability to expand import blocks using for_each loops. Previously you could target a particular instance of a resource in the to attribute of an import block, but you had to write a separate import block for each instance.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Expanding on my previous blogpost about Import blocks, here&#39;s a quick example of how to use the new &lt;code&gt;for_each&lt;/code&gt; argument on a list to import multiple Digitalocean Spaces buckets at once.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;terraform {
-  required_providers {
-    digitalocean = {
-      source = &amp;quot;digitalocean/digitalocean&amp;quot;
-    }
-  }
-}
+&lt;pre class=&quot;language-hcl&quot;&gt;&lt;code class=&quot;language-hcl&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;terraform&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;required_providers&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;digitalocean&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;digitalocean/digitalocean&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-locals {
-  buckets = {
-    &amp;quot;test&amp;quot; = &amp;quot;bucket-test&amp;quot;
-    &amp;quot;staging&amp;quot; = &amp;quot;bucket-staging&amp;quot;
-    &amp;quot;prod&amp;quot;    = &amp;quot;bucket-prod&amp;quot;
-  }
-}
+&lt;span class=&quot;token keyword&quot;&gt;locals&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;buckets&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;test&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;bucket-test&quot;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;staging&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;bucket-staging&quot;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;prod&quot;&lt;/span&gt;    &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;bucket-prod&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-import {
-  for_each = local.buckets
-  to       = digitalocean_spaces_bucket.mybucket[each.key]
-}
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;for_each&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; local.buckets
+  &lt;span class=&quot;token property&quot;&gt;to&lt;/span&gt;       &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; digitalocean_spaces_bucket.mybucket&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;each.key&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
 
-resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;mybucket&amp;quot; {
-  for_each = local.buckets
-  bucket   = each.value
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;token keyword&quot;&gt;resource &lt;span class=&quot;token type variable&quot;&gt;&quot;digitalocean_spaces_bucket&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mybucket&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;for_each&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; local.buckets
+  &lt;span class=&quot;token property&quot;&gt;bucket&lt;/span&gt;   &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; each.value
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Another great addition in Terraform 1.7 are Remove blocks. There are times when you need to remove a resource from your Statefile, optionally without removing the underlying resource itself. Of course there are CLI commands to accomplish this, but having it available as a Remove block means we can run &lt;code&gt;terraform apply&lt;/code&gt; and check the changes before executing them.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;As an alternative to the terraform state rm command, the removed block addresses all of these challenges. Just like the moved and import blocks, state removal can now be performed in bulk and is plannable, so you can be confident that the operation will have the intended effect before modifying state.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;removed {
-  from = digitalocean_spaces_bucket.mybucket
+&lt;pre class=&quot;language-hcl&quot;&gt;&lt;code class=&quot;language-hcl&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;removed&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; digitalocean_spaces_bucket.mybucket
 
-  # Instruct Terraform not to destroy the underlying resource
-  lifecycle {
-    destroy = false
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# Instruct Terraform not to destroy the underlying resource&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;lifecycle&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;destroy&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Both of these additions are great improvements to Terraform, and I&#39;m looking forward to using them in my projects. They will ensure I&#39;m much more confident in working with the Statefile which has always been a bit daunting.&lt;/p&gt;
 </description>
       <pubDate>Thu, 18 Jan 2024 00:00:00 GMT</pubDate>
@@ -155,57 +153,52 @@ resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;mybucket&amp;q
 &lt;p&gt;You can import your resources in the terminal, but you still have to write the code for the resources you import. With Terraform version 1.5 there&#39;s a better solution: import blocks.&lt;/p&gt;
 &lt;p&gt;Let&#39;s take a DigitalOcean Spaces bucket as an example here.&lt;/p&gt;
 &lt;p&gt;Before &lt;a href=&quot;https://www.hashicorp.com/blog/terraform-1-5-brings-config-driven-import-and-checks&quot;&gt;Terraform 1.5&lt;/a&gt; you first had to import the resource into your statefile:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;terraform import digitalocean_spaces_bucket.mybucket `region`,`name`
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;terraform &lt;span class=&quot;token function&quot;&gt;import&lt;/span&gt; digitalocean_spaces_bucket.mybucket &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;region&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;,&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;name&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now, using a bit of &lt;code&gt;terraform plan&lt;/code&gt; trial and error, you could write the code for the resource until no changes were found anymore.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;mybucket&amp;quot; {
-  name   = &amp;quot;mybucket&amp;quot;
-  region = &amp;quot;ams3&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-hcl&quot;&gt;&lt;code class=&quot;language-hcl&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;resource &lt;span class=&quot;token type variable&quot;&gt;&quot;digitalocean_spaces_bucket&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mybucket&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt;   &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mybucket&quot;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;region&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ams3&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Using &lt;a href=&quot;https://developer.hashicorp.com/terraform/tutorials/state/state-import&quot;&gt;import blocks&lt;/a&gt; you can basically skip the last step for the most part. You can now import resources using code, and have a basic skeleton of the resource code be created for you.&lt;/p&gt;
 &lt;p&gt;First we get the DigitalOcean Terraform provider and define our first import block.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;terraform {
-  required_providers {
-    digitalocean = {
-      source = &amp;quot;digitalocean/digitalocean&amp;quot;
-    }
-  }
-}
+&lt;pre class=&quot;language-hcl&quot;&gt;&lt;code class=&quot;language-hcl&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;terraform&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;required_providers&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;digitalocean&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;digitalocean/digitalocean&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
-import {
-  id = &amp;quot;ams3,mybucket&amp;quot;
-  to = digitalocean_spaces_bucket.mybucket
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ams3,mybucket&quot;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; digitalocean_spaces_bucket.mybucket
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Using &lt;code&gt;terraform plan&lt;/code&gt; with the &lt;code&gt;-generate-config-out&lt;/code&gt; flag, Terraform will generate configuration for the resource and outputs the plan.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;terraform plan -generate-config-out=generated.tf
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;terraform plan -generate-config-out&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;generated.tf&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Of course, the code it generates isn&#39;t perfect, but it&#39;s a very good starting point. Now, finally, we don&#39;t have to go back and forth between our code and &lt;code&gt;terraform plan&lt;/code&gt; to guess the arguments of the resource. You can go ahead and take the output and put it in the correct place in your own codebase.&lt;/p&gt;
 &lt;p&gt;The above import block will generate something like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;mybucket&amp;quot; {
-  acl           = null
-  force_destroy = null
-  name          = &amp;quot;mybucket&amp;quot;
-  region        = &amp;quot;ams3&amp;quot;
-  lifecycle_rule {
-    abort_incomplete_multipart_upload_days = 0
-    enabled                                = true
-    prefix                                 = null
-    expiration {
-      date                         = null
-      days                         = 7
-      expired_object_delete_marker = false
-    }
-    noncurrent_version_expiration {
-      days = 7
-    }
-  }
-  versioning {
-    enabled = false
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-hcl&quot;&gt;&lt;code class=&quot;language-hcl&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;resource &lt;span class=&quot;token type variable&quot;&gt;&quot;digitalocean_spaces_bucket&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mybucket&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;acl&lt;/span&gt;           &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; null
+  &lt;span class=&quot;token property&quot;&gt;force_destroy&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; null
+  &lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt;          &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mybucket&quot;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;region&lt;/span&gt;        &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ams3&quot;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;lifecycle_rule&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;abort_incomplete_multipart_upload_days&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;enabled&lt;/span&gt;                                &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;prefix&lt;/span&gt;                                 &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; null
+    &lt;span class=&quot;token keyword&quot;&gt;expiration&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;date&lt;/span&gt;                         &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; null
+      &lt;span class=&quot;token property&quot;&gt;days&lt;/span&gt;                         &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;expired_object_delete_marker&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;noncurrent_version_expiration&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;versioning&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 </description>
       <pubDate>Thu, 15 Jun 2023 00:00:00 GMT</pubDate>
       <dc:creator>Mijndert Stuij</dc:creator>
@@ -220,26 +213,25 @@ import {
 &lt;p&gt;As an example, let&#39;s take the &lt;a href=&quot;https://github.com/toot-community/platform&quot;&gt;platform code for toot.community&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here I wanted to create multiple &lt;a href=&quot;https://www.digitalocean.com/products/spaces&quot;&gt;Digitalocean Spaces&lt;/a&gt;, one for storing user files, one for backups, one for Terraform state management, etc. On some of these Spaces I want to create a lifecycle rule to automatically delete files older than a given threshold. But of course I don&#39;t want to apply that same lifecycle policy to everything; it would be a stupid idea to delete Terraform statefiles after all. At the same time, I really want to define the Digitalocean Spaces resource only once, for DRY reasons.&lt;/p&gt;
 &lt;p&gt;In this example you see a Dynamic block for the property &lt;code&gt;lifecycle_rule&lt;/code&gt;. There&#39;s a &lt;code&gt;for_each&lt;/code&gt; that needs the variable &lt;code&gt;expiration_enabled&lt;/code&gt; to be set to &lt;code&gt;true&lt;/code&gt;, else the &lt;code&gt;for_each&lt;/code&gt; loop will be empty and the property will not be created.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;resource &amp;quot;digitalocean_spaces_bucket&amp;quot; &amp;quot;this&amp;quot; {
-  name   = var.spaces_name
-  region = var.region
-  acl    = &amp;quot;private&amp;quot;
+&lt;pre class=&quot;language-hcl&quot;&gt;&lt;code class=&quot;language-hcl&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;resource &lt;span class=&quot;token type variable&quot;&gt;&quot;digitalocean_spaces_bucket&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;this&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt;   &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; var.spaces_name
+  &lt;span class=&quot;token property&quot;&gt;region&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; var.region
+  &lt;span class=&quot;token property&quot;&gt;acl&lt;/span&gt;    &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;private&quot;&lt;/span&gt;
 
-  dynamic &amp;quot;lifecycle_rule&amp;quot; {
-    for_each = var.expiration_enabled == true ? [1] : []
-    content {
-      id      = &amp;quot;${var.spaces_name}-lifecycle-rule&amp;quot;
-      enabled = true
-      expiration {
-        days = 7
-      }
-      noncurrent_version_expiration {
-        days = 7
-      }
-    }
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
+  dynamic &lt;span class=&quot;token string&quot;&gt;&quot;lifecycle_rule&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;for_each&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; var.expiration_enabled &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt; ? &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; : &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;content&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;id&lt;/span&gt;      &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token type variable&quot;&gt;spaces_name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;-lifecycle-rule&quot;&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;expiration&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;noncurrent_version_expiration&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token property&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now if I don&#39;t specify the variable &lt;code&gt;expiration_enabled&lt;/code&gt; the &lt;code&gt;lifecycle_rule&lt;/code&gt; property isn&#39;t created and I just get a standard &lt;code&gt;digitalocean_spaces_bucket&lt;/code&gt;. I don&#39;t have to repeat myself anymore and it makes my module a lot cleaner.&lt;/p&gt;
 &lt;p&gt;A word of warning though, overuse of Dynamic blocks will eventually lead to code being unreadable and not very easy to understand. Only use Dynamic blocks if there&#39;s no other way to avoid repeating the same code. If you have to repeat a few lines once or twice, stop and think if you really need a Dynamic block or if you can live with it in that instance.&lt;/p&gt;
 &lt;p&gt;Speaking of Terraform modules, that&#39;s something I want to talk about in another blog post as well. A question I get asked a lot is &amp;quot;how do I organize my environments and modules?&amp;quot;. More on that later. If you want to get notified of new posts you can import the &lt;a href=&quot;https://mijndertstuij.nl/feed.xml&quot;&gt;RSS feed&lt;/a&gt; for this website in your reader.&lt;/p&gt;
@@ -260,49 +252,48 @@ import {
 &lt;h2&gt;Shortcodes&lt;/h2&gt;
 &lt;p&gt;The following Hugo shortcode will generate multiple sizes of a given image and spit out .webp and .jpeg files.&lt;/p&gt;
 &lt;p&gt;Create a file called &lt;code&gt;/layouts/shortcodes/imgh.html&lt;/code&gt; in the root of your project with the following contents.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{- $respSizes := slice &amp;quot;960&amp;quot; &amp;quot;1280&amp;quot; &amp;quot;1920&amp;quot; -}}
-{{- $imgBase := &amp;quot;images/&amp;quot; -}}
-{{- $src := resources.Get (printf &amp;quot;%s%s&amp;quot; $imgBase (.Get &amp;quot;src&amp;quot;)) -}}
-{{- $alt := .Get &amp;quot;alt&amp;quot; -}}
-{{- $divClass := &amp;quot;&amp;quot; -}}{{/* Init&#39;g */}}
-{{- $imgClass := &amp;quot;w-full h-auto animate-fade&amp;quot; -}}
-{{- $dataSzes := &amp;quot;(min-width: 1024px) 100vw, 50vw&amp;quot; -}}
-{{- $actualImg := $src.Resize &amp;quot;640x jpg&amp;quot; -}}
-&amp;lt;picture&amp;gt;
-  &amp;lt;source
-    type=&amp;quot;image/webp&amp;quot;
-    srcset=&amp;quot;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;{{- $respSizes := slice &quot;960&quot; &quot;1280&quot; &quot;1920&quot; -}}
+{{- $imgBase := &quot;images/&quot; -}}
+{{- $src := resources.Get (printf &quot;%s%s&quot; $imgBase (.Get &quot;src&quot;)) -}}
+{{- $alt := .Get &quot;alt&quot; -}}
+{{- $divClass := &quot;&quot; -}}{{/* Init&#39;g */}}
+{{- $imgClass := &quot;w-full h-auto animate-fade&quot; -}}
+{{- $dataSzes := &quot;(min-width: 1024px) 100vw, 50vw&quot; -}}
+{{- $actualImg := $src.Resize &quot;640x jpg&quot; -}}
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;picture&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;source&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;image/webp&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;srcset&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;
       {{- with $respSizes -}}
         {{- range $i, $e := . -}}
         {{- if ge $src.Width . -}}
-          {{- if $i }}, {{ end -}}{{- ($src.Resize (printf &amp;quot;%sx%s&amp;quot; . &amp;quot; webp&amp;quot;) ).RelPermalink }} {{ . }}w
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}&amp;quot;
-    sizes=&amp;quot;{{ $dataSzes }}&amp;quot;
-  /&amp;gt;
-  &amp;lt;source
-    type=&amp;quot;image/jpeg&amp;quot;
-    srcset=&amp;quot;
+          {{- if $i }}, {{ end -}}{{- ($src.Resize (printf &lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;%sx%s&quot;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;webp&quot;)&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;).RelPermalink&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;}}&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;}}w&lt;/span&gt;
+        &lt;span class=&quot;token attr-name&quot;&gt;{{-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;-}}&lt;/span&gt;
+      &lt;span class=&quot;token attr-name&quot;&gt;{{-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;-}}&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;{{-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;-}}&quot;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;sizes&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $dataSzes }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;source&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;image/jpeg&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;srcset&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;
       {{- with $respSizes -}}
         {{- range $i, $e := . -}}
           {{- if ge $src.Width . -}}
-            {{- if $i }}, {{ end -}}{{- ($src.Resize (printf &amp;quot;%sx%s&amp;quot; . &amp;quot; jpg&amp;quot;) ).RelPermalink }} {{ . }}w
-          {{- end -}}
-      {{- end -}}
-    {{- end -}}&amp;quot;&#92;
-    sizes=&amp;quot;{{ $dataSzes }}&amp;quot;
-  /&amp;gt;
-  &amp;lt;img class=&amp;quot;{{ $imgClass }}&amp;quot;
-    src=&amp;quot;{{ $actualImg.RelPermalink }}&amp;quot;
-    width=&amp;quot;{{ $src.Width }}&amp;quot;
-    height=&amp;quot;{{ $src.Height }}&amp;quot;
-    alt=&amp;quot;{{ $alt }}&amp;quot;
-    loading=&amp;quot;lazy&amp;quot;
-  /&amp;gt;
-&amp;lt;/picture&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+            {{- if $i }}, {{ end -}}{{- ($src.Resize (printf &lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;%sx%s&quot;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;jpg&quot;)&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;).RelPermalink&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;}}&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;}}w&lt;/span&gt;
+          &lt;span class=&quot;token attr-name&quot;&gt;{{-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;-}}&lt;/span&gt;
+      &lt;span class=&quot;token attr-name&quot;&gt;{{-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;-}}&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;{{-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;-}}&quot;&#92;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;sizes&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $dataSzes }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $imgClass }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $actualImg.RelPermalink }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $src.Width }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $src.Height }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;alt&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $alt }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&quot;token attr-name&quot;&gt;loading&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;lazy&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;picture&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Using the shortcode&lt;/h2&gt;
 &lt;p&gt;Now in order to use the above shortcode you can simply drop an image into &lt;code&gt;/assets/images&lt;/code&gt; and insert this line of code in your MarkDown file.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;{{&amp;lt;/* imgh src=&amp;quot;my-example-file.jpeg&amp;quot; alt=&amp;quot;My example file&amp;quot; */&amp;gt;}}
@@ -355,26 +346,25 @@ git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/pack/plugi
 &lt;p&gt;Within Vim you can execute &lt;code&gt;:scriptnames&lt;/code&gt; to list all loaded plugins.&lt;/p&gt;
 &lt;h2&gt;My .vimrc&lt;/h2&gt;
 &lt;p&gt;My .vimrc is exactly what I need and nothing more.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;syntax on                           # enable syntax highlighting
-set tabstop=2                       # set 1 tab to 2 spaces
-set shiftwidth=2                    # set an indent to 2 spaces
-set expandtab                       # convert tabs to spaces
-set ai                              # automatic indentation
-set number                          # enable line numbers
-set hlsearch                        # highlight search matches
-set ruler                           # show current row and column position
-set backspace=2                     # fix backspace behaviour
-set wildmenu                        # enable autocompletion
-set path=$PWD/**                    # set search path
-set wildmode=longest:list,full      # set autocompletion mode
-set pastetoggle=&amp;lt;leader&amp;gt;p           # toggle paste mode using &#92;p
-set nuw=3                           # set left margin
-set noswapfile                       # disable swapfiles
-set clipboard=unnamed               # copy to system clipboard
-highlight LineNr ctermfg=DarkGrey   # set linenumbers to grey
-nnoremap &amp;lt;esc&amp;gt;&amp;lt;esc&amp;gt; :noh&amp;lt;return&amp;gt;    # clear search results using esc-esc
-colorscheme nord                    # set colorscheme to nord
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token builtin&quot;&gt;syntax&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;on&lt;/span&gt;                           # enable &lt;span class=&quot;token builtin&quot;&gt;syntax&lt;/span&gt; highlighting
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;tabstop&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;                       # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;tab&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; spaces
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;shiftwidth&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;                    # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; an indent &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; spaces
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;expandtab&lt;/span&gt;                       # convert &lt;span class=&quot;token keyword&quot;&gt;tabs&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; spaces
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;ai&lt;/span&gt;                              # automatic indentation
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;number&lt;/span&gt;                          # enable line numbers
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;hlsearch&lt;/span&gt;                        # &lt;span class=&quot;token builtin&quot;&gt;highlight&lt;/span&gt; search matches
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;ruler&lt;/span&gt;                           # show current row and column position
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;backspace&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;                     # &lt;span class=&quot;token keyword&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;backspace&lt;/span&gt; behaviour
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;wildmenu&lt;/span&gt;                        # enable autocompletion
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;$PWD&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;                    # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; search &lt;span class=&quot;token builtin&quot;&gt;path&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;wildmode&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;longest&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;full      # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; autocompletion &lt;span class=&quot;token keyword&quot;&gt;mode&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;pastetoggle&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;leader&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;p&lt;/span&gt;           # toggle &lt;span class=&quot;token builtin&quot;&gt;paste&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;mode&lt;/span&gt; using &#92;&lt;span class=&quot;token keyword&quot;&gt;p&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;nuw&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;                           # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;left&lt;/span&gt; margin
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;noswapfile&lt;/span&gt;                       # disable swapfiles
+&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;clipboard&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;unnamed               # &lt;span class=&quot;token keyword&quot;&gt;copy&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; system &lt;span class=&quot;token builtin&quot;&gt;clipboard&lt;/span&gt;
+&lt;span class=&quot;token builtin&quot;&gt;highlight&lt;/span&gt; LineNr ctermfg&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;DarkGrey   # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; linenumbers &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; grey
+nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;noh&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;    # clear search results using esc&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;esc
+&lt;span class=&quot;token keyword&quot;&gt;colorscheme&lt;/span&gt; nord                    # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;colorscheme&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; nord&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Keyboard shortcuts&lt;/h2&gt;
 &lt;p&gt;Some of the common ones I use are &lt;strong&gt;i&lt;/strong&gt; for insert mode and &lt;strong&gt;v&lt;/strong&gt; for visual mode. Then there&#39;s &lt;strong&gt;u&lt;/strong&gt; for undo, &lt;strong&gt;y&lt;/strong&gt; for copy (yank), &lt;strong&gt;d&lt;/strong&gt; for delete, and &lt;strong&gt;aB&lt;/strong&gt; for selecting a block with accolades. And of course a bunch more, but I think you&#39;re good to go with just these ones.&lt;/p&gt;
 &lt;p&gt;Even after years of use and some amount of muscle memory, it still feels like I&#39;ve only touched the surface of what&#39;s possible. When you&#39;re just starting out I highly recommend keeping a cheatsheet at hand, like &lt;a href=&quot;https://vim.rtorr.com/&quot;&gt;this one&lt;/a&gt;.&lt;/p&gt;
@@ -404,34 +394,31 @@ colorscheme nord                    # set colorscheme to nord
 &lt;p&gt;While I agree that adding Service Discovery to your architecture does add a little bit of an up-front learning curve, in the long run it&#39;s kind of a set-and-forget thing.&lt;/p&gt;
 &lt;p&gt;A great service for such a use-case is &lt;a href=&quot;https://aws.amazon.com/cloud-map/&quot;&gt;AWS CloudMap&lt;/a&gt; which integrates really well with AWS Fargate. Say you have a backend service running on AWS Fargate that accepts traffic on port 4000 that you can to be able to horizontally scale, it&#39;s pretty easy to implement in CloudFormation.&lt;/p&gt;
 &lt;p&gt;First we need to create a namespace to register targets in.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;PrivateNamespace:
-  Type: AWS::ServiceDiscovery::PrivateDnsNamespace
-  Properties:
-    Name: my-backend-service.aws
-    Vpc: !Ref VPCId
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;PrivateNamespace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; AWS&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;ServiceDiscovery&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;PrivateDnsNamespace
+  &lt;span class=&quot;token key atrule&quot;&gt;Properties&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; my&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;backend&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;service.aws
+    &lt;span class=&quot;token key atrule&quot;&gt;Vpc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;!Ref&lt;/span&gt; VPCId&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now we can create a Service which is a collection of backend servers that Fargate knows how to register itself into.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;DiscoveryService:
-  Type: AWS::ServiceDiscovery::Service
-  Properties:
-    Description: Discovery Service for my-backend-service
-    DnsConfig:
-      RoutingPolicy: MULTIVALUE
-      DnsRecords:
-        - TTL: 0
-          Type: A
-        - TTL: 0
-          Type: SRV
-    HealthCheckCustomConfig:
-      FailureThreshold: 1
-    Name: app
-    NamespaceId: !Ref PrivateNamespace
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;DiscoveryService&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token key atrule&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; AWS&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;ServiceDiscovery&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;Service
+  &lt;span class=&quot;token key atrule&quot;&gt;Properties&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;Description&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Discovery Service for my&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;backend&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;service
+    &lt;span class=&quot;token key atrule&quot;&gt;DnsConfig&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;RoutingPolicy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; MULTIVALUE
+      &lt;span class=&quot;token key atrule&quot;&gt;DnsRecords&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;TTL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+          &lt;span class=&quot;token key atrule&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; A
+        &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;TTL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+          &lt;span class=&quot;token key atrule&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; SRV
+    &lt;span class=&quot;token key atrule&quot;&gt;HealthCheckCustomConfig&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token key atrule&quot;&gt;FailureThreshold&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;token key atrule&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; app
+    &lt;span class=&quot;token key atrule&quot;&gt;NamespaceId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;!Ref&lt;/span&gt; PrivateNamespace&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To connect your Fargate service (&lt;code&gt;AWS::ECS::Service&lt;/code&gt;) to CloudMap we can simply specify the DiscoveryService resource.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ServiceRegistries:
-  - RegistryArn: !GetAtt DiscoveryService.Arn
-    Port: 4000
-&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;ServiceRegistries&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;RegistryArn&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;!GetAtt&lt;/span&gt; DiscoveryService.Arn
+    &lt;span class=&quot;token key atrule&quot;&gt;Port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Anyone who needs to access your backend server can now simply use the hostname &lt;code&gt;app.my-backend-service.aws:4000&lt;/code&gt; without every having to deploy a load balancer.&lt;/p&gt;
 &lt;p&gt;Of course AWS CloudMap also has the ability to specify exactly which services can access certain backends by integrating IAM into it. But that&#39;s for another day to discuss.&lt;/p&gt;
 </description>

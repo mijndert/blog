@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Eleventy v3.0.0">
     <meta name="fediverse:creator" content="@mijndert@fosstodon.org">
     <title>Saving time using Terraform import blocks</title>
-    <meta name="description" content="Stop creating resources yourself, use import blocks instead. A new feature in Terraform 1.5." />
-    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml" />
+    <meta name="description" content="Stop creating resources yourself, use import blocks instead. A new feature in Terraform 1.5.">
+    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/base.css">
+    <link href="//prismjs.catppuccin.com/mocha.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -22,9 +23,9 @@
   <a href="/">
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="32.000000pt" height="32.000000pt" viewBox="0 0 48.000000 48.000000" preserveAspectRatio="xMidYMid meet">
       <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-        <path d="M404 459 c-10 -12 -34 -28 -52 -36 -40 -17 -50 -39 -29 -61 19 -19 35 -9 19 11 -7 8 -9 17 -5 20 13 14 23 6 23 -16 0 -29 43 -72 64 -64 9 4 16 17 16 30 0 14 6 40 14 58 15 37 6 79 -17 79 -8 0 -22 -10 -33 -21z m36 -23 c0 -28 -13 -47 -41 -62 -27 -14 -29 -13 -29 6 0 20 44 70 61 70 5 0 9 -6 9 -14z m-20 -86 c0 -5 -7 -10 -16 -10 -8 0 -12 5 -9 10 3 6 10 10 16 10 5 0 9 -4 9 -10z"/>
-        <path d="M156 445 c-112 -40 -171 -186 -115 -285 20 -35 20 -39 5 -68 -20 -39 -21 -81 -1 -88 31 -12 70 9 134 71 62 60 180 229 168 241 -3 3 -28 -27 -55 -68 -84 -124 -188 -228 -229 -228 -16 0 -17 40 -2 74 11 23 13 24 35 9 32 -20 31 -6 -1 19 -80 63 -71 197 18 275 40 35 88 48 145 39 l37 -5 -30 14 c-38 18 -60 18 -109 0z"/>
-        <path d="M416 240 c-18 -96 -64 -152 -148 -181 l-53 -18 38 -1 c96 0 186 107 175 210 l-3 35 -9 -45z"/>
+        <path d="M404 459 c-10 -12 -34 -28 -52 -36 -40 -17 -50 -39 -29 -61 19 -19 35 -9 19 11 -7 8 -9 17 -5 20 13 14 23 6 23 -16 0 -29 43 -72 64 -64 9 4 16 17 16 30 0 14 6 40 14 58 15 37 6 79 -17 79 -8 0 -22 -10 -33 -21z m36 -23 c0 -28 -13 -47 -41 -62 -27 -14 -29 -13 -29 6 0 20 44 70 61 70 5 0 9 -6 9 -14z m-20 -86 c0 -5 -7 -10 -16 -10 -8 0 -12 5 -9 10 3 6 10 10 16 10 5 0 9 -4 9 -10z"></path>
+        <path d="M156 445 c-112 -40 -171 -186 -115 -285 20 -35 20 -39 5 -68 -20 -39 -21 -81 -1 -88 31 -12 70 9 134 71 62 60 180 229 168 241 -3 3 -28 -27 -55 -68 -84 -124 -188 -228 -229 -228 -16 0 -17 40 -2 74 11 23 13 24 35 9 32 -20 31 -6 -1 19 -80 63 -71 197 18 275 40 35 88 48 145 39 l37 -5 -30 14 c-38 18 -60 18 -109 0z"></path>
+        <path d="M416 240 c-18 -96 -64 -152 -148 -181 l-53 -18 38 -1 c96 0 186 107 175 210 l-3 35 -9 -45z"></path>
       </g>
     </svg>
   </a>
@@ -37,57 +38,52 @@
 <p>You can import your resources in the terminal, but you still have to write the code for the resources you import. With Terraform version 1.5 there's a better solution: import blocks.</p>
 <p>Let's take a DigitalOcean Spaces bucket as an example here.</p>
 <p>Before <a href="https://www.hashicorp.com/blog/terraform-1-5-brings-config-driven-import-and-checks">Terraform 1.5</a> you first had to import the resource into your statefile:</p>
-<pre><code>terraform import digitalocean_spaces_bucket.mybucket `region`,`name`
-</code></pre>
+<pre class="language-bash"><code class="language-bash">terraform <span class="token function">import</span> digitalocean_spaces_bucket.mybucket <span class="token variable"><span class="token variable">`</span>region<span class="token variable">`</span></span>,<span class="token variable"><span class="token variable">`</span>name<span class="token variable">`</span></span></code></pre>
 <p>Now, using a bit of <code>terraform plan</code> trial and error, you could write the code for the resource until no changes were found anymore.</p>
-<pre><code>resource &quot;digitalocean_spaces_bucket&quot; &quot;mybucket&quot; {
-  name   = &quot;mybucket&quot;
-  region = &quot;ams3&quot;
-}
-</code></pre>
+<pre class="language-hcl"><code class="language-hcl"><span class="token keyword">resource <span class="token type variable">"digitalocean_spaces_bucket"</span></span> <span class="token string">"mybucket"</span> <span class="token punctuation">{</span>
+  <span class="token property">name</span>   <span class="token punctuation">=</span> <span class="token string">"mybucket"</span>
+  <span class="token property">region</span> <span class="token punctuation">=</span> <span class="token string">"ams3"</span>
+<span class="token punctuation">}</span></code></pre>
 <p>Using <a href="https://developer.hashicorp.com/terraform/tutorials/state/state-import">import blocks</a> you can basically skip the last step for the most part. You can now import resources using code, and have a basic skeleton of the resource code be created for you.</p>
 <p>First we get the DigitalOcean Terraform provider and define our first import block.</p>
-<pre><code>terraform {
-  required_providers {
-    digitalocean = {
-      source = &quot;digitalocean/digitalocean&quot;
-    }
-  }
-}
+<pre class="language-hcl"><code class="language-hcl"><span class="token keyword">terraform</span> <span class="token punctuation">{</span>
+  <span class="token keyword">required_providers</span> <span class="token punctuation">{</span>
+    <span class="token property">digitalocean</span> <span class="token punctuation">=</span> <span class="token punctuation">{</span>
+      <span class="token property">source</span> <span class="token punctuation">=</span> <span class="token string">"digitalocean/digitalocean"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-import {
-  id = &quot;ams3,mybucket&quot;
-  to = digitalocean_spaces_bucket.mybucket
-}
-</code></pre>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>
+  <span class="token property">id</span> <span class="token punctuation">=</span> <span class="token string">"ams3,mybucket"</span>
+  <span class="token property">to</span> <span class="token punctuation">=</span> digitalocean_spaces_bucket.mybucket
+<span class="token punctuation">}</span></code></pre>
 <p>Using <code>terraform plan</code> with the <code>-generate-config-out</code> flag, Terraform will generate configuration for the resource and outputs the plan.</p>
-<pre><code>terraform plan -generate-config-out=generated.tf
-</code></pre>
+<pre class="language-bash"><code class="language-bash">terraform plan -generate-config-out<span class="token operator">=</span>generated.tf</code></pre>
 <p>Of course, the code it generates isn't perfect, but it's a very good starting point. Now, finally, we don't have to go back and forth between our code and <code>terraform plan</code> to guess the arguments of the resource. You can go ahead and take the output and put it in the correct place in your own codebase.</p>
 <p>The above import block will generate something like this:</p>
-<pre><code>resource &quot;digitalocean_spaces_bucket&quot; &quot;mybucket&quot; {
-  acl           = null
-  force_destroy = null
-  name          = &quot;mybucket&quot;
-  region        = &quot;ams3&quot;
-  lifecycle_rule {
-    abort_incomplete_multipart_upload_days = 0
-    enabled                                = true
-    prefix                                 = null
-    expiration {
-      date                         = null
-      days                         = 7
-      expired_object_delete_marker = false
-    }
-    noncurrent_version_expiration {
-      days = 7
-    }
-  }
-  versioning {
-    enabled = false
-  }
-}
-</code></pre>
+<pre class="language-hcl"><code class="language-hcl"><span class="token keyword">resource <span class="token type variable">"digitalocean_spaces_bucket"</span></span> <span class="token string">"mybucket"</span> <span class="token punctuation">{</span>
+  <span class="token property">acl</span>           <span class="token punctuation">=</span> null
+  <span class="token property">force_destroy</span> <span class="token punctuation">=</span> null
+  <span class="token property">name</span>          <span class="token punctuation">=</span> <span class="token string">"mybucket"</span>
+  <span class="token property">region</span>        <span class="token punctuation">=</span> <span class="token string">"ams3"</span>
+  <span class="token keyword">lifecycle_rule</span> <span class="token punctuation">{</span>
+    <span class="token property">abort_incomplete_multipart_upload_days</span> <span class="token punctuation">=</span> <span class="token number">0</span>
+    <span class="token property">enabled</span>                                <span class="token punctuation">=</span> <span class="token boolean">true</span>
+    <span class="token property">prefix</span>                                 <span class="token punctuation">=</span> null
+    <span class="token keyword">expiration</span> <span class="token punctuation">{</span>
+      <span class="token property">date</span>                         <span class="token punctuation">=</span> null
+      <span class="token property">days</span>                         <span class="token punctuation">=</span> <span class="token number">7</span>
+      <span class="token property">expired_object_delete_marker</span> <span class="token punctuation">=</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">noncurrent_version_expiration</span> <span class="token punctuation">{</span>
+      <span class="token property">days</span> <span class="token punctuation">=</span> <span class="token number">7</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">versioning</span> <span class="token punctuation">{</span>
+    <span class="token property">enabled</span> <span class="token punctuation">=</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
 </article>
 
     </main>

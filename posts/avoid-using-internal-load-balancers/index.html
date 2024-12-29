@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Eleventy v3.0.0">
     <meta name="fediverse:creator" content="@mijndert@fosstodon.org">
     <title>Avoid using internal load balancers</title>
-    <meta name="description" content="On avoiding internal load balancers in liue of AWS CloudMap." />
-    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml" />
+    <meta name="description" content="On avoiding internal load balancers in liue of AWS CloudMap.">
+    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/base.css">
+    <link href="//prismjs.catppuccin.com/mocha.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -22,9 +23,9 @@
   <a href="/">
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="32.000000pt" height="32.000000pt" viewBox="0 0 48.000000 48.000000" preserveAspectRatio="xMidYMid meet">
       <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-        <path d="M404 459 c-10 -12 -34 -28 -52 -36 -40 -17 -50 -39 -29 -61 19 -19 35 -9 19 11 -7 8 -9 17 -5 20 13 14 23 6 23 -16 0 -29 43 -72 64 -64 9 4 16 17 16 30 0 14 6 40 14 58 15 37 6 79 -17 79 -8 0 -22 -10 -33 -21z m36 -23 c0 -28 -13 -47 -41 -62 -27 -14 -29 -13 -29 6 0 20 44 70 61 70 5 0 9 -6 9 -14z m-20 -86 c0 -5 -7 -10 -16 -10 -8 0 -12 5 -9 10 3 6 10 10 16 10 5 0 9 -4 9 -10z"/>
-        <path d="M156 445 c-112 -40 -171 -186 -115 -285 20 -35 20 -39 5 -68 -20 -39 -21 -81 -1 -88 31 -12 70 9 134 71 62 60 180 229 168 241 -3 3 -28 -27 -55 -68 -84 -124 -188 -228 -229 -228 -16 0 -17 40 -2 74 11 23 13 24 35 9 32 -20 31 -6 -1 19 -80 63 -71 197 18 275 40 35 88 48 145 39 l37 -5 -30 14 c-38 18 -60 18 -109 0z"/>
-        <path d="M416 240 c-18 -96 -64 -152 -148 -181 l-53 -18 38 -1 c96 0 186 107 175 210 l-3 35 -9 -45z"/>
+        <path d="M404 459 c-10 -12 -34 -28 -52 -36 -40 -17 -50 -39 -29 -61 19 -19 35 -9 19 11 -7 8 -9 17 -5 20 13 14 23 6 23 -16 0 -29 43 -72 64 -64 9 4 16 17 16 30 0 14 6 40 14 58 15 37 6 79 -17 79 -8 0 -22 -10 -33 -21z m36 -23 c0 -28 -13 -47 -41 -62 -27 -14 -29 -13 -29 6 0 20 44 70 61 70 5 0 9 -6 9 -14z m-20 -86 c0 -5 -7 -10 -16 -10 -8 0 -12 5 -9 10 3 6 10 10 16 10 5 0 9 -4 9 -10z"></path>
+        <path d="M156 445 c-112 -40 -171 -186 -115 -285 20 -35 20 -39 5 -68 -20 -39 -21 -81 -1 -88 31 -12 70 9 134 71 62 60 180 229 168 241 -3 3 -28 -27 -55 -68 -84 -124 -188 -228 -229 -228 -16 0 -17 40 -2 74 11 23 13 24 35 9 32 -20 31 -6 -1 19 -80 63 -71 197 18 275 40 35 88 48 145 39 l37 -5 -30 14 c-38 18 -60 18 -109 0z"></path>
+        <path d="M416 240 c-18 -96 -64 -152 -148 -181 l-53 -18 38 -1 c96 0 186 107 175 210 l-3 35 -9 -45z"></path>
       </g>
     </svg>
   </a>
@@ -39,34 +40,31 @@
 <p>While I agree that adding Service Discovery to your architecture does add a little bit of an up-front learning curve, in the long run it's kind of a set-and-forget thing.</p>
 <p>A great service for such a use-case is <a href="https://aws.amazon.com/cloud-map/">AWS CloudMap</a> which integrates really well with AWS Fargate. Say you have a backend service running on AWS Fargate that accepts traffic on port 4000 that you can to be able to horizontally scale, it's pretty easy to implement in CloudFormation.</p>
 <p>First we need to create a namespace to register targets in.</p>
-<pre><code>PrivateNamespace:
-  Type: AWS::ServiceDiscovery::PrivateDnsNamespace
-  Properties:
-    Name: my-backend-service.aws
-    Vpc: !Ref VPCId
-</code></pre>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">PrivateNamespace</span><span class="token punctuation">:</span>
+  <span class="token key atrule">Type</span><span class="token punctuation">:</span> AWS<span class="token punctuation">:</span><span class="token punctuation">:</span>ServiceDiscovery<span class="token punctuation">:</span><span class="token punctuation">:</span>PrivateDnsNamespace
+  <span class="token key atrule">Properties</span><span class="token punctuation">:</span>
+    <span class="token key atrule">Name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>backend<span class="token punctuation">-</span>service.aws
+    <span class="token key atrule">Vpc</span><span class="token punctuation">:</span> <span class="token tag">!Ref</span> VPCId</code></pre>
 <p>Now we can create a Service which is a collection of backend servers that Fargate knows how to register itself into.</p>
-<pre><code>DiscoveryService:
-  Type: AWS::ServiceDiscovery::Service
-  Properties:
-    Description: Discovery Service for my-backend-service
-    DnsConfig:
-      RoutingPolicy: MULTIVALUE
-      DnsRecords:
-        - TTL: 0
-          Type: A
-        - TTL: 0
-          Type: SRV
-    HealthCheckCustomConfig:
-      FailureThreshold: 1
-    Name: app
-    NamespaceId: !Ref PrivateNamespace
-</code></pre>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">DiscoveryService</span><span class="token punctuation">:</span>
+  <span class="token key atrule">Type</span><span class="token punctuation">:</span> AWS<span class="token punctuation">:</span><span class="token punctuation">:</span>ServiceDiscovery<span class="token punctuation">:</span><span class="token punctuation">:</span>Service
+  <span class="token key atrule">Properties</span><span class="token punctuation">:</span>
+    <span class="token key atrule">Description</span><span class="token punctuation">:</span> Discovery Service for my<span class="token punctuation">-</span>backend<span class="token punctuation">-</span>service
+    <span class="token key atrule">DnsConfig</span><span class="token punctuation">:</span>
+      <span class="token key atrule">RoutingPolicy</span><span class="token punctuation">:</span> MULTIVALUE
+      <span class="token key atrule">DnsRecords</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">TTL</span><span class="token punctuation">:</span> <span class="token number">0</span>
+          <span class="token key atrule">Type</span><span class="token punctuation">:</span> A
+        <span class="token punctuation">-</span> <span class="token key atrule">TTL</span><span class="token punctuation">:</span> <span class="token number">0</span>
+          <span class="token key atrule">Type</span><span class="token punctuation">:</span> SRV
+    <span class="token key atrule">HealthCheckCustomConfig</span><span class="token punctuation">:</span>
+      <span class="token key atrule">FailureThreshold</span><span class="token punctuation">:</span> <span class="token number">1</span>
+    <span class="token key atrule">Name</span><span class="token punctuation">:</span> app
+    <span class="token key atrule">NamespaceId</span><span class="token punctuation">:</span> <span class="token tag">!Ref</span> PrivateNamespace</code></pre>
 <p>To connect your Fargate service (<code>AWS::ECS::Service</code>) to CloudMap we can simply specify the DiscoveryService resource.</p>
-<pre><code>ServiceRegistries:
-  - RegistryArn: !GetAtt DiscoveryService.Arn
-    Port: 4000
-</code></pre>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">ServiceRegistries</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">RegistryArn</span><span class="token punctuation">:</span> <span class="token tag">!GetAtt</span> DiscoveryService.Arn
+    <span class="token key atrule">Port</span><span class="token punctuation">:</span> <span class="token number">4000</span></code></pre>
 <p>Anyone who needs to access your backend server can now simply use the hostname <code>app.my-backend-service.aws:4000</code> without every having to deploy a load balancer.</p>
 <p>Of course AWS CloudMap also has the ability to specify exactly which services can access certain backends by integrating IAM into it. But that's for another day to discuss.</p>
 </article>
