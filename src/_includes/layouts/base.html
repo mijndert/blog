@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="{{ eleventy.generator }}">
     <meta name="fediverse:creator" content="@mijndert@fosstodon.org">
-    <title>{{ title }}</title>
-    {% if summary %}<meta name="description" content="{{ summary }}" />{% endif %}
+    <title>{{ title | escape }}</title>
+    {% if summary %}<meta name="description" content="{{ summary | escape }}" />{% endif %}
+    <link rel="canonical" href={{ site.url }}{{ page.url }}>
+    <meta name="robots" content="index, follow" />
     <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
