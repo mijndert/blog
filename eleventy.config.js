@@ -1,12 +1,12 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
-import dateFilter from "./src/filters/date-filter.js"
-import w3DateFilter from"./src/filters/w3-date-filter.js"
 import embeds from "eleventy-plugin-embed-everything"
 import { eleventyImagePlugin } from "@11ty/eleventy-img"
+import { DateTime } from "luxon";
 
 export default async function(eleventyConfig) {
-  eleventyConfig.addFilter("dateFilter", dateFilter);
-  eleventyConfig.addFilter("w3DateFilter", w3DateFilter);
+  eleventyConfig.addFilter("postDate", dateObj => {
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
+  })
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("src/favicon/");
   eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });

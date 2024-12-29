@@ -2,8 +2,8 @@
   {%- for post in collections.post | reverse -%}
   <div class="post">
     <span class="meta">
-      <time class="muted" datetime="{{ post.date | w3DateFilter }}">
-        {{ post.date | dateFilter }}
+      <time class="muted" datetime="{{ post.date | postDate }}">
+        {{ post.date | postDate }}
       </time>
     </span>
     <a class="title" href="{{ post.url }}">{{ post.data.title }}</a>
