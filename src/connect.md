@@ -8,5 +8,6 @@ Due to my busy life and priorities, I prefer asynchronous communication. You can
 
 - **Email**: [mijndert@mijndertstuij.nl](mailto:mijndert@mijndertstuij.nl)
 - **RSS feed**: [mijndertstuij.nl/feed.xml](/feed.xml)
+- **Mastodon**: [fosstodon.org/@mijndert](https://fosstodon.org/@mijndert)
 - **LinkedIn**: [linkedin.com/in/mijndertstuij](https://www.linkedin.com/in/mijndertstuij)
 - **GitHub**: [github.com/mijndert](https://github.com/mijndert)
