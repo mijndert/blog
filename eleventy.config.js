@@ -1,4 +1,4 @@
-import pluginRss from "@11ty/eleventy-plugin-rss";
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import embeds from "eleventy-plugin-embed-everything"
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
 import { DateTime } from "luxon";
@@ -13,9 +13,26 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/favicon/");
   eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
   eleventyConfig.addPassthroughCopy({ 'src/CNAME': '/CNAME' });
-  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(embeds);
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(feedPlugin, {
+		type: "atom",
+		outputPath: "/feed.xml",
+		collection: {
+			name: "post",
+			limit: 25,
+		},
+		metadata: {
+			language: "en",
+			title: "Mijndert Stuij",
+			subtitle: "Senior DevOps Engineer. Runner. Minimalist.",
+			base: "https://mijndertstuij.nl/",
+			author: {
+				name: "Mijndert Stuij",
+				email: "mijndert@mijndertstuij.nl",
+			}
+		}
+	});
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		extensions: "html",
 		defaultAttributes: {
