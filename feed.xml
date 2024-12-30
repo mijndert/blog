@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xml:base="https://mijndertstuij.nl" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Mijndert Stuij</title>
-    <link>https://mijndertstuij.nl</link>
-    <atom:link href="https://mijndertstuij.nl/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Senior DevOps Engineer. Runner. Minimalist.</description>
-    <language>en</language>
-    <item>
-      <title>2024 GOTY</title>
-      <link>https://mijndertstuij.nl/posts/2024-goty/</link>
-      <description>&lt;p&gt;My gaming habits can be summed up in a single word: erratic. I have a Nintendo Switch and an Xbox Series X just sitting there, collecting dust most of the time. Turning on the tv, powering on the console, waiting for things to update and then finally playing a game just feels like a burden. Espescially the part where the Xbox hogs the tv and my wife can&#39;t use it while I play a game. Cumbersome. As a result I didn&#39;t really play much on there this year. And yes, I know I can use my Switch as a handheld, but playing it for any significant amount of time makes my hands cramp up. The ergonomics of the Switch are terrible, for me at least. Don&#39;t @ me.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Mijndert Stuij</title>
+  <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
+  <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
+  <link href="https://mijndertstuij.nl/" />
+  <updated>2024-12-20T00:00:00Z</updated>
+  <id>https://mijndertstuij.nl/</id>
+  <author>
+    <name>Mijndert Stuij</name>
+    <email>mijndert@mijndertstuij.nl</email>
+  </author>
+  <entry>
+    <title>2024 GOTY</title>
+    <link href="https://mijndertstuij.nl/posts/2024-goty/" />
+    <updated>2024-12-20T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/2024-goty/</id>
+    <content type="html">&lt;p&gt;My gaming habits can be summed up in a single word: erratic. I have a Nintendo Switch and an Xbox Series X just sitting there, collecting dust most of the time. Turning on the tv, powering on the console, waiting for things to update and then finally playing a game just feels like a burden. Espescially the part where the Xbox hogs the tv and my wife can&#39;t use it while I play a game. Cumbersome. As a result I didn&#39;t really play much on there this year. And yes, I know I can use my Switch as a handheld, but playing it for any significant amount of time makes my hands cramp up. The ergonomics of the Switch are terrible, for me at least. Don&#39;t @ me.&lt;/p&gt;
 &lt;p&gt;I did play a single game on my Xbox though, and it&#39;s my GOTY for 2024: &lt;strong&gt;Diablo IV&lt;/strong&gt;. Back when the game came out I went through a rough time. My wife ended up in the hospital after she was diagnosed with Multiple Sclerosis and I was left to fend for myself and my daughter for the week. It was the most stressful time I ever experienced and I spent it playing Diablo IV every night until it was time to go to bed. A perfect escape from reality. It&#39;s very grindy and works well with my monkey brain because numbers pop out of enemies when I hit them. It&#39;s mindless fun, not much skill involved if you don&#39;t want to, but it can also be a very deep and difficult game if you&#39;re into that. I know there&#39;s issues with the game and it&#39;s not perfect at all, but for me it was the perfect game at the perfect time.&lt;/p&gt;
 &lt;p&gt;When the situation started to settle down again though, my Xbox went back to collecting dust as I was focussing on other things that occupied my mind.&lt;/p&gt;
 &lt;p&gt;It wasn&#39;t until I finally pulled the trigger on a Steam Deck that things started to turn around again for gaming. I always found the Steam Deck to be a really interesting device, but I always thought I&#39;d never use it. Just another console that would collect dust, right? I couldn&#39;t be more wrong.&lt;/p&gt;
 &lt;p&gt;The Steam Deck feels more personal, it feels like I&#39;m way more connected to the games I play. I can just pick it up, play for a short session and put it back down again. The ergonomics are way better than the Switch as well; I have zero issues playing for a few hours on end. The games are generally much cheaper compared to the Xbox and Nintendo stores as well, which makes trying a game a bit less prohibitive. I&#39;ve even been double dipping on games that I already own on Xbox so now I&#39;m back to playing Diablo IV but on Steam Deck instead. It&#39;s perfect.&lt;/p&gt;
 &lt;p&gt;I got my Steam Deck at the end of October and I already played many dozens of hours on it. Some honorable mentions, really all roguelite games, are: Hades II, Vampire Survivors, Brotato and Ballionaire. Every one of these are an incredible time sink and I can&#39;t recommend them enough.&lt;/p&gt;
 &lt;p&gt;Now if you would excuse me, I have some demons to kill and some levels to grind.&lt;/p&gt;
-</description>
-      <pubDate>Fri, 20 Dec 2024 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/2024-goty/</guid>
-    </item>
-    <item>
-      <title>Default apps 2024</title>
-      <link>https://mijndertstuij.nl/posts/default-apps-2024/</link>
-      <description>&lt;p&gt;Here&#39;s a fun new thing in the blogosphere: sharing your default apps. I saw a few people I follow do it and borrowed the format, as one does. A ton more pages like this to look at are catalogued by &lt;a href=&quot;https://defaults.rknight.me/&quot;&gt;Robb Knight&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Default apps 2024</title>
+    <link href="https://mijndertstuij.nl/posts/default-apps-2024/" />
+    <updated>2024-02-19T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/default-apps-2024/</id>
+    <content type="html">&lt;p&gt;Here&#39;s a fun new thing in the blogosphere: sharing your default apps. I saw a few people I follow do it and borrowed the format, as one does. A ton more pages like this to look at are catalogued by &lt;a href=&quot;https://defaults.rknight.me/&quot;&gt;Robb Knight&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I&#39;ve always been a minimalist since having too much &lt;em&gt;stuff&lt;/em&gt; doesn&#39;t fit in my brain. The same is true on my electronic devices; having too many apps gives me a headache. As a result, this might be a rather boring list for most people, but I&#39;m eager to see how it evolves over time.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;📨 Mail Client&lt;/strong&gt;: Apple Mail&lt;/li&gt;
@@ -53,15 +58,14 @@
 &lt;li&gt;&lt;strong&gt;🧑‍💻 Code Editor&lt;/strong&gt;: Visual Studio Code&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;✈️ VPN&lt;/strong&gt;: none&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      <pubDate>Mon, 19 Feb 2024 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/default-apps-2024/</guid>
-    </item>
-    <item>
-      <title>Config-driven Terraform</title>
-      <link>https://mijndertstuij.nl/posts/config-driven-terraform/</link>
-      <description>&lt;p&gt;Some time ago I wrote about &lt;a href=&quot;https://mijndertstuij.nl/posts/terraform-import-blocks/&quot;&gt;config-driven import&lt;/a&gt; which became available in Terraform 1.5. Import blocks are a way to import existing resources into the statefile, which is useful when you have a bunch of infrastructure that was created manually. Yesterday &lt;a href=&quot;https://www.hashicorp.com/blog/terraform-1-7-adds-test-mocking-and-config-driven-remove&quot;&gt;Terraform 1.7 was released&lt;/a&gt; that extends this functionality with a &lt;code&gt;for_each&lt;/code&gt; argument.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Config-driven Terraform</title>
+    <link href="https://mijndertstuij.nl/posts/config-driven-terraform/" />
+    <updated>2024-01-18T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/config-driven-terraform/</id>
+    <content type="html">&lt;p&gt;Some time ago I wrote about &lt;a href=&quot;https://mijndertstuij.nl/posts/terraform-import-blocks/&quot;&gt;config-driven import&lt;/a&gt; which became available in Terraform 1.5. Import blocks are a way to import existing resources into the statefile, which is useful when you have a bunch of infrastructure that was created manually. Yesterday &lt;a href=&quot;https://www.hashicorp.com/blog/terraform-1-7-adds-test-mocking-and-config-driven-remove&quot;&gt;Terraform 1.7 was released&lt;/a&gt; that extends this functionality with a &lt;code&gt;for_each&lt;/code&gt; argument.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Terraform 1.7 also includes an enhancement for config-driven import: the ability to expand import blocks using for_each loops. Previously you could target a particular instance of a resource in the to attribute of an import block, but you had to write a separate import block for each instance.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -105,15 +109,14 @@
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Both of these additions are great improvements to Terraform, and I&#39;m looking forward to using them in my projects. They will ensure I&#39;m much more confident in working with the Statefile which has always been a bit daunting.&lt;/p&gt;
-</description>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/config-driven-terraform/</guid>
-    </item>
-    <item>
-      <title>On running with a watch</title>
-      <link>https://mijndertstuij.nl/posts/running-with-a-watch/</link>
-      <description>&lt;p&gt;Anyone that knows me well can attest to me being a dreadful sports person in almost every category; except for one: running. I&#39;ve been running for a very long time, I could at one point run a 5k in 20 minutes and a 10k in less than 50 minutes. I never really had a plan, I just go out for a run and don&#39;t think about it too much. To the chagrin of some of my friends, running comes natural to me. I naturally have a rather high vo2max and I&#39;m not super prone to injuries so I can just keep running for a good while before I hit my limits.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>On running with a watch</title>
+    <link href="https://mijndertstuij.nl/posts/running-with-a-watch/" />
+    <updated>2023-12-08T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/running-with-a-watch/</id>
+    <content type="html">&lt;p&gt;Anyone that knows me well can attest to me being a dreadful sports person in almost every category; except for one: running. I&#39;ve been running for a very long time, I could at one point run a 5k in 20 minutes and a 10k in less than 50 minutes. I never really had a plan, I just go out for a run and don&#39;t think about it too much. To the chagrin of some of my friends, running comes natural to me. I naturally have a rather high vo2max and I&#39;m not super prone to injuries so I can just keep running for a good while before I hit my limits.&lt;/p&gt;
 &lt;p&gt;Because of all this, I never had a use-case for a better watch than my Apple Watch SE. But as I get older I do need a little more hand holding to get my old form back. I finally decided to get a Garmin Forerunner 255S and I&#39;ve been using it for 2 weeks now.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;First things first, there&#39;s absolutely no way to compare an Apple Watch to a Garmin Forerunnner. They are for completely different use-cases. The Apple Watch is a smart watch with some fitness features, the Garmin is a fitness watch with some smart features. That&#39;s not to say I don&#39;t wear my Garmin throughout the day, on the contrary; I wear it as much as possible to give it as much information as I can. I even use it to track my sleep, which is something I never did with my Apple Watch.&lt;/p&gt;
@@ -121,15 +124,14 @@
 &lt;p&gt;What I like most about the Garmin as compared to the Apple Watch is how well it ties all the data together to create a comprehensive overview of how your training is affecting you and your overall health. Something the Apple Watch did not do, it just showed you all the individual data points and left it up to you to figure out what it all meant. It really does take out all the guesswork out of training for say a half marathon which I&#39;m doing right now.&lt;/p&gt;
 &lt;p&gt;Speaking of training, the Garmin does give me daily suggestions on what I should be doing that day. Today I got a recommendation to do interval sprints, and tomorrow is long run day. Due to personal circumstances I can&#39;t always follow the recommendations, but it&#39;s nice to have a little guidance when I am able to get a run in.&lt;/p&gt;
 &lt;p&gt;All in all, I&#39;m really happy with my move to Garmin. Even though I&#39;m currently not following the recommendations closely, I do feel like I can get much more out of my runs with this watch than I ever could with my Apple Watch. This thing gives me the confidence to reclaiming my old form, run a half marathon and do well in it.&lt;/p&gt;
-</description>
-      <pubDate>Fri, 08 Dec 2023 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/running-with-a-watch/</guid>
-    </item>
-    <item>
-      <title>Obsidian doesn&#39;t click for me</title>
-      <link>https://mijndertstuij.nl/posts/obsidian-doesnt-click-for-me/</link>
-      <description>&lt;p&gt;The idea of a personal wiki has always appealed to me. I tried a few times to incorporate one into my &amp;quot;workflow&amp;quot; if I even have one. I tried all sorts of different tools but the latest one that&#39;s been keeping me occupied is &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;. I really want to like and use Obsidian, but I&#39;m unable to. Let me explain.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Obsidian doesn&#39;t click for me</title>
+    <link href="https://mijndertstuij.nl/posts/obsidian-doesnt-click-for-me/" />
+    <updated>2023-10-12T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/obsidian-doesnt-click-for-me/</id>
+    <content type="html">&lt;p&gt;The idea of a personal wiki has always appealed to me. I tried a few times to incorporate one into my &amp;quot;workflow&amp;quot; if I even have one. I tried all sorts of different tools but the latest one that&#39;s been keeping me occupied is &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;. I really want to like and use Obsidian, but I&#39;m unable to. Let me explain.&lt;/p&gt;
 &lt;p&gt;I&#39;ve implemented the &lt;a href=&quot;https://fortelabs.com/blog/para/&quot;&gt;PARA method&lt;/a&gt; into my personal wiki. It&#39;s a way of organizing all information into four buckets:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Projects for any ongoing stuff&lt;/li&gt;
@@ -141,15 +143,14 @@
 &lt;p&gt;But, even with this organisation of information going on, Obsidian still doesn&#39;t click for me.&lt;/p&gt;
 &lt;p&gt;To be frank, Obsidian just... feels wrong. It&#39;s undeniably an Electron app and that just makes the experience really cumbersome to me. The application always feels a little sluggish and is never truly at home on any platform. You can make Obsidian look a little better using the great &lt;a href=&quot;https://github.com/kepano/obsidian-minimal&quot;&gt;Minimal theme&lt;/a&gt; but its core problems remain. The entire ecosystem of themes and plugins is also a little overwhelming and are prone to break in any subsequent release. I don&#39;t want to spend hours tweaking my personal wiki, I just want to use it. The barrier between my thoughts and putting them into writing needs to be as low as possible.&lt;/p&gt;
 &lt;p&gt;I know there are many people out there who love Obsidian, people who spend dozens of hours making it just right. I however will be reluctantly looking elsewhere.&lt;/p&gt;
-</description>
-      <pubDate>Thu, 12 Oct 2023 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/obsidian-doesnt-click-for-me/</guid>
-    </item>
-    <item>
-      <title>Saving time using Terraform import blocks</title>
-      <link>https://mijndertstuij.nl/posts/terraform-import-blocks/</link>
-      <description>&lt;p&gt;Anyone who uses Terraform must be familiar with the &lt;code&gt;import&lt;/code&gt; command; it allows you to gather existing resources and put them into your statefile. This way, existing resources which were previously not created using Terraform are now under management of your infrastructure as code.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Saving time using Terraform import blocks</title>
+    <link href="https://mijndertstuij.nl/posts/terraform-import-blocks/" />
+    <updated>2023-06-15T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/terraform-import-blocks/</id>
+    <content type="html">&lt;p&gt;Anyone who uses Terraform must be familiar with the &lt;code&gt;import&lt;/code&gt; command; it allows you to gather existing resources and put them into your statefile. This way, existing resources which were previously not created using Terraform are now under management of your infrastructure as code.&lt;/p&gt;
 &lt;p&gt;You can import your resources in the terminal, but you still have to write the code for the resources you import. With Terraform version 1.5 there&#39;s a better solution: import blocks.&lt;/p&gt;
 &lt;p&gt;Let&#39;s take a DigitalOcean Spaces bucket as an example here.&lt;/p&gt;
 &lt;p&gt;Before &lt;a href=&quot;https://www.hashicorp.com/blog/terraform-1-5-brings-config-driven-import-and-checks&quot;&gt;Terraform 1.5&lt;/a&gt; you first had to import the resource into your statefile:&lt;/p&gt;
@@ -199,15 +200,14 @@
     &lt;span class=&quot;token property&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-</description>
-      <pubDate>Thu, 15 Jun 2023 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/terraform-import-blocks/</guid>
-    </item>
-    <item>
-      <title>Reusable Terraform modules using Dynamic blocks</title>
-      <link>https://mijndertstuij.nl/posts/terraform-dynamic-blocks-modules/</link>
-      <description>&lt;p&gt;In the realm of Amazon Web Services there&#39;s this thing called a &lt;a href=&quot;https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-aws-environment/understanding-landing-zones.html&quot;&gt;Landing Zone&lt;/a&gt;, a set of infrastructure as code modules built to deploy new environments faster. You can build a Landing Zone using &lt;a href=&quot;https://aws.amazon.com/cloudformation/&quot;&gt;CloudFormation&lt;/a&gt;, &lt;a href=&quot;https://aws.amazon.com/cdk/&quot;&gt;CDK&lt;/a&gt;, &lt;a href=&quot;https://www.terraform.io/&quot;&gt;Terraform&lt;/a&gt;, or any other tool you like. The point is that you have a starting point for as many use-cases as possible. For a Landing Zone to work you have to write reusable generalized code that could work for any client and any combination of infrastructure.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Reusable Terraform modules using Dynamic blocks</title>
+    <link href="https://mijndertstuij.nl/posts/terraform-dynamic-blocks-modules/" />
+    <updated>2022-12-08T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/terraform-dynamic-blocks-modules/</id>
+    <content type="html">&lt;p&gt;In the realm of Amazon Web Services there&#39;s this thing called a &lt;a href=&quot;https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-aws-environment/understanding-landing-zones.html&quot;&gt;Landing Zone&lt;/a&gt;, a set of infrastructure as code modules built to deploy new environments faster. You can build a Landing Zone using &lt;a href=&quot;https://aws.amazon.com/cloudformation/&quot;&gt;CloudFormation&lt;/a&gt;, &lt;a href=&quot;https://aws.amazon.com/cdk/&quot;&gt;CDK&lt;/a&gt;, &lt;a href=&quot;https://www.terraform.io&quot;&gt;Terraform&lt;/a&gt;, or any other tool you like. The point is that you have a starting point for as many use-cases as possible. For a Landing Zone to work you have to write reusable generalized code that could work for any client and any combination of infrastructure.&lt;/p&gt;
 &lt;p&gt;While trying to create a Landing Zone in Terraform I found that it&#39;s very hard to make them follow the &lt;a href=&quot;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&quot;&gt;DRY principle&lt;/a&gt; (Don&#39;t Repeat Yourself). After a while the code started to be really hard to maintain. But then I found Dynamic blocks.&lt;/p&gt;
 &lt;p&gt;Terraform provides &lt;a href=&quot;https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks&quot;&gt;Dynamic blocks&lt;/a&gt; as a way to create repeatable nested code within a resource, it&#39;s kind of similar to a for loop but for stuff within a resource. But Dynamic blocks also allow you to conditionally create certain properties on a resource.&lt;/p&gt;
 &lt;p&gt;As an example, let&#39;s take the &lt;a href=&quot;https://github.com/toot-community/platform&quot;&gt;platform code for toot.community&lt;/a&gt;.&lt;/p&gt;
@@ -235,15 +235,14 @@
 &lt;p&gt;Now if I don&#39;t specify the variable &lt;code&gt;expiration_enabled&lt;/code&gt; the &lt;code&gt;lifecycle_rule&lt;/code&gt; property isn&#39;t created and I just get a standard &lt;code&gt;digitalocean_spaces_bucket&lt;/code&gt;. I don&#39;t have to repeat myself anymore and it makes my module a lot cleaner.&lt;/p&gt;
 &lt;p&gt;A word of warning though, overuse of Dynamic blocks will eventually lead to code being unreadable and not very easy to understand. Only use Dynamic blocks if there&#39;s no other way to avoid repeating the same code. If you have to repeat a few lines once or twice, stop and think if you really need a Dynamic block or if you can live with it in that instance.&lt;/p&gt;
 &lt;p&gt;Speaking of Terraform modules, that&#39;s something I want to talk about in another blog post as well. A question I get asked a lot is &amp;quot;how do I organize my environments and modules?&amp;quot;. More on that later. If you want to get notified of new posts you can import the &lt;a href=&quot;https://mijndertstuij.nl/feed.xml&quot;&gt;RSS feed&lt;/a&gt; for this website in your reader.&lt;/p&gt;
-</description>
-      <pubDate>Thu, 08 Dec 2022 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/terraform-dynamic-blocks-modules/</guid>
-    </item>
-    <item>
-      <title>Responsive images on a static Hugo website</title>
-      <link>https://mijndertstuij.nl/posts/hugo-responsive-images/</link>
-      <description>&lt;p&gt;For years and years I&#39;ve been using &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; as my static site generator of choice, mostly because I like their templating engine and I&#39;m a fan of Ruby as a programming language. I&#39;ve been experimenting with Hugo as well, but it never really clicked for me. Well, until I found &lt;a href=&quot;https://github.com/mavidser/hugo-rocinante&quot;&gt;the perfect theme&lt;/a&gt; for my needs. The same theme is now used here and on the &lt;a href=&quot;https://blog.toot.community/&quot;&gt;toot.community blog&lt;/a&gt; so I wanted to set mine apart a little bit by adding banner images on some posts. Downloading an image from Unsplash and manually resizing it wasn&#39;t an option though - I need things to be frictionless when I want to add a blog entry.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Responsive images on a static Hugo website</title>
+    <link href="https://mijndertstuij.nl/posts/hugo-responsive-images/" />
+    <updated>2022-12-06T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/hugo-responsive-images/</id>
+    <content type="html">&lt;p&gt;For years and years I&#39;ve been using &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; as my static site generator of choice, mostly because I like their templating engine and I&#39;m a fan of Ruby as a programming language. I&#39;ve been experimenting with Hugo as well, but it never really clicked for me. Well, until I found &lt;a href=&quot;https://github.com/mavidser/hugo-rocinante&quot;&gt;the perfect theme&lt;/a&gt; for my needs. The same theme is now used here and on the &lt;a href=&quot;https://blog.toot.community/&quot;&gt;toot.community blog&lt;/a&gt; so I wanted to set mine apart a little bit by adding banner images on some posts. Downloading an image from Unsplash and manually resizing it wasn&#39;t an option though - I need things to be frictionless when I want to add a blog entry.&lt;/p&gt;
 &lt;p&gt;I started looking for ways to automatically generate multiple sizes of an image and came across a lot of different solutions. Most didn&#39;t work anymore or were very convoluted. That&#39;s to say, until I found &lt;a href=&quot;https://www.brycewray.com/posts/2022/06/responsive-optimized-images-hugo/&quot;&gt;Bryce Wray&#39;s entry&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I quickly adapted his code to my needs and had it working on no-time, you can see it in action &lt;a href=&quot;https://mijndertstuij.nl/posts/scaling-mastodon-community/&quot;&gt;right here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here&#39;s how I did it.&lt;/p&gt;
@@ -298,42 +297,39 @@
 &lt;p&gt;Now in order to use the above shortcode you can simply drop an image into &lt;code&gt;/assets/images&lt;/code&gt; and insert this line of code in your MarkDown file.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;{{&amp;lt;/* imgh src=&amp;quot;my-example-file.jpeg&amp;quot; alt=&amp;quot;My example file&amp;quot; */&amp;gt;}}
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-      <pubDate>Tue, 06 Dec 2022 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/hugo-responsive-images/</guid>
-    </item>
-    <item>
-      <title>Stop doing DevOps teams if you want to scale</title>
-      <link>https://mijndertstuij.nl/posts/stop-doing-devops-teams/</link>
-      <description>&lt;p&gt;If you&#39;re serious about scaling your company you should stop doing DevOps teams. I realise this is probably a controversial opinion and one I&#39;m most likely almost alone in thinking, but it&#39;s something I&#39;ve been thinking about a lot as of late.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Stop doing DevOps teams if you want to scale</title>
+    <link href="https://mijndertstuij.nl/posts/stop-doing-devops-teams/" />
+    <updated>2022-12-05T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/stop-doing-devops-teams/</id>
+    <content type="html">&lt;p&gt;If you&#39;re serious about scaling your company you should stop doing DevOps teams. I realise this is probably a controversial opinion and one I&#39;m most likely almost alone in thinking, but it&#39;s something I&#39;ve been thinking about a lot as of late.&lt;/p&gt;
 &lt;p&gt;DevOps teams are developers and IT operations people who work together collaboratively in order to increase the speed and quality of software development and deployment. Development and Operations are not working in their own bubble but rather work closely across the entire lifecycle of an application. Anyone who ever worked in such a team must be familiar with the DevOps loop of infinity.&lt;/p&gt;
 &lt;p&gt;I&#39;m here to argue that, while this model of integrated DevOps teams works well for smaller companies, it&#39;s absolutely awful for scaling a company beyond what would be considered medium sized. I think eventually the integrated nature of DevOps inhibits a team&#39;s ability to execute projects while adhering to set standards for quality, stability, and speed.&lt;/p&gt;
 &lt;p&gt;My preliminary conclusion is that in order to scale, a company needs to embrace the silos of development and operations again. Now, I&#39;m not arguing for dev and ops not to talk to each other anymore - to the contrary, I think operations needs to be serving the development team with pre-baked building blocks for any and all use-case. While we&#39;re at it, the operations team needs to be called the platform team as they provide the platform for the developers to build applications on. The developers should be able to use the building blocks like Lego and the platform team needs to be empowering the former.&lt;/p&gt;
 &lt;p&gt;Again, DevOps teams are still the right solution for a lot of companies. But if you&#39;re serious about scaling your operation, you need to be thinking about seperating the two again. There&#39;s always the possibility that in a few years time I&#39;ll look back at this and come to the conclusion I was wrong, but for now it sounds like the right solution.&lt;/p&gt;
 &lt;p&gt;Just a thought for now, I&#39;ll get back to this topic. I&#39;d love to hear what others think so &lt;a href=&quot;https://fosstodon.org/@mijndert&quot;&gt;send me a message&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <pubDate>Mon, 05 Dec 2022 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/stop-doing-devops-teams/</guid>
-    </item>
-    <item>
-      <title>Scaling a Mastodon community to 27k people</title>
-      <link>https://mijndertstuij.nl/posts/scaling-mastodon-community/</link>
-      <description>&lt;p&gt;Tomorrow marks the first full month of my move to &lt;a href=&quot;https://toot.community/&quot;&gt;toot.community&lt;/a&gt;, a Mastodon instance initially set up by my friend &lt;a href=&quot;https://jorijn.com/&quot;&gt;Jorijn&lt;/a&gt;. My move to Mastodon wasn&#39;t motivated by what&#39;s going at Twitter right now, but rather the technical challenges of scaling the shit out of it. In the first week we welcomed thousands of people and we certainly had to put out a fire or two, but most of the time we had the time to focus on optimization.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Scaling a Mastodon community to 27k people</title>
+    <link href="https://mijndertstuij.nl/posts/scaling-mastodon-community/" />
+    <updated>2022-12-04T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/scaling-mastodon-community/</id>
+    <content type="html">&lt;p&gt;Tomorrow marks the first full month of my move to &lt;a href=&quot;https://toot.community/&quot;&gt;toot.community&lt;/a&gt;, a Mastodon instance initially set up by my friend &lt;a href=&quot;https://jorijn.com/&quot;&gt;Jorijn&lt;/a&gt;. My move to Mastodon wasn&#39;t motivated by what&#39;s going at Twitter right now, but rather the technical challenges of scaling the shit out of it. In the first week we welcomed thousands of people and we certainly had to put out a fire or two, but most of the time we had the time to focus on optimization.&lt;/p&gt;
 &lt;p&gt;If you look at the &lt;code&gt;#MastoAdmin&lt;/code&gt; hashtag on Mastodon you&#39;ll see a lot of messages from other admins sharing scaling tips and tricks. There I got the idea to &lt;a href=&quot;https://blog.toot.community/posts/open-sourcing-toot-community/&quot;&gt;open source everything&lt;/a&gt; we were doing so that others could hopefully benefit from it. Open source software has shaped my carreer and giving back is the least I could do. While we were working on making the scaling of toot.community fully event-driven, I got to work to write &lt;a href=&quot;https://github.com/toot-community/platform&quot;&gt;Terraform code for the infrastructure&lt;/a&gt;. Since I have a lot of experience with Terraform, I made sure to create modules for every part of the platform so we can easily rip out and replace every part of it without any hassle at all.&lt;/p&gt;
 &lt;p&gt;At the same time we were also working on a &lt;a href=&quot;https://github.com/toot-community/kubernetes&quot;&gt;fully event-driven scaling setup&lt;/a&gt; on top of Kubernetes. Currently we run between 3 and 7 nodes in the Kubernetes cluster depending on the requests to the web server and the amount of messages in the queues. This way we&#39;re never overspending on infrastructure, something that&#39;s incredibly important while running a Mastodon community because it&#39;s fully supported by donations. Of course we don&#39;t want to squander the money so we&#39;re constantly optimizing and tweaking to be able to handle more people on the same amount of infrastructure; now at 27k people we&#39;re paying about the same amount of money per month as we were at 15k people.&lt;/p&gt;
 &lt;p&gt;We now have an event-driven, self-healing Mastodon instance that can basically scale into infinity given enough funds. That doesn&#39;t mean we sit back and relax however, we still have a ton of ideas to optimize further. Some things we want to do over the coming months include: getting our CloudFlare setup into Terraform, turning the screws on security, more visibility into key metrics, and database optimizations.&lt;/p&gt;
-&lt;p&gt;On the &lt;a href=&quot;https://blog.toot.community/&quot;&gt;toot.community blog&lt;/a&gt; we will publish updates on financials and some deepdives into the technical implementation of it all. There&#39;s an RSS feed it you want to follow along.&lt;/p&gt;
-</description>
-      <pubDate>Sun, 04 Dec 2022 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/scaling-mastodon-community/</guid>
-    </item>
-    <item>
-      <title>A minimalist take on Vim</title>
-      <link>https://mijndertstuij.nl/posts/a-minimalist-take-on-vim/</link>
-      <description>&lt;p&gt;I&#39;ve been a Vim user for as long as I can remember, but in the last few years VS Code kind of took over as the defacto choice for us DevOps engineers. VS Code is great at offering all kinds of plugins that should, in theory, make life a little easier. It&#39;s funny actually, because plugins are the sole reason I never quite got into using Vim fulltime. To me, plugins in Vim just added to the complexity of remembering all of the keyboard shortcuts and quite frankly, the many ways of installing a plugin didn&#39;t help me make sense of things either.&lt;/p&gt;
+&lt;p&gt;On the &lt;a href=&quot;https://blog.toot.community&quot;&gt;toot.community blog&lt;/a&gt; we will publish updates on financials and some deepdives into the technical implementation of it all. There&#39;s an RSS feed it you want to follow along.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>A minimalist take on Vim</title>
+    <link href="https://mijndertstuij.nl/posts/a-minimalist-take-on-vim/" />
+    <updated>2022-04-15T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/a-minimalist-take-on-vim/</id>
+    <content type="html">&lt;p&gt;I&#39;ve been a Vim user for as long as I can remember, but in the last few years VS Code kind of took over as the defacto choice for us DevOps engineers. VS Code is great at offering all kinds of plugins that should, in theory, make life a little easier. It&#39;s funny actually, because plugins are the sole reason I never quite got into using Vim fulltime. To me, plugins in Vim just added to the complexity of remembering all of the keyboard shortcuts and quite frankly, the many ways of installing a plugin didn&#39;t help me make sense of things either.&lt;/p&gt;
 &lt;p&gt;But then Vim 8 was released.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/vim/vim/releases/tag/v8.0.0000&quot;&gt;Vim 8&lt;/a&gt; introduced a really simple &lt;em&gt;pack&lt;/em&gt; system for installing plugins. You can just drop a directory in the designated pack directory and Vim will automatically load everything that&#39;s there. When you &lt;code&gt;git clone&lt;/code&gt; a plugin it&#39;s quite easy to update it whenever a new version is released.&lt;/p&gt;
 &lt;p&gt;That&#39;s not to say I&#39;ve gone crazy and I&#39;m now running 20 plugins. I only have a plugin for working with &lt;a href=&quot;https://www.terraform.io/&quot;&gt;Terraform&lt;/a&gt; and one for loading &lt;a href=&quot;https://editorconfig.org/&quot;&gt;EditorConfig&lt;/a&gt; files installed. And for me that&#39;s more than enough. Not because I can&#39;t handle complexity but mostly because Vim can do so much out of the box that most people are not aware of.&lt;/p&gt;
@@ -368,27 +364,25 @@ nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&l
 &lt;h2&gt;Keyboard shortcuts&lt;/h2&gt;
 &lt;p&gt;Some of the common ones I use are &lt;strong&gt;i&lt;/strong&gt; for insert mode and &lt;strong&gt;v&lt;/strong&gt; for visual mode. Then there&#39;s &lt;strong&gt;u&lt;/strong&gt; for undo, &lt;strong&gt;y&lt;/strong&gt; for copy (yank), &lt;strong&gt;d&lt;/strong&gt; for delete, and &lt;strong&gt;aB&lt;/strong&gt; for selecting a block with accolades. And of course a bunch more, but I think you&#39;re good to go with just these ones.&lt;/p&gt;
 &lt;p&gt;Even after years of use and some amount of muscle memory, it still feels like I&#39;ve only touched the surface of what&#39;s possible. When you&#39;re just starting out I highly recommend keeping a cheatsheet at hand, like &lt;a href=&quot;https://vim.rtorr.com/&quot;&gt;this one&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <pubDate>Fri, 15 Apr 2022 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/a-minimalist-take-on-vim/</guid>
-    </item>
-    <item>
-      <title>40 questions</title>
-      <link>https://mijndertstuij.nl/posts/40-questions/</link>
-      <description>&lt;p&gt;The end of the year or your own birthday are both for reflection on the days and months that came before. We try to look back on all the things that went right and the things that maybe could&#39;ve been better. The highs and the lows, the moments where we experienced stress, where we felt love. We try to make new resolutions for the year ahead. But sometimes we fail to notice trends as the years go by quicker and quicker.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>40 questions</title>
+    <link href="https://mijndertstuij.nl/posts/40-questions/" />
+    <updated>2022-03-18T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/40-questions/</id>
+    <content type="html">&lt;p&gt;The end of the year or your own birthday are both for reflection on the days and months that came before. We try to look back on all the things that went right and the things that maybe could&#39;ve been better. The highs and the lows, the moments where we experienced stress, where we felt love. We try to make new resolutions for the year ahead. But sometimes we fail to notice trends as the years go by quicker and quicker.&lt;/p&gt;
 &lt;p&gt;I&#39;m 34 years old and 35 is quickly approaching. Someone should have told me that your 30s will fly by; it&#39;s like I only just turned 30 but I&#39;m almost half way through. We still can&#39;t slow down time, except for maybe orbiting a black hole, and everything&#39;s relative. But I somehow feel like I&#39;m losing my grip as the years go by.&lt;/p&gt;
 &lt;p&gt;Recently I came across &lt;a href=&quot;https://github.com/kepano/40-questions/&quot;&gt;Stephan Ango&#39;s 40 questions&lt;/a&gt;. It&#39;s a list of questions you can ask yourself every year and you can keep the answers around to maybe spot trends and you can share the questions with family and friends to have a conversation about what it&#39;s been like for them. You certainly don&#39;t have to have an immediate answer to everything then and there - instead, take your time. It might take a week or two to answer them all and that&#39;s perfectly fine.&lt;/p&gt;
 &lt;p&gt;The world is a loud place that never stops moving. Sometimes it&#39;s good to step out of it for a little bit to sit down and reflect on everything that happened and everything that awaits you. Ask yourself these 40 questions, it might help you understand yourself and the world around you just a bit more.&lt;/p&gt;
-</description>
-      <pubDate>Fri, 18 Mar 2022 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/40-questions/</guid>
-    </item>
-    <item>
-      <title>Avoid using internal load balancers</title>
-      <link>https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/</link>
-      <description>&lt;p&gt;One of the most well-known patterns in infrastructure is having an internal load balancer in front of backend services like application servers. When you&#39;re migrating your workloads to say AWS Fargate it&#39;s easy to just carry over that same pattern because, well, it works. But, as with all things in the cloud, internal load balancers cost money and add complexity. When you&#39;re just migrating to using containers for the first time, adding complexity to an already steep learning curve might not be the best way to go about things.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Avoid using internal load balancers</title>
+    <link href="https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/" />
+    <updated>2022-03-15T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/</id>
+    <content type="html">&lt;p&gt;One of the most well-known patterns in infrastructure is having an internal load balancer in front of backend services like application servers. When you&#39;re migrating your workloads to say AWS Fargate it&#39;s easy to just carry over that same pattern because, well, it works. But, as with all things in the cloud, internal load balancers cost money and add complexity. When you&#39;re just migrating to using containers for the first time, adding complexity to an already steep learning curve might not be the best way to go about things.&lt;/p&gt;
 &lt;p&gt;That&#39;s where &lt;em&gt;Service Discovery&lt;/em&gt; comes in.&lt;/p&gt;
 &lt;p&gt;Service Discovery is a thing where you let the backend servers register themselves in some kind of database, so the requestor knows where the targets are. This has been done in all kinds of scenarios; from DHCP to XMPP, as well as DNS in Kubernetes.&lt;/p&gt;
 &lt;p&gt;While I agree that adding Service Discovery to your architecture does add a little bit of an up-front learning curve, in the long run it&#39;s kind of a set-and-forget thing.&lt;/p&gt;
@@ -421,15 +415,14 @@ nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&l
     &lt;span class=&quot;token key atrule&quot;&gt;Port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Anyone who needs to access your backend server can now simply use the hostname &lt;code&gt;app.my-backend-service.aws:4000&lt;/code&gt; without every having to deploy a load balancer.&lt;/p&gt;
 &lt;p&gt;Of course AWS CloudMap also has the ability to specify exactly which services can access certain backends by integrating IAM into it. But that&#39;s for another day to discuss.&lt;/p&gt;
-</description>
-      <pubDate>Tue, 15 Mar 2022 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/</guid>
-    </item>
-    <item>
-      <title>AirPods Max</title>
-      <link>https://mijndertstuij.nl/posts/airpods-max/</link>
-      <description>&lt;p&gt;To be clear right off the bat: I don&#39;t do well in busy offices. I get distracted easily, I don&#39;t like it when people can see what I&#39;m doing, I don&#39;t like people talking and radio&#39;s blaring. The open office plan truly is the bane of my existence. Therefore, noise cancelling headphones are a Godsend.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>AirPods Max</title>
+    <link href="https://mijndertstuij.nl/posts/airpods-max/" />
+    <updated>2022-03-04T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/airpods-max/</id>
+    <content type="html">&lt;p&gt;To be clear right off the bat: I don&#39;t do well in busy offices. I get distracted easily, I don&#39;t like it when people can see what I&#39;m doing, I don&#39;t like people talking and radio&#39;s blaring. The open office plan truly is the bane of my existence. Therefore, noise cancelling headphones are a Godsend.&lt;/p&gt;
 &lt;p&gt;I&#39;ve owned just about every popular pair of noise cancelling headphones out there. That doesn&#39;t mean I&#39;m an expert or anything, it just means I know what I like and don&#39;t like.&lt;/p&gt;
 &lt;p&gt;The latest pair that I bought are AirPods Max - yes, the expensive Apple ones. Luckily I didn&#39;t pay full price for them; no pair of headphones is worth that much money. Even though I use them almost every day and, spoiler alert, they are pretty awesome, I&#39;m glad I paid about 60% of MSRP. And yes, even AirPods Max have problems and because it&#39;s Apple about everyone and their mom knows about them.&lt;/p&gt;
 &lt;h2&gt;The case&lt;/h2&gt;
@@ -445,27 +438,25 @@ nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&l
 &lt;p&gt;The problems listed about don&#39;t detere me from declaring AirPods Max an awesome pair of headphones. They are mostly about the integration with the Apple eco-system of course. Previous headphones I owned came with an awful mobile app to control things like EQ and NC levels, and app that never worked properly and felt out of place on iOS.&lt;/p&gt;
 &lt;p&gt;I&#39;ve had AirPods Max for a solid 2 months now so the jury&#39;s still out on durability but I bet they will hold up pretty well.&lt;/p&gt;
 &lt;p&gt;I still wouldn&#39;t recommend anyone buying them at full price. But if you can find them at a discount I highly recommend you at leat give them a try.&lt;/p&gt;
-</description>
-      <pubDate>Fri, 04 Mar 2022 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/airpods-max/</guid>
-    </item>
-    <item>
-      <title>OpenBSD</title>
-      <link>https://mijndertstuij.nl/posts/openbsd/</link>
-      <description>&lt;p&gt;I&#39;ve been an avid user of various Linux distributions for 22+ years now and I will forever love everything about it and what it brought me. I have my entire carreer built on Linux and open source software. I&#39;ve also known about BSD for about as long, but I never quite got into it, until now. I&#39;m as much a minimalist as I am a nerd and I love simple software that does one thing well. I want all of my software to Just Work, no hassle or needless features added. After coming across &lt;a href=&quot;https://openbsd.amsterdam/&quot;&gt;OpenBSD.ams&lt;/a&gt; I decided to read up on OpenBSD and its &lt;a href=&quot;https://www.openbsd.org/goals.html&quot;&gt;goals&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>OpenBSD</title>
+    <link href="https://mijndertstuij.nl/posts/openbsd/" />
+    <updated>2021-11-01T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/openbsd/</id>
+    <content type="html">&lt;p&gt;I&#39;ve been an avid user of various Linux distributions for 22+ years now and I will forever love everything about it and what it brought me. I have my entire carreer built on Linux and open source software. I&#39;ve also known about BSD for about as long, but I never quite got into it, until now. I&#39;m as much a minimalist as I am a nerd and I love simple software that does one thing well. I want all of my software to Just Work, no hassle or needless features added. After coming across &lt;a href=&quot;https://openbsd.amsterdam/&quot;&gt;OpenBSD.ams&lt;/a&gt; I decided to read up on OpenBSD and its &lt;a href=&quot;https://www.openbsd.org/goals.html&quot;&gt;goals&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Long story short, I&#39;m currently in the process of moving some workloads from Linux VM&#39;s to OpenBSD ones. It&#39;s been quite a journey so far because unlearning 22 years of Linux experience is... hard. Luckily the community is awesome and the available documentation even more so. But what makes OpenBSD such a joy to use are the sane defaults and the completely empty config files that are just there for me to fill out as I see fit. It feels like the system was designed to fit whatever purpose I have in mind without ever getting in the way. Stuff like &lt;a href=&quot;https://man.openbsd.org/httpd.8&quot;&gt;httpd(8)&lt;/a&gt;, &lt;a href=&quot;https://man.openbsd.org/relayd.8&quot;&gt;relayd(8)&lt;/a&gt;, &lt;a href=&quot;https://man.openbsd.org/acme-client.1&quot;&gt;acme-client(1)&lt;/a&gt; and &lt;a href=&quot;https://man.openbsd.org/pf.4&quot;&gt;pf(4)&lt;/a&gt; make the entire system feel very robust and well thought out.&lt;/p&gt;
 &lt;p&gt;Over in the Linux world everything just seems to be strung together with little sense of direction. It always felt like a pile of software that happens to sometimes work together. OpenBSD is the opposite of that and I love it. I just wish I could run it on my laptop as well, with all the bells and whistles working. But that&#39;s a bit of a pipe dream as bluetooth support is currently completely missing.&lt;/p&gt;
 &lt;p&gt;For now it&#39;s a great operating system for servers for me. If you also want to play around with OpenBSD and indirectly &lt;a href=&quot;https://www.openbsdfoundation.org/&quot;&gt;support the foundation&lt;/a&gt; I would highly recommend getting a VM over at &lt;a href=&quot;https://openbsd.amsterdam/&quot;&gt;OpenBSD.ams&lt;/a&gt;.&lt;/p&gt;
-</description>
-      <pubDate>Mon, 01 Nov 2021 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/openbsd/</guid>
-    </item>
-    <item>
-      <title>Information processing</title>
-      <link>https://mijndertstuij.nl/posts/information-processing/</link>
-      <description>&lt;p&gt;Ever since this COVID-19 thing hit I&#39;ve been working from home non-stop. That&#39;s almost a full year of working remotely and being fully in charge of my own productivity. To be honest, I could keep this going forever - I&#39;ve never been more productive in my life.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Information processing</title>
+    <link href="https://mijndertstuij.nl/posts/information-processing/" />
+    <updated>2021-02-15T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/information-processing/</id>
+    <content type="html">&lt;p&gt;Ever since this COVID-19 thing hit I&#39;ve been working from home non-stop. That&#39;s almost a full year of working remotely and being fully in charge of my own productivity. To be honest, I could keep this going forever - I&#39;ve never been more productive in my life.&lt;/p&gt;
 &lt;p&gt;The last few months have also been perfect to optimize certain aspects of my work, the most important one being information processing. I&#39;ve been horrible at keeping track of todo items before since I could never make it stick. Due to WFH I had the time to create a system for myself and I&#39;ve never been more productive, stress-free and happy.&lt;/p&gt;
 &lt;p&gt;My system hinges on categorizing all of my information into 4 silo&#39;s: articles, todo items, quick notes and knowledge. Let&#39;s go through them one by one.&lt;/p&gt;
 &lt;h2&gt;Articles&lt;/h2&gt;
@@ -492,15 +483,14 @@ nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&l
 &lt;p&gt;The tool I&#39;ve chosen to create my Digital Brain is &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;, but there are of course others as well like &lt;a href=&quot;https://roamresearch.com/&quot;&gt;Roam Research&lt;/a&gt;. The latter is way too complicated for my taste as I just to have a bunch of Markdown files and I want to link certain pages together to create a cortex of sorts.&lt;/p&gt;
 &lt;p&gt;At first it&#39;s quite time consuming to jot down every little piece of knowledge I can think of. But in the end I hope it&#39;ll lessen the amount of Google searches for trivial stuff. Obsidian allows me to very quickly search the contents of my Digital Brain so that&#39;s awesome as well.&lt;/p&gt;
 &lt;p&gt;Another reason I&#39;m building this is because I want to have this as my part of my legacy - a small window into what it was like when I was alive. I hope it&#39;s going to be one of those &lt;a href=&quot;https://en.wikipedia.org/wiki/Time_capsule&quot;&gt;time capsules&lt;/a&gt; they put in the ground to be recovered a hundred years from now.&lt;/p&gt;
-</description>
-      <pubDate>Mon, 15 Feb 2021 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/information-processing/</guid>
-    </item>
-    <item>
-      <title>My Tmux setup</title>
-      <link>https://mijndertstuij.nl/posts/my-tmux-setup/</link>
-      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/tmux/tmux/wiki&quot;&gt;Tmux&lt;/a&gt; is a terminal multiplexer. It lets you switch between several programs through windows and panes, detach your session and reattach to it on a different computer. I reckon it&#39;s mostly used on servers where people have long running jobs and such running in a tmux session.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>My Tmux setup</title>
+    <link href="https://mijndertstuij.nl/posts/my-tmux-setup/" />
+    <updated>2020-04-16T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/my-tmux-setup/</id>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/tmux/tmux/wiki&quot;&gt;Tmux&lt;/a&gt; is a terminal multiplexer. It lets you switch between several programs through windows and panes, detach your session and reattach to it on a different computer. I reckon it&#39;s mostly used on servers where people have long running jobs and such running in a tmux session.&lt;/p&gt;
 &lt;p&gt;The learning curve is what always withheld me from just diving in and giving Tmux a chance to get integrated into my workflow. I wanted to share some of the small changes I made to &lt;a href=&quot;https://github.com/mijndert/dotfiles&quot;&gt;my Tmux configuration&lt;/a&gt; to make life a little easier.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;I now work in Tmux fulltime and I&#39;m loving everything about it. Mostly because Tmux can be configured just the way I like it and because I can have this exact same configuration on all of my computers and servers.&lt;/p&gt;
@@ -535,15 +525,14 @@ unbind %
 bind | split-window -h
 bind - split-window -v
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-      <pubDate>Thu, 16 Apr 2020 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/my-tmux-setup/</guid>
-    </item>
-    <item>
-      <title>On minimalism</title>
-      <link>https://mijndertstuij.nl/posts/minimalism/</link>
-      <description>&lt;p&gt;Places like Reddit and Twitter are filled with people who practice their version of minimalism. The most prevalent method is to just have less of everything. Some groups of people even go so far as to think they can only have a fixed amount of things in their lives.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>On minimalism</title>
+    <link href="https://mijndertstuij.nl/posts/minimalism/" />
+    <updated>2019-01-28T00:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/minimalism/</id>
+    <content type="html">&lt;p&gt;Places like Reddit and Twitter are filled with people who practice their version of minimalism. The most prevalent method is to just have less of everything. Some groups of people even go so far as to think they can only have a fixed amount of things in their lives.&lt;/p&gt;
 &lt;p&gt;Don&#39;t let anyone tell you this is the spirit of minimalism because it&#39;s not. Let me explain.&lt;/p&gt;
 &lt;p&gt;I&#39;ve always practiced minimalism, even way before I knew about the term. This was born from a desire to have a less complicated relationship with technology. I genuinely hate having a lot of stuff because nowadays, more so than say 10 years ago, everything needs updates and needs to be charged all the time for it to be useful. Gadgets are outdated the minute you buy them. Keeping track of where everything is and making sure everything gets its maintenance is nauseating to me.&lt;/p&gt;
 &lt;p&gt;The burden of having to keep track of all of these things is what led me to practice minimalism. Unfortunately, talking about minimalism is hard because a lot of lies and misinformation is thrown around.&lt;/p&gt;
@@ -551,10 +540,6 @@ bind - split-window -v
 &lt;p&gt;Don&#39;t get me wrong, owning less stuff is a great endeavor and one that the Earth sorely needs. But just owning less without a clear goal in mind is not very productive.&lt;/p&gt;
 &lt;p&gt;To me minimalism is about making more deliberate choices about what to buy and, more importantly, what not to buy. If I truly think something will bring me joy I will buy it. I have no hesitation about buying things because I don&#39;t keep track of how many things I own. I want everything I own to have a purpose, even if that&#39;s to just bring joy into my life. If something doesn&#39;t fulfill its intended purpose anymore I will gladly put it up for sale, or give it away.&lt;/p&gt;
 &lt;p&gt;I love cleaning out drawers because it means less stuff to keep track of.&lt;/p&gt;
-</description>
-      <pubDate>Mon, 28 Jan 2019 00:00:00 GMT</pubDate>
-      <dc:creator>Mijndert Stuij</dc:creator>
-      <guid>https://mijndertstuij.nl/posts/minimalism/</guid>
-    </item>
-  </channel>
-</rss>
+</content>
+  </entry>
+</feed>
