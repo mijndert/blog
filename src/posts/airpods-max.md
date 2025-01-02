@@ -1,6 +1,6 @@
 ---
 title: AirPods Max
-date: 2022-03-04
+date: 2022-03-04 10:00:00 +02:00
 summary: Some thoughts on AirPods Max and headphones in general.
 ---
 

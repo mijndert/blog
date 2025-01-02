@@ -1,6 +1,6 @@
 ---
 title: OpenBSD
-date: 2021-11-01
+date: 2021-11-01 10:00:00
 summary: Getting to know OpenBSD after 22+ years of using Linux.
 ---
 

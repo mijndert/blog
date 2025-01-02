@@ -1,6 +1,6 @@
 ---
 title: My Tmux setup
-date: 2020-04-16
+date: 2020-04-16 10:00:00
 summary: A quick Tmux tutorial.
 ---
 

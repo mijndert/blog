@@ -1,6 +1,6 @@
 ---
 title: Config-driven Terraform
-date: 2024-01-18
+date: 2024-01-18 10:00:00
 summary: "Some improvements in Terraform 1.7: Config-driven Remove and Import block for_each."
 ---
 

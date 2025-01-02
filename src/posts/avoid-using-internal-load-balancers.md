@@ -1,6 +1,6 @@
 ---
 title: Avoid using internal load balancers
-date: 2022-03-15
+date: 2022-03-15 10:00:00
 summary: On avoiding internal load balancers in liue of AWS CloudMap.
 ---
 

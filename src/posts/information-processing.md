@@ -1,6 +1,6 @@
 ---
 title: Information processing
-date: 2021-02-15
+date: 2021-02-15 10:00:00
 summary: The apps that I use to keep track of knowledge and todo items.
 ---
 

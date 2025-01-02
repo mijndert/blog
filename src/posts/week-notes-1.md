@@ -1,6 +1,6 @@
 ---
 title: Week notes 1
-date: 2025-01-02
+date: 2025-01-02 10:00:00
 summary: A weekly summary of things that are on my mind.
 ---
 

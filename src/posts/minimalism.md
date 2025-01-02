@@ -1,6 +1,6 @@
 ---
 title: On minimalism
-date: 2019-01-28
+date: 2019-01-28 10:00:00
 summary: There's a lot of misinformation about minimalism. My thoughts.
 ---
 

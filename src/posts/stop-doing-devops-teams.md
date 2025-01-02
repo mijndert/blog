@@ -1,6 +1,6 @@
 ---
 title: Stop doing DevOps teams if you want to scale
-date: 2022-12-05
+date: 2022-12-05 10:00:00
 summary: In which I make the case for separate developer and platform teams
 tags:
   - post

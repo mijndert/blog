@@ -1,6 +1,6 @@
 ---
 title: 40 questions
-date: 2022-03-18
+date: 2022-03-18 10:00:00
 summary: 40 questions to ask yourself every day.
 ---
 

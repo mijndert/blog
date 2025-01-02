@@ -1,6 +1,6 @@
 ---
 title: A minimalist take on Vim
-date: 2022-04-15
+date: 2022-04-15 10:00:00
 summary: How I use Vim without any (well, almost) plugins.
 ---
 

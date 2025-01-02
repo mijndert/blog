@@ -1,6 +1,6 @@
 ---
 title: Obsidian doesn't click for me
-date: 2023-10-12
+date: 2023-10-12 10:00:00
 summary: I really want to like and use Obsidian, but I'm unable to.
 ---
 
