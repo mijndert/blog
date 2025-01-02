@@ -146,11 +146,7 @@ blockquote {
   }
 
   header {
-    margin: 3em 0 2em 0;
-  }
-
-  ul {
-    margin-left: 2em;
+    margin: 3em 0 3em 0;
   }
 }
 
@@ -162,13 +158,9 @@ blockquote {
   }
 
   header {
-    margin: 3em 0 2em 0;
+    margin: 3em 0 3em 0;
   }
 
-  ul {
-    margin-left: 1em;
-  }
-  
   pre {
     font-size: 12px;
   }
