@@ -7,6 +7,7 @@ html {
   font-family: "Crimson Pro", serif;
   font-size: 1.125rem;
   font-kerning: normal;
+  font-display: optional;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   font-optical-sizing: auto;
