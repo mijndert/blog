@@ -12,7 +12,7 @@ I think the overarching theme is going to be about taking care about myself and 
 
 ## Running 
 
-Running has been a big part of my life in 2024 and I intend to go above and beyond this year. I'm planning to run a few 10k events, again [raising funds for MS research](https://www.msmotion.nl/fundraisers/mijndert-stuij). I'm also going back to the half marathon distance which I'm equal parts excited and scared about. The goal is to get close to the 2 hour mark. 
+Running has been a big part of my life in 2024 and I intend to go above and beyond this year. I'm planning to run a few 10k events, again [raising funds for MS research](https://www.msmotion.nl/fundraisers/mijndert-stuij-2). I'm also going back to the half marathon distance which I'm equal parts excited and scared about. The goal is to get close to the 2 hour mark. 
 
 The big one is going to be my first ever ultra in November. I have plenty of time left, but it's going to be grind and the biggest challenge yet. Can't wait to cross the finish line.
 
