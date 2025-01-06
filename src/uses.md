@@ -7,7 +7,7 @@ summary: A list of hardware and software I use on a daily basis.
 ## Hardware
 
 <p class="compact">14" MacBook Pro (M2 Pro)</p>
-<p class="compact">HP Z38C</p>
+<p class="compact">Dell P3421W</p>
 <p class="compact">iPhone 13 Pro</p>
 <p class="compact">Logitech Streamcam</p>
 <p class="compact">Logitech MX Ergo</p>
