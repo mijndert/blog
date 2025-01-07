@@ -115,7 +115,7 @@ ul {
 
 img,
 picture {
-  aspect-ratio: 16/9;
+  /* aspect-ratio: 16/9; */
   height: auto;
   width: 100%;
 } 
