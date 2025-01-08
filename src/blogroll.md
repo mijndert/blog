@@ -16,6 +16,7 @@ I follow people, not corporations. Here's some great people to follow and a link
 - [Jose M. Gilgado](https://josem.co/) - [RSS](https://josem.co/articles/index.xml)
 - [Keenan](https://gkeenan.co/avgb/) - [RSS](https://gkeenan.co/avgb/feed.xml)
 - [Kevin Gimbel](https://kevingimbel.de/) - [RSS](https://kevingimbel.de/feed.rss)
+- [Manuel Moreale](https://manuelmoreale.com/) - [RSS](https://manuelmoreale.com/feed/rss)
 - [Michal Zelazny](https://www.michalzelazny.com/) - [RSS](https://www.michalzelazny.com/feed/)
 - [Michiel van der Winden](https://mvdwinden.nl/) - [RSS](https://mvdwinden.nl/index.xml)
 - [Mischa van den Burg](https://mischavandenburg.blog/) - [RSS](https://mischavandenburg.blog/feed/)
