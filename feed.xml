@@ -4,12 +4,22 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-01-07T06:00:00Z</updated>
+  <updated>2025-01-08T13:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>I&#39;ll read it</title>
+    <link href="https://mijndertstuij.nl/posts/ill-read-it/" />
+    <updated>2025-01-08T13:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/ill-read-it/</id>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;https://manuelmoreale.com/&quot;&gt;Manuel Moreale&lt;/a&gt; has a very good personal blog, both in terms of design as well as content-wise. It&#39;s difficult to keep writing and come up with topics to write about, more so when you feel like no one is reading along. Manuel is motivating people to start writing &lt;a href=&quot;https://manuelmoreale.com/i-ll-read-it&quot;&gt;by offering to read their blog&lt;/a&gt; so you have your first reader.&lt;/p&gt;
+&lt;p&gt;I think with the ever growing power of mega corporations on the internet, writing a personal blog is a good way to keep the internet weird. It doesn&#39;t matter if it&#39;s about personal experiences, some very specific topic, or just random thoughts.&lt;/p&gt;
+&lt;p&gt;So, I&#39;d like to join Manuel in this effort. If you have a blog, &lt;a href=&quot;mailto:mijndert@mijndertstuij.nl&quot;&gt;send it to me&lt;/a&gt; and I will read it. Even better if you add an RSS feed so I can easily keep track of new posts. I like reading in English or Dutch, any and all topics are welcome.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Display waffling</title>
     <link href="https://mijndertstuij.nl/posts/display-waffling/" />
