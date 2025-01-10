@@ -35,10 +35,11 @@ export default async function(eleventyConfig) {
 	});
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		extensions: "html",
+		widths: [800, 500, 300],
 		defaultAttributes: {
+			sizes: "90vw",
 			loading: "lazy",
 			decoding: "async",
-			sizes: "auto",
 		},
 	});
   return {
