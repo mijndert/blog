@@ -118,13 +118,15 @@ picture {
   /* aspect-ratio: 16/9; */
   height: auto;
   width: 100%;
+  border-radius: .5em;
 } 
 
 pre {
   background-color: #e3e3e34f;
   padding: .75em;
   overflow-x: auto;
-  border-radius: .75em;
+  border-radius: .5em;
+  margin-bottom: 1em;
 }
 
 code {
