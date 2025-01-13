@@ -4,12 +4,37 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-01-10T09:00:00Z</updated>
+  <updated>2025-01-13T14:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Blog questions challenge</title>
+    <link href="https://mijndertstuij.nl/posts/how-i-do-the-internet/" />
+    <updated>2025-01-13T14:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/how-i-do-the-internet/</id>
+    <content type="html">&lt;p&gt;&lt;strong&gt;1. Why did you start blogging in the first place?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;My blog has taken on many forms over the years, but the main theme was always sharing technical content that others might find useful. Some things that I&#39;ve learned, some bug I&#39;ve solved, some tools I discovered. I am and forever will be a firm believer that knowledge should be freely available for anyone. What I did find though, was that keeping the technical content up to date was a hassle so I decided to dial that back a little bit.&lt;/p&gt;
+&lt;p&gt;Now I write about whatever comes to mind and I recently started sharing week notes which has done wonders for my creativity, mental health and output on this blog as well. I just love having my own &lt;em&gt;home&lt;/em&gt; on the internet that I can do anything with. I don&#39;t need to ask for permission and my name is attached to it, not some large corporation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. What platform are you using to manage your blog and why did you choose it?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This also has changed over the years, but I&#39;m currently all in on Eleventy and I love everything about it. I love static websites for their speed and myriad hosting options it gives me. Eleventy has a very good plug-in ecosystem as well and the community is super friendly.&lt;/p&gt;
+&lt;p&gt;My blog is hosted on GitHub Pages. All details can be found in the &lt;a href=&quot;https://mijndertstuij.nl/colophon&quot;&gt;colophon&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Have you blogged on other platforms before?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Many, many changes over the years. I started out on WordPress, was active on Tumblr for a while, switched to Jekyll, then to Hugo and now on Eleventy. I also tried Ghost in the past but quickly found it didn&#39;t suit my needs very well. I just want the tool to get out of the way as much as possible now.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. How do you write your posts? For example, in a local editing tool, or in a panel/dashboard that&#39;s part of your blog?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I write my posts in Visual Studio Code and I preview them locally using Eleventy&#39;s built-in server. I just copy over one of the Markdown files in &lt;code&gt;src/posts&lt;/code&gt; and start writing. Nothing fancy.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. When do you feel most inspired to write?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I follow a ton of different independent blogs in my RSS reader where I come across so many good posts that inspire me all the time. When my brain gets some downtime that&#39;s when I find myself thinking about what I could write about next. I either write immediately when I&#39;m at my desk, or I add it to my Reminders app for later.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. Do you publish immediately after writing, or do you let it simmer a bit as a draft?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I publish immediately because most times I&#39;m pretty excited to share what I&#39;ve written and I love getting feedback. I do proofread but I still have to go back and add a few more commits to fix the odd spelling mistake.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7. What&#39;s your favorite post on your blog?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Currently it&#39;s &lt;a href=&quot;https://mijndertstuij.nl/posts/2025-goals/&quot;&gt;Goals for 2025&lt;/a&gt; as it guides me through the year. A technical topic I still really like is &lt;a href=&quot;https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/&quot;&gt;Avoid using internal load balancers&lt;/a&gt; because it saved me a ton of time as an AWS consultant back in the day.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8. Any future plans for your blog? Maybe a redesign, a move to another platform, or adding a new feature?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I just redesigned my blog and I&#39;m happy with it for now. I do want to eventually add a photography section on here.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 2</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-2/" />
