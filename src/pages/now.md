@@ -2,6 +2,7 @@
 title: Now
 layout: layouts/page.html
 summary: What I am focused on now.
+permalink: /now/
 ---
 
 - Working as a Senior Devops Engineer at [Otrium](https://www.otrium.nl)

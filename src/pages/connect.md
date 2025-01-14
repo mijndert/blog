@@ -2,6 +2,7 @@
 title: Connect
 layout: layouts/page.html
 summary: How and where to reach/follow me.
+permalink: /connect/
 ---
 
 Due to my busy life and priorities, I prefer asynchronous communication. You can reach/follow me via the following means:

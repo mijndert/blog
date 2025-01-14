@@ -2,6 +2,8 @@
 title: Explore
 layout: layouts/page.html
 summary: A list of all pages on this website, in alphabetical order.
+permalink: /explore/
+eleventyExcludeFromCollections: true
 ---
 
 - [AI](/ai)
