@@ -4,12 +4,26 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-01-17T12:00:00Z</updated>
+  <updated>2025-01-20T12:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>The algorithm isn&#39;t always to blame</title>
+    <link href="https://mijndertstuij.nl/posts/the-algorithm-not-always-to-blame/" />
+    <updated>2025-01-20T12:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/the-algorithm-not-always-to-blame/</id>
+    <content type="html">&lt;p&gt;Everyone is a victim of The Algorithm in one way or another. I&#39;m still on Instagram (yes, I know) and I quite often fall into the trap of looking at Reels (super short videos) for too long.&lt;/p&gt;
+&lt;p&gt;I don&#39;t even like most of the content it shows me, but I keep swiping just in case the next one is something funny. The algorithm is really good at recognizing when I&#39;m looking at a video of a golden retriever for 3 seconds longer than usual. I will get a bunch of other golden retriever videos and suddenly it will cut to something else entirely, lest I get bored and quit the app.&lt;/p&gt;
+&lt;p&gt;Then again, showing a user videos of golden retrievers is a benign use of an algorithm. The algorithm is also used to get you hooked onto extreme, dangerous content. Our brains love nothing more than engaging with content that gets us angry, scared, sad, or anxious. All to make us pay attention for longer, because eyeballs sell ads and ads are the lifeblood of these companies. They are using our psychology against us to make a buck, and it&#39;s working incredibly well. Thousands of people are working every day to exploit our brains in better, more efficient ways.&lt;/p&gt;
+&lt;p&gt;It&#39;s this algortihm that is (partly) to blame for the state of the world today where people are more divided than ever. Big tech became politicized; it&#39;s no longer about the truth, it&#39;s about what gets the most clicks, the most eyeballs, the most ad revenue. People are acting dumb willingly, all to get that precious attention.&lt;/p&gt;
+&lt;p&gt;But is the algorithm to blame for all of these problems?&lt;/p&gt;
+&lt;p&gt;I wrote about &lt;a href=&quot;https://mijndertstuij.nl/posts/the-best-laptop-ever/&quot;&gt;my favorite laptop&lt;/a&gt; and someone put it up on &lt;a href=&quot;https://news.ycombinator.com/item?id=42715462&quot;&gt;Hacker News&lt;/a&gt; and &lt;a href=&quot;https://lobste.rs/s/y7n6lo/best_laptop_ever&quot;&gt;Lobsters&lt;/a&gt;. Both HN and Lobsters don&#39;t have much in the way of an algorithm - they rank stories based on newness, amount of comments in a certain timeframe, and upvotes. Again, people love nothing more than interacting with negative content and, even without an algorithm, the negativity still spread like wildfire and reached the top so more people felt the need to chime in. The result was a whopping 140+ comments on the Lobsters thread which are insane numbers on there.&lt;/p&gt;
+&lt;p&gt;It&#39;s easy to blame to algorithm for the flood of negative, harmful shit that&#39;s spread out over the internet nowadays. It puts the blame on a thing we have no control over, instead of on ourselves. But maybe, instead of leaving a comment on something you have no affinity with, you should ask yourself &lt;em&gt;&amp;quot;is what I have to say going to add anything of value?&amp;quot;&lt;/em&gt; and if the answer is no, maybe just don&#39;t comment? If you don&#39;t care at all about Mac hardware, you can quite safely ignore all content that&#39;s about Mac hardware. It will save you and everyone else a bunch of time and frustration.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 3</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-3/" />
@@ -627,48 +641,6 @@ nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&l
 &lt;p&gt;The tool I&#39;ve chosen to create my Digital Brain is &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;, but there are of course others as well like &lt;a href=&quot;https://roamresearch.com/&quot;&gt;Roam Research&lt;/a&gt;. The latter is way too complicated for my taste as I just to have a bunch of Markdown files and I want to link certain pages together to create a cortex of sorts.&lt;/p&gt;
 &lt;p&gt;At first it&#39;s quite time consuming to jot down every little piece of knowledge I can think of. But in the end I hope it&#39;ll lessen the amount of Google searches for trivial stuff. Obsidian allows me to very quickly search the contents of my Digital Brain so that&#39;s awesome as well.&lt;/p&gt;
 &lt;p&gt;Another reason I&#39;m building this is because I want to have this as my part of my legacy - a small window into what it was like when I was alive. I hope it&#39;s going to be one of those &lt;a href=&quot;https://en.wikipedia.org/wiki/Time_capsule&quot;&gt;time capsules&lt;/a&gt; they put in the ground to be recovered a hundred years from now.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>My Tmux setup</title>
-    <link href="https://mijndertstuij.nl/posts/my-tmux-setup/" />
-    <updated>2020-04-16T10:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/my-tmux-setup/</id>
-    <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/tmux/tmux/wiki&quot;&gt;Tmux&lt;/a&gt; is a terminal multiplexer. It lets you switch between several programs through windows and panes, detach your session and reattach to it on a different computer. I reckon it&#39;s mostly used on servers where people have long running jobs and such running in a tmux session.&lt;/p&gt;
-&lt;p&gt;The learning curve is what always withheld me from just diving in and giving Tmux a chance to get integrated into my workflow. I wanted to share some of the small changes I made to &lt;a href=&quot;https://github.com/mijndert/dotfiles&quot;&gt;my Tmux configuration&lt;/a&gt; to make life a little easier.&lt;/p&gt;
-&lt;!--more--&gt;
-&lt;p&gt;I now work in Tmux fulltime and I&#39;m loving everything about it. Mostly because Tmux can be configured just the way I like it and because I can have this exact same configuration on all of my computers and servers.&lt;/p&gt;
-&lt;p&gt;And when I&#39;m stuck there&#39;s always the &lt;a href=&quot;https://tmuxcheatsheet.com/&quot;&gt;Tmux cheat sheet&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Meta key&lt;/h2&gt;
-&lt;p&gt;One thing I struggled with is getting my meta key right. The meta key is the prefix you use before issuing other commands that control Tmux. Commands such as creating and closing windows, splitting panes, moving between panes, etc. I finally landed on &lt;code&gt;ctrl + a&lt;/code&gt; for my meta key, but you can pick anything you like really.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;unbind C-b
-set -g prefix C-a
-bind-key C-a send-prefix
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;The status bar&lt;/h2&gt;
-&lt;p&gt;By default the Tmux status bar is green. This hurt my eyes so I figured out a way to change its colors a little bit. You can put all kinds of stuff in the status bar like your load averages, battery status, and much more. I like to keep it clean though.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;set -g status-bg &#39;#666666&#39;
-set -g status-fg &#39;white&#39;
-set -g status-left &#39;&#39;
-set -g status-right &#39;&#39;
-setw -g window-status-current-style &#39;fg=white bg=colour19&#39;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Count from 1&lt;/h2&gt;
-&lt;p&gt;The status bar shows your currently open windows. One minor annoyance I faced was that it counted from zero and wouldn&#39;t rearrange its count as I closed windows. I change that behaviour so it&#39;s much easier to switch between windows using &lt;code&gt;ctrl + a&lt;/code&gt; and the number of the window that I want to switch to.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;set -g base-index 1
-set -g renumber-windows on
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Start new windows in the same path&lt;/h2&gt;
-&lt;p&gt;When I open a new window I usually want to start off in the same directory as the window I came from. Or at least close to it.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;bind c new-window -c &amp;quot;#{pane_current_path}&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Easier window splits&lt;/h2&gt;
-&lt;p&gt;How to split a window into two different panes has quite the learning curve as, for me, the defaults were a little hard to work with. Now I can split windows using the &lt;code&gt;|&lt;/code&gt; and &lt;code&gt;-&lt;/code&gt; keys.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;unbind &#39;&amp;quot;&#39;
-unbind %
-bind | split-window -h
-bind - split-window -v
-&lt;/code&gt;&lt;/pre&gt;
 </content>
   </entry>
 </feed>
