@@ -5,13 +5,16 @@ import { DateTime } from "luxon";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 export default async function(eleventyConfig) {
+	// this shows dates on posts
   eleventyConfig.addFilter("postDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
   })
+	// create a posts collection
 	eleventyConfig.addCollection("posts", (collectionApi) =>
 		collectionApi.getFilteredByGlob("src/posts/*.md")
 	);
 
+	// tags configuration
 	eleventyConfig.addCollection("tagsList", function(collectionApi) {
     let tagsSet = new Set();
     collectionApi.getAll().forEach(item => {
@@ -26,11 +29,14 @@ export default async function(eleventyConfig) {
 		return posts.filter(post => post.data.tags && post.data.tags.includes(tag));
 	});
 
+	// copy assets
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/favicon/");
   eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
   eleventyConfig.addPassthroughCopy({ 'src/CNAME': '/CNAME' });
+
+	// plugins
   eleventyConfig.addPlugin(embeds);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(feedPlugin, {
