@@ -2,6 +2,7 @@
 title: Avoid using internal load balancers
 date: 2022-03-15 10:00:00
 summary: On avoiding internal load balancers in liue of AWS CloudMap.
+tags: aws
 ---
 
 One of the most well-known patterns in infrastructure is having an internal load balancer in front of backend services like application servers. When you're migrating your workloads to say AWS Fargate it's easy to just carry over that same pattern because, well, it works. But, as with all things in the cloud, internal load balancers cost money and add complexity. When you're just migrating to using containers for the first time, adding complexity to an already steep learning curve might not be the best way to go about things.

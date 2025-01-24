@@ -23,7 +23,7 @@ export default async function(eleventyConfig) {
         tags.forEach(tag => tagsSet.add(tag));
       }
     });
-    return [...tagsSet];
+    return [...tagsSet].sort();
   });
 	eleventyConfig.addFilter("filterByTag", (posts, tag) => {
 		return posts.filter(post => post.data.tags && post.data.tags.includes(tag));

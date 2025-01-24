@@ -2,6 +2,7 @@
 title: I'll read it
 date: 2025-01-08 13:00:00
 summary: Do you have a blog? Send it to me, I'll read it.
+tags: meta
 ---
 
 I think with the ever growing power of mega corporations on the internet, writing a personal blog is a good way to keep the internet weird. It doesn't matter if it's about personal experiences, some very specific topic, or just random thoughts. 

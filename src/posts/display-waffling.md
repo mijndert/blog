@@ -2,6 +2,7 @@
 title: Display waffling
 date: 2025-01-07 06:00:00
 summary: In which I waffle about computer monitors.
+tags: gadgets
 ---
 
 I think almost any nerd remembers their first computer monitor. Mine was a tiny CRT one that could only display a few lines of amber text. It was hooked up to an Intel 8086 I think and even though it was very outdated at the time already, it was my very first personal computer.
