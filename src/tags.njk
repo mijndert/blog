@@ -5,6 +5,7 @@ pagination:
   alias: tag
 permalink: /tags/{{ tag | slug }}/index.html
 layout: layouts/page.html
+eleventyExcludeFromCollections: true
 ---
 
 <h1>Topics / {{ tag }}</h1>
