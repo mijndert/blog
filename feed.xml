@@ -4,12 +4,29 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-01-20T12:00:00Z</updated>
+  <updated>2025-01-24T09:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 4</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-4/" />
+    <updated>2025-01-24T09:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-4/</id>
+    <content type="html">&lt;p&gt;It&#39;s the year of week notes on the desktop! (if you know, you know)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;My position at work involves a lot of non-technical work like talking to people and vendors, filling out spreadsheets, doing presentations. Which is all great, but I&#39;m a nerd at heart so I allowed myself some time to do some engineering work this week. I really have to carve out more time for that kind of stuff.&lt;/li&gt;
+&lt;li&gt;During a company-wide kick-off event, I presented how the tech team is going to contribute to the overall goal of the company for 2025 and beyond. I was a little nervous to present in front of 100+ people, but I got some really nice compliments afterwards.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ellie.wtf/&quot;&gt;Ellie&lt;/a&gt; has given me access to try &lt;a href=&quot;https://atuin.sh/&quot;&gt;Atuin&lt;/a&gt; Desktop and it&#39;s just incredible. It&#39;s still early days so it&#39;s all a little rough around the edges, but the potential is definitly there. I&#39;ll be sharing some more thoughts in a separate post soon.&lt;/li&gt;
+&lt;li&gt;After the inauguration of the Orange Man, I decided to filter out a ton of words on Mastodon. My timeline is now a happy place once more.&lt;/li&gt;
+&lt;li&gt;Last time I talked about how we&#39;re planning to have some work done to our garage. We received the first quote and &lt;em&gt;wow&lt;/em&gt; is it a lot of money. I kind of expected it, but not &lt;em&gt;this much&lt;/em&gt;. Anyway, we have a few more quotes coming in so we&#39;ll see how it goes.&lt;/li&gt;
+&lt;li&gt;Today I brought in my car for maintenance. Fingers crossed nothing unexpected pops up.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That&#39;s it! Bit of a quiet week this one. Until next time!&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>The algorithm isn&#39;t always to blame</title>
     <link href="https://mijndertstuij.nl/posts/the-algorithm-not-always-to-blame/" />
@@ -607,40 +624,6 @@ nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&l
 &lt;p&gt;Long story short, I&#39;m currently in the process of moving some workloads from Linux VM&#39;s to OpenBSD ones. It&#39;s been quite a journey so far because unlearning 22 years of Linux experience is... hard. Luckily the community is awesome and the available documentation even more so. But what makes OpenBSD such a joy to use are the sane defaults and the completely empty config files that are just there for me to fill out as I see fit. It feels like the system was designed to fit whatever purpose I have in mind without ever getting in the way. Stuff like &lt;a href=&quot;https://man.openbsd.org/httpd.8&quot;&gt;httpd(8)&lt;/a&gt;, &lt;a href=&quot;https://man.openbsd.org/relayd.8&quot;&gt;relayd(8)&lt;/a&gt;, &lt;a href=&quot;https://man.openbsd.org/acme-client.1&quot;&gt;acme-client(1)&lt;/a&gt; and &lt;a href=&quot;https://man.openbsd.org/pf.4&quot;&gt;pf(4)&lt;/a&gt; make the entire system feel very robust and well thought out.&lt;/p&gt;
 &lt;p&gt;Over in the Linux world everything just seems to be strung together with little sense of direction. It always felt like a pile of software that happens to sometimes work together. OpenBSD is the opposite of that and I love it. I just wish I could run it on my laptop as well, with all the bells and whistles working. But that&#39;s a bit of a pipe dream as bluetooth support is currently completely missing.&lt;/p&gt;
 &lt;p&gt;For now it&#39;s a great operating system for servers for me. If you also want to play around with OpenBSD and indirectly &lt;a href=&quot;https://www.openbsdfoundation.org/&quot;&gt;support the foundation&lt;/a&gt; I would highly recommend getting a VM over at &lt;a href=&quot;https://openbsd.amsterdam/&quot;&gt;OpenBSD.ams&lt;/a&gt;.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Information processing</title>
-    <link href="https://mijndertstuij.nl/posts/information-processing/" />
-    <updated>2021-02-15T10:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/information-processing/</id>
-    <content type="html">&lt;p&gt;Ever since this COVID-19 thing hit I&#39;ve been working from home non-stop. That&#39;s almost a full year of working remotely and being fully in charge of my own productivity. To be honest, I could keep this going forever - I&#39;ve never been more productive in my life.&lt;/p&gt;
-&lt;p&gt;The last few months have also been perfect to optimize certain aspects of my work, the most important one being information processing. I&#39;ve been horrible at keeping track of todo items before since I could never make it stick. Due to WFH I had the time to create a system for myself and I&#39;ve never been more productive, stress-free and happy.&lt;/p&gt;
-&lt;p&gt;My system hinges on categorizing all of my information into 4 silo&#39;s: articles, todo items, quick notes and knowledge. Let&#39;s go through them one by one.&lt;/p&gt;
-&lt;h2&gt;Articles&lt;/h2&gt;
-&lt;p&gt;One of the websites I visit (almost) daily is &lt;a href=&quot;https://news.ycombinator.com/&quot;&gt;Hacker News&lt;/a&gt;. Before, I would open a bunch of links and have something like 10 tabs open until I got around to reading the articles. In practice this meant I&#39;d probably read 2 and skim through the rest. I always hated myself for it because I know a lot of these articles would&#39;ve added a lot of value to my life.&lt;/p&gt;
-&lt;p&gt;Over a year ago my wife gifted me a &lt;a href=&quot;https://gl.kobobooks.com/collections/all&quot;&gt;Kobo e-reader&lt;/a&gt; which has the ability to connect to a &lt;a href=&quot;https://getpocket.com/&quot;&gt;Pocket&lt;/a&gt; account. Firefox has built-in support for saving articles to Pocket as well, no extensions required. Now, instead of opening 10 articles in tabs and keeping them open for a few days, I save everything I want to read to Pocket which then automatically &lt;a href=&quot;https://help.getpocket.com/article/1006-getting-started-with-kobo&quot;&gt;syncs to my Kobo&lt;/a&gt;. There&#39;s absolutely no manual action required which I like a lot. Of course, an e-ink display is a much more enjoyable way of reading long-form articles than the LCD screen of my laptop or phone.&lt;/p&gt;
-&lt;p&gt;It&#39;s nothing novel but this simple action enriches my life with new insights I glean from all of the artices my Kobo safeguards for me.&lt;/p&gt;
-&lt;h2&gt;Todo items&lt;/h2&gt;
-&lt;p&gt;Many years ago I subscribed to the idea of &lt;a href=&quot;https://gettingthingsdone.com/&quot;&gt;Getting Things Done&lt;/a&gt;, but only a subset of the concept ever stuck with me. I think GTD is way too complicated for a single person with a limited amount of todo items at any given time. Since then, I&#39;ve been trying just about every todo application, but one that always appealed to me was &lt;a href=&quot;https://culturedcode.com/things/&quot;&gt;Things&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Things is only as powerful as you want it to be since it has &lt;a href=&quot;https://culturedcode.com/things/guide/&quot;&gt;many features&lt;/a&gt; I never really used before: headings, tags, sub-items, etcetera. I basically used Things as a glorified list of todo&#39;s without any context apart from projects.&lt;/p&gt;
-&lt;p&gt;Things deserves its own blog post because I can talk for hours about the &lt;a href=&quot;https://www.youtube.com/watch?v=9oBuOrrBskw&quot;&gt;many ways&lt;/a&gt; you can process information inside the app. I&#39;ll tell you about the most important things I do inside of Things so I&#39;ll, hopefully, never forget something again.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;I added an &lt;a href=&quot;https://culturedcode.com/things/support/articles/2803567/&quot;&gt;iOS widget&lt;/a&gt; that points to my Inbox to make adding a new task as easy as possible&lt;/li&gt;
-&lt;li&gt;I created new areas to categorize projects under and added emoji in the title of the area for easier visual grepping&lt;/li&gt;
-&lt;li&gt;Each project now has a description in the notes field that outlines my goals&lt;/li&gt;
-&lt;li&gt;I&#39;ve added a recurring task for a daily review to have a look at any new tasks from the Inbox and add new tasks I want to work on to Today&lt;/li&gt;
-&lt;li&gt;I started &lt;a href=&quot;https://culturedcode.com/things/support/articles/2803581/&quot;&gt;adding Tags&lt;/a&gt; to todo items to easily filter on priority and assumed effort&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Quick notes&lt;/h2&gt;
-&lt;p&gt;I&#39;ve always had a bit of a love-hate relationship with digital note taking tools and I&#39;ve again tried most of them. At the end of the day I want the least amount of friction between my thoughts and putting them in writing for later reference. I also like it when a tool feels a well crafted Mac app instead of some janky web app. That&#39;s why I always found apps like &lt;a href=&quot;https://bear.app/&quot;&gt;Bear&lt;/a&gt; to be very cumbersome. Since I&#39;m already knees deep in the Apple ecosystem I&#39;m currently using the default &lt;a href=&quot;https://www.icloud.com/notes&quot;&gt;Apple Notes&lt;/a&gt; app across my devices.&lt;/p&gt;
-&lt;p&gt;Since WFH I have a lot of meetings with all of my different clients. During those meetings I make quick notes of everything we talk about. Right after the meeting I review my notes and distill everything into action items which I jot down in Things. After that the note basically becomes useless again as the information is processed.&lt;/p&gt;
-&lt;h2&gt;Knowledge&lt;/h2&gt;
-&lt;p&gt;You&#39;ve probably found yourself Googling a Git command or something about &lt;a href=&quot;https://en.wikipedia.org/wiki/Regular_expression&quot;&gt;regex&lt;/a&gt; more than once. I&#39;ve been there, doesn&#39;t feel great.&lt;/p&gt;
-&lt;p&gt;Recently I got into the concept of a &lt;a href=&quot;https://www.youtube.com/watch?v=OP3dA2GcAh8&quot;&gt;Second Brain&lt;/a&gt;, Digital Brain or whatever you wanna call it. It&#39;s a collection of, in my case, Markdown files with stuff I want to keep around for future reference. Notes that I want to keep around for a short period of time are in Notes, my Digital Brain is for keeping knowledge around that will prove its worth over time.&lt;/p&gt;
-&lt;p&gt;The tool I&#39;ve chosen to create my Digital Brain is &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;, but there are of course others as well like &lt;a href=&quot;https://roamresearch.com/&quot;&gt;Roam Research&lt;/a&gt;. The latter is way too complicated for my taste as I just to have a bunch of Markdown files and I want to link certain pages together to create a cortex of sorts.&lt;/p&gt;
-&lt;p&gt;At first it&#39;s quite time consuming to jot down every little piece of knowledge I can think of. But in the end I hope it&#39;ll lessen the amount of Google searches for trivial stuff. Obsidian allows me to very quickly search the contents of my Digital Brain so that&#39;s awesome as well.&lt;/p&gt;
-&lt;p&gt;Another reason I&#39;m building this is because I want to have this as my part of my legacy - a small window into what it was like when I was alive. I hope it&#39;s going to be one of those &lt;a href=&quot;https://en.wikipedia.org/wiki/Time_capsule&quot;&gt;time capsules&lt;/a&gt; they put in the ground to be recovered a hundred years from now.&lt;/p&gt;
 </content>
   </entry>
 </feed>
