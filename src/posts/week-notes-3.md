@@ -2,6 +2,8 @@
 title: Week notes 3
 date: 2025-01-17 12:00:00
 summary: A weekly summary of things that are on my mind.
+tags: 
+- week notes
 ---
 
 New week notes, who dis?

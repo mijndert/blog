@@ -2,7 +2,8 @@
 title: Week notes 4
 date: 2025-01-24 09:00:00
 summary: A weekly summary of things that are on my mind.
-tags: weeknotes
+tags: 
+- week notes
 ---
 
 It's the year of week notes on the desktop! (if you know, you know)

@@ -2,6 +2,8 @@
 title: Week notes 2
 date: 2025-01-10 09:00:00
 summary: A weekly summary of things that are on my mind.
+tags: 
+- week notes
 ---
 
 Week notes 2 already? Feels like I just wrote the first one. If time keeps flying by like this, it will be a very short year.
