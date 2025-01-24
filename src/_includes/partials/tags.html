@@ -1,0 +1,8 @@
+<ul>
+  {% for tag in collections.tagsList %}
+    <li>
+      <a href="/tags/{{ tag | slug }}/">{{ tag }}</a>
+      ({{ collections.posts | filterByTag(tag) | length }})
+    </li>
+  {% endfor %}
+</ul>

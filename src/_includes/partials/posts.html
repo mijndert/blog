@@ -1,5 +1,5 @@
 <div class="listposts">
-  {%- for post in collections.post | reverse -%}
+  {%- for post in collections.posts | reverse -%}
   <div class="post">
     <span class="meta">
       <time class="muted" datetime="{{ post.date | postDate }}">

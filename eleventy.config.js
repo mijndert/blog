@@ -8,6 +8,24 @@ export default async function(eleventyConfig) {
   eleventyConfig.addFilter("postDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
   })
+	eleventyConfig.addCollection("posts", (collectionApi) =>
+		collectionApi.getFilteredByGlob("src/posts/*.md")
+	);
+
+	eleventyConfig.addCollection("tagsList", function(collectionApi) {
+    let tagsSet = new Set();
+    collectionApi.getAll().forEach(item => {
+      if ("tags" in item.data) {
+        let tags = item.data.tags;
+        tags.forEach(tag => tagsSet.add(tag));
+      }
+    });
+    return [...tagsSet];
+  });
+	eleventyConfig.addFilter("filterByTag", (posts, tag) => {
+		return posts.filter(post => post.data.tags && post.data.tags.includes(tag));
+	});
+
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/favicon/");
@@ -19,7 +37,7 @@ export default async function(eleventyConfig) {
 		type: "atom",
 		outputPath: "/feed.xml",
 		collection: {
-			name: "post",
+			name: "posts",
 			limit: 25,
 		},
 		metadata: {
