@@ -2,6 +2,7 @@
 title: Blog questions challenge
 date: 2025-01-13 14:00:00
 summary: A new challenge. Why not? Some Q&A about my blog. Here we go.
+tags: meta
 ---
 
 **1. Why did you start blogging in the first place?**

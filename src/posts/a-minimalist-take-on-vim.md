@@ -2,6 +2,7 @@
 title: A minimalist take on Vim
 date: 2022-04-15 10:00:00
 summary: How I use Vim without any (well, almost) plugins.
+tags: apps
 ---
 
 I've been a Vim user for as long as I can remember, but in the last few years VS Code kind of took over as the defacto choice for us DevOps engineers. VS Code is great at offering all kinds of plugins that should, in theory, make life a little easier. It's funny actually, because plugins are the sole reason I never quite got into using Vim fulltime. To me, plugins in Vim just added to the complexity of remembering all of the keyboard shortcuts and quite frankly, the many ways of installing a plugin didn't help me make sense of things either.

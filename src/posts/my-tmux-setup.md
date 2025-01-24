@@ -2,6 +2,7 @@
 title: My Tmux setup
 date: 2020-04-16 10:00:00
 summary: A quick Tmux tutorial.
+tags: apps
 ---
 
 [Tmux](https://github.com/tmux/tmux/wiki) is a terminal multiplexer. It lets you switch between several programs through windows and panes, detach your session and reattach to it on a different computer. I reckon it's mostly used on servers where people have long running jobs and such running in a tmux session.

@@ -2,6 +2,7 @@
 title: OpenBSD
 date: 2021-11-01 10:00:00
 summary: Getting to know OpenBSD after 22+ years of using Linux.
+tags: openbsd
 ---
 
 I've been an avid user of various Linux distributions for 22+ years now and I will forever love everything about it and what it brought me. I have my entire carreer built on Linux and open source software. I've also known about BSD for about as long, but I never quite got into it, until now. I'm as much a minimalist as I am a nerd and I love simple software that does one thing well. I want all of my software to Just Work, no hassle or needless features added. After coming across [OpenBSD.ams](https://openbsd.amsterdam/) I decided to read up on OpenBSD and its [goals](https://www.openbsd.org/goals.html).

@@ -2,6 +2,7 @@
 title: The algorithm isn't always to blame
 date: 2025-01-20 12:00:00
 summary: We can't blame the algorithm for the state of the internet, not for all of it.
+tags: internet
 ---
 
 Everyone is a victim of The Algorithm in one way or another. I'm still on Instagram (yes, I know) and I quite often fall into the trap of looking at Reels (super short videos) for too long. 

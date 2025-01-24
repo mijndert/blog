@@ -2,8 +2,7 @@
 title: Stop doing DevOps teams if you want to scale
 date: 2022-12-05 10:00:00
 summary: In which I make the case for separate developer and platform teams
-tags:
-  - post
+tags: devops
 ---
 
 If you're serious about scaling your company you should stop doing DevOps teams. I realise this is probably a controversial opinion and one I'm most likely almost alone in thinking, but it's something I've been thinking about a lot as of late.

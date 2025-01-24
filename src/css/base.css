@@ -38,6 +38,15 @@ li.nav-item {
   display: inline;
 }
 
+ul.tags {
+  margin: 0 0 5em 0;
+}
+
+ul.tags li {
+  display: inline;
+  margin: 0 .5em 0 0;
+}
+
 li.nav-item:not(:last-child)::after {
   content: "•";
   margin: 0 5px 0 5px;

@@ -3,4 +3,11 @@
 <h1>{{ title }}</h1>
 <p class="muted">{{ page.date | postDate }}</p>
 <article>{{ content | safe }}</article>
+
+<p>Tags:
+  {% for tag in tags %}
+    <a href="/tags/{{ tag | slug }}/">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+  {% endfor %}
+</p>
+
 {% endblock %}

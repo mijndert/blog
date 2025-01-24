@@ -10,6 +10,10 @@ Based in The Netherlands. Currently a Senior DevOps Engineer with over 16 years 
 
 {% include 'partials/nav.html' %}
 
+## Topics
+
+{% include 'partials/tags.html' %}
+
 ## Blog
 
 {% include 'partials/posts-short.html' %}

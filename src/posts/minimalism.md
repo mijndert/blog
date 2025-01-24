@@ -2,6 +2,7 @@
 title: On minimalism
 date: 2019-01-28 10:00:00
 summary: There's a lot of misinformation about minimalism. My thoughts.
+tags: minimalism
 ---
 
 Places like Reddit and Twitter are filled with people who practice their version of minimalism. The most prevalent method is to just have less of everything. Some groups of people even go so far as to think they can only have a fixed amount of things in their lives.

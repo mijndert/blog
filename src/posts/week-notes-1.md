@@ -2,6 +2,8 @@
 title: Week notes 1
 date: 2025-01-02 10:00:00
 summary: A weekly summary of things that are on my mind.
+tags: 
+- week notes
 ---
 
 This is my first ever entry in a new series. Just about every blog I follow does these week notes where they summarize what they've been up to. It's often very personal, sometimes it's about work or games or music. I always get something out of reading them, so I thought I'd give it a try myself. There's no particular format or structure and I'm trying to figure things out as I go. Bear with me.

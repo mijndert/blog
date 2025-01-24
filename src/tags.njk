@@ -1,5 +1,15 @@
+---
+pagination:
+  data: collections.tagsList
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag | slug }}/index.html
+layout: layouts/page.html
+---
+
+<h1>Topics / {{ tag }}</h1>
 <div class="listposts">
-  {%- for post in collections.posts | reverse -%}
+  {% for post in collections.posts | filterByTag(tag) | reverse %}
   <div class="post">
     <span class="meta">
       <time class="muted" datetime="{{ post.date | postDate }}">
@@ -10,3 +20,4 @@
   </div>
   {%- endfor -%}
 </div>
+<a href="/blog">All posts</a>
