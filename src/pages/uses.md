@@ -8,7 +8,7 @@ permalink: /uses/
 ## Hardware
 
 <p class="compact">14" MacBook Pro (M2 Pro)</p>
-<p class="compact">Dell P3421W</p>
+<p class="compact">Dell U4025QW</p>
 <p class="compact">iPhone 13 Pro</p>
 <p class="compact">Logitech Streamcam</p>
 <p class="compact">Logitech MX Ergo</p>
