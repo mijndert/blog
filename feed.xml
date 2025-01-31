@@ -4,12 +4,29 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-01-24T09:00:00Z</updated>
+  <updated>2025-01-31T10:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 5</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-5/" />
+    <updated>2025-01-31T10:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-5/</id>
+    <content type="html">&lt;p&gt;New (not so) boring week, new notes!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;After 37 years of stumbling through life I got &lt;em&gt;unofficially&lt;/em&gt; diagnosed with ADHD. I&#39;m now thinking of requesting an official diagnosis, but I&#39;m not sure yet what that will bring me. It&#39;s not like it&#39;s impacting my performance at work or anything, every employer I&#39;ve worked with has been really happy. Anyway, it&#39;s good to know I&#39;m not totally crazy or stupid, and my suspicions were right all these years.&lt;/li&gt;
+&lt;li&gt;Currently finishing up another crazy week at work. But it&#39;s a really good chance to step up as a leader more and more. I&#39;m very much enjoying the challenge and the career growth.&lt;/li&gt;
+&lt;li&gt;Again, didn&#39;t get to do any running or rowing this week because of everything that&#39;s been going on. I&#39;m just too tired in the evenings to do anything. I hope to pick it back up again soon because my Garmin watch is screaming at me. I&#39;m starting to sound like a broken record. Moving on.&lt;/li&gt;
+&lt;li&gt;Yesterday my new computer display (Dell U4025QW) arrived. It was the most frivolous purchase I&#39;ve ever made but I&#39;m so happy. Everything looks so crisp, the port selection is insane, the build quality is really good, the light sensor is super useful and works very well. It&#39;s my dream display. I&#39;ll put a photo of my current setup down below.&lt;/li&gt;
+&lt;li&gt;This weekend we&#39;ll meet up with some friends we haven&#39;t seen in a while to play boardgames. I&#39;m terrible at boardgames but I&#39;m looking forward to seeing our friends again.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://mijndertstuij.nl/img/q64y9w3F8G-300.webp 300w, https://mijndertstuij.nl/img/q64y9w3F8G-500.webp 500w, https://mijndertstuij.nl/img/q64y9w3F8G-800.webp 800w&quot; sizes=&quot;90vw&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://mijndertstuij.nl/img/q64y9w3F8G-300.jpeg&quot; alt=&quot;My WFH setup in 2025&quot; width=&quot;800&quot; height=&quot;524&quot; srcset=&quot;https://mijndertstuij.nl/img/q64y9w3F8G-300.jpeg 300w, https://mijndertstuij.nl/img/q64y9w3F8G-500.jpeg 500w, https://mijndertstuij.nl/img/q64y9w3F8G-800.jpeg 800w&quot; sizes=&quot;90vw&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;I&#39;ll leave you with a YouTube recommendation. Even when she worked at The Verge I would watch all of her videos, every last one of them. But now she&#39;s gone independent and her videos are somehow even better. I&#39;m talking about &lt;a href=&quot;https://www.youtube.com/@BeccaFarsace/videos&quot;&gt;Becca Farsace&lt;/a&gt;. She takes tech outside. Go watch her videos.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 4</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-4/" />
@@ -613,17 +630,6 @@ nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&l
 &lt;p&gt;The problems listed about don&#39;t detere me from declaring AirPods Max an awesome pair of headphones. They are mostly about the integration with the Apple eco-system of course. Previous headphones I owned came with an awful mobile app to control things like EQ and NC levels, and app that never worked properly and felt out of place on iOS.&lt;/p&gt;
 &lt;p&gt;I&#39;ve had AirPods Max for a solid 2 months now so the jury&#39;s still out on durability but I bet they will hold up pretty well.&lt;/p&gt;
 &lt;p&gt;I still wouldn&#39;t recommend anyone buying them at full price. But if you can find them at a discount I highly recommend you at leat give them a try.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>OpenBSD</title>
-    <link href="https://mijndertstuij.nl/posts/openbsd/" />
-    <updated>2021-11-01T10:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/openbsd/</id>
-    <content type="html">&lt;p&gt;I&#39;ve been an avid user of various Linux distributions for 22+ years now and I will forever love everything about it and what it brought me. I have my entire carreer built on Linux and open source software. I&#39;ve also known about BSD for about as long, but I never quite got into it, until now. I&#39;m as much a minimalist as I am a nerd and I love simple software that does one thing well. I want all of my software to Just Work, no hassle or needless features added. After coming across &lt;a href=&quot;https://openbsd.amsterdam/&quot;&gt;OpenBSD.ams&lt;/a&gt; I decided to read up on OpenBSD and its &lt;a href=&quot;https://www.openbsd.org/goals.html&quot;&gt;goals&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Long story short, I&#39;m currently in the process of moving some workloads from Linux VM&#39;s to OpenBSD ones. It&#39;s been quite a journey so far because unlearning 22 years of Linux experience is... hard. Luckily the community is awesome and the available documentation even more so. But what makes OpenBSD such a joy to use are the sane defaults and the completely empty config files that are just there for me to fill out as I see fit. It feels like the system was designed to fit whatever purpose I have in mind without ever getting in the way. Stuff like &lt;a href=&quot;https://man.openbsd.org/httpd.8&quot;&gt;httpd(8)&lt;/a&gt;, &lt;a href=&quot;https://man.openbsd.org/relayd.8&quot;&gt;relayd(8)&lt;/a&gt;, &lt;a href=&quot;https://man.openbsd.org/acme-client.1&quot;&gt;acme-client(1)&lt;/a&gt; and &lt;a href=&quot;https://man.openbsd.org/pf.4&quot;&gt;pf(4)&lt;/a&gt; make the entire system feel very robust and well thought out.&lt;/p&gt;
-&lt;p&gt;Over in the Linux world everything just seems to be strung together with little sense of direction. It always felt like a pile of software that happens to sometimes work together. OpenBSD is the opposite of that and I love it. I just wish I could run it on my laptop as well, with all the bells and whistles working. But that&#39;s a bit of a pipe dream as bluetooth support is currently completely missing.&lt;/p&gt;
-&lt;p&gt;For now it&#39;s a great operating system for servers for me. If you also want to play around with OpenBSD and indirectly &lt;a href=&quot;https://www.openbsdfoundation.org/&quot;&gt;support the foundation&lt;/a&gt; I would highly recommend getting a VM over at &lt;a href=&quot;https://openbsd.amsterdam/&quot;&gt;OpenBSD.ams&lt;/a&gt;.&lt;/p&gt;
 </content>
   </entry>
 </feed>
