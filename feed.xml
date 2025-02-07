@@ -4,12 +4,27 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-01-31T10:00:00Z</updated>
+  <updated>2025-02-07T10:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 6</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-6/" />
+    <updated>2025-02-07T10:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-6/</id>
+    <content type="html">&lt;p&gt;Bit of a boring week (again) with not much going on. I was mainly working a lot to finish everything before I&#39;m off for a week.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I focussed on getting our backups in a better shape. All of our photos are stored in iCloud, but they&#39;re also now going to the Synology NAS automatically via the Synology Photos app. I&#39;ve also set up a backup of the NAS to Backblaze for around $6/month.&lt;/li&gt;
+&lt;li&gt;Went to see a couple of friends and we played some boardgames together. It was nice seeing them again and getting out of the house for a bit.&lt;/li&gt;
+&lt;li&gt;On Wednesday I went to the office and had a pretty productive day there. Still takes almost 3 hours for a one way trip, though. I always need to recover the day after.&lt;/li&gt;
+&lt;li&gt;The list of things I want to write about is ever growing but I just haven&#39;t found the time yet. I won&#39;t promise anything, just expect some more of these week notes with nothing else in between while I get on top of other stuff first.&lt;/li&gt;
+&lt;li&gt;Next week we&#39;ll go an a little vacation for a few days. I expect lots of swimming, reading, relaxing and eating. But most of all, just not having to worry about work for a bit is going to be very good for me.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 5</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-5/" />
@@ -607,29 +622,6 @@ nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&l
     &lt;span class=&quot;token key atrule&quot;&gt;Port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Anyone who needs to access your backend server can now simply use the hostname &lt;code&gt;app.my-backend-service.aws:4000&lt;/code&gt; without every having to deploy a load balancer.&lt;/p&gt;
 &lt;p&gt;Of course AWS CloudMap also has the ability to specify exactly which services can access certain backends by integrating IAM into it. But that&#39;s for another day to discuss.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>AirPods Max</title>
-    <link href="https://mijndertstuij.nl/posts/airpods-max/" />
-    <updated>2022-03-04T08:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/airpods-max/</id>
-    <content type="html">&lt;p&gt;To be clear right off the bat: I don&#39;t do well in busy offices. I get distracted easily, I don&#39;t like it when people can see what I&#39;m doing, I don&#39;t like people talking and radio&#39;s blaring. The open office plan truly is the bane of my existence. Therefore, noise cancelling headphones are a Godsend.&lt;/p&gt;
-&lt;p&gt;I&#39;ve owned just about every popular pair of noise cancelling headphones out there. That doesn&#39;t mean I&#39;m an expert or anything, it just means I know what I like and don&#39;t like.&lt;/p&gt;
-&lt;p&gt;The latest pair that I bought are AirPods Max - yes, the expensive Apple ones. Luckily I didn&#39;t pay full price for them; no pair of headphones is worth that much money. Even though I use them almost every day and, spoiler alert, they are pretty awesome, I&#39;m glad I paid about 60% of MSRP. And yes, even AirPods Max have problems and because it&#39;s Apple about everyone and their mom knows about them.&lt;/p&gt;
-&lt;h2&gt;The case&lt;/h2&gt;
-&lt;p&gt;Many things have been said about the case so I&#39;ll avoid repeating all that. What I can say though, is that the case isn&#39;t as bad as people on the internet make it out to be. It&#39;s easy to get AirPods Max in and out of, it&#39;s made of nice materials and after getting used to it, the case doesn&#39;t look weird to me anymore.&lt;/p&gt;
-&lt;p&gt;Of course it does have issues.&lt;/p&gt;
-&lt;p&gt;The case doesn&#39;t protect the headband, which makes travelling with it that much more awkward. I have to really keep it in a safe place in my backpack. But the most damning thing to me is that, when you retract the headband to fit your head, the charging port doesn&#39;t line up with the hole for the cable to go through. This means that I usually charge my AirPods Max while they are out of the case. For me, that&#39;s the biggest design flaw.&lt;/p&gt;
-&lt;h2&gt;Weight&lt;/h2&gt;
-&lt;p&gt;When you use your headphones as much as I do, one of the most important aspects is weight. Well, not really the weight but rather the comfort levels after having them on for hours on end. The issue I always had with other headphones was that, after some amount of time, the headband would get really painful. It always felt like the headband was trying to force itself into my skull.&lt;/p&gt;
-&lt;p&gt;Not so much with AirPods Max. Yes, on paper they are on the heavy side, but in real life I don&#39;t notice the weight just because the headband is really good at distributing all that weight. This is the first pair of headphones that I can truly wear for hours without any discomfort.&lt;/p&gt;
-&lt;h2&gt;Condensation&lt;/h2&gt;
-&lt;p&gt;Condensation inside of the earcups, I bet every type of closed-back noise cancelling headphones have the issue. It&#39;s just that on AirPods Max it&#39;s really easy to get the earcups off and have a look inside. Mine sometimes have a little bit of condensation inside the earcups as well, but will it be a problem long-term? We&#39;ll have to wait and see.&lt;/p&gt;
-&lt;h2&gt;Verdict?&lt;/h2&gt;
-&lt;p&gt;The problems listed about don&#39;t detere me from declaring AirPods Max an awesome pair of headphones. They are mostly about the integration with the Apple eco-system of course. Previous headphones I owned came with an awful mobile app to control things like EQ and NC levels, and app that never worked properly and felt out of place on iOS.&lt;/p&gt;
-&lt;p&gt;I&#39;ve had AirPods Max for a solid 2 months now so the jury&#39;s still out on durability but I bet they will hold up pretty well.&lt;/p&gt;
-&lt;p&gt;I still wouldn&#39;t recommend anyone buying them at full price. But if you can find them at a discount I highly recommend you at leat give them a try.&lt;/p&gt;
 </content>
   </entry>
 </feed>
