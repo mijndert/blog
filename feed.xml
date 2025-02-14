@@ -4,12 +4,25 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-02-07T10:00:00Z</updated>
+  <updated>2025-02-14T19:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 7</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-7/" />
+    <updated>2025-02-14T19:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-7/</id>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;We went on a 5 day trip to a place with lots of playgrounds and a swimming pool for our daughter. Disconnecting from work for a bit was sorely needed for my brain to recover from the insane hours I&#39;ve been putting in lately. I wouldn&#39;t mind to extend by another week or two.&lt;/li&gt;
+&lt;li&gt;I&#39;m 4 hours into playing &lt;a href=&quot;https://www.cultofthelamb.com/&quot;&gt;Cult of the Lamb&lt;/a&gt; on Steam Deck. It&#39;s Stardew Valley but with satanic rituals. From the trailers it looked pretty simple, but it actually has a ton of depth.&lt;/li&gt;
+&lt;li&gt;I started reading &lt;a href=&quot;https://www.extrafocusbook.com/&quot;&gt;Extra Focus&lt;/a&gt; by &lt;a href=&quot;https://adhdjesse.com/&quot;&gt;Jesse J. Anderson&lt;/a&gt;. I&#39;m only a few pages in so I&#39;m not sure yet if it&#39;s going to be helpful for me, but I&#39;ll be taking notes. We&#39;ll see.&lt;/li&gt;
+&lt;li&gt;With everything that&#39;s going on in the world, the government has been telling us to &lt;a href=&quot;https://www.denkvooruit.nl/bereid-je-voor/stel-je-noodpakket-samen&quot;&gt;maybe prepare an emergency kit&lt;/a&gt;. For the past few months I was pretty sceptical, surely war won&#39;t reach us? But with the dismantling of the United States and the ongoing aggression by Russia, I&#39;m starting to think it might be a good idea to have some stuff on hand.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 6</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-6/" />
@@ -582,46 +595,6 @@ nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&l
 &lt;p&gt;I&#39;m 34 years old and 35 is quickly approaching. Someone should have told me that your 30s will fly by; it&#39;s like I only just turned 30 but I&#39;m almost half way through. We still can&#39;t slow down time, except for maybe orbiting a black hole, and everything&#39;s relative. But I somehow feel like I&#39;m losing my grip as the years go by.&lt;/p&gt;
 &lt;p&gt;Recently I came across &lt;a href=&quot;https://github.com/kepano/40-questions/&quot;&gt;Stephan Ango&#39;s 40 questions&lt;/a&gt;. It&#39;s a list of questions you can ask yourself every year and you can keep the answers around to maybe spot trends and you can share the questions with family and friends to have a conversation about what it&#39;s been like for them. You certainly don&#39;t have to have an immediate answer to everything then and there - instead, take your time. It might take a week or two to answer them all and that&#39;s perfectly fine.&lt;/p&gt;
 &lt;p&gt;The world is a loud place that never stops moving. Sometimes it&#39;s good to step out of it for a little bit to sit down and reflect on everything that happened and everything that awaits you. Ask yourself these 40 questions, it might help you understand yourself and the world around you just a bit more.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Avoid using internal load balancers</title>
-    <link href="https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/" />
-    <updated>2022-03-15T10:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/</id>
-    <content type="html">&lt;p&gt;One of the most well-known patterns in infrastructure is having an internal load balancer in front of backend services like application servers. When you&#39;re migrating your workloads to say AWS Fargate it&#39;s easy to just carry over that same pattern because, well, it works. But, as with all things in the cloud, internal load balancers cost money and add complexity. When you&#39;re just migrating to using containers for the first time, adding complexity to an already steep learning curve might not be the best way to go about things.&lt;/p&gt;
-&lt;p&gt;That&#39;s where &lt;em&gt;Service Discovery&lt;/em&gt; comes in.&lt;/p&gt;
-&lt;p&gt;Service Discovery is a thing where you let the backend servers register themselves in some kind of database, so the requestor knows where the targets are. This has been done in all kinds of scenarios; from DHCP to XMPP, as well as DNS in Kubernetes.&lt;/p&gt;
-&lt;p&gt;While I agree that adding Service Discovery to your architecture does add a little bit of an up-front learning curve, in the long run it&#39;s kind of a set-and-forget thing.&lt;/p&gt;
-&lt;p&gt;A great service for such a use-case is &lt;a href=&quot;https://aws.amazon.com/cloud-map/&quot;&gt;AWS CloudMap&lt;/a&gt; which integrates really well with AWS Fargate. Say you have a backend service running on AWS Fargate that accepts traffic on port 4000 that you can to be able to horizontally scale, it&#39;s pretty easy to implement in CloudFormation.&lt;/p&gt;
-&lt;p&gt;First we need to create a namespace to register targets in.&lt;/p&gt;
-&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;PrivateNamespace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;token key atrule&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; AWS&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;ServiceDiscovery&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;PrivateDnsNamespace
-  &lt;span class=&quot;token key atrule&quot;&gt;Properties&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token key atrule&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; my&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;backend&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;service.aws
-    &lt;span class=&quot;token key atrule&quot;&gt;Vpc&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;!Ref&lt;/span&gt; VPCId&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now we can create a Service which is a collection of backend servers that Fargate knows how to register itself into.&lt;/p&gt;
-&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;DiscoveryService&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;token key atrule&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; AWS&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;ServiceDiscovery&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;Service
-  &lt;span class=&quot;token key atrule&quot;&gt;Properties&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token key atrule&quot;&gt;Description&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Discovery Service for my&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;backend&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;service
-    &lt;span class=&quot;token key atrule&quot;&gt;DnsConfig&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;token key atrule&quot;&gt;RoutingPolicy&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; MULTIVALUE
-      &lt;span class=&quot;token key atrule&quot;&gt;DnsRecords&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;TTL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
-          &lt;span class=&quot;token key atrule&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; A
-        &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;TTL&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
-          &lt;span class=&quot;token key atrule&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; SRV
-    &lt;span class=&quot;token key atrule&quot;&gt;HealthCheckCustomConfig&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;token key atrule&quot;&gt;FailureThreshold&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;token key atrule&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; app
-    &lt;span class=&quot;token key atrule&quot;&gt;NamespaceId&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;!Ref&lt;/span&gt; PrivateNamespace&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;To connect your Fargate service (&lt;code&gt;AWS::ECS::Service&lt;/code&gt;) to CloudMap we can simply specify the DiscoveryService resource.&lt;/p&gt;
-&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;ServiceRegistries&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;RegistryArn&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;!GetAtt&lt;/span&gt; DiscoveryService.Arn
-    &lt;span class=&quot;token key atrule&quot;&gt;Port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Anyone who needs to access your backend server can now simply use the hostname &lt;code&gt;app.my-backend-service.aws:4000&lt;/code&gt; without every having to deploy a load balancer.&lt;/p&gt;
-&lt;p&gt;Of course AWS CloudMap also has the ability to specify exactly which services can access certain backends by integrating IAM into it. But that&#39;s for another day to discuss.&lt;/p&gt;
 </content>
   </entry>
 </feed>
