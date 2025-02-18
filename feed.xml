@@ -4,12 +4,25 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-02-14T19:00:00Z</updated>
+  <updated>2025-02-18T15:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Oops, I bought it</title>
+    <link href="https://mijndertstuij.nl/posts/oops-i-bought-it/" />
+    <updated>2025-02-18T15:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/oops-i-bought-it/</id>
+    <content type="html">&lt;p&gt;Remember me &lt;a href=&quot;https://mijndertstuij.nl/posts/display-waffling/&quot;&gt;waffling about computer monitors&lt;/a&gt;? That was just six weeks ago. I have a confession to make: I bought it (yes this was shared in &lt;a href=&quot;https://mijndertstuij.nl/posts/week-notes-5/&quot;&gt;week notes 5&lt;/a&gt; already, but I have some more things to say now).&lt;/p&gt;
+&lt;p&gt;Admittedly, I wouldn&#39;t recommend anyone else do this, unless you&#39;ve got a bunch of money to squander. I certainly don&#39;t, usually. But unexpectedly, I received some extra money to spend and I decided to treat myself for once. I&#39;m always very good at convicing myself that I don&#39;t need the thing I actually really want to have. But this time, after much deliberation, I decided to go for it. And boy, was it worth it.&lt;/p&gt;
+&lt;p&gt;The Dell U4025QW is by far the best monitor I&#39;ve ever owned.&lt;/p&gt;
+&lt;p&gt;It came packaged in probably one of the biggest piles of cardboard I&#39;ve ever seen. The mark of a good quality product I guess. The entire unboxing experience was really easy and my new 40 inch 5k 120hz monitor was up and running on my desktop in no time at all. Getting rid of the giant mountain of cardboard was the hardest part.&lt;/p&gt;
+&lt;p&gt;Speaking about those specs: they don&#39;t matter. There are other monitors with similar specs and they don&#39;t matter either. What does matter is the sharpness of the text, the color reproduction, the insane ports selection, the build quality... I could gush over this thing for hours. My favorite thing is this little pop-out thing that has 1x USB-A and 2x USB-C, easily accessible on the front. Why didn&#39;t others think of this? Another really convient thing is the ambient light sensor that automatically adjusts the monitor&#39;s brightness. I didn&#39;t expect it to work very well, but it totally does!&lt;/p&gt;
+&lt;p&gt;Anyway, I wanted to update ya&#39;ll on my waffling. I&#39;m a total hypocrite for buying it anyway. Not that I feel sorry about it, I&#39;m rather pleased with my purchase.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 7</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-7/" />
@@ -584,17 +597,6 @@ nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&l
 &lt;h2&gt;Keyboard shortcuts&lt;/h2&gt;
 &lt;p&gt;Some of the common ones I use are &lt;strong&gt;i&lt;/strong&gt; for insert mode and &lt;strong&gt;v&lt;/strong&gt; for visual mode. Then there&#39;s &lt;strong&gt;u&lt;/strong&gt; for undo, &lt;strong&gt;y&lt;/strong&gt; for copy (yank), &lt;strong&gt;d&lt;/strong&gt; for delete, and &lt;strong&gt;aB&lt;/strong&gt; for selecting a block with accolades. And of course a bunch more, but I think you&#39;re good to go with just these ones.&lt;/p&gt;
 &lt;p&gt;Even after years of use and some amount of muscle memory, it still feels like I&#39;ve only touched the surface of what&#39;s possible. When you&#39;re just starting out I highly recommend keeping a cheatsheet at hand, like &lt;a href=&quot;https://vim.rtorr.com/&quot;&gt;this one&lt;/a&gt;.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>40 questions</title>
-    <link href="https://mijndertstuij.nl/posts/40-questions/" />
-    <updated>2022-03-18T10:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/40-questions/</id>
-    <content type="html">&lt;p&gt;The end of the year or your own birthday are both for reflection on the days and months that came before. We try to look back on all the things that went right and the things that maybe could&#39;ve been better. The highs and the lows, the moments where we experienced stress, where we felt love. We try to make new resolutions for the year ahead. But sometimes we fail to notice trends as the years go by quicker and quicker.&lt;/p&gt;
-&lt;p&gt;I&#39;m 34 years old and 35 is quickly approaching. Someone should have told me that your 30s will fly by; it&#39;s like I only just turned 30 but I&#39;m almost half way through. We still can&#39;t slow down time, except for maybe orbiting a black hole, and everything&#39;s relative. But I somehow feel like I&#39;m losing my grip as the years go by.&lt;/p&gt;
-&lt;p&gt;Recently I came across &lt;a href=&quot;https://github.com/kepano/40-questions/&quot;&gt;Stephan Ango&#39;s 40 questions&lt;/a&gt;. It&#39;s a list of questions you can ask yourself every year and you can keep the answers around to maybe spot trends and you can share the questions with family and friends to have a conversation about what it&#39;s been like for them. You certainly don&#39;t have to have an immediate answer to everything then and there - instead, take your time. It might take a week or two to answer them all and that&#39;s perfectly fine.&lt;/p&gt;
-&lt;p&gt;The world is a loud place that never stops moving. Sometimes it&#39;s good to step out of it for a little bit to sit down and reflect on everything that happened and everything that awaits you. Ask yourself these 40 questions, it might help you understand yourself and the world around you just a bit more.&lt;/p&gt;
 </content>
   </entry>
 </feed>
