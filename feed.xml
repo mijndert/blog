@@ -4,22 +4,36 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-02-18T15:00:00Z</updated>
+  <updated>2025-02-21T11:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
   <entry>
+    <title>Week notes 8</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-8/" />
+    <updated>2025-02-21T11:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-8/</id>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;This week I finished reading &lt;a href=&quot;https://www.extrafocusbook.com/&quot;&gt;Extra Focus&lt;/a&gt;. For me personally there wasn&#39;t a ton of new information in there, but it was nice to get some extra validation for all of the things I&#39;ve been experiencing over the years.&lt;/li&gt;
+&lt;li&gt;All of the extra responsibilities I&#39;m given at work are starting to materialize. It&#39;s a busy but very exciting time right now.&lt;/li&gt;
+&lt;li&gt;I&#39;ve been going back to writing notes, todo items and other things on paper in a little notebook. The problem however is that it&#39;s very hard to keep it somewhat organized. I&#39;m currently thinking about how I can best tackle this problem.&lt;/li&gt;
+&lt;li&gt;I&#39;ve been thinking about quantum computers for almost 30 years at this point. This week Microsoft &lt;a href=&quot;https://www.youtube.com/watch?v=wSHmygPQukQ&quot;&gt;announced a new process&lt;/a&gt; for creating a scalable error-corrected quantum chip. Obviously that&#39;s all very exciting. We need quantum computers to build better quantum computers, so in a few years time this innovation will only accelerate exponentially.&lt;/li&gt;
+&lt;li&gt;Through the Welsh Corgi Club here in The Netherlands I enquired about getting a Corgi puppy. We&#39;ve been dreaming about this for almost 8 years and we&#39;re finally in a position to make it happen.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
     <title>Oops, I bought it</title>
     <link href="https://mijndertstuij.nl/posts/oops-i-bought-it/" />
     <updated>2025-02-18T15:00:00Z</updated>
     <id>https://mijndertstuij.nl/posts/oops-i-bought-it/</id>
     <content type="html">&lt;p&gt;Remember me &lt;a href=&quot;https://mijndertstuij.nl/posts/display-waffling/&quot;&gt;waffling about computer monitors&lt;/a&gt;? That was just six weeks ago. I have a confession to make: I bought it (yes this was shared in &lt;a href=&quot;https://mijndertstuij.nl/posts/week-notes-5/&quot;&gt;week notes 5&lt;/a&gt; already, but I have some more things to say now).&lt;/p&gt;
-&lt;p&gt;Admittedly, I wouldn&#39;t recommend anyone else do this, unless you&#39;ve got a bunch of money to squander. I certainly don&#39;t, usually. But unexpectedly, I received some extra money to spend and I decided to treat myself for once. I&#39;m always very good at convicing myself that I don&#39;t need the thing I actually really want to have. But this time, after much deliberation, I decided to go for it. And boy, was it worth it.&lt;/p&gt;
+&lt;p&gt;Admittedly, I wouldn&#39;t recommend anyone else do this, unless you&#39;ve got a bunch of money to squander. I certainly don&#39;t, usually. But unexpectedly, I received some extra money to spend and I decided to treat myself for once. I&#39;m always very good at convincing myself that I don&#39;t need the thing I actually really want to have. But this time, after much deliberation, I decided to go for it. And boy, is it worth it.&lt;/p&gt;
 &lt;p&gt;The Dell U4025QW is by far the best monitor I&#39;ve ever owned.&lt;/p&gt;
-&lt;p&gt;It came packaged in probably one of the biggest piles of cardboard I&#39;ve ever seen. The mark of a good quality product I guess. The entire unboxing experience was really easy and my new 40 inch 5k 120hz monitor was up and running on my desktop in no time at all. Getting rid of the giant mountain of cardboard was the hardest part.&lt;/p&gt;
-&lt;p&gt;Speaking about those specs: they don&#39;t matter. There are other monitors with similar specs and they don&#39;t matter either. What does matter is the sharpness of the text, the color reproduction, the insane ports selection, the build quality... I could gush over this thing for hours. My favorite thing is this little pop-out thing that has 1x USB-A and 2x USB-C, easily accessible on the front. Why didn&#39;t others think of this? Another really convient thing is the ambient light sensor that automatically adjusts the monitor&#39;s brightness. I didn&#39;t expect it to work very well, but it totally does!&lt;/p&gt;
+&lt;p&gt;It came packaged in probably one of the biggest piles of cardboard I&#39;ve ever seen. The mark of a good quality product I guess. The entire unboxing experience was really easy and my new 40 inch 5k 120hz monitor was up and running on my desk in no time at all. Getting rid of the giant mountain of cardboard was the hardest part.&lt;/p&gt;
+&lt;p&gt;Speaking about those specs: they don&#39;t matter. There are other monitors with similar specs and they don&#39;t matter either. What does matter is the sharpness of the text, the color reproduction, the insane ports selection, the build quality... I could gush over this thing for hours. My favorite thing is this little pop-out thing that has 1x USB-A and 2x USB-C, easily accessible on the front. Why didn&#39;t others think of this? Another really convenient thing is the ambient light sensor that automatically adjusts the monitor&#39;s brightness. I didn&#39;t expect it to work very well, but it totally does!&lt;/p&gt;
 &lt;p&gt;Anyway, I wanted to update ya&#39;ll on my waffling. I&#39;m a total hypocrite for buying it anyway. Not that I feel sorry about it, I&#39;m rather pleased with my purchase.&lt;/p&gt;
 </content>
   </entry>
@@ -555,48 +569,6 @@
 &lt;p&gt;At the same time we were also working on a &lt;a href=&quot;https://github.com/toot-community/kubernetes&quot;&gt;fully event-driven scaling setup&lt;/a&gt; on top of Kubernetes. Currently we run between 3 and 7 nodes in the Kubernetes cluster depending on the requests to the web server and the amount of messages in the queues. This way we&#39;re never overspending on infrastructure, something that&#39;s incredibly important while running a Mastodon community because it&#39;s fully supported by donations. Of course we don&#39;t want to squander the money so we&#39;re constantly optimizing and tweaking to be able to handle more people on the same amount of infrastructure; now at 27k people we&#39;re paying about the same amount of money per month as we were at 15k people.&lt;/p&gt;
 &lt;p&gt;We now have an event-driven, self-healing Mastodon instance that can basically scale into infinity given enough funds. That doesn&#39;t mean we sit back and relax however, we still have a ton of ideas to optimize further. Some things we want to do over the coming months include: getting our CloudFlare setup into Terraform, turning the screws on security, more visibility into key metrics, and database optimizations.&lt;/p&gt;
 &lt;p&gt;On the &lt;a href=&quot;https://blog.toot.community&quot;&gt;toot.community blog&lt;/a&gt; we will publish updates on financials and some deepdives into the technical implementation of it all. There&#39;s an RSS feed it you want to follow along.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>A minimalist take on Vim</title>
-    <link href="https://mijndertstuij.nl/posts/a-minimalist-take-on-vim/" />
-    <updated>2022-04-15T10:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/a-minimalist-take-on-vim/</id>
-    <content type="html">&lt;p&gt;I&#39;ve been a Vim user for as long as I can remember, but in the last few years VS Code kind of took over as the defacto choice for us DevOps engineers. VS Code is great at offering all kinds of plugins that should, in theory, make life a little easier. It&#39;s funny actually, because plugins are the sole reason I never quite got into using Vim fulltime. To me, plugins in Vim just added to the complexity of remembering all of the keyboard shortcuts and quite frankly, the many ways of installing a plugin didn&#39;t help me make sense of things either.&lt;/p&gt;
-&lt;p&gt;But then Vim 8 was released.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/vim/vim/releases/tag/v8.0.0000&quot;&gt;Vim 8&lt;/a&gt; introduced a really simple &lt;em&gt;pack&lt;/em&gt; system for installing plugins. You can just drop a directory in the designated pack directory and Vim will automatically load everything that&#39;s there. When you &lt;code&gt;git clone&lt;/code&gt; a plugin it&#39;s quite easy to update it whenever a new version is released.&lt;/p&gt;
-&lt;p&gt;That&#39;s not to say I&#39;ve gone crazy and I&#39;m now running 20 plugins. I only have a plugin for working with &lt;a href=&quot;https://www.terraform.io/&quot;&gt;Terraform&lt;/a&gt; and one for loading &lt;a href=&quot;https://editorconfig.org/&quot;&gt;EditorConfig&lt;/a&gt; files installed. And for me that&#39;s more than enough. Not because I can&#39;t handle complexity but mostly because Vim can do so much out of the box that most people are not aware of.&lt;/p&gt;
-&lt;p&gt;Let&#39;s dig deeper into my setup.&lt;/p&gt;
-&lt;h2&gt;Installing plugins&lt;/h2&gt;
-&lt;p&gt;Installing &lt;a href=&quot;https://github.com/hashivim/vim-terraform&quot;&gt;vim-terraform&lt;/a&gt; and &lt;a href=&quot;https://github.com/editorconfig/editorconfig-vim&quot;&gt;editorconfig-vim&lt;/a&gt; is as easy as cloning their repositories into the pack directory.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/hashivim/vim-terraform.git ~/.vim/pack/plugins/start/vim-terraform
-git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/pack/plugins/start/editorconfig-vim
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Within Vim you can execute &lt;code&gt;:scriptnames&lt;/code&gt; to list all loaded plugins.&lt;/p&gt;
-&lt;h2&gt;My .vimrc&lt;/h2&gt;
-&lt;p&gt;My .vimrc is exactly what I need and nothing more.&lt;/p&gt;
-&lt;pre class=&quot;language-vim&quot;&gt;&lt;code class=&quot;language-vim&quot;&gt;&lt;span class=&quot;token builtin&quot;&gt;syntax&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;on&lt;/span&gt;                           # enable &lt;span class=&quot;token builtin&quot;&gt;syntax&lt;/span&gt; highlighting
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;tabstop&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;                       # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;tab&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; spaces
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;shiftwidth&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;                    # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; an indent &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; spaces
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;expandtab&lt;/span&gt;                       # convert &lt;span class=&quot;token keyword&quot;&gt;tabs&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; spaces
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;ai&lt;/span&gt;                              # automatic indentation
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;number&lt;/span&gt;                          # enable line numbers
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;hlsearch&lt;/span&gt;                        # &lt;span class=&quot;token builtin&quot;&gt;highlight&lt;/span&gt; search matches
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;ruler&lt;/span&gt;                           # show current row and column position
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;backspace&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;                     # &lt;span class=&quot;token keyword&quot;&gt;fix&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;backspace&lt;/span&gt; behaviour
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;wildmenu&lt;/span&gt;                        # enable autocompletion
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;$PWD&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;                    # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; search &lt;span class=&quot;token builtin&quot;&gt;path&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;wildmode&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;longest&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;full      # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; autocompletion &lt;span class=&quot;token keyword&quot;&gt;mode&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;pastetoggle&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;leader&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;p&lt;/span&gt;           # toggle &lt;span class=&quot;token builtin&quot;&gt;paste&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;mode&lt;/span&gt; using &#92;&lt;span class=&quot;token keyword&quot;&gt;p&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;nuw&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;                           # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;left&lt;/span&gt; margin
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;noswapfile&lt;/span&gt;                       # disable swapfiles
-&lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;clipboard&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;unnamed               # &lt;span class=&quot;token keyword&quot;&gt;copy&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; system &lt;span class=&quot;token builtin&quot;&gt;clipboard&lt;/span&gt;
-&lt;span class=&quot;token builtin&quot;&gt;highlight&lt;/span&gt; LineNr ctermfg&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;DarkGrey   # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; linenumbers &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; grey
-nnoremap &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;esc&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;noh&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;    # clear search results using esc&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;esc
-&lt;span class=&quot;token keyword&quot;&gt;colorscheme&lt;/span&gt; nord                    # &lt;span class=&quot;token keyword&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;colorscheme&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;to&lt;/span&gt; nord&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Keyboard shortcuts&lt;/h2&gt;
-&lt;p&gt;Some of the common ones I use are &lt;strong&gt;i&lt;/strong&gt; for insert mode and &lt;strong&gt;v&lt;/strong&gt; for visual mode. Then there&#39;s &lt;strong&gt;u&lt;/strong&gt; for undo, &lt;strong&gt;y&lt;/strong&gt; for copy (yank), &lt;strong&gt;d&lt;/strong&gt; for delete, and &lt;strong&gt;aB&lt;/strong&gt; for selecting a block with accolades. And of course a bunch more, but I think you&#39;re good to go with just these ones.&lt;/p&gt;
-&lt;p&gt;Even after years of use and some amount of muscle memory, it still feels like I&#39;ve only touched the surface of what&#39;s possible. When you&#39;re just starting out I highly recommend keeping a cheatsheet at hand, like &lt;a href=&quot;https://vim.rtorr.com/&quot;&gt;this one&lt;/a&gt;.&lt;/p&gt;
 </content>
   </entry>
 </feed>
