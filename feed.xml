@@ -4,12 +4,28 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-02-26T10:00:00Z</updated>
+  <updated>2025-02-28T11:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 9</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-9/" />
+    <updated>2025-02-28T11:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-9/</id>
+    <content type="html">&lt;p&gt;What a week, huh? It&#39;s been a quick one again, with a lot of work done and a lot of things happening. Here are some highlights.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;After a call with a breeder we are now officially on the list for a Corgi puppy. After years and years of waiting and dreaming it&#39;s finally happening, or so I hope. We&#39;re gonna meet the puppies in about 3 weeks time and we&#39;ll see how that goes.&lt;/li&gt;
+&lt;li&gt;I&#39;m currently re-reading &lt;a href=&quot;http://matthewquirk.com/the-night-agent/&quot;&gt;The Night Agent by Matthew Quirk&lt;/a&gt;. I&#39;ve seen the tv show but honestly the book is better.&lt;/li&gt;
+&lt;li&gt;I also started reading Bill Gates&#39; new memoir &lt;a href=&quot;https://www.gatesnotes.com/meet-bill/source-code&quot;&gt;Source Code&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The 2025 F1 season is underway with 3 days of testing. Of course, nothing can be gleaned from testing, but it&#39;s nice to see the cars out on track again. It&#39;s going to be a tight field with some rookies that are very promising as well.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lastly, I&#39;ll leave you with another song. Blues legend Buddy Guy and one of my favorite bands Switchfoot released a single together called Last Man Standing.&lt;/p&gt;
+&lt;div id=&quot;spotify-track-1ra4PQfZO9AbLTT0V8xu1D&quot; class=&quot;eleventy-plugin-embed-spotify eleventy-plugin-embed-spotify-track&quot;&gt;&lt;iframe style=&quot;border-radius:12px;&quot; title=&quot;Spotify track&quot; src=&quot;https://open.spotify.com/embed/track/1ra4PQfZO9AbLTT0V8xu1D&quot; width=&quot;100%&quot; height=&quot;352&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+</content>
+  </entry>
   <entry>
     <title>Practice optimism with a single question</title>
     <link href="https://mijndertstuij.nl/posts/practice-optimism-w-single-question/" />
@@ -559,19 +575,6 @@
 &lt;p&gt;Now in order to use the above shortcode you can simply drop an image into &lt;code&gt;/assets/images&lt;/code&gt; and insert this line of code in your MarkDown file.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;{{&amp;lt;/* imgh src=&amp;quot;my-example-file.jpeg&amp;quot; alt=&amp;quot;My example file&amp;quot; */&amp;gt;}}
 &lt;/code&gt;&lt;/pre&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Stop doing DevOps teams if you want to scale</title>
-    <link href="https://mijndertstuij.nl/posts/stop-doing-devops-teams/" />
-    <updated>2022-12-05T10:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/stop-doing-devops-teams/</id>
-    <content type="html">&lt;p&gt;If you&#39;re serious about scaling your company you should stop doing DevOps teams. I realise this is probably a controversial opinion and one I&#39;m most likely almost alone in thinking, but it&#39;s something I&#39;ve been thinking about a lot as of late.&lt;/p&gt;
-&lt;p&gt;DevOps teams are developers and IT operations people who work together collaboratively in order to increase the speed and quality of software development and deployment. Development and Operations are not working in their own bubble but rather work closely across the entire lifecycle of an application. Anyone who ever worked in such a team must be familiar with the DevOps loop of infinity.&lt;/p&gt;
-&lt;p&gt;I&#39;m here to argue that, while this model of integrated DevOps teams works well for smaller companies, it&#39;s absolutely awful for scaling a company beyond what would be considered medium sized. I think eventually the integrated nature of DevOps inhibits a team&#39;s ability to execute projects while adhering to set standards for quality, stability, and speed.&lt;/p&gt;
-&lt;p&gt;My preliminary conclusion is that in order to scale, a company needs to embrace the silos of development and operations again. Now, I&#39;m not arguing for dev and ops not to talk to each other anymore - to the contrary, I think operations needs to be serving the development team with pre-baked building blocks for any and all use-case. While we&#39;re at it, the operations team needs to be called the platform team as they provide the platform for the developers to build applications on. The developers should be able to use the building blocks like Lego and the platform team needs to be empowering the former.&lt;/p&gt;
-&lt;p&gt;Again, DevOps teams are still the right solution for a lot of companies. But if you&#39;re serious about scaling your operation, you need to be thinking about seperating the two again. There&#39;s always the possibility that in a few years time I&#39;ll look back at this and come to the conclusion I was wrong, but for now it sounds like the right solution.&lt;/p&gt;
-&lt;p&gt;Just a thought for now, I&#39;ll get back to this topic. I&#39;d love to hear what others think so &lt;a href=&quot;https://fosstodon.org/@mijndert&quot;&gt;send me a message&lt;/a&gt;.&lt;/p&gt;
 </content>
   </entry>
 </feed>
