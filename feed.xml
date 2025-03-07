@@ -4,12 +4,30 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-02-28T11:00:00Z</updated>
+  <updated>2025-03-07T13:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 10</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-10/" />
+    <updated>2025-03-07T13:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-10/</id>
+    <content type="html">&lt;p&gt;Quite a few updates to share this week!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The weather has been absolutely amazing these past few days. It&#39;s finally sunny and warm and nature is waking up!&lt;/li&gt;
+&lt;li&gt;We&#39;ve made some good progress on the project to insulate the garage. We finally have a pretty good game plan and we can close on some deals to make it happen.&lt;/li&gt;
+&lt;li&gt;Another thing that&#39;s finally out of the way (I hope, let&#39;s wait another few days) is the trouble we&#39;ve been having with our electric heat pump. When it&#39;s cold outside, it would make this terrible noise that kept us up at night. After many visits from technicians, it seems to be fixed now. And of course the fix was relatively simple, it just took a long while to figure out.&lt;/li&gt;
+&lt;li&gt;I haven&#39;t been running for almost 3 months now. I&#39;ve been very busy with work and due to everything else going on in my life I haven&#39;t been feeling great both physically and mentally. I&#39;m really hoping I feel well enough soon to pick running back up because I have an event coming up in May.&lt;/li&gt;
+&lt;li&gt;I&#39;ve been enjoying &lt;a href=&quot;https://soundcloud.com/fusq&quot;&gt;Fusq&lt;/a&gt; while working this week. I don&#39;t think why but it works really well with my brain.&lt;/li&gt;
+&lt;li&gt;Firefox 136 is released and it has vertical tabs! The design is really well done in my opinion. I would highly recommend you check it out.&lt;/li&gt;
+&lt;li&gt;Tonight we&#39;ll be binge-watching the new season of Drive to Survive on Netflix. And on Saturday I have a poker session planned with some friends.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy Friday and enjoy the weather!&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 9</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-9/" />
@@ -513,68 +531,6 @@
 &lt;p&gt;Now if I don&#39;t specify the variable &lt;code&gt;expiration_enabled&lt;/code&gt; the &lt;code&gt;lifecycle_rule&lt;/code&gt; property isn&#39;t created and I just get a standard &lt;code&gt;digitalocean_spaces_bucket&lt;/code&gt;. I don&#39;t have to repeat myself anymore and it makes my module a lot cleaner.&lt;/p&gt;
 &lt;p&gt;A word of warning though, overuse of Dynamic blocks will eventually lead to code being unreadable and not very easy to understand. Only use Dynamic blocks if there&#39;s no other way to avoid repeating the same code. If you have to repeat a few lines once or twice, stop and think if you really need a Dynamic block or if you can live with it in that instance.&lt;/p&gt;
 &lt;p&gt;Speaking of Terraform modules, that&#39;s something I want to talk about in another blog post as well. A question I get asked a lot is &amp;quot;how do I organize my environments and modules?&amp;quot;. More on that later. If you want to get notified of new posts you can import the &lt;a href=&quot;https://mijndertstuij.nl/feed.xml&quot;&gt;RSS feed&lt;/a&gt; for this website in your reader.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Responsive images on a static Hugo website</title>
-    <link href="https://mijndertstuij.nl/posts/hugo-responsive-images/" />
-    <updated>2022-12-06T10:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/hugo-responsive-images/</id>
-    <content type="html">&lt;p&gt;For years and years I&#39;ve been using &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; as my static site generator of choice, mostly because I like their templating engine and I&#39;m a fan of Ruby as a programming language. I&#39;ve been experimenting with Hugo as well, but it never really clicked for me. Well, until I found &lt;a href=&quot;https://github.com/mavidser/hugo-rocinante&quot;&gt;the perfect theme&lt;/a&gt; for my needs. The same theme is now used here and on the &lt;a href=&quot;https://blog.toot.community/&quot;&gt;toot.community blog&lt;/a&gt; so I wanted to set mine apart a little bit by adding banner images on some posts. Downloading an image from Unsplash and manually resizing it wasn&#39;t an option though - I need things to be frictionless when I want to add a blog entry.&lt;/p&gt;
-&lt;p&gt;I started looking for ways to automatically generate multiple sizes of an image and came across a lot of different solutions. Most didn&#39;t work anymore or were very convoluted. That&#39;s to say, until I found &lt;a href=&quot;https://www.brycewray.com/posts/2022/06/responsive-optimized-images-hugo/&quot;&gt;Bryce Wray&#39;s entry&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I quickly adapted his code to my needs and had it working on no-time, you can see it in action &lt;a href=&quot;https://mijndertstuij.nl/posts/scaling-mastodon-community/&quot;&gt;right here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Here&#39;s how I did it.&lt;/p&gt;
-&lt;h2&gt;Assets directory&lt;/h2&gt;
-&lt;p&gt;In order to leverage the built-in image resizing capabilities of Hugo, you have to create an &lt;code&gt;assets/images&lt;/code&gt; directory in the root of your project. Any other place doesn&#39;t work, unless of course you customize the directory. But I like using defaults to avoid breakage later down the line.&lt;/p&gt;
-&lt;h2&gt;Shortcodes&lt;/h2&gt;
-&lt;p&gt;The following Hugo shortcode will generate multiple sizes of a given image and spit out .webp and .jpeg files.&lt;/p&gt;
-&lt;p&gt;Create a file called &lt;code&gt;/layouts/shortcodes/imgh.html&lt;/code&gt; in the root of your project with the following contents.&lt;/p&gt;
-&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;{{- $respSizes := slice &quot;960&quot; &quot;1280&quot; &quot;1920&quot; -}}
-{{- $imgBase := &quot;images/&quot; -}}
-{{- $src := resources.Get (printf &quot;%s%s&quot; $imgBase (.Get &quot;src&quot;)) -}}
-{{- $alt := .Get &quot;alt&quot; -}}
-{{- $divClass := &quot;&quot; -}}{{/* Init&#39;g */}}
-{{- $imgClass := &quot;w-full h-auto animate-fade&quot; -}}
-{{- $dataSzes := &quot;(min-width: 1024px) 100vw, 50vw&quot; -}}
-{{- $actualImg := $src.Resize &quot;640x jpg&quot; -}}
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;picture&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;source&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;image/webp&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;srcset&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;
-      {{- with $respSizes -}}
-        {{- range $i, $e := . -}}
-        {{- if ge $src.Width . -}}
-          {{- if $i }}, {{ end -}}{{- ($src.Resize (printf &lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;%sx%s&quot;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;webp&quot;)&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;).RelPermalink&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;}}&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;}}w&lt;/span&gt;
-        &lt;span class=&quot;token attr-name&quot;&gt;{{-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;-}}&lt;/span&gt;
-      &lt;span class=&quot;token attr-name&quot;&gt;{{-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;-}}&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;{{-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;-}}&quot;&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;sizes&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $dataSzes }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;source&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;image/jpeg&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;srcset&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;
-      {{- with $respSizes -}}
-        {{- range $i, $e := . -}}
-          {{- if ge $src.Width . -}}
-            {{- if $i }}, {{ end -}}{{- ($src.Resize (printf &lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;%sx%s&quot;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;jpg&quot;)&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;).RelPermalink&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;}}&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;{{&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;}}w&lt;/span&gt;
-          &lt;span class=&quot;token attr-name&quot;&gt;{{-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;-}}&lt;/span&gt;
-      &lt;span class=&quot;token attr-name&quot;&gt;{{-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;-}}&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;{{-&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;-}}&quot;&#92;&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;sizes&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $dataSzes }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $imgClass }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $actualImg.RelPermalink }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $src.Width }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $src.Height }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;alt&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;{{ $alt }}&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-    &lt;span class=&quot;token attr-name&quot;&gt;loading&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;lazy&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;picture&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Using the shortcode&lt;/h2&gt;
-&lt;p&gt;Now in order to use the above shortcode you can simply drop an image into &lt;code&gt;/assets/images&lt;/code&gt; and insert this line of code in your MarkDown file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt;/* imgh src=&amp;quot;my-example-file.jpeg&amp;quot; alt=&amp;quot;My example file&amp;quot; */&amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
 </content>
   </entry>
 </feed>
