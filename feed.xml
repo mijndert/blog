@@ -4,12 +4,28 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-03-14T13:00:00Z</updated>
+  <updated>2025-03-21T13:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 12</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-12/" />
+    <updated>2025-03-21T13:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-12/</id>
+    <content type="html">&lt;p&gt;What a week, lots has happened.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It&#39;s been a really stressful week at work. Safe to say I need a quiet weekend to recover.&lt;/li&gt;
+&lt;li&gt;Before the Steam spring sale ended I made sure to pick up &lt;a href=&quot;https://store.steampowered.com/app/2218750/Halls_of_Torment/&quot;&gt;Halls of Torment&lt;/a&gt; for 4 euro&#39;s. It&#39;s kind of like a mix between oldskool Diablo and Vampire Survivors. Numbers pop up out of enemies and it has a whopping 500 achievements. Highly recommended.&lt;/li&gt;
+&lt;li&gt;The F1 sesaon is underway! Last Sunday I woke up at 5am to watch the Australian GP and it was pure chaos because of the rain. This weekend the Chinese GP is on, I haven&#39;t seen anything yet because of the time difference and work but I&#39;ll catch up later. It&#39;s gonna be a banger of a season!&lt;/li&gt;
+&lt;li&gt;Last Tuesday we finally met our Corgi puppy for the first time. We have to wait another 4 weeks now before he can come live with us. His name will be Sam and we&#39;re all very excited to welcome him into the family!&lt;/li&gt;
+&lt;li&gt;One week left until the 5k event in my town. Due to work and other responsibilities I&#39;m still not running and working out as much as I would like, but the times I have been running have been very promising. Even after this long hiatus I can still run a 27 minute 5k no problem. Really looking forward to the event and on to many more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&#39;m gonna enjoy the sunny weather, F1 and some more Halls of Torment. See ya next week&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 11</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-11/" />
@@ -454,63 +470,6 @@
 &lt;p&gt;But, even with this organisation of information going on, Obsidian still doesn&#39;t click for me.&lt;/p&gt;
 &lt;p&gt;To be frank, Obsidian just... feels wrong. It&#39;s undeniably an Electron app and that just makes the experience really cumbersome to me. The application always feels a little sluggish and is never truly at home on any platform. You can make Obsidian look a little better using the great &lt;a href=&quot;https://github.com/kepano/obsidian-minimal&quot;&gt;Minimal theme&lt;/a&gt; but its core problems remain. The entire ecosystem of themes and plugins is also a little overwhelming and are prone to break in any subsequent release. I don&#39;t want to spend hours tweaking my personal wiki, I just want to use it. The barrier between my thoughts and putting them into writing needs to be as low as possible.&lt;/p&gt;
 &lt;p&gt;I know there are many people out there who love Obsidian, people who spend dozens of hours making it just right. I however will be reluctantly looking elsewhere.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Saving time using Terraform import blocks</title>
-    <link href="https://mijndertstuij.nl/posts/terraform-import-blocks/" />
-    <updated>2023-06-15T10:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/terraform-import-blocks/</id>
-    <content type="html">&lt;p&gt;Anyone who uses Terraform must be familiar with the &lt;code&gt;import&lt;/code&gt; command; it allows you to gather existing resources and put them into your statefile. This way, existing resources which were previously not created using Terraform are now under management of your infrastructure as code.&lt;/p&gt;
-&lt;p&gt;You can import your resources in the terminal, but you still have to write the code for the resources you import. With Terraform version 1.5 there&#39;s a better solution: import blocks.&lt;/p&gt;
-&lt;p&gt;Let&#39;s take a DigitalOcean Spaces bucket as an example here.&lt;/p&gt;
-&lt;p&gt;Before &lt;a href=&quot;https://www.hashicorp.com/blog/terraform-1-5-brings-config-driven-import-and-checks&quot;&gt;Terraform 1.5&lt;/a&gt; you first had to import the resource into your statefile:&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;terraform &lt;span class=&quot;token function&quot;&gt;import&lt;/span&gt; digitalocean_spaces_bucket.mybucket &lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;region&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;,&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;name&lt;span class=&quot;token variable&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now, using a bit of &lt;code&gt;terraform plan&lt;/code&gt; trial and error, you could write the code for the resource until no changes were found anymore.&lt;/p&gt;
-&lt;pre class=&quot;language-hcl&quot;&gt;&lt;code class=&quot;language-hcl&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;resource &lt;span class=&quot;token type variable&quot;&gt;&quot;digitalocean_spaces_bucket&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mybucket&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt;   &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mybucket&quot;&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;region&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ams3&quot;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Using &lt;a href=&quot;https://developer.hashicorp.com/terraform/tutorials/state/state-import&quot;&gt;import blocks&lt;/a&gt; you can basically skip the last step for the most part. You can now import resources using code, and have a basic skeleton of the resource code be created for you.&lt;/p&gt;
-&lt;p&gt;First we get the DigitalOcean Terraform provider and define our first import block.&lt;/p&gt;
-&lt;pre class=&quot;language-hcl&quot;&gt;&lt;code class=&quot;language-hcl&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;terraform&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;required_providers&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;digitalocean&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;token property&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;digitalocean/digitalocean&quot;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ams3,mybucket&quot;&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; digitalocean_spaces_bucket.mybucket
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Using &lt;code&gt;terraform plan&lt;/code&gt; with the &lt;code&gt;-generate-config-out&lt;/code&gt; flag, Terraform will generate configuration for the resource and outputs the plan.&lt;/p&gt;
-&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;terraform plan -generate-config-out&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;generated.tf&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Of course, the code it generates isn&#39;t perfect, but it&#39;s a very good starting point. Now, finally, we don&#39;t have to go back and forth between our code and &lt;code&gt;terraform plan&lt;/code&gt; to guess the arguments of the resource. You can go ahead and take the output and put it in the correct place in your own codebase.&lt;/p&gt;
-&lt;p&gt;The above import block will generate something like this:&lt;/p&gt;
-&lt;pre class=&quot;language-hcl&quot;&gt;&lt;code class=&quot;language-hcl&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;resource &lt;span class=&quot;token type variable&quot;&gt;&quot;digitalocean_spaces_bucket&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mybucket&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;acl&lt;/span&gt;           &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; null
-  &lt;span class=&quot;token property&quot;&gt;force_destroy&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; null
-  &lt;span class=&quot;token property&quot;&gt;name&lt;/span&gt;          &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mybucket&quot;&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;region&lt;/span&gt;        &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ams3&quot;&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;lifecycle_rule&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;abort_incomplete_multipart_upload_days&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;enabled&lt;/span&gt;                                &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;prefix&lt;/span&gt;                                 &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; null
-    &lt;span class=&quot;token keyword&quot;&gt;expiration&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;token property&quot;&gt;date&lt;/span&gt;                         &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; null
-      &lt;span class=&quot;token property&quot;&gt;days&lt;/span&gt;                         &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;
-      &lt;span class=&quot;token property&quot;&gt;expired_object_delete_marker&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;noncurrent_version_expiration&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;token property&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;versioning&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;enabled&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 </content>
   </entry>
 </feed>
