@@ -4,12 +4,27 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-03-21T13:00:00Z</updated>
+  <updated>2025-03-26T14:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>I need to reset my inboxes</title>
+    <link href="https://mijndertstuij.nl/posts/reset-my-inboxes/" />
+    <updated>2025-03-26T14:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/reset-my-inboxes/</id>
+    <content type="html">&lt;p&gt;In the &lt;a href=&quot;https://en.wikipedia.org/wiki/Getting_Things_Done&quot;&gt;Getting Things Done&lt;/a&gt; (GTD) productivity system there&#39;s this concept of an &lt;em&gt;inbox&lt;/em&gt;. People often think of their inbox as just their email, but in GTD an inbox is anything where you collect things that need to be processed. If you&#39;re not careful you&#39;ll quickly end up with too many of them.&lt;/p&gt;
+&lt;p&gt;When I look at my phone and laptop I can identify at least 14 inboxes, ranging from email and calendar, to messaging apps and social media.&lt;/p&gt;
+&lt;p&gt;This is becoming an issue, especially with life and work becoming ever more complex. Every one of these inboxes have to be checked regularly or send a notification by themselves, and every one of them can contain tasks or information that I need to act on or process.&lt;/p&gt;
+&lt;p&gt;The sheer amount of information and tasks that pile up in any of these inboxes is a constant source of distraction and stress. And of course it&#39;s also definitly a &lt;em&gt;me problem&lt;/em&gt;; I have a severe case of FOMO where I sometimes even end up going through a bunch of these apps in rapid succession to see if anything new popped up.&lt;/p&gt;
+&lt;p&gt;It&#39;s clear that I need a reset.&lt;/p&gt;
+&lt;p&gt;First off, I need to &lt;strong&gt;consolidate my inboxes&lt;/strong&gt;. I really don&#39;t need three separate messaging apps, I also don&#39;t need to have both LinkedIn and Instagram installed on my phone. A concrete example are the messaging apps – I have Messages, WhatsApp and Signal installed at the moment. It&#39;s difficult to get everyone on Signal so I&#39;ll try to consolidate as much of my messaging to WhatsApp. I know it&#39;s a Meta product, but sometimes you have to make compromises. Once more people and groups move over to Signal I&#39;ll be in a place to reconsider this.&lt;/p&gt;
+&lt;p&gt;The second thing I need to do is to &lt;strong&gt;set specific times for checking my inboxes&lt;/strong&gt;. I&#39;ll simply put this on my calendar, and I&#39;ll see how this goes. I&#39;ll start with three times a day (morning, lunch, evening) and see if I can later on reduce this to two times a day.&lt;/p&gt;
+&lt;p&gt;Lastly I need to be way more &lt;strong&gt;mindful of my information intake&lt;/strong&gt;. It&#39;s easy to have a pinned tab for Mastodon and IRC open at all times. All they are doing is distract me from work, costing me a bunch of time I could spend on other things like spending time with my family, running or reading a book.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 12</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-12/" />
@@ -451,25 +466,6 @@
 &lt;p&gt;What I like most about the Garmin as compared to the Apple Watch is how well it ties all the data together to create a comprehensive overview of how your training is affecting you and your overall health. Something the Apple Watch did not do, it just showed you all the individual data points and left it up to you to figure out what it all meant. It really does take out all the guesswork out of training for say a half marathon which I&#39;m doing right now.&lt;/p&gt;
 &lt;p&gt;Speaking of training, the Garmin does give me daily suggestions on what I should be doing that day. Today I got a recommendation to do interval sprints, and tomorrow is long run day. Due to personal circumstances I can&#39;t always follow the recommendations, but it&#39;s nice to have a little guidance when I am able to get a run in.&lt;/p&gt;
 &lt;p&gt;All in all, I&#39;m really happy with my move to Garmin. Even though I&#39;m currently not following the recommendations closely, I do feel like I can get much more out of my runs with this watch than I ever could with my Apple Watch. This thing gives me the confidence to reclaiming my old form, run a half marathon and do well in it.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Obsidian doesn&#39;t click for me</title>
-    <link href="https://mijndertstuij.nl/posts/obsidian-doesnt-click-for-me/" />
-    <updated>2023-10-12T10:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/obsidian-doesnt-click-for-me/</id>
-    <content type="html">&lt;p&gt;The idea of a personal wiki has always appealed to me. I tried a few times to incorporate one into my &amp;quot;workflow&amp;quot; if I even have one. I tried all sorts of different tools but the latest one that&#39;s been keeping me occupied is &lt;a href=&quot;https://obsidian.md/&quot;&gt;Obsidian&lt;/a&gt;. I really want to like and use Obsidian, but I&#39;m unable to. Let me explain.&lt;/p&gt;
-&lt;p&gt;I&#39;ve implemented the &lt;a href=&quot;https://fortelabs.com/blog/para/&quot;&gt;PARA method&lt;/a&gt; into my personal wiki. It&#39;s a way of organizing all information into four buckets:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Projects for any ongoing stuff&lt;/li&gt;
-&lt;li&gt;Areas for anything that&#39;s going on in your life like your car, finances, mental health, etc.&lt;/li&gt;
-&lt;li&gt;Resources for anything that you might want to reference later&lt;/li&gt;
-&lt;li&gt;Archives for anything that&#39;s no longer relevant&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Gotta say, I love this so much and it&#39;s not really relevant to any one tool. I&#39;ve been using this method for a while now and it&#39;s been working great.&lt;/p&gt;
-&lt;p&gt;But, even with this organisation of information going on, Obsidian still doesn&#39;t click for me.&lt;/p&gt;
-&lt;p&gt;To be frank, Obsidian just... feels wrong. It&#39;s undeniably an Electron app and that just makes the experience really cumbersome to me. The application always feels a little sluggish and is never truly at home on any platform. You can make Obsidian look a little better using the great &lt;a href=&quot;https://github.com/kepano/obsidian-minimal&quot;&gt;Minimal theme&lt;/a&gt; but its core problems remain. The entire ecosystem of themes and plugins is also a little overwhelming and are prone to break in any subsequent release. I don&#39;t want to spend hours tweaking my personal wiki, I just want to use it. The barrier between my thoughts and putting them into writing needs to be as low as possible.&lt;/p&gt;
-&lt;p&gt;I know there are many people out there who love Obsidian, people who spend dozens of hours making it just right. I however will be reluctantly looking elsewhere.&lt;/p&gt;
 </content>
   </entry>
 </feed>
