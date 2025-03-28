@@ -4,12 +4,31 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-03-26T14:00:00Z</updated>
+  <updated>2025-03-28T15:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 13</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-13/" />
+    <updated>2025-03-28T15:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-13/</id>
+    <content type="html">&lt;p&gt;I keep saying this but, what a week! Not in terms of any super exciting new developments or anything, it&#39;s just busy at work and at home. Anyway, let&#39;s get into this week&#39;s notes because I have a lot to share this time around.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A few days ago I posted a free startup idea on Mastodon: vibe coding keyboards (it&#39;s a keyboard with only a tab key). People seemed to resonate with it so I think there&#39;s a business opportunity there. Have at it.&lt;/li&gt;
+&lt;li&gt;On Wednesday I picked up my bib for a local running event on Sunday. I&#39;m just gonna soak up the atmosphere and enjoy the event, I don&#39;t have any goals in mind.&lt;/li&gt;
+&lt;li&gt;This week I posted about &lt;a href=&quot;https://mijndertstuij.nl/posts/reset-my-inboxes/&quot;&gt;needing to reset my inboxes&lt;/a&gt;. Work, life, everything has been pretty overwhelming lately and a constant barrage of notifications and information isn&#39;t helping. I&#39;m already much happier with reducing the amount of inboxes and therefore noise.&lt;/li&gt;
+&lt;li&gt;This tiny website is now &lt;a href=&quot;https://www.11ty.dev/authors/mijndert/&quot;&gt;mentioned on 11ty.dev&lt;/a&gt;! You&#39;ll hopefully see it pop up on the 11ty leaderboards soon.&lt;/li&gt;
+&lt;li&gt;I&#39;ve been working on my tan quite a bit this week. The weather has been absolutely gorgeous so I did a bunch of running. I&#39;m happy with my pace at the moment and it can only get better from here as I&#39;m also doing some strength training on the days where I don&#39;t go running.&lt;/li&gt;
+&lt;li&gt;Another thing that happened this week: the internet was up in arms about something! Garmin is adding a subscription service and it&#39;s completely optional so far. I&#39;ve seen people selling off their Garmin watch in response and I don&#39;t think that&#39;s the right move. They already have your money, the service still works. Let&#39;s just wait and see what Garmin will do next before doing anything drastic. It will however likely impact my decision to buy another Garmin watch in the future.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://store.steampowered.com/app/2218750/Halls_of_Torment/&quot;&gt;Halls of Torment&lt;/a&gt; remains an incredible game. Having an absolute blast over here on my Steam Deck. Buy it if you haven&#39;t already.&lt;/li&gt;
+&lt;li&gt;What&#39;s even going on at Red Bull Racing anymore? I&#39;m really happy to see Yuki finally getting the seat, but I&#39;m also really scared for his career. That car is obviously not great to drive for anyone other than Max Verstappen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And that&#39;s it for this week! In the meantime, if you have anything to say, anything to share, any question, please &lt;a href=&quot;https://mijndertstuij.nl/connect/&quot;&gt;feel free to reach out&lt;/a&gt;. I love getting emails from random people around the world.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>I need to reset my inboxes</title>
     <link href="https://mijndertstuij.nl/posts/reset-my-inboxes/" />
@@ -451,21 +470,6 @@
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Both of these additions are great improvements to Terraform, and I&#39;m looking forward to using them in my projects. They will ensure I&#39;m much more confident in working with the Statefile which has always been a bit daunting.&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>On running with a watch</title>
-    <link href="https://mijndertstuij.nl/posts/running-with-a-watch/" />
-    <updated>2023-12-08T10:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/running-with-a-watch/</id>
-    <content type="html">&lt;p&gt;Anyone that knows me well can attest to me being a dreadful sports person in almost every category; except for one: running. I&#39;ve been running for a very long time, I could at one point run a 5k in 20 minutes and a 10k in less than 50 minutes. I never really had a plan, I just go out for a run and don&#39;t think about it too much. To the chagrin of some of my friends, running comes natural to me. I naturally have a rather high vo2max and I&#39;m not super prone to injuries so I can just keep running for a good while before I hit my limits.&lt;/p&gt;
-&lt;p&gt;Because of all this, I never had a use-case for a better watch than my Apple Watch SE. But as I get older I do need a little more hand holding to get my old form back. I finally decided to get a Garmin Forerunner 255S and I&#39;ve been using it for 2 weeks now.&lt;/p&gt;
-&lt;!--more--&gt;
-&lt;p&gt;First things first, there&#39;s absolutely no way to compare an Apple Watch to a Garmin Forerunnner. They are for completely different use-cases. The Apple Watch is a smart watch with some fitness features, the Garmin is a fitness watch with some smart features. That&#39;s not to say I don&#39;t wear my Garmin throughout the day, on the contrary; I wear it as much as possible to give it as much information as I can. I even use it to track my sleep, which is something I never did with my Apple Watch.&lt;/p&gt;
-&lt;p&gt;Another thing that&#39;s incomparable between the two is the ease of use and the user interface. My new Garmin has an app called Garmin Connect and the UI just isn&#39;t as pretty. Because of the UI the entire experience takes a while to get used to, factor in the huge amount of data that&#39;s being collected and presented in the app, and you have a recipe for a steep learning curve. Luckily every single metric has a &#39;help&#39; button which describes exactly what it is and why I should care about it.&lt;/p&gt;
-&lt;p&gt;What I like most about the Garmin as compared to the Apple Watch is how well it ties all the data together to create a comprehensive overview of how your training is affecting you and your overall health. Something the Apple Watch did not do, it just showed you all the individual data points and left it up to you to figure out what it all meant. It really does take out all the guesswork out of training for say a half marathon which I&#39;m doing right now.&lt;/p&gt;
-&lt;p&gt;Speaking of training, the Garmin does give me daily suggestions on what I should be doing that day. Today I got a recommendation to do interval sprints, and tomorrow is long run day. Due to personal circumstances I can&#39;t always follow the recommendations, but it&#39;s nice to have a little guidance when I am able to get a run in.&lt;/p&gt;
-&lt;p&gt;All in all, I&#39;m really happy with my move to Garmin. Even though I&#39;m currently not following the recommendations closely, I do feel like I can get much more out of my runs with this watch than I ever could with my Apple Watch. This thing gives me the confidence to reclaiming my old form, run a half marathon and do well in it.&lt;/p&gt;
 </content>
   </entry>
 </feed>
