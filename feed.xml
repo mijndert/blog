@@ -4,12 +4,28 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-03-28T15:00:00Z</updated>
+  <updated>2025-04-04T15:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 14</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-14/" />
+    <updated>2025-04-04T15:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-14/</id>
+    <content type="html">&lt;p&gt;Week 14 was a bit of a boring one. Luckily we have a race weekend coming up (in Japan this time, white RBR woo!), and we&#39;re gonna see our corgi puppy again.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This past Sunday I participated in the local 5k. Despite the wind, it was a pretty good race. My legs felt really good througout and I could really go for it in second half. Givse me some confidence for the next race that&#39;s coming up soon.&lt;/li&gt;
+&lt;li&gt;On Monday and Tuesday I expierenced some pain and cramps in my right leg which I felt during my runs. I think it was just a fluke, it&#39;s all solved now anyway.&lt;/li&gt;
+&lt;li&gt;I went to the office on Wednesday. Again I had to go the long way round (by train) because of issues near Rotterdam, but at least the weather was enjoyable.&lt;/li&gt;
+&lt;li&gt;I discovered and have been enjoying &lt;a href=&quot;https://open.spotify.com/artist/1nhSLEYdoBHG6cJ8NDwoF1&quot;&gt;Fickle Friends&lt;/a&gt; on Spotify.&lt;/li&gt;
+&lt;li&gt;The Nintendo Switch 2 was announcend. I don&#39;t think I&#39;m gonna buy it considering the price and how much I play games these days. Maybe I&#39;ll get one in a few years.&lt;/li&gt;
+&lt;li&gt;I just wishlisted &lt;a href=&quot;https://store.steampowered.com/app/3314190/Oh_No_UFO/&quot;&gt;Oh No! UFO!&lt;/a&gt; on Steam. It&#39;s an indie game where you play as a tiny adorable UFO and you get to cause all kinds of chaos. Can&#39;t wait to play this on Steam Deck.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 13</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-13/" />
@@ -419,57 +435,6 @@
 &lt;li&gt;&lt;strong&gt;🧑‍💻 Code Editor&lt;/strong&gt;: Visual Studio Code&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;✈️ VPN&lt;/strong&gt;: none&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Config-driven Terraform</title>
-    <link href="https://mijndertstuij.nl/posts/config-driven-terraform/" />
-    <updated>2024-01-18T10:00:00Z</updated>
-    <id>https://mijndertstuij.nl/posts/config-driven-terraform/</id>
-    <content type="html">&lt;p&gt;Some time ago I wrote about &lt;a href=&quot;https://mijndertstuij.nl/posts/terraform-import-blocks/&quot;&gt;config-driven import&lt;/a&gt; which became available in Terraform 1.5. Import blocks are a way to import existing resources into the statefile, which is useful when you have a bunch of infrastructure that was created manually. Yesterday &lt;a href=&quot;https://www.hashicorp.com/blog/terraform-1-7-adds-test-mocking-and-config-driven-remove&quot;&gt;Terraform 1.7 was released&lt;/a&gt; that extends this functionality with a &lt;code&gt;for_each&lt;/code&gt; argument.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Terraform 1.7 also includes an enhancement for config-driven import: the ability to expand import blocks using for_each loops. Previously you could target a particular instance of a resource in the to attribute of an import block, but you had to write a separate import block for each instance.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Expanding on my previous blogpost about Import blocks, here&#39;s a quick example of how to use the new &lt;code&gt;for_each&lt;/code&gt; argument on a list to import multiple Digitalocean Spaces buckets at once.&lt;/p&gt;
-&lt;pre class=&quot;language-hcl&quot;&gt;&lt;code class=&quot;language-hcl&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;terraform&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;required_providers&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;digitalocean&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;token property&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;digitalocean/digitalocean&quot;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;locals&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;buckets&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;&quot;test&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;bucket-test&quot;&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;&quot;staging&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;bucket-staging&quot;&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;&quot;prod&quot;&lt;/span&gt;    &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;bucket-prod&quot;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;for_each&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; local.buckets
-  &lt;span class=&quot;token property&quot;&gt;to&lt;/span&gt;       &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; digitalocean_spaces_bucket.mybucket&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;each.key&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-
-&lt;span class=&quot;token keyword&quot;&gt;resource &lt;span class=&quot;token type variable&quot;&gt;&quot;digitalocean_spaces_bucket&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mybucket&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;for_each&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; local.buckets
-  &lt;span class=&quot;token property&quot;&gt;bucket&lt;/span&gt;   &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; each.value
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Another great addition in Terraform 1.7 are Remove blocks. There are times when you need to remove a resource from your Statefile, optionally without removing the underlying resource itself. Of course there are CLI commands to accomplish this, but having it available as a Remove block means we can run &lt;code&gt;terraform apply&lt;/code&gt; and check the changes before executing them.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;As an alternative to the terraform state rm command, the removed block addresses all of these challenges. Just like the moved and import blocks, state removal can now be performed in bulk and is plannable, so you can be confident that the operation will have the intended effect before modifying state.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre class=&quot;language-hcl&quot;&gt;&lt;code class=&quot;language-hcl&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;removed&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token property&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; digitalocean_spaces_bucket.mybucket
-
-  &lt;span class=&quot;token comment&quot;&gt;# Instruct Terraform not to destroy the underlying resource&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;lifecycle&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;destroy&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Both of these additions are great improvements to Terraform, and I&#39;m looking forward to using them in my projects. They will ensure I&#39;m much more confident in working with the Statefile which has always been a bit daunting.&lt;/p&gt;
 </content>
   </entry>
 </feed>
