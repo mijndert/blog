@@ -8,7 +8,7 @@ tags:
 
 Week 14 was a bit of a boring one. Luckily we have a race weekend coming up (in Japan this time, white RBR woo!), and we're gonna see our corgi puppy again. 
 
-- This past Sunday I participated in the local 5k. Despite the wind, it was a pretty good race. My legs felt really good througout and I could really go for it in second half. Givse me some confidence for the next race that's coming up soon.
+- This past Sunday I participated in the local 5k. Despite the wind, it was a pretty good race. My legs felt really good througout and I could really go for it in second half. Gives me some confidence for the next race that's coming up soon.
 - On Monday and Tuesday I expierenced some pain and cramps in my right leg which I felt during my runs. I think it was just a fluke, it's all solved now anyway.
 - I went to the office on Wednesday. Again I had to go the long way round (by train) because of issues near Rotterdam, but at least the weather was enjoyable. 
 - I discovered and have been enjoying [Fickle Friends](https://open.spotify.com/artist/1nhSLEYdoBHG6cJ8NDwoF1) on Spotify.
