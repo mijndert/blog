@@ -43,8 +43,7 @@ export default async function(eleventyConfig) {
 		type: "atom",
 		outputPath: "/feed.xml",
 		collection: {
-			name: "posts",
-			limit: 25,
+			name: "posts"
 		},
 		metadata: {
 			language: "en",
