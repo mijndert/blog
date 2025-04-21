@@ -4,12 +4,28 @@
   <subtitle>Senior DevOps Engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-04-11T15:00:00Z</updated>
+  <updated>2025-04-21T13:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 16</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-16/" />
+    <updated>2025-04-21T13:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-16/</id>
+    <content type="html">&lt;p&gt;Excuse me while I publish these weeks notes a little later than usual this time around. I&#39;ve been busy gushing over Sam our new Corgi puppy. He&#39;s been an absolute joy to have around – he listens very well, is playful, and has a ton of personality.&lt;/p&gt;
+&lt;p&gt;Some other things that happened this week:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Last week on Sunday we went to see Frozen the musical. It was an amazing experience with a great cast, stunning visuals and an incredible orchestra. Highly recommended!&lt;/li&gt;
+&lt;li&gt;We hired a puppy trainer to help with Sam and we met her for the first time this week. She gave us some great tips for the first few days. Next week we&#39;ll start proper training.&lt;/li&gt;
+&lt;li&gt;On Wednesday I went to the AWS Summit in Amsterdam. When you&#39;ve been working with AWS for 17 years it&#39;s kind of a tradition to go. Always nice to see familiar faces, meet new people, talk to some vendors and attend a session or two. Because AWS increases the sponsor fees the number of vendors was a lot lower than previous years, and also the food was quite a bit worse. But it was still a nice change of scenery from the usual work week.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here&#39;s a photo of Sam when he just arrived at our home.&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://mijndertstuij.nl/img/Lx8x8Okzks-300.webp 300w, https://mijndertstuij.nl/img/Lx8x8Okzks-500.webp 500w, https://mijndertstuij.nl/img/Lx8x8Okzks-800.webp 800w&quot; sizes=&quot;90vw&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://mijndertstuij.nl/img/Lx8x8Okzks-300.jpeg&quot; alt=&quot;Sam our Corgi puppy at 8 weeks old&quot; width=&quot;800&quot; height=&quot;600&quot; srcset=&quot;https://mijndertstuij.nl/img/Lx8x8Okzks-300.jpeg 300w, https://mijndertstuij.nl/img/Lx8x8Okzks-500.jpeg 500w, https://mijndertstuij.nl/img/Lx8x8Okzks-800.jpeg 800w&quot; sizes=&quot;90vw&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 15</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-15/" />
