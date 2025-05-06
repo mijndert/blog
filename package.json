@@ -6,7 +6,8 @@
   "main": "eleventy.config.js",
   "scripts": {
     "build": "npx eleventy",
-    "start": "npx eleventy --serve"
+    "start": "npx eleventy --serve",
+    "post": "node newpost.js"
   },
   "keywords": [],
   "author": "",
