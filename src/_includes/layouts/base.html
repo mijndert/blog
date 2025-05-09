@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="{{ eleventy.generator }}">
     <meta name="fediverse:creator" content="@mijndert@fosstodon.org">
-    <!-- <title>{{ title | escape }}</title> -->
+    <meta property="og:title" content="{{ title or metaTitle | safe }}{% if title !== 'Mijndert Stuij' %} - Mijndert Stuij{% endif %}" />
+    {% if summary %}<meta property="og:description" content="{{ summary | escape }}" />{% endif %}
     <title>{{ title or metaTitle | safe }}{% if title !== 'Mijndert Stuij' %} - Mijndert Stuij{% endif %}</title>
     {% if summary %}<meta name="description" content="{{ summary | escape }}" />{% endif %}
     <link rel="canonical" href={{ site.url }}{{ page.url }}>
