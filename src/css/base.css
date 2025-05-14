@@ -165,21 +165,17 @@ blockquote {
 #gallery {
   column-count: 2;
   column-gap: 1em;
-  padding-top: 16px;
   margin: 0;
 
   .item {
     display: block;
     margin: 0 0 1em;
     width: 100%;
-    img{
-      margin: 0;
-    }
   }
 
-  @media only screen and (max-width: 767px) and (min-width: 540px) {
+  /* @media only screen and (max-width: 767px) and (min-width: 540px) {
     column-count: 2;
-  }
+  } */
 
   @media only screen and (max-width: 600px) {
     column-count: 1;
