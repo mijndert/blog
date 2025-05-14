@@ -5,7 +5,7 @@ summary: What I am focused on now.
 permalink: /now/
 ---
 
-- Working as a lead platform engineerat [Otrium](https://www.otrium.nl)
+- Working as a lead platform engineer at [Otrium](https://www.otrium.nl)
 - Running as much as I can, training for multiple events
 - Taking care of a Corgi puppy named Sam
 - Learning to default to [optimism](https://stephango.com/optimism)
