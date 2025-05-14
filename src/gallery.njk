@@ -1,11 +1,28 @@
 --- 
 layout: layouts/page.html
-permalink: /gallery/
+permalink: /gallery/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% else %}index.html{% endif %}
 title: Gallery
 summary: Some of the photos I have taken over the years.
+pagination:
+  data: collections.gallery
+  size: 2  # Number of items per page
+  alias: paginatedImages
 ---
 <ul id="gallery">
-  {% for image in collections.gallery %}
-    <img class="item" src="{{ image.src }}" width="{{ image.width }}" height="{{ image.height }}" title="{{ image.name}}" alt="{{ image.name}}" />
+  {% for image in paginatedImages %}
+    <img class="item" src="{{ image.src }}" width="{{ image.width }}" height="{{ image.height }}" title="{{ image.name }}" alt="{{ image.name }}" />
   {% endfor %}
 </ul>
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}" class="previous">Previous</a>
+  {% endif %}
+
+  <span class="page-number">Page {{ pagination.pageNumber }} of {{ pagination.totalPages }}</span>
+
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}" class="next">Next</a>
+  {% endif %}
+</div>
