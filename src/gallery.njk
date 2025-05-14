@@ -1,0 +1,12 @@
+--- 
+layout: layouts/page.html
+permalink: /gallery/
+title: 'Gallery'
+---
+<ul id="gallery">
+  {% for image in collections.gallery %}
+    <a class="item" href="{{ image.src }}" target="__blank">
+      <img src="{{ image.src }}" width="{{ image.width }}" height="{{ image.height }}" title="{{ image.name}}" alt="{{ image.name}}" />
+    </a>
+  {% endfor %}
+</ul>
