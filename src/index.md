@@ -1,7 +1,7 @@
 ---
 title: Mijndert Stuij
 layout: layouts/page.html
-summary: Senior DevOps Engineer with over 15 years of experience building highly scalable, high performance infrastructure on top of AWS.
+summary: Lead platform engineer with over 17 years of experience building highly scalable, high performance infrastructure on top of AWS.
 ---
 
 # {{ site.subtitle }}

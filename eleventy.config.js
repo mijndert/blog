@@ -48,7 +48,7 @@ export default async function(eleventyConfig) {
 		metadata: {
 			language: "en",
 			title: "Mijndert Stuij",
-			subtitle: "Senior DevOps Engineer. Runner. Minimalist.",
+			subtitle: "Lead platform engineer. Runner. Minimalist.",
 			base: "https://mijndertstuij.nl/",
 			author: {
 				name: "Mijndert Stuij",
