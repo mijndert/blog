@@ -162,30 +162,8 @@ blockquote {
   }
 }
 
-/* Responsive CSS for Mobile */
-@media (max-width: 375px) {
-  body {
-    max-width: 100%;
-    padding: .5em;
-  }
-
-  header {
-    margin: 3em 0 3em 0;
-  }
-
-  pre {
-    font-size: 12px;
-  }
-  
-  blockquote {
-    margin: 0.5em 0;
-    padding: 0.5em;
-    border-left: 2px solid #5B5B66;
-  }
-}
-
 #gallery {
-  column-count: 3;
+  column-count: 2;
   column-gap: 1em;
   padding-top: 16px;
   margin: 0;
@@ -205,5 +183,27 @@ blockquote {
 
   @media only screen and (max-width: 600px) {
     column-count: 1;
+  }
+}
+
+/* Responsive CSS for Mobile */
+@media (max-width: 375px) {
+  body {
+    max-width: 100%;
+    padding: .5em;
+  }
+
+  header {
+    margin: 3em 0 3em 0;
+  }
+
+  pre {
+    font-size: 12px;
+  }
+  
+  blockquote {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border-left: 2px solid #5B5B66;
   }
 }
