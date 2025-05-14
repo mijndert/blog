@@ -5,7 +5,7 @@ title: Gallery
 summary: Some of the photos I have taken over the years.
 pagination:
   data: collections.gallery
-  size: 2  # Number of items per page
+  size: 2
   alias: paginatedImages
 ---
 <ul id="gallery">
@@ -14,14 +14,10 @@ pagination:
   {% endfor %}
 </ul>
 
-<!-- Pagination links -->
 <div class="pagination">
   {% if pagination.href.previous %}
     <a href="{{ pagination.href.previous }}" class="previous">Previous</a>
   {% endif %}
-
-  <span class="page-number">Page {{ pagination.pageNumber }} of {{ pagination.totalPages }}</span>
-
   {% if pagination.href.next %}
     <a href="{{ pagination.href.next }}" class="next">Next</a>
   {% endif %}
