@@ -24,18 +24,11 @@ export default async function(eleventyConfig) {
 	// creates a gallery collection
 	eleventyConfig.addCollection("gallery", () => {
 		const galleryPath = path.resolve(__dirname, "src/img/gallery");
-	
 		try {
 			const files = fs.readdirSync(galleryPath);
-	
 			return files
-				.filter(file => {
-					// Filter out non-image files if necessary
-					const validExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
-					return validExtensions.includes(path.extname(file).toLowerCase());
-				})
 				.map((file) => {
-					console.log(`🖼 Adding picture to gallery: ${file}`);
+					console.log(`Adding picture to gallery: ${file}`);
 					return {
 						name: file.split(".")[0],
 						src: `/img/gallery/${file}`,
