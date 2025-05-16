@@ -163,30 +163,28 @@ blockquote {
 }
 
 .gallery {
-  column-count: 2;
-  column-gap: 1em;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
   margin: 0;
-
-  .item {
-    display: block;
-    margin: 0 0 1em;
-    width: 100%;
-;
-  }
-
-  /* @media only screen and (max-width: 767px) and (min-width: 540px) {
-    column-count: 2;
-  } */
-
-  @media only screen and (max-width: 600px) {
-    column-count: 1;
-  }
+}
+.gallery picture {
+  width: 100%; /* 50% for side-by-side */
+  height: auto;
+  object-fit: cover;
+  box-sizing: border-box;
+  margin: .5em 0;
+  /* padding: 5px; */
+}
+.gallery img {
+  width: 100%;
+  height: auto;
 }
 
 .pagination {
   display: flex;
   justify-content: space-between;
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 /* Responsive CSS for Mobile */
