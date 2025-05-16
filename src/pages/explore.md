@@ -12,4 +12,5 @@ eleventyExcludeFromCollections: true
 - [Connect](/connect)
 - [Defaults](/defaults)
 - [Now](/now)
+- [Photography](/photography)
 - [Uses](/uses)
