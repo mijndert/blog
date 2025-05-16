@@ -4,15 +4,41 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
 import { DateTime } from "luxon";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
+import { fileURLToPath } from 'url';
+import path from 'path';
+import fs from 'fs';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 export default async function(eleventyConfig) {
 	// this shows dates on posts
   eleventyConfig.addFilter("postDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
   })
+
 	// create a posts collection
 	eleventyConfig.addCollection("posts", (collectionApi) =>
 		collectionApi.getFilteredByGlob("src/posts/*.md")
 	);
+
+	// creates a gallery collection
+	eleventyConfig.addCollection("gallery", () => {
+		const galleryPath = path.resolve(__dirname, "src/img/gallery");
+		try {
+			const files = fs.readdirSync(galleryPath);
+			return files
+				.map((file) => {
+					console.log(`Adding picture to gallery: ${file}`);
+					return {
+						name: file.split(".")[0],
+						src: `/img/gallery/${file}`,
+					};
+				});
+		} catch (error) {
+			console.error(`Error reading gallery directory: ${error.message}`);
+			return [];
+		}
+	});
 
 	// tags configuration
 	eleventyConfig.addCollection("tagsList", function(collectionApi) {
@@ -30,7 +56,7 @@ export default async function(eleventyConfig) {
 	});
 
 	// copy assets
-  eleventyConfig.addPassthroughCopy("src/img");
+  //eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/favicon/");
   eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
