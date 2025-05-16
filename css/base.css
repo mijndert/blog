@@ -162,8 +162,33 @@ blockquote {
   }
 }
 
+.gallery {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.gallery picture {
+  width: 100%; /* 50% for side-by-side */
+  height: auto;
+  object-fit: cover;
+  box-sizing: border-box;
+  margin: .5em 0;
+  /* padding: 5px; */
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
 /* Responsive CSS for Mobile */
-@media (max-width: 375px) {
+@media (max-width: 600px) {
   body {
     max-width: 100%;
     padding: .5em;
