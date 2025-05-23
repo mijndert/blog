@@ -4,12 +4,27 @@
   <subtitle>Lead platform engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-05-16T09:12:41Z</updated>
+  <updated>2025-05-23T15:26:41Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 21</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-21/" />
+    <updated>2025-05-23T15:26:41Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-21/</id>
+    <content type="html">&lt;p&gt;Another week done, another week of learning, of doing, of thinking. Here are the highlights.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I got promoted at work to lead platform engineer. My department if you want to call it that is currectly called DevOps but I want to get rid of that. A platform team would serve the needs of the company much better. It&#39;s not going to be a single large change but rather a series of small changes.&lt;/li&gt;
+&lt;li&gt;Work for some reason has been incredibly productive this week. Maybe I was running on pure adrenaline. In any case, my backlog is just about empty.&lt;/li&gt;
+&lt;li&gt;It&#39;s been a long week with seasonal allergies ruining almost everything. I hope it lets off for a bit while we get some rain over the weekend.&lt;/li&gt;
+&lt;li&gt;We&#39;ve been selling a bunch of stuff online, sort of like a garage sale. We&#39;ve also been giving away a lot of stuff for free. Feels good to have some space in the garage.&lt;/li&gt;
+&lt;li&gt;I&#39;ve been using my plain text TODO file for a while now to manage work and life. But I&#39;ve been thinking of maybe moving it to Obsidian instead. A text file on your desktop doesn&#39;t scale very well obviously. I do like having a single file though. Whenever I try something like Reminders of Things, the tasks just end up in a black hole and I forget about them ever existing.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 20</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-20/" />
