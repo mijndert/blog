@@ -56,7 +56,6 @@ export default async function(eleventyConfig) {
 	});
 
 	// copy assets
-  //eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/favicon/");
   eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
