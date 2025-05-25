@@ -25,6 +25,10 @@ header {
 }
 
 header svg {
+  color: #000000;
+}
+
+header svg {
   width: 32px;
   height: 32px;
   display: block;
@@ -213,6 +217,10 @@ blockquote {
 @media (prefers-color-scheme: dark) {
   html {
     background-color: #232326;
+    color: #F0F0F0;
+  }
+  
+  header svg {
     color: #F0F0F0;
   }
   
