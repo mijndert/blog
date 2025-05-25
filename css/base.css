@@ -208,3 +208,23 @@ blockquote {
     border-left: 2px solid #5B5B66;
   }
 }
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #232326;
+    color: #F0F0F0;
+  }
+  
+  .muted {
+    color: #AAAAB5;
+  }
+  
+  pre {
+    background-color: #2A2A2E;
+  }
+  
+  li.nav-item:not(:last-child)::after {
+    color: #555555;
+  }
+}
