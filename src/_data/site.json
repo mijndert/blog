@@ -3,8 +3,14 @@
   "subtitle": "Lead platform engineer. Runner. Minimalist.",
   "language": "en",
   "url": "https://mijndertstuij.nl",
+  "robots": "/robots.txt",
+  "sitemap": "/sitemap.xml",
   "author": {
     "name": "Mijndert Stuij",
-    "email": "mijndert@mijndertstuij.nl"
+    "email": "mijndert@mijndertstuij.nl",
+    "mastodon": "@mijndert@toot.community"
+  },
+  "intro": {
+    "text": "Hi, I'm a lead platform engineer, runner and minimalist based in The Netherlands. I'm building highly scalable, high performance infrastructure on top of AWS. I try to break free from the silo's of development and operations. I love keeping things simple."
   }
 }

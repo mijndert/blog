@@ -1,14 +1,18 @@
 [
   {
-    "text": "uses",
-    "url": "/uses"
+    "text": "Mijndert Stuij",
+    "url": "/"
   },
   {
-    "text": "photography",
-    "url": "/photography"
+    "text": "Blog",
+    "url": "/blog/"
   },
   {
-    "text": "explore",
-    "url": "/explore"
+    "text": "Uses",
+    "url": "/uses/"
+  },
+  {
+    "text": "Explore",
+    "url": "/explore/"
   }
 ]

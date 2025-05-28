@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <!-- Meta tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="{{ eleventy.generator }}">
-    <meta name="fediverse:creator" content="@mijndert@toot.community">
-    <meta property="og:title" content="{{ title or metaTitle | safe }}{% if title !== 'Mijndert Stuij' %} - Mijndert Stuij{% endif %}" />
-    {% if summary %}<meta property="og:description" content="{{ summary | escape }}" />{% endif %}
-    <title>{{ title or metaTitle | safe }}{% if title !== 'Mijndert Stuij' %} - Mijndert Stuij{% endif %}</title>
-    {% if summary %}<meta name="description" content="{{ summary | escape }}" />{% endif %}
+
+    <!-- SEO -->
+    <title>
+      {{ title or metaTitle | safe }}
+    </title>
+    {% if summary %}
+    <meta name="description" content="{{ summary | escape }}" />
+    <meta property="og:description" content="{{ summary | escape }}" />
+    {% endif %}
     <link rel="canonical" href={{ site.url }}{{ page.url }}>
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#232326" media="(prefers-color-scheme: dark)">
-    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
+
+    <!-- Open Graph -->
+    <meta name="fediverse:creator" content="{{ site.author.mastodon }}" />
+    <meta property="og:title" content="{{ title or metaTitle | safe }}" />
+
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <!-- RSS feed -->
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.feed }}" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/mocha.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="/css/syntax.css" />
+
+    <!-- Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
   </head>
+  
   <body>
+    {% include "partials/nav.html" %}
+
+    {% if page.url == "/" %}
     {% include "partials/header.html" %}
+    {% else %}
+    {% endif %}
+
     <main>
       {% block content %}{% endblock %}
     </main>
+
     {% include "partials/footer.html" %}
   </body>
 </html>

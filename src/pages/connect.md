@@ -1,7 +1,7 @@
 ---
 title: Connect
 layout: layouts/page.html
-summary: How and where to reach/follow me.
+summary: How to connect with me through various channels.
 permalink: /connect/
 ---
 

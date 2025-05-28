@@ -1,6 +1,10 @@
 {% extends "layouts/base.html" %} 
 {% block content %}
 <h1>{{ title }}</h1>
-<p class="muted">{{ page.date | postDate }}</p>
-<article>{{ content | safe }}</article>
+<span class="meta">
+  <p class="muted">
+    {{ page.date | postDate }}
+  </p>
+</span>
+{{ content | safe }}
 {% endblock %}

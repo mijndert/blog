@@ -1,0 +1,14 @@
+---
+title: Explore
+summary: A list of all pages on this website, in alphabetical order.
+layout: layouts/page.html
+permalink: /explore/
+eleventyExcludeFromCollections: true
+---
+
+{% for page in collections.page %}
+<a href="{{ page.url }}">{{ page.data.title }}</a>
+<p class="muted">
+  {{ page.data.summary }}
+</p>
+{% endfor %}

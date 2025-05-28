@@ -1,0 +1,10 @@
+<section class="topics">
+  <h2>Topics</h2>
+  <ul>
+    {%- for tag in collections.tagsList -%}
+    <li>
+      <a href="/topics/{{ tag | slug }}/">{{ tag }}</a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>

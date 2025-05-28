@@ -1,24 +1,21 @@
 {
-  "type": "module",
   "name": "blog",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
   "main": "eleventy.config.js",
   "scripts": {
     "build": "npx eleventy",
-    "start": "npx eleventy --serve",
-    "post": "node newpost.js"
+    "start": "npx eleventy --serve"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mijnder Stuij <mijndert@mijndertstuij.nl>",
   "license": "ISC",
+  "description": "",
+  "type": "module",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-img": "^6.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "eleventy-plugin-embed-everything": "^1.19.0"
-  },
-  "devDependencies": {
-    "@11ty/eleventy-plugin-rss": "^2.0.2"
+    "@11ty/eleventy": "^3.1.0",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
+    "eleventy-plugin-embed-everything": "^1.21.0"
   }
 }

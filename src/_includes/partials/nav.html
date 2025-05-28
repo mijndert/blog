@@ -1,7 +1,9 @@
-<ul class="nav">
-  {% for link in nav %}
-  <li class="nav-item">
-    <a href="{{ link.url }}">{{ link.text }}</a>
-  </li>
-  {% endfor %}
-</ul>
+<nav aria-label="Main navigation">
+  <ul class="nav">
+    {% for link in nav %}
+    <li>
+      <a href="{{ link.url }}" {% if page.url == link.url %}aria-current="page"{% endif %} class="nav-link">{{ link.text }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -1,5 +1,13 @@
-Sitemap: https://mijndertstuij.nl/sitemap.xml
+---
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  permalink: "{{ site.robots }}"
+---
+Sitemap: {{ site.url + site.sitemap }}
 
+User-agent: *
+
+Disallow:
 User-agent: AI2Bot
 User-agent: Ai2Bot-Dolma
 User-agent: aiHitBot

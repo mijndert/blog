@@ -3,22 +3,21 @@ pagination:
   data: collections.tagsList
   size: 1
   alias: tag
-permalink: /tags/{{ tag | slug }}/index.html
+permalink: /topics/{{ tag | slug }}/index.html
 layout: layouts/page.html
 eleventyExcludeFromCollections: true
 ---
 
 <h1>Topics / {{ tag }}</h1>
-<div class="listposts">
+<section class="posts">
+  <ul>
   {% for post in collections.posts | filterByTag(tag) | reverse %}
-  <div class="post">
-    <span class="meta">
+    <li>
       <time class="muted" datetime="{{ post.date | postDate }}">
         {{ post.date | postDate }}
       </time>
-    </span>
-    <a class="title" href="{{ post.url }}">{{ post.data.title }}</a>
-  </div>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
   {%- endfor -%}
+  </ul>
 </div>
-<a href="/blog">All posts</a>

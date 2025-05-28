@@ -1,12 +1,12 @@
-<div class="listposts">
-  {%- for post in collections.posts | reverse -%}
-  <div class="post">
-    <span class="meta">
+<section class="posts">
+  <ul>
+    {%- for post in collections.posts | reverse -%}
+    <li>
       <time class="muted" datetime="{{ post.date | postDate }}">
         {{ post.date | postDate }}
       </time>
-    </span>
-    <a class="title" href="{{ post.url }}">{{ post.data.title }}</a>
-  </div>
-  {%- endfor -%}
-</div>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
