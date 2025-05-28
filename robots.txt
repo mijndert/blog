@@ -1,5 +1,8 @@
 Sitemap: https://mijndertstuij.nl/sitemap.xml
 
+User-agent: *
+
+Disallow:
 User-agent: AI2Bot
 User-agent: Ai2Bot-Dolma
 User-agent: aiHitBot
