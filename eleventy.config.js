@@ -22,7 +22,7 @@ export default async function(eleventyConfig) {
     collectionApi.getAll().forEach(item => {
       if ("tags" in item.data) {
         let tags = item.data.tags;
-        tags.forEach(tag => tagsSet.add(tag));
+        tags.filter(tag => tag !== "page").forEach(tag => tagsSet.add(tag));
       }
     });
     return [...tagsSet].sort();
