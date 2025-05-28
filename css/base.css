@@ -172,7 +172,6 @@ header {
 
 /* Topics */
 section.topics {
-  margin: 0 0 1rem 0;
   border-bottom: var(--border);
   padding-bottom: 4rem;
 }
@@ -183,7 +182,7 @@ section.topics ul {
 
 section.topics li {
   display: inline-block;
-  margin: 0 1rem .5rem 0;
+  margin: 0 1rem .25rem 0;
 }
 
 /* Posts */
@@ -217,7 +216,7 @@ footer {
   }
 
   nav ul {
-    margin: 0 0 4rem 0;
+    margin: .5rem 0 4rem 0;
   }
 }
 
@@ -237,6 +236,6 @@ footer {
   }
 
   nav ul {
-    margin: 0 0 4rem 0;
+    margin: .5rem 0 4rem 0;
   }
 }
