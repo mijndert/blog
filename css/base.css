@@ -215,8 +215,32 @@ footer {
     padding: .5rem;
   }
 
+  .meta {
+    display: block;
+    margin: 0 0 2rem 0;
+  }
+
   nav ul {
-    margin: .5rem 0 4rem 0;
+    margin: .5rem 0 1rem 0;
+    padding-bottom: 1rem;
+  }
+
+  header {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+  }
+
+  section.topics {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+  }
+
+  section.posts.short {
+    padding-top: 0rem;
+  }
+  
+  footer {
+    margin: 1rem 0 1rem 0;
   }
 }
 
@@ -235,7 +259,31 @@ footer {
     border-left: 2px solid rgb(227 218 197/ var(--border-opacity,1);
   }
 
+  .meta {
+    display: block;
+    margin: 0 0 2rem 0;
+  }
+
   nav ul {
-    margin: .5rem 0 4rem 0;
+    margin: .5rem 0 1rem 0;
+    padding-bottom: 1rem;
+  }
+
+  header {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+  }
+
+  section.topics {
+    margin: 0 0 1rem 0;
+    padding-bottom: 1rem;
+  }
+
+  section.posts.short {
+    padding-top: 1rem;
+  }
+
+  footer {
+    margin: 1rem 0 1rem 0;
   }
 }
