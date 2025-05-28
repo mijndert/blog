@@ -215,6 +215,10 @@ footer {
     max-width: 100%;
     padding: .5rem;
   }
+
+  nav ul {
+    margin: 0 0 4rem 0;
+  }
 }
 
 @media (max-width: 600px) {
@@ -230,5 +234,9 @@ footer {
     margin: .5rem 0;
     padding: .5rem;
     border-left: 2px solid rgb(227 218 197/ var(--border-opacity,1);
+  }
+
+  nav ul {
+    margin: 0 0 4rem 0;
   }
 }
