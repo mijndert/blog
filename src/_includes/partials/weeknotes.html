@@ -1,6 +1,6 @@
 <section class="posts">
   <ul>
-    {%- for post in collections.blogposts | reverse -%}
+    {%- for post in collections.weeknotes | reverse -%}
     <li>
       <time class="muted" datetime="{{ post.date | postDate }}">
         {{ post.date | postDate }}

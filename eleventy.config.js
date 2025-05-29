@@ -51,6 +51,9 @@ export default async function(eleventyConfig) {
 		return posts.filter(post => post.data.tags && post.data.tags.includes(tag));
 	});
 
+  // Watch non-template files
+  eleventyConfig.addWatchTarget("./src/_data");
+
   // Embeds plugin
   eleventyConfig.addPlugin(embeds);
 

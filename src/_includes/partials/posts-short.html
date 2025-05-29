@@ -1,7 +1,7 @@
 <section class="posts short">
   <h2>Latest posts</h2>
   <ul>
-    {%- for post in collections.posts | reverse -%}
+    {%- for post in collections.blogposts | reverse -%}
       {%- if loop.index0 < 5 -%}
       <li>
         <time class="muted" datetime="{{ post.date | postDate }}">
