@@ -247,52 +247,67 @@
 
   <url>
     <loc>https://mijndertstuij.nl/</loc>
-    <lastmod>2025-05-29T08:53:00.348Z</lastmod>
+    <lastmod>2025-05-29T12:02:03.957Z</lastmod>
   </url>
 
   <url>
     <loc>https://mijndertstuij.nl/ai/</loc>
-    <lastmod>2025-05-29T08:53:00.348Z</lastmod>
+    <lastmod>2025-05-29T12:02:03.957Z</lastmod>
   </url>
 
   <url>
     <loc>https://mijndertstuij.nl/blog/</loc>
-    <lastmod>2025-05-29T08:53:00.348Z</lastmod>
+    <lastmod>2025-05-29T12:02:03.957Z</lastmod>
   </url>
 
   <url>
     <loc>https://mijndertstuij.nl/blogroll/</loc>
-    <lastmod>2025-05-29T08:53:00.348Z</lastmod>
+    <lastmod>2025-05-29T12:02:03.958Z</lastmod>
   </url>
 
   <url>
     <loc>https://mijndertstuij.nl/colophon/</loc>
-    <lastmod>2025-05-29T08:53:00.348Z</lastmod>
+    <lastmod>2025-05-29T12:02:03.958Z</lastmod>
   </url>
 
   <url>
     <loc>https://mijndertstuij.nl/connect/</loc>
-    <lastmod>2025-05-29T08:53:00.348Z</lastmod>
+    <lastmod>2025-05-29T12:02:03.958Z</lastmod>
   </url>
 
   <url>
     <loc>https://mijndertstuij.nl/defaults/</loc>
-    <lastmod>2025-05-29T08:53:00.348Z</lastmod>
+    <lastmod>2025-05-29T12:02:03.958Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mijndertstuij.nl/feeds/</loc>
+    <lastmod>2025-05-29T12:02:03.958Z</lastmod>
   </url>
 
   <url>
     <loc>https://mijndertstuij.nl/now/</loc>
-    <lastmod>2025-05-29T08:53:00.348Z</lastmod>
+    <lastmod>2025-05-29T12:02:03.958Z</lastmod>
   </url>
 
   <url>
     <loc>https://mijndertstuij.nl/uses/</loc>
-    <lastmod>2025-05-29T08:53:00.348Z</lastmod>
+    <lastmod>2025-05-29T12:02:03.958Z</lastmod>
   </url>
 
   <url>
     <loc>https://mijndertstuij.nl/feed.xml</loc>
-    <lastmod>2025-05-29T08:53:11.416Z</lastmod>
+    <lastmod>2025-05-29T12:02:07.502Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mijndertstuij.nl/posts-feed.xml</loc>
+    <lastmod>2025-05-29T12:02:07.502Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mijndertstuij.nl/weeknotes-feed.xml</loc>
+    <lastmod>2025-05-29T12:02:07.502Z</lastmod>
   </url>
 
 </urlset>
