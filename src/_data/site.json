@@ -5,6 +5,11 @@
   "url": "https://mijndertstuij.nl",
   "robots": "/robots.txt",
   "sitemap": "/sitemap.xml",
+  "feeds": {
+    "all": "/feed.xml",
+    "weeknotes": "/weeknotes-feed.xml",
+    "blogposts": "/posts-feed.xml"
+  },
   "author": {
     "name": "Mijndert Stuij",
     "email": "mijndert@mijndertstuij.nl",

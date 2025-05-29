@@ -32,8 +32,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
 
-    <!-- RSS feed -->
-    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.feed }}" />
+    <!-- RSS feeds -->
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.feeds.all }}" />
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.feeds.weeknotes }}" />
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.feeds.blogposts }}" />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/css/base.css" />
