@@ -4,12 +4,27 @@
   <subtitle>Lead platform engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-05-23T15:26:41Z</updated>
+  <updated>2025-05-30T09:41:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijnder Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 22</title>
+    <link href="https://mijndertstuij.nl/posts/week-notes-22/" />
+    <updated>2025-05-30T09:41:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/week-notes-22/</id>
+    <content type="html">&lt;p&gt;This week hasn&#39;t been very eventful so I&#39;ll just give you an update on everything that&#39;s been changing on my website.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The most obvious thing is the new layout. I sometimes think of a new purpose for the website, or I see something I really like on another website. I also changed the font to a sans-serif one because while I liked the serif one at first, it quickly became stale to me. I think the sans-serif font looks a bit more modern. I also put the navigation at the top to make it more accessible.&lt;/li&gt;
+&lt;li&gt;Because the blog became overwhelmed by week notes I decided to separate them &lt;a href=&quot;https://mijndertstuij.nl/weeknotes/&quot;&gt;into their own page&lt;/a&gt;. Now I have a blog page for general thoughts on technology, running, minimalism and everything in between, and a separate one where I share my week notes. I think this makes a lot more sense.&lt;/li&gt;
+&lt;li&gt;To separate the week notes from the blog posts, I needed to create new 11ty &lt;a href=&quot;https://www.11ty.dev/docs/collections/&quot;&gt;collections&lt;/a&gt; anyway. Doing this also allowed me to create &lt;a href=&quot;https://mijndertstuij.nl/feeds/&quot;&gt;separate RSS feeds&lt;/a&gt;. Now you can subscribe to the blog posts or the week notes separately, depending on what you prefer. The current feed still exists as well and contains both.&lt;/li&gt;
+&lt;li&gt;I rewrote the CSS to use variables which hopefully makes it easier to maintain.&lt;/li&gt;
+&lt;li&gt;A lot of tiny under the hood changes like a rewrite of my eleventy config, restructuring the html, and removing unused code.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 21</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-21/" />
