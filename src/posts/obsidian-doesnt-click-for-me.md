@@ -2,7 +2,7 @@
 title: Obsidian doesn't click for me
 date: 2023-10-12 10:00:00
 summary: I really want to like and use Obsidian, but I'm unable to.
-tags: apps
+tags: productivity
 ---
 
 The idea of a personal wiki has always appealed to me. I tried a few times to incorporate one into my "workflow" if I even have one. I tried all sorts of different tools but the latest one that's been keeping me occupied is [Obsidian](https://obsidian.md/). I really want to like and use Obsidian, but I'm unable to. Let me explain.
