@@ -9,7 +9,11 @@
 
     <!-- SEO -->
     <title>
-      {{ title or metaTitle | safe }}
+      {% if page.url == "/" %}
+        {{ site.title }}
+      {% else %}
+        {{ title }} - {{ site.title }}
+      {% endif %}
     </title>
     {% if summary %}
     <meta name="description" content="{{ summary | escape }}" />
