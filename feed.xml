@@ -4,12 +4,28 @@
   <subtitle>Lead platform engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-05-30T09:41:00Z</updated>
+  <updated>2025-05-30T15:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijnder Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>I got promoted</title>
+    <link href="https://mijndertstuij.nl/posts/i-got-promoted-to-lead/" />
+    <updated>2025-05-30T15:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/i-got-promoted-to-lead/</id>
+    <content type="html">&lt;p&gt;Over the past 17 years I&#39;ve been working in IT, I&#39;ve had the opportunity to work in many different roles and companies. I started out as a systems administrator at a digital agency, working on ColdFusion, MS SQL, Linux and VMware. I then transitioned to a role where I had to work a lot with the Microsoft stack, including Windows Server, IIS, MS SQL and Exchange.&lt;/p&gt;
+&lt;p&gt;My heart is and will always be with Linux and open source though, so of course I ended up working for a managed hosting company where I was able to work with all that. I was also an early adoptor of AWS and introducted it throughout the companies I worked for. Then in 2015 I became an AWS consultant working for a long list of clients, helping them with getting their applications to the cloud.&lt;/p&gt;
+&lt;p&gt;For the past 2 years my title at work was that of Senior DevOps Engineer, which definitly fit the way we were and are working currently. However, as the companies&#39; strategy and needs are shifting, and I was stepping more and more into the lead role for everything infrastructure and cyber security related, I felt it was time to slowly start transitioning to a platform team. Of course this transition will not be an overnight change, but rather one of slow incremental changes over time.&lt;/p&gt;
+&lt;p&gt;Through stepping up and taking on more responsibilities, I was granted the oppportunity to show what I&#39;m capable of. A few weeks ago this all accumulated to a promotion to lead platform engineer.&lt;/p&gt;
+&lt;p&gt;Back in 2022 I was already thinking about how DevOps teams would evolve in the future. I&#39;m a firm believer in the idea that DevOps teams eventually die out in favor of platform teams which serve the needs of the development teams and other stakeholders.&lt;/p&gt;
+&lt;p&gt;A platform team should provide self-service capabilities to the development teams using a combination of proccesses, automations and templates. This allows the development teams to decrease their time to market, and it allows the platform team to focus on the platform itself instead of the development teams&#39; needs. I wrote about this in my post &lt;a href=&quot;https://mijndertstuij.nl/posts/stop-doing-devops-teams/&quot;&gt;Stop doing DevOps teams if you want to scale&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It&#39;s fun to see LinkedIn light up with all kinds of posts from people also warming up to the idea of platform engineering over DevOps. I think this is a great development and I hope to see more companies adopt this approach.&lt;/p&gt;
+&lt;p&gt;In any event, I&#39;m very happy with this promotion and recognition of my work and abilities. I wouldn&#39;t be where I am today without the support of everyone I&#39;ve worked with over the years. There&#39;s been a time where, because of an unscientific test, I was erroneously labeled as someone who&#39;s unable to work in teams, unable to communicate, and somehow not after the best results, totally unable to lead in any capacity.&lt;/p&gt;
+&lt;p&gt;I think I&#39;ve proven them wrong.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Week notes 22</title>
     <link href="https://mijndertstuij.nl/posts/week-notes-22/" />
