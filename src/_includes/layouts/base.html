@@ -25,6 +25,9 @@
     <!-- Open Graph -->
     <meta name="fediverse:creator" content="{{ site.author.mastodon }}" />
     <meta property="og:title" content="{{ title or metaTitle | safe }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}" />
 
     <!-- Theme color -->
     <meta name="theme-color" content="#eee9dc" media="(prefers-color-scheme: light)">
