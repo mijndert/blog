@@ -7,7 +7,7 @@
     "start": "npx eleventy --serve"
   },
   "keywords": [],
-  "author": "Mijnder Stuij <mijndert@mijndertstuij.nl>",
+  "author": "Mijndert Stuij <mijndert@mijndertstuij.nl>",
   "license": "ISC",
   "description": "",
   "type": "module",
