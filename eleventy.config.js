@@ -131,7 +131,6 @@ export default async function(eleventyConfig) {
   // Copy assets
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/favicon/");
-  eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
   eleventyConfig.addPassthroughCopy({ 'src/CNAME': '/CNAME' });
 
   // Set templating engine and input/output directories
