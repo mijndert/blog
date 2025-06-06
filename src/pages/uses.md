@@ -44,5 +44,5 @@ permalink: /uses/
 
 <p class="compact">Synology DS723+</p>
 <p class="compact">Kobo Aura h2O Edition 2</p>
-<p class="compact">Garmin Forerunner 255S</p>
+<p class="compact">Garmin Forerunner 570</p>
 <p class="compact">Steam Deck OLED (1TB)</p>
