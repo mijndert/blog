@@ -4,7 +4,8 @@
   "main": "eleventy.config.js",
   "scripts": {
     "build": "npx eleventy",
-    "start": "npx eleventy --serve"
+    "start": "npx eleventy --serve",
+    "umami": "curl -o src/scripts/script.js https://cloud.umami.is/script.js"
   },
   "keywords": [],
   "author": "Mijndert Stuij <mijndert@mijndertstuij.nl>",
