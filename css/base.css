@@ -7,6 +7,7 @@
   --color-muted: #999;
   --color-blockquote-border: #5B5B66;
   --color-code-bg: #e3e3e34f;
+  --color-aside-bg: #e6e1d2;
 
   /* Borders */
   --border-opacity: 1;
@@ -39,6 +40,7 @@
     --color-muted: #a0a0a0;
     --color-blockquote-border: #7a7a8c;
     --color-code-bg: #2a2a2a4f;
+    --color-aside-bg: #2a2a2e;
     
     --border-opacity: 0.6;
     --border-color: rgb(120 120 120 / var(--border-opacity));
@@ -134,6 +136,25 @@ blockquote {
   padding: 0 var(--spacing-md);
   border-left: 3px solid var(--color-blockquote-border);
   font-style: italic;
+}
+
+/* Asides */
+aside {
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-md) calc(var(--spacing-lg) + var(--spacing-xs));
+  background-color: var(--color-aside-bg);
+  border-left: 4px solid var(--color-blockquote-border);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  position: relative;
+}
+
+aside::before {
+  content: "💡";
+  position: absolute;
+  left: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1em;
 }
 
 /* Lists */
