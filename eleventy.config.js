@@ -12,28 +12,18 @@ export default async function(eleventyConfig) {
   })
 
 	// Create a collection for all posts
-	eleventyConfig.addCollection("posts", (collectionApi) =>
-		collectionApi.getFilteredByGlob("src/posts/*.md")
-	);
+	eleventyConfig.addCollection("posts", (collectionApi) => {
+		return collectionApi.getFilteredByGlob(["src/posts/*.md", "src/weeknotes/*.md"])
+	});
 
   // Create a week notes collection
   eleventyConfig.addCollection("weeknotes", (collectionApi) => {
-  return collectionApi.getFilteredByGlob("src/posts/*.md").filter(item => {
-    return item.data.tags && 
-           Array.isArray(item.data.tags) && 
-           item.data.tags.map(tag => tag.toLowerCase()).includes("week notes");
-    });
+    return collectionApi.getFilteredByGlob("src/weeknotes/*.md")
   });
 
   // Create a collection for all posts except week notes
   eleventyConfig.addCollection("blogposts", (collectionApi) => {
-    return collectionApi.getFilteredByGlob("src/posts/*.md").filter(item => {
-      if (!item.data.tags || !Array.isArray(item.data.tags)) {
-        return true;
-      }
-      const lowerCaseTags = item.data.tags.map(tag => tag.toLowerCase());
-      return !lowerCaseTags.includes("week notes");
-    });
+    return collectionApi.getFilteredByGlob("src/posts/*.md")
   });
 
 	// Create a tags collection
