@@ -5,8 +5,6 @@ summary: A collection of links to interesting blogs I follow.
 permalink: /blogroll/
 ---
 
-I follow people, not corporations. Here's some great people to follow and a link to their RSS feed because RSS is awesome. Want to get added? [Drop me a message](https://fosstodon.org/@mijndert).
-
 - [82MHz](https://82mhz.net)
 - [Keenan](https://gkeenan.co)
 - [acn.lol](https://acn.lol)
