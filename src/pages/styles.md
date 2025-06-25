@@ -20,6 +20,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet digni
 - Item 2
 - Item 3
 
+<aside>This is an aside used for calling out important information.</aside>
+
 ![My messy desk with a bunch of cables and my Kobo e-reader](/img/week-notes-19.jpeg)
 *Image caption.*
 
