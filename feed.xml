@@ -4,12 +4,29 @@
   <subtitle>Lead platform engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-06-26T16:24:00Z</updated>
+  <updated>2025-06-27T15:11:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijnder Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 26</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-26/" />
+    <updated>2025-06-27T15:11:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-26/</id>
+    <content type="html">&lt;p&gt;Week 26 was full of Kubernetes and getting a lot of work done in a very short amount of time. What else happened?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Over the weekend my left ear was completely blocked again. I get that a lot, especially in the summer. On Monday I went to the doctors office where they fixed it, it&#39;s such a good feeling being able to properly hear again.&lt;/li&gt;
+&lt;li&gt;I had to renew our energy contract this week. Weird thing happened where their own system told me to renew at a higher price than what was offered while I was logged out and on the homepage. So I played dumb, signed up for a &amp;quot;new&amp;quot; contract at a lower rate, and low and behold, it worked. Bit scammy, but we&#39;re gonna end up paying a bit less so I don&#39;t really care too much.&lt;/li&gt;
+&lt;li&gt;If I look at our Jira board, I&#39;m kind of amazed at the amount of work I got done this week. Nice to have a productive week like that.&lt;/li&gt;
+&lt;li&gt;Speaking about work, this week has been about Kubernetes a lot. I had some upgrades to do, some low level cgroups and runc issues to debug, some networking things to address. Not complaining, I like the challenge and being able to do some actual engineering. These days I don&#39;t do a lot of that anymore.&lt;/li&gt;
+&lt;li&gt;I wrote about some tips to make &lt;a href=&quot;http://localhost:8080/posts/remote-working-protips/&quot;&gt;remote working&lt;/a&gt; a bit more enjoyable.&lt;/li&gt;
+&lt;li&gt;In terms of gaming, I didn&#39;t have a ton of time to play on the Switch 2 but I did manage to play some Halls of Torment on Steam Deck. What I like about it right now is that it has a HUGE number of achievements to unlock which I&#39;m working on right now.&lt;/li&gt;
+&lt;li&gt;I also installed a thing called &lt;a href=&quot;https://github.com/unknownskl/greenlight&quot;&gt;Greenlight&lt;/a&gt; on my Steam Deck which allows me to stream whatever my Xbox would show to the deck. It was easy to get going and works reasonably well. I wouldn&#39;t use it for super fast action games, but for slower paced ones it&#39;s great.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>Pro tips for remote working</title>
     <link href="https://mijndertstuij.nl/posts/remote-working-protips/" />
