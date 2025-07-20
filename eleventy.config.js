@@ -11,17 +11,12 @@ export default async function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
   })
 
-	// Create a collection for all posts
+	// Create a collection for all posts and future content
 	eleventyConfig.addCollection("posts", (collectionApi) => {
-		return collectionApi.getFilteredByGlob(["src/posts/*.md", "src/weeknotes/*.md"])
+		return collectionApi.getFilteredByGlob(["src/posts/*.md"])
 	});
 
-  // Create a week notes collection
-  eleventyConfig.addCollection("weeknotes", (collectionApi) => {
-    return collectionApi.getFilteredByGlob("src/weeknotes/*.md")
-  });
-
-  // Create a collection for all posts except week notes
+  // Create a collection for all blog posts 
   eleventyConfig.addCollection("blogposts", (collectionApi) => {
     return collectionApi.getFilteredByGlob("src/posts/*.md")
   });
@@ -50,7 +45,7 @@ export default async function(eleventyConfig) {
   // Syntax highlighting
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  // RSS feed for all posts
+  // RSS feed for all posts and future content
   eleventyConfig.addPlugin(feedPlugin, {
 		type: "atom",
 		outputPath: "/feed.xml",
@@ -69,26 +64,7 @@ export default async function(eleventyConfig) {
 		}
 	});
 
-  // RSS feed for week notes
-  eleventyConfig.addPlugin(feedPlugin, {
-    type: "atom",
-    outputPath: "/weeknotes-feed.xml",
-    collection: {
-      name: "weeknotes"
-    },
-    metadata: {
-      language: "en",
-      title: "Mijndert Stuij - Week Notes",
-      subtitle: "Weekly notes and updates",
-      base: "https://mijndertstuij.nl",
-      author: {
-        name: "Mijndert Stuij",
-        email: "mijndert@mijndertstuij.nl",
-      }
-    }
-  });
-
-  // RSS feed for all posts excluding week notes
+  // RSS feed for all blog posts 
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
     outputPath: "/posts-feed.xml",

@@ -21,7 +21,6 @@ permalink: /uses/
 <p class="compact">Apple Notes, Calendar, Mail, Reminders</p>
 <p class="compact">Firefox</p>
 <p class="compact">VS Code</p>
-<p class="compact">Things</p>
 <p class="compact">Ghostty</p>
 <p class="compact">NetNewsWire</p>
 <p class="compact">1Password</p>
