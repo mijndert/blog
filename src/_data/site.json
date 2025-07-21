@@ -7,7 +7,6 @@
   "sitemap": "/sitemap.xml",
   "feeds": {
     "all": "/feed.xml",
-    "weeknotes": "/weeknotes-feed.xml",
     "blogposts": "/posts-feed.xml"
   },
   "author": {

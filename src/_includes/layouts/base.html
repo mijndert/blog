@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
 
     <!-- Meta tags -->
@@ -19,7 +19,8 @@
     <meta name="description" content="{{ summary | escape }}" />
     <meta property="og:description" content="{{ summary | escape }}" />
     {% endif %}
-    <link rel="canonical" href={{ site.url }}{{ page.url }}>
+    <meta name="author" content="{{ site.author.name }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph -->
@@ -41,7 +42,6 @@
 
     <!-- RSS feeds -->
     <link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.feeds.all }}" />
-    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.feeds.weeknotes }}" />
     <link rel="alternate" type="application/rss+xml" href="{{ site.url }}{{ site.feeds.blogposts }}" />
 
     <!-- Stylesheets -->
@@ -49,9 +49,11 @@
     <link rel="stylesheet" href="/css/syntax.css" />
 
     <!-- Font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"></noscript>
 
     <!-- Tracking -->
     <script defer src="/scripts/script.js" data-website-id="c397b0aa-75bd-473a-bfb2-1beb45cd46d8"></script>
