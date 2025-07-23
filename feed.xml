@@ -4,12 +4,29 @@
   <subtitle>Lead platform engineer. Runner. Minimalist.</subtitle>
   <link href="https://mijndertstuij.nl/feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-06-26T16:24:00Z</updated>
+  <updated>2025-06-27T15:11:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijnder Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Week notes 26</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-26/" />
+    <updated>2025-06-27T15:11:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-26/</id>
+    <content type="html">&lt;p&gt;Week 26 was full of Kubernetes and getting a lot of work done in a very short amount of time. What else happened?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Over the weekend my left ear was completely blocked again. I get that a lot, especially in the summer. On Monday I went to the doctors office where they fixed it, it&#39;s such a good feeling being able to properly hear again.&lt;/li&gt;
+&lt;li&gt;I had to renew our energy contract this week. Weird thing happened where their own system told me to renew at a higher price than what was offered while I was logged out and on the homepage. So I played dumb, signed up for a &amp;quot;new&amp;quot; contract at a lower rate, and low and behold, it worked. Bit scammy, but we&#39;re gonna end up paying a bit less so I don&#39;t really care too much.&lt;/li&gt;
+&lt;li&gt;If I look at our Jira board, I&#39;m kind of amazed at the amount of work I got done this week. Nice to have a productive week like that.&lt;/li&gt;
+&lt;li&gt;Speaking about work, this week has been about Kubernetes a lot. I had some upgrades to do, some low level cgroups and runc issues to debug, some networking things to address. Not complaining, I like the challenge and being able to do some actual engineering. These days I don&#39;t do a lot of that anymore.&lt;/li&gt;
+&lt;li&gt;I wrote about some tips to make &lt;a href=&quot;http://localhost:8080/posts/remote-working-protips/&quot;&gt;remote working&lt;/a&gt; a bit more enjoyable.&lt;/li&gt;
+&lt;li&gt;In terms of gaming, I didn&#39;t have a ton of time to play on the Switch 2 but I did manage to play some Halls of Torment on Steam Deck. What I like about it right now is that it has a HUGE number of achievements to unlock which I&#39;m working on right now.&lt;/li&gt;
+&lt;li&gt;I also installed a thing called &lt;a href=&quot;https://github.com/unknownskl/greenlight&quot;&gt;Greenlight&lt;/a&gt; on my Steam Deck which allows me to stream whatever my Xbox would show to the deck. It was easy to get going and works reasonably well. I wouldn&#39;t use it for super fast action games, but for slower paced ones it&#39;s great.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>Pro tips for remote working</title>
     <link href="https://mijndertstuij.nl/posts/remote-working-protips/" />
@@ -34,6 +51,23 @@
 </content>
   </entry>
   <entry>
+    <title>Week notes 25</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-25/" />
+    <updated>2025-06-20T11:05:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-25/</id>
+    <content type="html">&lt;p&gt;Yesterday on Mastodon I said that the week notes were cancelled because of people being really weird. But I thought about it a bit more and decided to just keep going anyway. I like writing them, even just for myself (not sure who&#39;s reading them anyway), and they make me reflect on the week which I think is very valuable.&lt;/p&gt;
+&lt;p&gt;Here we go again.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Monday and Tuesday I was out sick with the flu. The allergies are still hitting hard this year which undermines my immune system. Luckily I have new medication that helps a lot better than the previous ones.&lt;/li&gt;
+&lt;li&gt;Wednesday my wife had to get her immonutherapy treatment again so I took a day off to drive her to and from the hospital. It&#39;s always a long and emotionally draining day, but we got through. The next one is 6 months away.&lt;/li&gt;
+&lt;li&gt;We&#39;ve been playing a ton of Mario Kart World on the Switch 2 this week. We&#39;re really enjoying it and it&#39;s a great way to unwind.&lt;/li&gt;
+&lt;li&gt;The weather has been excellent this week and will continue to be so for the forseeable future.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mijndertstuij.nl/posts/smartphone-resentment/&quot;&gt;My phone use&lt;/a&gt; is down by 40% week over week. I try to look at screen time a little more critically to see where I can improve even further. There&#39;s a lot of wasted time in there, time that often goes unnoticed. My phone needs to be a tool, and nothing more.&lt;/li&gt;
+&lt;li&gt;After buying myself a &lt;a href=&quot;https://mijndertstuij.nl/posts/garmin-forerunner-570/&quot;&gt;Garmin Forerunner 570&lt;/a&gt; and a Switch 2 I&#39;m in the process of selling my old Garmin 255 and my original Switch. The 255 is already sold at a very good price, the Switch is still available. I&#39;m taking my time, not in a rush to sell at all.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
     <title>Smartphone resentment</title>
     <link href="https://mijndertstuij.nl/posts/smartphone-resentment/" />
     <updated>2025-06-18T19:00:00Z</updated>
@@ -44,6 +78,18 @@
 &lt;p&gt;My phone became a source of frustration and anger.&lt;/p&gt;
 &lt;p&gt;This might be a phase, or a symptom of something else entirely, but I can&#39;t complain while it lasts. I hope it lasts forever though, because I feel like I&#39;m finally free from the incessant need to check my phone.&lt;/p&gt;
 &lt;p&gt;If this holds, my phone will become a tool rather than a distraction. I will be less... available to people though. But I&#39;m sure it will all be alright. I will still be reachable, but I won&#39;t be checking my phone all the time.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 24</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-24/" />
+    <updated>2025-06-13T14:10:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-24/</id>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;After a good fews days with rain, the weather turned and we now have a lot of sunshine and heat. But with that, the seasonal allergies are making a huge comeback. I&#39;ve been feeling terrible again and I&#39;m so ready for the pollen to go away so I can start running again as well.&lt;/li&gt;
+&lt;li&gt;I drove to Almelo, about a 2h15m drive, on Thursday to visit our warehouse where we have this giant robot for order picking. It&#39;s an amazingly large place and fascinating to see how that side of the business works.&lt;/li&gt;
+&lt;li&gt;The biggest news of the week for me personally is that I ordered a Nintendo Switch 2 with Mario Kart World. I was hesitant at first, but then I got to try one and I was sold immediately. It&#39;s currently making its way across the border into The Netherlands and I hope it will arrive tomorrow, but Monday is more likely. I&#39;m sure I&#39;ll share some more thoughts later on.&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
   <entry>
@@ -69,6 +115,22 @@
 &lt;p&gt;Mario Kart is mostly on this list because it&#39;s the perfect game to play with friends. The feeling of winning a tight race against a friend is unbeatable. I don&#39;t think I need to explain any further, everyone knows Mario Kart. It&#39;s great.&lt;/p&gt;
 &lt;h2&gt;Smash Bros.&lt;/h2&gt;
 &lt;p&gt;Smash Bros., like Mario Kart, is also an amazing game to play with friends on the couch or online. It gets chaotic very quickly, is difficult to master, but it&#39;s always such a good time. I can&#39;t say I&#39;m particularly good at it, but does it matter?&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 23</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-23/" />
+    <updated>2025-06-06T10:14:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-23/</id>
+    <content type="html">&lt;p&gt;It&#39;s June already?! Times flies. Feels like last week that we were celebrating New Year&#39;s.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I received my new Garmin Forerunner 570 which I wrote my first impressions of &lt;a href=&quot;https://mijndertstuij.nl/posts/garmin-forerunner-570/&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I also wrote about my phone number being &lt;a href=&quot;https://mijndertstuij.nl/posts/my-phone-number-is-poisoned/&quot;&gt;poisoned&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;On Thursday I went to the office for a team day. Always a good time seeing everyone again. We spoke a lot about AI, automated testing and tech debt.&lt;/li&gt;
+&lt;li&gt;I made some minor changes to the website like adding a new favicon and updating some content here and there.&lt;/li&gt;
+&lt;li&gt;My car, a 2019 Ford Focus ST-line, had to go in for maintenance. Luckily nothing major came up, just an oil change and a new air filter so the costs were reasonable.&lt;/li&gt;
+&lt;li&gt;The Nintendo Switch 2 was released! I don&#39;t have one yet, I&#39;m pretty sure I will at some point since my daughter loves playing Mario Kart on the OG Switch. I just don&#39;t see a reason to upgrade yet as there&#39;s not a ton of new games that take advantage of the new hardware.&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
   <entry>
@@ -129,6 +191,129 @@
 </content>
   </entry>
   <entry>
+    <title>Week notes 22</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-22/" />
+    <updated>2025-05-30T09:41:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-22/</id>
+    <content type="html">&lt;p&gt;This week hasn&#39;t been very eventful so I&#39;ll just give you an update on everything that&#39;s been changing on my website.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The most obvious thing is the new layout. I sometimes think of a new purpose for the website, or I see something I really like on another website. I also changed the font to a sans-serif one because while I liked the serif one at first, it quickly became stale to me. I think the sans-serif font looks a bit more modern. I also put the navigation at the top to make it more accessible.&lt;/li&gt;
+&lt;li&gt;Because the blog became overwhelmed by week notes I decided to separate them &lt;a href=&quot;https://mijndertstuij.nl/weeknotes/&quot;&gt;into their own page&lt;/a&gt;. Now I have a blog page for general thoughts on technology, running, minimalism and everything in between, and a separate one where I share my week notes. I think this makes a lot more sense.&lt;/li&gt;
+&lt;li&gt;To separate the week notes from the blog posts, I needed to create new 11ty &lt;a href=&quot;https://www.11ty.dev/docs/collections/&quot;&gt;collections&lt;/a&gt; anyway. Doing this also allowed me to create &lt;a href=&quot;https://mijndertstuij.nl/feeds/&quot;&gt;separate RSS feeds&lt;/a&gt;. Now you can subscribe to the blog posts or the week notes separately, depending on what you prefer. The current feed still exists as well and contains both.&lt;/li&gt;
+&lt;li&gt;I rewrote the CSS to use variables which hopefully makes it easier to maintain.&lt;/li&gt;
+&lt;li&gt;A lot of tiny under the hood changes like a rewrite of my eleventy config, restructuring the html, and removing unused code.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 21</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-21/" />
+    <updated>2025-05-23T15:26:41Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-21/</id>
+    <content type="html">&lt;p&gt;Another week done, another week of learning, of doing, of thinking. Here are the highlights.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I got promoted at work to lead platform engineer. My department if you want to call it that is currectly called DevOps but I want to get rid of that. A platform team would serve the needs of the company much better. It&#39;s not going to be a single large change but rather a series of small changes.&lt;/li&gt;
+&lt;li&gt;Work for some reason has been incredibly productive this week. Maybe I was running on pure adrenaline. In any case, my backlog is just about empty.&lt;/li&gt;
+&lt;li&gt;It&#39;s been a long week with seasonal allergies ruining almost everything. I hope it lets off for a bit while we get some rain over the weekend.&lt;/li&gt;
+&lt;li&gt;We&#39;ve been selling a bunch of stuff online, sort of like a garage sale. We&#39;ve also been giving away a lot of stuff for free. Feels good to have some space in the garage.&lt;/li&gt;
+&lt;li&gt;I&#39;ve been using my plain text TODO file for a while now to manage work and life. But I&#39;ve been thinking of maybe moving it to Obsidian instead. A text file on your desktop doesn&#39;t scale very well obviously. I do like having a single file though. Whenever I try something like Reminders of Things, the tasks just end up in a black hole and I forget about them ever existing.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 20</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-20/" />
+    <updated>2025-05-16T09:12:41Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-20/</id>
+    <content type="html">&lt;p&gt;Week 20 is almost done! A round number, I like round numbers.&lt;/p&gt;
+&lt;p&gt;It&#39;s been a busy week again, with not much time to do anything besides work and puppy... things.&lt;/p&gt;
+&lt;p&gt;I did get around to adding a &lt;a href=&quot;https://mijndertstuij.nl/photography&quot;&gt;photography&lt;/a&gt; section to the site, which is something I&#39;ve been meaning to do for a while. It&#39;s definitely a work in progress as I&#39;m still not entirely sure what to do with the layout. And the photos aren&#39;t individual posts so I can&#39;t generate an RSS feed for them. I might look into fixing that at some point. At this point I have no clue what an elegant solution would be within the relative contraints of Eleventy.&lt;/p&gt;
+&lt;p&gt;Currently the photography section shows a bunch of photos from years past. Of course I fully intend to add new photos as I&#39;ve taken my RX100 out of storage and I&#39;m currently using it more and more.&lt;/p&gt;
+&lt;p&gt;The main point of this new page is to have it fully under my control and available on my own domain, not on someone else&#39;s platform.&lt;/p&gt;
+&lt;p&gt;Enough about that, though. This week I&#39;ve also been doing some running which was really nice. But otherwise this week has been thwarted by seasonal allergies. I&#39;m ready for spring to be over please.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 19</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-19/" />
+    <updated>2025-05-09T16:14:55Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-19/</id>
+    <content type="html">&lt;p&gt;It&#39;s Friday again! Time to look back at the week.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Our daughter is back to school after 2 weeks off. It was really nice having her around more, but it was also quite difficult to jugggle work and family responsibilities.&lt;/li&gt;
+&lt;li&gt;Sam, our Corgi puppy, has been doing really well since the school break is over. It&#39;s a bit more quiet in the house, so he can get more rest which leds to better behavior all around. We&#39;re also focussing more on training him now that we have more time and he&#39;s doing really well. The biting has also decreased by a lot. A relief for us all.&lt;/li&gt;
+&lt;li&gt;I took some time to finally take my Sony RX100 Mark IV out of storage. It&#39;s such a nice little camera with really great glass, a nice sensor and a ton of manual control. I&#39;m taking it to more and more places now and I&#39;m trying to figure out a bit of a worklow. I think I&#39;ll just stick to shooting jpeg since I don&#39;t have any fancy requirements. I can quite easily transer the photos from the camera to my phone using the Imaging Edge app. Then I do some quick edits in the Photos app.&lt;/li&gt;
+&lt;li&gt;Once I get the hang of it again, I hope to make a page where I can showcase some of my photos right here on this website. I&#39;ll see what I can do with the design and overall layout.&lt;/li&gt;
+&lt;li&gt;All this experimentation led to a messy desk, something I absolutely despise most times but this week it didn&#39;t really bother me.&lt;/li&gt;
+&lt;li&gt;I&#39;ve been reading way more this week, something which seems to help well with sleep quality.&lt;/li&gt;
+&lt;li&gt;I noticed when I share a post on Mastodon, it doesn&#39;t show an image or the summary of the post. I need to set aside some time to make it a bit more presentable. Coming up soon!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://mijndertstuij.nl/img/y25S5niDIh-300.webp 300w, https://mijndertstuij.nl/img/y25S5niDIh-500.webp 500w, https://mijndertstuij.nl/img/y25S5niDIh-800.webp 800w&quot; sizes=&quot;90vw&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://mijndertstuij.nl/img/y25S5niDIh-300.jpeg&quot; alt=&quot;My messy desk with a bunch of cables and my Kobo e-reader&quot; width=&quot;800&quot; height=&quot;533&quot; srcset=&quot;https://mijndertstuij.nl/img/y25S5niDIh-300.jpeg 300w, https://mijndertstuij.nl/img/y25S5niDIh-500.jpeg 500w, https://mijndertstuij.nl/img/y25S5niDIh-800.jpeg 800w&quot; sizes=&quot;90vw&quot;&gt;&lt;/picture&gt;
+&lt;em&gt;This messy desk is pretty emblematic for the past week.&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 18</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-18/" />
+    <updated>2025-05-06T13:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-18/</id>
+    <content type="html">&lt;p&gt;I&#39;m again way too late in posting these week notes. I really think I need to rethink my schedule and system here. It&#39;s been crazy busy with the puppy and work, and I don&#39;t have a lot of time left in the day to sit down and write.&lt;/p&gt;
+&lt;p&gt;In any case, here&#39;s a summary of the last week:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sam is slowly turning into a land shark with a lot of biting at our heels and pants. It&#39;s definitely a rough phase, and something that makes you doubt your decision to get a puppy. But with some  really great help we&#39;re slowly working through it and learning his language more.&lt;/li&gt;
+&lt;li&gt;We had someone come over for some maintenance on our electric heat pump. It was a bit of a hassle to get a skilled technician to come over, but it seems we&#39;ve struck gold with this one. He was really knowledgeable and friendly, and he even fixed a small thing on our solar inverter as well.&lt;/li&gt;
+&lt;li&gt;Together with my brother in law we made a really nice closet made out of kitchen cabinets from IKEA to go around our washing machine and dryer. The result is really nice and makes the space feel a lot more organized.&lt;/li&gt;
+&lt;li&gt;On Wednesday I took the afternoon off to go to the forest with my family including Sam. Of course he passed out halfway through the walk and we had to carry him back. With his smol legs.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 17</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-17/" />
+    <updated>2025-04-25T13:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-17/</id>
+    <content type="html">&lt;p&gt;Bit of a short week because I posted the previous notes a little later than usual. Still have a couple of things to share.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sam&#39;s been growing really quickly and he&#39;s been making this house his home. He&#39;s really used to us and the routine right now. That&#39;s not to say everything has been easy; the shark phase and the witching hours are something to behold. But outside of that he&#39;s a really sweet, chill dog to have around.&lt;/li&gt;
+&lt;li&gt;I haven&#39;t been feeling very well this week, both physically and mentally. The combination of work, the new puppy, and other general life stuff is all quite overwhelming. I&#39;ve been trying to manage my time and energy and make sure I also keep doing stuff for myself. I haven&#39;t gone running since Sam&#39;s here for example, and I can really feel that. Hope I can get back to a bit of a routine once the dust has settled.&lt;/li&gt;
+&lt;li&gt;I&#39;d like to find some time soon to set up this &lt;a href=&quot;https://github.com/arpanghosh8453/garmin-grafana&quot;&gt;Garmin Grafana dashboard&lt;/a&gt;. Looks cool, not sure what the value will be but I like the idea of having all this data in a place that I control.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://doom.bethesda.net/en-EU/the-dark-ages&quot;&gt;Doom The Dark Ages&lt;/a&gt; is releasing soon and I&#39;m obsessed. I never buy games at full price anymore, so I&#39;ll hold off on buying it until it gets a discount. In preperation I&#39;ve downloaded Doom 2016 onto my Steam Deck. It&#39;s so cool playing that game on a portable machine. I get an easy 60fps at medium settings.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 16</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-16/" />
+    <updated>2025-04-21T13:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-16/</id>
+    <content type="html">&lt;p&gt;Excuse me while I publish these weeks notes a little later than usual this time around. I&#39;ve been busy gushing over Sam our new Corgi puppy. He&#39;s been an absolute joy to have around – he listens very well, is playful, and has a ton of personality.&lt;/p&gt;
+&lt;p&gt;Some other things that happened this week:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Last week on Sunday we went to see Frozen the musical. It was an amazing experience with a great cast, stunning visuals and an incredible orchestra. Highly recommended!&lt;/li&gt;
+&lt;li&gt;We hired a puppy trainer to help with Sam and we met her for the first time this week. She gave us some great tips for the first few days. Next week we&#39;ll start proper training.&lt;/li&gt;
+&lt;li&gt;On Wednesday I went to the AWS Summit in Amsterdam. When you&#39;ve been working with AWS for 17 years it&#39;s kind of a tradition to go. Always nice to see familiar faces, meet new people, talk to some vendors and attend a session or two. Because AWS increases the sponsor fees the number of vendors was a lot lower than previous years, and also the food was quite a bit worse. But it was still a nice change of scenery from the usual work week.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here&#39;s a photo of Sam when he just arrived at our home.&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://mijndertstuij.nl/img/Lx8x8Okzks-300.webp 300w, https://mijndertstuij.nl/img/Lx8x8Okzks-500.webp 500w, https://mijndertstuij.nl/img/Lx8x8Okzks-800.webp 800w&quot; sizes=&quot;90vw&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://mijndertstuij.nl/img/Lx8x8Okzks-300.jpeg&quot; alt=&quot;Sam our Corgi puppy at 8 weeks old&quot; width=&quot;800&quot; height=&quot;600&quot; srcset=&quot;https://mijndertstuij.nl/img/Lx8x8Okzks-300.jpeg 300w, https://mijndertstuij.nl/img/Lx8x8Okzks-500.jpeg 500w, https://mijndertstuij.nl/img/Lx8x8Okzks-800.jpeg 800w&quot; sizes=&quot;90vw&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 15</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-15/" />
+    <updated>2025-04-11T15:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-15/</id>
+    <content type="html">&lt;p&gt;Another week has passed and it&#39;s time to share some notes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We went to see our Corgi puppy again this week. He&#39;s growing really quickly and he seems to really like cuddling. We&#39;re going to pick him up next week.&lt;/li&gt;
+&lt;li&gt;We had people come to install a new garage door. Quite an expensive and big project but they really delivered. We now have a normal door to use to get in and out of the garage. The goal is to use the garage more once the puppy is here so that should really help.&lt;/li&gt;
+&lt;li&gt;We bought all the stuff needed for a puppy like a bench, toys, food, a leash and much more. Really looking forward to having him around!&lt;/li&gt;
+&lt;li&gt;My wife&#39;s company car was picked up today so we&#39;re now a one car family. We bought a 2019 Ford Focus 2 years ago and it wasn&#39;t really used much, but now that will finally change. It&#39;s a great car to drive after all.&lt;/li&gt;
+&lt;li&gt;This weekend we&#39;re going to see Frozen the musical. My wife really wants to go but because of her disease it&#39;s quite the challenge. I hope she gets to enjoy it and that it doesn&#39;t take too much out of her.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That&#39;s it for now! Again, don&#39;t hesitate to &lt;a href=&quot;https://mijndertstuij.nl/connect/&quot;&gt;reach out&lt;/a&gt; if you have anything to say or share.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>Silence as a tactic</title>
     <link href="https://mijndertstuij.nl/posts/silence-as-a-tactic/" />
     <updated>2025-04-08T10:00:00Z</updated>
@@ -140,6 +325,41 @@
 &lt;p&gt;The best advice I ever got was from my manager at a previous employer. He told me exactly what I just explained and how it affects my bargaining position. He told me to just state my case and wait, let the awkwardness wash over the other party and sit there. You&#39;ve just stated what you want and now it&#39;s up to the other party to come up with an answer.&lt;/p&gt;
 &lt;p&gt;Silence is a tactic that can be used to your advantage. It puts some pressure on the other party to respond and it gives you time to think about your next move. It also shows some confidence and assertiveness. It shows that you&#39;ve thought this through and that you&#39;re not afraid to ask for what you want or need.&lt;/p&gt;
 &lt;p&gt;More often than not, this will only garner respect from the other party.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 14</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-14/" />
+    <updated>2025-04-04T15:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-14/</id>
+    <content type="html">&lt;p&gt;Week 14 was a bit of a boring one. Luckily we have a race weekend coming up (in Japan this time, white RBR woo!), and we&#39;re gonna see our corgi puppy again.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This past Sunday I participated in the local 5k. Despite the wind, it was a pretty good race. My legs felt really good througout and I could really go for it in second half. Gives me some confidence for the next race that&#39;s coming up soon.&lt;/li&gt;
+&lt;li&gt;On Monday and Tuesday I expierenced some pain and cramps in my right leg which I felt during my runs. I think it was just a fluke, it&#39;s all solved now anyway.&lt;/li&gt;
+&lt;li&gt;I went to the office on Wednesday. Again I had to go the long way round (by train) because of issues near Rotterdam, but at least the weather was enjoyable.&lt;/li&gt;
+&lt;li&gt;I discovered and have been enjoying &lt;a href=&quot;https://open.spotify.com/artist/1nhSLEYdoBHG6cJ8NDwoF1&quot;&gt;Fickle Friends&lt;/a&gt; on Spotify.&lt;/li&gt;
+&lt;li&gt;The Nintendo Switch 2 was announcend. I don&#39;t think I&#39;m gonna buy it considering the price and how much I play games these days. Maybe I&#39;ll get one in a few years.&lt;/li&gt;
+&lt;li&gt;I just wishlisted &lt;a href=&quot;https://store.steampowered.com/app/3314190/Oh_No_UFO/&quot;&gt;Oh No! UFO!&lt;/a&gt; on Steam. It&#39;s an indie game where you play as a tiny adorable UFO and you get to cause all kinds of chaos. Can&#39;t wait to play this on Steam Deck.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 13</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-13/" />
+    <updated>2025-03-28T15:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-13/</id>
+    <content type="html">&lt;p&gt;I keep saying this but, what a week! Not in terms of any super exciting new developments or anything, it&#39;s just busy at work and at home. Anyway, let&#39;s get into this week&#39;s notes because I have a lot to share this time around.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A few days ago I posted a free startup idea on Mastodon: vibe coding keyboards (it&#39;s a keyboard with only a tab key). People seemed to resonate with it so I think there&#39;s a business opportunity there. Have at it.&lt;/li&gt;
+&lt;li&gt;On Wednesday I picked up my bib for a local running event on Sunday. I&#39;m just gonna soak up the atmosphere and enjoy the event, I don&#39;t have any goals in mind.&lt;/li&gt;
+&lt;li&gt;This week I posted about &lt;a href=&quot;https://mijndertstuij.nl/posts/reset-my-inboxes/&quot;&gt;needing to reset my inboxes&lt;/a&gt;. Work, life, everything has been pretty overwhelming lately and a constant barrage of notifications and information isn&#39;t helping. I&#39;m already much happier with reducing the amount of inboxes and therefore noise.&lt;/li&gt;
+&lt;li&gt;This tiny website is now &lt;a href=&quot;https://www.11ty.dev/authors/mijndert/&quot;&gt;mentioned on 11ty.dev&lt;/a&gt;! You&#39;ll hopefully see it pop up on the 11ty leaderboards soon.&lt;/li&gt;
+&lt;li&gt;I&#39;ve been working on my tan quite a bit this week. The weather has been absolutely gorgeous so I did a bunch of running. I&#39;m happy with my pace at the moment and it can only get better from here as I&#39;m also doing some strength training on the days where I don&#39;t go running.&lt;/li&gt;
+&lt;li&gt;Another thing that happened this week: the internet was up in arms about something! Garmin is adding a subscription service and it&#39;s completely optional so far. I&#39;ve seen people selling off their Garmin watch in response and I don&#39;t think that&#39;s the right move. They already have your money, the service still works. Let&#39;s just wait and see what Garmin will do next before doing anything drastic. It will however likely impact my decision to buy another Garmin watch in the future.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://store.steampowered.com/app/2218750/Halls_of_Torment/&quot;&gt;Halls of Torment&lt;/a&gt; remains an incredible game. Having an absolute blast over here on my Steam Deck. Buy it if you haven&#39;t already.&lt;/li&gt;
+&lt;li&gt;What&#39;s even going on at Red Bull Racing anymore? I&#39;m really happy to see Yuki finally getting the seat, but I&#39;m also really scared for his career. That car is obviously not great to drive for anyone other than Max Verstappen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And that&#39;s it for this week! In the meantime, if you have anything to say, anything to share, any question, please &lt;a href=&quot;https://mijndertstuij.nl/connect/&quot;&gt;feel free to reach out&lt;/a&gt;. I love getting emails from random people around the world.&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -158,6 +378,71 @@
 </content>
   </entry>
   <entry>
+    <title>Week notes 12</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-12/" />
+    <updated>2025-03-21T13:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-12/</id>
+    <content type="html">&lt;p&gt;What a week, lots has happened.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It&#39;s been a really stressful week at work. Safe to say I need a quiet weekend to recover.&lt;/li&gt;
+&lt;li&gt;Before the Steam spring sale ended I made sure to pick up &lt;a href=&quot;https://store.steampowered.com/app/2218750/Halls_of_Torment/&quot;&gt;Halls of Torment&lt;/a&gt; for 4 euro&#39;s. It&#39;s kind of like a mix between oldskool Diablo and Vampire Survivors. Numbers pop up out of enemies and it has a whopping 500 achievements. Highly recommended.&lt;/li&gt;
+&lt;li&gt;The F1 sesaon is underway! Last Sunday I woke up at 5am to watch the Australian GP and it was pure chaos because of the rain. This weekend the Chinese GP is on, I haven&#39;t seen anything yet because of the time difference and work but I&#39;ll catch up later. It&#39;s gonna be a banger of a season!&lt;/li&gt;
+&lt;li&gt;Last Tuesday we finally met our Corgi puppy for the first time. We have to wait another 4 weeks now before he can come live with us. His name will be Sam and we&#39;re all very excited to welcome him into the family!&lt;/li&gt;
+&lt;li&gt;One week left until the 5k event in my town. Due to work and other responsibilities I&#39;m still not running and working out as much as I would like, but the times I have been running have been very promising. Even after this long hiatus I can still run a 27 minute 5k no problem. Really looking forward to the event and on to many more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&#39;m gonna enjoy the sunny weather, F1 and some more Halls of Torment. See ya next week&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 11</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-11/" />
+    <updated>2025-03-14T13:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-11/</id>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;After many many months of noise coming from our eletric heat pump, I can safely say it&#39;s fixed! I gave the engineer who fixed it a nice bottle of whiskey that&#39;s how happy we are. We can finally sleep at night without turning the heat off.&lt;/li&gt;
+&lt;li&gt;The new F1 season is underway with practice sessions in Australia already done. It&#39;s going to be an absolete banger of a season! Hamilton in a Ferrari, Kimi in the Mercedes, McLaren in the mix from the start, some other promising rookies in there. No clue how it&#39;s going to pan out and that excites me.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://store.steampowered.com/&quot;&gt;Steam Spring Sale&lt;/a&gt; is here and I finally bought &lt;a href=&quot;https://store.steampowered.com/app/646570/Slay_the_Spire/&quot;&gt;Slay The Spire&lt;/a&gt; to play on my Steam Deck. Everyone kept saying it&#39;s a very addictive game and they... weren&#39;t wrong. I think I&#39;ll stick with this game for a good while.&lt;/li&gt;
+&lt;li&gt;This morning I started running again, I feel like my body and mind are again in a place where I feel like I can do it. Of course I didn&#39;t take it easy because I wanted to benchmark myself a little bit to see where my limit is at currently. I wasn&#39;t disappointed at all, I still have a pretty good base to work off of. Just need to put some kilometers in over the coming weeks.&lt;/li&gt;
+&lt;li&gt;I&#39;ve signed up for a local 5k on the 30th of March to make sure I keep at it and have a bit of a goal to work towards. I don&#39;t have any specific finishing time in mind, I&#39;m just gonna enjoy this one and use it to get back into the rythm.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That&#39;s about it for this week! Sunday I&#39;m going out for dinner with a friend and next Tuesday we&#39;ll finally meet the Corgi puppies! Can&#39;t wait. See ya then!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 10</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-10/" />
+    <updated>2025-03-07T13:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-10/</id>
+    <content type="html">&lt;p&gt;Quite a few updates to share this week!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The weather has been absolutely amazing these past few days. It&#39;s finally sunny and warm and nature is waking up!&lt;/li&gt;
+&lt;li&gt;We&#39;ve made some good progress on the project to insulate the garage. We finally have a pretty good game plan and we can close on some deals to make it happen.&lt;/li&gt;
+&lt;li&gt;Another thing that&#39;s finally out of the way (I hope, let&#39;s wait another few days) is the trouble we&#39;ve been having with our electric heat pump. When it&#39;s cold outside, it would make this terrible noise that kept us up at night. After many visits from technicians, it seems to be fixed now. And of course the fix was relatively simple, it just took a long while to figure out.&lt;/li&gt;
+&lt;li&gt;I haven&#39;t been running for almost 3 months now. I&#39;ve been very busy with work and due to everything else going on in my life I haven&#39;t been feeling great both physically and mentally. I&#39;m really hoping I feel well enough soon to pick running back up because I have an event coming up in May.&lt;/li&gt;
+&lt;li&gt;I&#39;ve been enjoying &lt;a href=&quot;https://soundcloud.com/fusq&quot;&gt;Fusq&lt;/a&gt; while working this week. I don&#39;t think why but it works really well with my brain.&lt;/li&gt;
+&lt;li&gt;Firefox 136 is released and it has vertical tabs! The design is really well done in my opinion. I would highly recommend you check it out.&lt;/li&gt;
+&lt;li&gt;Tonight we&#39;ll be binge-watching the new season of Drive to Survive on Netflix. And on Saturday I have a poker session planned with some friends.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Happy Friday and enjoy the weather!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 9</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-9/" />
+    <updated>2025-02-28T11:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-9/</id>
+    <content type="html">&lt;p&gt;What a week, huh? It&#39;s been a quick one again, with a lot of work done and a lot of things happening. Here are some highlights.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;After a call with a breeder we are now officially on the list for a Corgi puppy. After years and years of waiting and dreaming it&#39;s finally happening, or so I hope. We&#39;re gonna meet the puppies in about 3 weeks time and we&#39;ll see how that goes.&lt;/li&gt;
+&lt;li&gt;I&#39;m currently re-reading &lt;a href=&quot;http://matthewquirk.com/the-night-agent/&quot;&gt;The Night Agent by Matthew Quirk&lt;/a&gt;. I&#39;ve seen the tv show but honestly the book is better.&lt;/li&gt;
+&lt;li&gt;I also started reading Bill Gates&#39; new memoir &lt;a href=&quot;https://www.gatesnotes.com/meet-bill/source-code&quot;&gt;Source Code&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The 2025 F1 season is underway with 3 days of testing. Of course, nothing can be gleaned from testing, but it&#39;s nice to see the cars out on track again. It&#39;s going to be a tight field with some rookies that are very promising as well.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lastly, I&#39;ll leave you with another song. Blues legend Buddy Guy and one of my favorite bands Switchfoot released a single together called Last Man Standing.&lt;/p&gt;
+&lt;div id=&quot;spotify-track-1ra4PQfZO9AbLTT0V8xu1D&quot; class=&quot;eleventy-plugin-embed-spotify eleventy-plugin-embed-spotify-track&quot;&gt;&lt;iframe style=&quot;border-radius:12px;&quot; title=&quot;Spotify track&quot; src=&quot;https://open.spotify.com/embed/track/1ra4PQfZO9AbLTT0V8xu1D&quot; width=&quot;100%&quot; height=&quot;352&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
+</content>
+  </entry>
+  <entry>
     <title>Practice optimism with a single question</title>
     <link href="https://mijndertstuij.nl/posts/practice-optimism-w-single-question/" />
     <updated>2025-02-26T10:00:00Z</updated>
@@ -170,6 +455,20 @@
 &lt;/blockquote&gt;
 &lt;p&gt;As a family we unintentionally started a bit of a tradition. Every night at dinner we ask each other &amp;quot;what was the most fun thing that happened today?&amp;quot;.&lt;/p&gt;
 &lt;p&gt;A single question that helps us reflect on the day and focus on the positives. Our daughter loves it as well and it&#39;s a great way to get her to talk about her day. It&#39;s also a great way for me to practice optimism. Lastly it really helps with gratitude and storytelling skills – making you think a little harder about what transpired during the day.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 8</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-8/" />
+    <updated>2025-02-21T11:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-8/</id>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;This week I finished reading &lt;a href=&quot;https://www.extrafocusbook.com/&quot;&gt;Extra Focus&lt;/a&gt;. For me personally there wasn&#39;t a ton of new information in there, but it was nice to get some extra validation for all of the things I&#39;ve been experiencing over the years.&lt;/li&gt;
+&lt;li&gt;All of the extra responsibilities I&#39;m given at work are starting to materialize. It&#39;s a busy but very exciting time right now.&lt;/li&gt;
+&lt;li&gt;I&#39;ve been going back to writing notes, todo items and other things on paper in a little notebook. The problem however is that it&#39;s very hard to keep it somewhat organized. I&#39;m currently thinking about how I can best tackle this problem.&lt;/li&gt;
+&lt;li&gt;I&#39;ve been thinking about quantum computers for almost 30 years at this point. This week Microsoft &lt;a href=&quot;https://www.youtube.com/watch?v=wSHmygPQukQ&quot;&gt;announced a new process&lt;/a&gt; for creating a scalable error-corrected quantum chip. Obviously that&#39;s all very exciting. We need quantum computers to build better quantum computers, so in a few years time this innovation will only accelerate exponentially.&lt;/li&gt;
+&lt;li&gt;Through the Welsh Corgi Club here in The Netherlands I enquired about getting a Corgi puppy. We&#39;ve been dreaming about this for almost 8 years and we&#39;re finally in a position to make it happen.&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
   <entry>
@@ -186,6 +485,68 @@
 </content>
   </entry>
   <entry>
+    <title>Week notes 7</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-7/" />
+    <updated>2025-02-14T19:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-7/</id>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;We went on a 5 day trip to a place with lots of playgrounds and a swimming pool for our daughter. Disconnecting from work for a bit was sorely needed for my brain to recover from the insane hours I&#39;ve been putting in lately. I wouldn&#39;t mind to extend by another week or two.&lt;/li&gt;
+&lt;li&gt;I&#39;m 4 hours into playing &lt;a href=&quot;https://www.cultofthelamb.com/&quot;&gt;Cult of the Lamb&lt;/a&gt; on Steam Deck. It&#39;s Stardew Valley but with satanic rituals. From the trailers it looked pretty simple, but it actually has a ton of depth.&lt;/li&gt;
+&lt;li&gt;I started reading &lt;a href=&quot;https://www.extrafocusbook.com/&quot;&gt;Extra Focus&lt;/a&gt; by &lt;a href=&quot;https://adhdjesse.com/&quot;&gt;Jesse J. Anderson&lt;/a&gt;. I&#39;m only a few pages in so I&#39;m not sure yet if it&#39;s going to be helpful for me, but I&#39;ll be taking notes. We&#39;ll see.&lt;/li&gt;
+&lt;li&gt;With everything that&#39;s going on in the world, the government has been telling us to &lt;a href=&quot;https://www.denkvooruit.nl/bereid-je-voor/stel-je-noodpakket-samen&quot;&gt;maybe prepare an emergency kit&lt;/a&gt;. For the past few months I was pretty sceptical, surely war won&#39;t reach us? But with the dismantling of the United States and the ongoing aggression by Russia, I&#39;m starting to think it might be a good idea to have some stuff on hand.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 6</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-6/" />
+    <updated>2025-02-07T10:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-6/</id>
+    <content type="html">&lt;p&gt;Bit of a boring week (again) with not much going on. I was mainly working a lot to finish everything before I&#39;m off for a week.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I focussed on getting our backups in a better shape. All of our photos are stored in iCloud, but they&#39;re also now going to the Synology NAS automatically via the Synology Photos app. I&#39;ve also set up a backup of the NAS to Backblaze for around $6/month.&lt;/li&gt;
+&lt;li&gt;Went to see a couple of friends and we played some boardgames together. It was nice seeing them again and getting out of the house for a bit.&lt;/li&gt;
+&lt;li&gt;On Wednesday I went to the office and had a pretty productive day there. Still takes almost 3 hours for a one way trip, though. I always need to recover the day after.&lt;/li&gt;
+&lt;li&gt;The list of things I want to write about is ever growing but I just haven&#39;t found the time yet. I won&#39;t promise anything, just expect some more of these week notes with nothing else in between while I get on top of other stuff first.&lt;/li&gt;
+&lt;li&gt;Next week we&#39;ll go an a little vacation for a few days. I expect lots of swimming, reading, relaxing and eating. But most of all, just not having to worry about work for a bit is going to be very good for me.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 5</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-5/" />
+    <updated>2025-01-31T10:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-5/</id>
+    <content type="html">&lt;p&gt;New (not so) boring week, new notes!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;After 37 years of stumbling through life I got &lt;em&gt;unofficially&lt;/em&gt; diagnosed with ADHD. I&#39;m now thinking of requesting an official diagnosis, but I&#39;m not sure yet what that will bring me. It&#39;s not like it&#39;s impacting my performance at work or anything, every employer I&#39;ve worked with has been really happy. Anyway, it&#39;s good to know I&#39;m not totally crazy or stupid, and my suspicions were right all these years.&lt;/li&gt;
+&lt;li&gt;Currently finishing up another crazy week at work. But it&#39;s a really good chance to step up as a leader more and more. I&#39;m very much enjoying the challenge and the career growth.&lt;/li&gt;
+&lt;li&gt;Again, didn&#39;t get to do any running or rowing this week because of everything that&#39;s been going on. I&#39;m just too tired in the evenings to do anything. I hope to pick it back up again soon because my Garmin watch is screaming at me. I&#39;m starting to sound like a broken record. Moving on.&lt;/li&gt;
+&lt;li&gt;Yesterday my new computer display (Dell U4025QW) arrived. It was the most frivolous purchase I&#39;ve ever made but I&#39;m so happy. Everything looks so crisp, the port selection is insane, the build quality is really good, the light sensor is super useful and works very well. It&#39;s my dream display. I&#39;ll put a photo of my current setup down below.&lt;/li&gt;
+&lt;li&gt;This weekend we&#39;ll meet up with some friends we haven&#39;t seen in a while to play boardgames. I&#39;m terrible at boardgames but I&#39;m looking forward to seeing our friends again.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://mijndertstuij.nl/img/q64y9w3F8G-300.webp 300w, https://mijndertstuij.nl/img/q64y9w3F8G-500.webp 500w, https://mijndertstuij.nl/img/q64y9w3F8G-800.webp 800w&quot; sizes=&quot;90vw&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://mijndertstuij.nl/img/q64y9w3F8G-300.jpeg&quot; alt=&quot;My WFH setup in 2025&quot; width=&quot;800&quot; height=&quot;524&quot; srcset=&quot;https://mijndertstuij.nl/img/q64y9w3F8G-300.jpeg 300w, https://mijndertstuij.nl/img/q64y9w3F8G-500.jpeg 500w, https://mijndertstuij.nl/img/q64y9w3F8G-800.jpeg 800w&quot; sizes=&quot;90vw&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;I&#39;ll leave you with a YouTube recommendation. Even when she worked at The Verge I would watch all of her videos, every last one of them. But now she&#39;s gone independent and her videos are somehow even better. I&#39;m talking about &lt;a href=&quot;https://www.youtube.com/@BeccaFarsace/videos&quot;&gt;Becca Farsace&lt;/a&gt;. She takes tech outside. Go watch her videos.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 4</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-4/" />
+    <updated>2025-01-24T09:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-4/</id>
+    <content type="html">&lt;p&gt;It&#39;s the year of week notes on the desktop! (if you know, you know)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;My position at work involves a lot of non-technical work like talking to people and vendors, filling out spreadsheets, doing presentations. Which is all great, but I&#39;m a nerd at heart so I allowed myself some time to do some engineering work this week. I really have to carve out more time for that kind of stuff.&lt;/li&gt;
+&lt;li&gt;During a company-wide kick-off event, I presented how the tech team is going to contribute to the overall goal of the company for 2025 and beyond. I was a little nervous to present in front of 100+ people, but I got some really nice compliments afterwards.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ellie.wtf/&quot;&gt;Ellie&lt;/a&gt; has given me access to try &lt;a href=&quot;https://atuin.sh/&quot;&gt;Atuin&lt;/a&gt; Desktop and it&#39;s just incredible. It&#39;s still early days so it&#39;s all a little rough around the edges, but the potential is definitly there. I&#39;ll be sharing some more thoughts in a separate post soon.&lt;/li&gt;
+&lt;li&gt;After the inauguration of the Orange Man, I decided to filter out a ton of words on Mastodon. My timeline is now a happy place once more.&lt;/li&gt;
+&lt;li&gt;Last time I talked about how we&#39;re planning to have some work done to our garage. We received the first quote and &lt;em&gt;wow&lt;/em&gt; is it a lot of money. I kind of expected it, but not &lt;em&gt;this much&lt;/em&gt;. Anyway, we have a few more quotes coming in so we&#39;ll see how it goes.&lt;/li&gt;
+&lt;li&gt;Today I brought in my car for maintenance. Fingers crossed nothing unexpected pops up.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That&#39;s it! Bit of a quiet week this one. Until next time!&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>The algorithm isn&#39;t always to blame</title>
     <link href="https://mijndertstuij.nl/posts/the-algorithm-not-always-to-blame/" />
     <updated>2025-01-20T12:00:00Z</updated>
@@ -197,6 +558,23 @@
 &lt;p&gt;But is the algorithm to blame for all of these problems?&lt;/p&gt;
 &lt;p&gt;I wrote about &lt;a href=&quot;https://mijndertstuij.nl/posts/the-best-laptop-ever/&quot;&gt;my favorite laptop&lt;/a&gt; and someone put it up on &lt;a href=&quot;https://news.ycombinator.com/item?id=42715462&quot;&gt;Hacker News&lt;/a&gt; and &lt;a href=&quot;https://lobste.rs/s/y7n6lo/best_laptop_ever&quot;&gt;Lobsters&lt;/a&gt;. Both HN and Lobsters don&#39;t have much in the way of an algorithm - they rank stories based on newness, amount of comments in a certain timeframe, and upvotes. Again, people love nothing more than interacting with negative content and, even without an algorithm, the negativity still spread like wildfire and reached the top so more people felt the need to chime in. The result was a whopping 140+ comments on the Lobsters thread which are insane numbers on there.&lt;/p&gt;
 &lt;p&gt;It&#39;s easy to blame to algorithm for the flood of negative, harmful shit that&#39;s spread out over the internet nowadays. It puts the blame on a thing we have no control over, instead of on ourselves. But maybe, instead of leaving a comment on something you have no affinity with, you should ask yourself &lt;em&gt;&amp;quot;is what I have to say going to add anything of value?&amp;quot;&lt;/em&gt; and if the answer is no, maybe just don&#39;t comment? If you don&#39;t care at all about Mac hardware, you can quite safely ignore all content that&#39;s about Mac hardware. It will save you and everyone else a bunch of time and frustration.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 3</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-3/" />
+    <updated>2025-01-17T12:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-3/</id>
+    <content type="html">&lt;p&gt;New week notes, who dis?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I wrote about &lt;a href=&quot;https://mijndertstuij.nl/posts/the-best-laptop-ever/&quot;&gt;my favorite laptop&lt;/a&gt; and someone put it up on &lt;a href=&quot;https://news.ycombinator.com/item?id=42715462&quot;&gt;Hacker News&lt;/a&gt; and &lt;a href=&quot;https://lobste.rs/s/y7n6lo/best_laptop_ever&quot;&gt;Lobsters&lt;/a&gt;. I know I shouldn&#39;t read the comments, but I did it anyway. And I came to the conclusion we cannot blame the algorithm for the state of the internet, not for all of it anyway. Even on websites without much of an algorithm, negative comments are still going to reach the top because people love nothing more than engaging with negative content apparently. There were still quite a few positive comments though, so that was nice to see. Not everyone has absolutely lost their minds yet.&lt;/li&gt;
+&lt;li&gt;I got a &lt;a href=&quot;https://github.com/awsdocs/amazon-eks-user-guide/pull/828&quot;&gt;PR merged&lt;/a&gt; on the AWS EKS documentation so that was nice.&lt;/li&gt;
+&lt;li&gt;In terms of sports, this week was and is a bit better than the previous one. I did some running and rowing, and I will hopefully do some more of that this weekend.&lt;/li&gt;
+&lt;li&gt;We had some people come over to look at our garage. The plan is to insulate the whole thing, put in a new tile floor, redo the electrical wiring, and put in a new garage door. It&#39;s going to be a big and costly project, but I hope it will be worth it in the end.&lt;/li&gt;
+&lt;li&gt;Work has been chaotic with a lot of things breaking. Didn&#39;t have the most fun week ever, but I&#39;m glad we could fix it pretty quickly every time. I&#39;ll take the learnings out of these incidents and move on.&lt;/li&gt;
+&lt;li&gt;After a pretty intense week full of work and other tasks, we&#39;re gonna order sushi and watch trash tv tonight. I think we deserve it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That&#39;s it for now! Hope you have a wonderful weekend!&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -238,6 +616,24 @@
 &lt;p&gt;Currently it&#39;s &lt;a href=&quot;https://mijndertstuij.nl/posts/2025-goals/&quot;&gt;Goals for 2025&lt;/a&gt; as it guides me through the year. A technical topic I still really like is &lt;a href=&quot;https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/&quot;&gt;Avoid using internal load balancers&lt;/a&gt; because it saved me a ton of time as an AWS consultant back in the day.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;8. Any future plans for your blog? Maybe a redesign, a move to another platform, or adding a new feature?&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I just redesigned my blog and I&#39;m happy with it for now. I do want to eventually add a photography section on here.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 2</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-2/" />
+    <updated>2025-01-10T09:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-2/</id>
+    <content type="html">&lt;p&gt;Week notes 2 already? Feels like I just wrote the first one. If time keeps flying by like this, it will be a very short year.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I didn&#39;t do much running this week unfortunately as life got in the way. Maybe next week will be better.&lt;/li&gt;
+&lt;li&gt;Work has slowly started picking up again now that everyone&#39;s coming back from their holiday break. We&#39;ve got a pretty good roadmap ahead of us and I&#39;m excited to get stuck in!&lt;/li&gt;
+&lt;li&gt;I&#39;m getting some extra responsibilities at work soon which I&#39;m pretty excited about as well.&lt;/li&gt;
+&lt;li&gt;We haven&#39;t seen the sun much over the past couple of weeks, but starting today we&#39;ll have a few days of clear skies. It&#39;s cold though!&lt;/li&gt;
+&lt;li&gt;I kept on playing Diablo IV, trying to transform my Spiritborn into an endgame build and hitting at least 200 paragon before this season ends.&lt;/li&gt;
+&lt;li&gt;I wrote down a few ideas for more blog posts which are coming soon. I&#39;m trying to spread it out a little bit so I don&#39;t run out of things to write about and I don&#39;t want to spam your RSS readers either.&lt;/li&gt;
+&lt;li&gt;Received some lovely blogs to read after my &lt;a href=&quot;https://mijndertstuij.nl/posts/ill-read-it/&quot;&gt;call to send them my way&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That&#39;s it! See ya next week.&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -285,6 +681,27 @@
 &lt;p&gt;Photography has always been a hobby for me - it makes me look at the world differently and makes me consider certain things in a different way. I have this nice Sony camera just collecting dust and I intend to bring it with me more often, where appropriate. I have a certain photographic style in mind which I want to explore some more. When I have something to show for I&#39;ll create a photography section on this website.&lt;/p&gt;
 &lt;h2&gt;Work&lt;/h2&gt;
 &lt;p&gt;Despite all the difficulties in my personal life, professionally 2024 has been a year of immense growth. I took on more of a leadership position and I&#39;ve been working with other leaders in the company; I think technology wise we&#39;re in a much better position now. I&#39;m incredibly proud of myself in that regard, it&#39;s what I&#39;ve been working towards for 16 years at this point. In 2025 I&#39;d like to continue this growth and take on even more responsibilities in coaching people, shaping infrastructure and platform architecture, and making sure we&#39;re all on the same page.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Week notes 1</title>
+    <link href="https://mijndertstuij.nl/weeknotes/week-notes-1/" />
+    <updated>2025-01-02T10:00:00Z</updated>
+    <id>https://mijndertstuij.nl/weeknotes/week-notes-1/</id>
+    <content type="html">&lt;p&gt;This is my first ever entry in a new series. Just about every blog I follow does these week notes where they summarize what they&#39;ve been up to. It&#39;s often very personal, sometimes it&#39;s about work or games or music. I always get something out of reading them, so I thought I&#39;d give it a try myself. There&#39;s no particular format or structure and I&#39;m trying to figure things out as I go. Bear with me.&lt;/p&gt;
+&lt;p&gt;Normally I&#39;d publish these things on a Friday, but I just got back to work today and I wanted to get this out there. Here goes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I was off work for almost 2 weeks which was the longest stretch of not having to think about work in a long long time.&lt;/li&gt;
+&lt;li&gt;New Years eve was rather uneventful. We stayed home because most other people we regulary hang out with during NYE had other plans. Maybe next year...&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ghostty.org/&quot;&gt;Ghostty&lt;/a&gt; is my new terminal emulator and it runs great. Love the defaults so &lt;a href=&quot;https://github.com/mijndert/dotfiles/blob/main/ghostty_config&quot;&gt;my config&lt;/a&gt; is just 3 lines.&lt;/li&gt;
+&lt;li&gt;I double dipped and bought &lt;a href=&quot;https://diablo4.blizzard.com/en-us/&quot;&gt;Diablo IV&lt;/a&gt; again for my Steam Deck. Doesn&#39;t run great in endgame, but good enough to be enjoyable. Having a blast with the new class. Already put in well over 20 hours again.&lt;/li&gt;
+&lt;li&gt;This website got quite a large refresh in terms of its design. I&#39;m very happy with the result.&lt;/li&gt;
+&lt;li&gt;After 2 months of being sedentary I got back into the habit of running. Planning to run a few events this year, with some 10k and 21k distances in there. The big one is going to be a 50k in November. Back to the grind!&lt;/li&gt;
+&lt;li&gt;Still thinking of some new years resolutions, nothing is set in stone yet. I&#39;m not going to make my life very hard or anything - I just want a quiet year with a bigger focus on myself and what my body needs.&lt;/li&gt;
+&lt;li&gt;Been listening to one of my favorite bands &lt;a href=&quot;https://www.switchfoot.com/&quot;&gt;Switchfoot&lt;/a&gt; quite a bit after a long stretch of not listening to them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That&#39;s it! I&#39;ll leave you with a playlist to listen to.&lt;/p&gt;
+&lt;div id=&quot;spotify-playlist-37i9dQZF1DZ06evO43TWtq&quot; class=&quot;eleventy-plugin-embed-spotify eleventy-plugin-embed-spotify-playlist&quot;&gt;&lt;iframe style=&quot;border-radius:12px;&quot; title=&quot;Spotify playlist&quot; src=&quot;https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO43TWtq&quot; width=&quot;100%&quot; height=&quot;352&quot; frameborder=&quot;0&quot; allowtransparency=&quot;true&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 </content>
   </entry>
   <entry>
