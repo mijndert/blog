@@ -17,6 +17,7 @@
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-plugin-rss": "^2.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
+    "@11ty/parse-date-strings": "^2.0.5",
     "eleventy-plugin-embed-everything": "^1.21.0"
   }
 }

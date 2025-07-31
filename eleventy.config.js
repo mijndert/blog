@@ -1,4 +1,3 @@
-import { DateTime } from "luxon";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import embeds from "eleventy-plugin-embed-everything";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
@@ -8,8 +7,13 @@ export default async function(eleventyConfig) {
 
   // Add a filter to format dates
   eleventyConfig.addFilter("postDate", dateObj => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
-  })
+    const date = new Date(dateObj);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  });
 
 	// Create a collection for all posts
 	eleventyConfig.addCollection("posts", (collectionApi) => {
