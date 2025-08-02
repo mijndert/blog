@@ -1,7 +1,7 @@
 ---
 title: I love shaving yaks
 date: 2025-08-02 13:00:00
-summary: 
+summary: Embracing the value of yak shaving
 tags: development
 ---
 
