@@ -15,14 +15,25 @@ During my free time I still take a deep interest in technical topics ranging fro
 
 ## Experience 
 
-**Otrium** - *Lead platform engineer* (2020 - 2023)
+**Otrium** - *Lead platform engineer* (2023 - now)
 
 Some text about my role at Otrium, the projects I worked on, and the technologies I used.
 
-
-**inQdo Cloud** - *Senior AWS Solutions Architect* (2018 - 2020)
+**inQdo Cloud** - *Senior AWS Solutions Architect* (2015 - 2023)
 
 Some text about my role at inQdo Cloud, the projects I worked on, and the technologies I used.
+
+**Nines** - *Linux hosting engineer* (2014 - 2015)
+
+Some text about my role at Nines, the projects I worked on, and the technologies I used.
+
+**We Are You** - *Systems administrator* (2013 - 2014)
+
+Some text about my role at We Are You, the projects I worked on, and the technologies I used.
+
+**Kaliber Interactive** - *Systems administrator* (2008 - 2012)
+
+Some text about my role at Kaliber Interactive, the projects I worked on, and the technologies I used.
 
 ## Skills 
 
