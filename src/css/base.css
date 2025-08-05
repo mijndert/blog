@@ -29,6 +29,10 @@
   --font-size-md: 1.25em;
   --font-size-lg: 1.5em;
   --line-height: 1.6;
+
+  /* Progress bars */
+  --progress-bg: var(--border-color);
+  --progress-fill: var(--color-link-hover);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -237,6 +241,35 @@ footer {
   margin: var(--spacing-xl) 0;
   padding: var(--spacing-md) 0;
   border-top: var(--border);
+}
+
+/* Skill progress bars */
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-md);
+}
+
+.skill-name {
+  min-width: 100px;
+  font-weight: 500;
+}
+
+.skill-bar {
+  flex: 1;
+  height: 8px;
+  background-color: var(--progress-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-fill {
+  height: 100%;
+  background-color: var(--progress-fill);
+  border-radius: 4px;
+  transition: width 0.3s ease;
 }
 
 /* Responsive styles */
