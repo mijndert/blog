@@ -4,12 +4,149 @@
   <subtitle>Articles excluding week notes</subtitle>
   <link href="https://mijndertstuij.nl/posts-feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-08-02T13:00:00Z</updated>
+  <updated>2025-08-06T14:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>A static website on OpenBSD</title>
+    <link href="https://mijndertstuij.nl/posts/static-website-on-openbsd/" />
+    <updated>2025-08-06T14:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/static-website-on-openbsd/</id>
+    <content type="html">&lt;p&gt;Back in 2021 I was dipping my toes into the &lt;a href=&quot;https://mijndertstuij.nl/posts/openbsd/&quot;&gt;world of OpenBSD&lt;/a&gt;. A few days ago I got the itch to try OpenBSD again, mostly because I&#39;m kind of fed up with how little control I have over security headers and such on GitHub Pages. Since I have a Synology NAS with 32GB of RAM and plenty of storage, I decided to install VMM (Virtual Machine Manager) and run it there for a while.&lt;/p&gt;
+&lt;h2&gt;VMM&lt;/h2&gt;
+&lt;p&gt;Here&#39;s a really quick overview of how I set up the VM for OpenBSD:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install VMM from the Synology Package Center&lt;/li&gt;
+&lt;li&gt;Open VMM, go to &amp;quot;Virtual Machine&amp;quot; and click &amp;quot;Create&amp;quot;&lt;/li&gt;
+&lt;li&gt;Select Linux as the operating system&lt;/li&gt;
+&lt;li&gt;Select your storage pool&lt;/li&gt;
+&lt;li&gt;Give the VM a name and select the amount of RAM and CPU cores you want to allocate, leave everything else as default&lt;/li&gt;
+&lt;li&gt;Assign 40G of storage&lt;/li&gt;
+&lt;li&gt;For the network, select &amp;quot;Default VM network&amp;quot;&lt;/li&gt;
+&lt;li&gt;For &amp;quot;ISO file for bootup&amp;quot; select the &lt;a href=&quot;https://mirror.leaseweb.com/pub/OpenBSD/7.7/amd64/install77.iso&quot;&gt;OpenBSD ISO&lt;/a&gt; you downloaded&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Start the VM and click &amp;quot;Connect&amp;quot; to open the console. Follow the &lt;a href=&quot;https://www.openbsdhandbook.com/installation/&quot;&gt;installation instructions&lt;/a&gt;, which are pretty straightforward. I chose to install OpenBSD on the whole disk, which is fine for this use-case.&lt;/p&gt;
+&lt;h2&gt;Doas&lt;/h2&gt;
+&lt;p&gt;OpenBSD uses &lt;code&gt;doas&lt;/code&gt; instead of &lt;code&gt;sudo&lt;/code&gt; for privilege escalation. If you want to run commands as root, you can use:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;doas &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;command&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To allow your user to run &lt;code&gt;doas&lt;/code&gt; to gain escalated privileges, you need to edit the &lt;code&gt;/etc/doas.conf&lt;/code&gt; file. Add the following line:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;permit persist yourusername&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;HTTPD&lt;/h2&gt;
+&lt;p&gt;OpenBSD comes with a built-in web server called &lt;code&gt;httpd&lt;/code&gt;. To set it up, you need to create a configuration file at &lt;code&gt;/etc/httpd.conf&lt;/code&gt;. You also need to create a directory for your website:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-p&lt;/span&gt; /var/www/htdocs/mydomain.foo.bar
+&lt;span class=&quot;token function&quot;&gt;chown&lt;/span&gt; yourusername /var/www/htdocs/mydomain.foo.bar&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here&#39;s my configuration for serving a static website:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;server &lt;span class=&quot;token string&quot;&gt;&quot;mydomain.foo.bar&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  listen on &lt;span class=&quot;token number&quot;&gt;127.0&lt;/span&gt;.0.1 port &lt;span class=&quot;token number&quot;&gt;8080&lt;/span&gt;
+  root &lt;span class=&quot;token string&quot;&gt;&quot;/htdocs/mydomain.foo.bar&quot;&lt;/span&gt;
+  log style forwarded
+  gzip-static
+  location &lt;span class=&quot;token string&quot;&gt;&quot;/.well-known/acme-challenge/*&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    root &lt;span class=&quot;token string&quot;&gt;&quot;/acme&quot;&lt;/span&gt;
+    request strip &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+server &lt;span class=&quot;token string&quot;&gt;&quot;secure-redirect&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  listen on * port &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt; block &lt;span class=&quot;token builtin class-name&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;301&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;https://&lt;span class=&quot;token variable&quot;&gt;$HTTP_HOST&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;$REQUEST_URI&lt;/span&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;aside&gt;&lt;p&gt;Notice the gzip-static directive, which enables gzip compression for static files. You can gzip your assets using the following command when building your static website:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt; dist/ &lt;span class=&quot;token parameter variable&quot;&gt;-type&lt;/span&gt; f &lt;span class=&quot;token parameter variable&quot;&gt;-exec&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;gzip&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-9k&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;{}&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;&#92;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/aside&gt;
+&lt;p&gt;To enable httpd and start it, run:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;rcctl &lt;span class=&quot;token builtin class-name&quot;&gt;enable&lt;/span&gt; httpd
+rcctl start httpd&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Relayd&lt;/h2&gt;
+&lt;p&gt;Relayd can act as a reverse proxy to httpd to handle TLS termination and add security headers and such. It&#39;s installed by default, but you will need to create a configuration file at &lt;code&gt;/etc/relayd.conf&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token assign-left variable&quot;&gt;ipv4&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;your.ipv4.address&quot;&lt;/span&gt;
+table &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;local&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;127.0&lt;/span&gt;.0.1 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+http protocol https &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  tls keypair &lt;span class=&quot;token string&quot;&gt;&quot;mydomain.foo.bar&quot;&lt;/span&gt;
+
+  tls ciphers &lt;span class=&quot;token string&quot;&gt;&quot;ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256&quot;&lt;/span&gt;
+  
+  match request header append &lt;span class=&quot;token string&quot;&gt;&quot;X-Forwarded-For&quot;&lt;/span&gt; value &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$REMOTE_ADDR&lt;/span&gt;&quot;&lt;/span&gt;
+  match request header append &lt;span class=&quot;token string&quot;&gt;&quot;X-Forwarded-Port&quot;&lt;/span&gt; value &lt;span class=&quot;token string&quot;&gt;&quot;&lt;span class=&quot;token variable&quot;&gt;$REMOTE_PORT&lt;/span&gt;&quot;&lt;/span&gt;
+  match response header &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Referrer-Policy&quot;&lt;/span&gt; value &lt;span class=&quot;token string&quot;&gt;&quot;same-origin&quot;&lt;/span&gt;
+  match response header &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;X-Frame-Options&quot;&lt;/span&gt; value &lt;span class=&quot;token string&quot;&gt;&quot;deny&quot;&lt;/span&gt;
+  match response header &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;X-XSS-Protection&quot;&lt;/span&gt; value &lt;span class=&quot;token string&quot;&gt;&quot;1; mode=block&quot;&lt;/span&gt;
+  match response header &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;X-Content-Type-Options&quot;&lt;/span&gt; value &lt;span class=&quot;token string&quot;&gt;&quot;nosniff&quot;&lt;/span&gt;
+  match response header &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Strict-Transport-Security&quot;&lt;/span&gt; value &lt;span class=&quot;token string&quot;&gt;&quot;max-age=31536000; includeSubDomains; preload&quot;&lt;/span&gt;
+  match response header &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Content-Security-Policy&quot;&lt;/span&gt; value &lt;span class=&quot;token string&quot;&gt;&quot;default-src &#39;self&#39;; font-src &#39;self&#39; https://fonts.googleapis.com https://fonts.gstatic.com; style-src &#39;self&#39; https://fonts.googleapis.com; script-src &#39;self&#39; https://fonts.googleapis.com https://fonts.gstatic.com &#39;sha256-1jAmyYXcRq6zFldLe/GCgIDJBiOONdXjTLgEFMDnDSM=&#39; &#39;sha256-ZswfTY7H35rbv8WC7NXBoiC7WNu86vSzCDChNWwZZDM=&#39;;&quot;&lt;/span&gt;
+  match response header &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Permissions-Policy&quot;&lt;/span&gt; value &lt;span class=&quot;token string&quot;&gt;&quot;accelerometer=()&quot;&lt;/span&gt;
+  match response header &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Cache-Control&quot;&lt;/span&gt; value &lt;span class=&quot;token string&quot;&gt;&quot;max-age=86400&quot;&lt;/span&gt;
+  
+  &lt;span class=&quot;token builtin class-name&quot;&gt;return&lt;/span&gt; error
+  pass
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+relay wwwtls &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  listen on &lt;span class=&quot;token variable&quot;&gt;$ipv4&lt;/span&gt; port &lt;span class=&quot;token number&quot;&gt;443&lt;/span&gt; tls
+  protocol https
+  forward to &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;local&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; port &lt;span class=&quot;token number&quot;&gt;8080&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;aside&gt;Make sure to replace `your.ipv4.address` with the actual IPv4 address of your server and adjust the `keypair` directive to match your TLS certificate setup.&lt;/aside&gt;
+&lt;p&gt;To enable relayd and start it, run:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;rcctl &lt;span class=&quot;token builtin class-name&quot;&gt;enable&lt;/span&gt; relayd
+rcctl start relayd&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;ACME client&lt;/h2&gt;
+&lt;p&gt;ACME client can be used to automatically obtain a certificate from, in this case, Let&#39;s Encrypt.&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;EOT &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; /etc/acme-client.conf
+authority letsencrypt &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  api url &lt;span class=&quot;token string&quot;&gt;&quot;https://acme-v02.api.letsencrypt.org/directory&quot;&lt;/span&gt;
+  account key &lt;span class=&quot;token string&quot;&gt;&quot;/etc/acme/letsencrypt-privkey.pem&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+domain mydomain.foo.bar &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  domain key &lt;span class=&quot;token string&quot;&gt;&quot;/etc/ssl/private/mydomain.foo.bar.key&quot;&lt;/span&gt;
+  domain full chain certificate &lt;span class=&quot;token string&quot;&gt;&quot;/etc/ssl/mydomain.foo.bar.fullchain.pem&quot;&lt;/span&gt;
+  sign with letsencrypt
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+EOF&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can now fetch the certificate by running:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;acme-client &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt; mydomain.foo.bar&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To automatically renew the certificate, add the following to &lt;code&gt;/etc/daily.local&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;next_part &lt;span class=&quot;token string&quot;&gt;&quot;Refreshing Let&#39;s Encrypt certificates:&quot;&lt;/span&gt;
+acme-client mydomain.foo.bar &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; rcctl reload relayd&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Rsync&lt;/h2&gt;
+&lt;p&gt;To deploy your static website, you can use &lt;code&gt;rsync&lt;/code&gt; to copy files to your OpenBSD server.&lt;/p&gt;
+&lt;p&gt;First, install &lt;code&gt;rsync&lt;/code&gt; if it&#39;s not already installed:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;pkg_add &lt;span class=&quot;token function&quot;&gt;rsync&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, create the configuration file at &lt;code&gt;/etc/rsyncd.conf&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;global&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+use &lt;span class=&quot;token function&quot;&gt;chroot&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;yes&lt;/span&gt;
+max connection &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;
+log &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; /var/log/rsyncd.log
+
+&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;mydomain.foo.bar&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+path &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; /var/www/htdocs/mydomain.foo.bar/
+&lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; only &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+list &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;yes&lt;/span&gt;
+uid &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;
+gid &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Finally, enable and start the rsync daemon:&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;rcctl &lt;span class=&quot;token builtin class-name&quot;&gt;enable&lt;/span&gt; rsyncd
+rcctl start rsyncd&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;PF&lt;/h2&gt;
+&lt;p&gt;For a basic firewall setup, you can use OpenBSD&#39;s Packet Filter (PF). You can find the PF configuration file at &lt;code&gt;/etc/pf.conf&lt;/code&gt;. Here&#39;s an example that allows SSH, HTTP and HTTPS outbound.&lt;/p&gt;
+&lt;pre class=&quot;language-pf&quot;&gt;&lt;code class=&quot;language-pf&quot;&gt;cat &lt;&lt;EOT&gt;&gt; /etc/pf.conf
+set skip on lo0
+block all
+pass in proto tcp to port { ssh http https }
+pass out proto { tcp udp } to port { 22 53 80 123 443 }
+pass out inet proto icmp icmp-type { echoreq }
+pass proto ipv6-icmp from any to any
+EOT
+pfctl -f /etc/pf.conf&lt;/EOT&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;All in all this was a pretty painless experience. I was able to set up a copy of this website on OpenBSD with minimal effort using the built-in tools. Performance is generally pretty good, even though it&#39;s running in spinning disks that occassionally go to sleep.&lt;/p&gt;
+&lt;p&gt;Using this relayd config I now get an A+ on &lt;a href=&quot;https://securityheaders.com/&quot;&gt;Security Headers&lt;/a&gt;, another A+ on &lt;a href=&quot;https://developer.mozilla.org/en-US/observatory&quot;&gt;HTTP Observatory&lt;/a&gt;, and yet another A+ on &lt;a href=&quot;https://www.ssllabs.com/ssltest/&quot;&gt;SSL Labs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For my use, I&#39;m not entirely sure yet whether I will keep this setup or not. Maybe I&#39;ll run my OpenBSD VM some place else like Hetzner or similar. It also depends on whether I actually want to deal with the sysadmin part of running a server. I do like the complete control I have over every single part of the stack.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>I love shaving yaks</title>
     <link href="https://mijndertstuij.nl/posts/i-love-shaving-yaks/" />

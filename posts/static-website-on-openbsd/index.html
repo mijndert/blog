@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Eleventy v3.1.2">
+
+    <!-- SEO -->
+    <title>
+      
+        A static website on OpenBSD - Mijndert Stuij
+      
+    </title>
+    
+    <meta name="description" content="Running a copy of my 11ty website on OpenBSD using httpd and relayd.">
+    <meta property="og:description" content="Running a copy of my 11ty website on OpenBSD using httpd and relayd.">
+    
+    <meta name="author" content="Mijndert Stuij">
+    <link rel="canonical" href="https://mijndertstuij.nl/posts/static-website-on-openbsd/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta name="fediverse:creator" content="@mijndert@toot.community">
+    <meta property="og:title" content="A static website on OpenBSD">
+    <meta property="og:site_name" content="Mijndert Stuij">
+    <meta property="og:url" content="https://mijndertstuij.nl/posts/static-website-on-openbsd/">
+    <meta property="og:type" content="article">
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#eee9dc" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1a1b1e" media="(prefers-color-scheme: dark)">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+
+    <!-- RSS feeds -->
+    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/feed.xml">
+    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/posts-feed.xml">
+    <link rel="alternate" type="application/rss+xml" href="https://mijndertstuij.nl/weeknotes-feed.xml">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"></noscript>
+  </head>
+  
+  <body>
+    <nav aria-label="Main navigation">
+  <ul class="nav">
+    
+    <li>
+      <a href="/" class="nav-link">Mijndert Stuij</a>
+    </li>
+    
+    <li>
+      <a href="/blog/" class="nav-link">Blog</a>
+    </li>
+    
+    <li>
+      <a href="/weeknotes/" class="nav-link">Week notes</a>
+    </li>
+    
+    <li>
+      <a href="/explore/" class="nav-link">Explore</a>
+    </li>
+    
+  </ul>
+</nav>
+
+    
+    
+
+    <main>
+      
+<h1>A static website on OpenBSD</h1>
+<span class="meta">
+  <p class="muted">
+    August 6, 2025
+  </p>
+</span>
+<p>Back in 2021 I was dipping my toes into the <a href="https://mijndertstuij.nl/posts/openbsd/">world of OpenBSD</a>. A few days ago I got the itch to try OpenBSD again, mostly because I'm kind of fed up with how little control I have over security headers and such on GitHub Pages. Since I have a Synology NAS with 32GB of RAM and plenty of storage, I decided to install VMM (Virtual Machine Manager) and run it there for a while.</p>
+<h2>VMM</h2>
+<p>Here's a really quick overview of how I set up the VM for OpenBSD:</p>
+<ol>
+<li>Install VMM from the Synology Package Center</li>
+<li>Open VMM, go to &quot;Virtual Machine&quot; and click &quot;Create&quot;</li>
+<li>Select Linux as the operating system</li>
+<li>Select your storage pool</li>
+<li>Give the VM a name and select the amount of RAM and CPU cores you want to allocate, leave everything else as default</li>
+<li>Assign 40G of storage</li>
+<li>For the network, select &quot;Default VM network&quot;</li>
+<li>For &quot;ISO file for bootup&quot; select the <a href="https://mirror.leaseweb.com/pub/OpenBSD/7.7/amd64/install77.iso">OpenBSD ISO</a> you downloaded</li>
+</ol>
+<p>Start the VM and click &quot;Connect&quot; to open the console. Follow the <a href="https://www.openbsdhandbook.com/installation/">installation instructions</a>, which are pretty straightforward. I chose to install OpenBSD on the whole disk, which is fine for this use-case.</p>
+<h2>Doas</h2>
+<p>OpenBSD uses <code>doas</code> instead of <code>sudo</code> for privilege escalation. If you want to run commands as root, you can use:</p>
+<pre class="language-sh"><code class="language-sh">doas <span class="token operator">&lt;</span>command<span class="token operator">></span></code></pre>
+<p>To allow your user to run <code>doas</code> to gain escalated privileges, you need to edit the <code>/etc/doas.conf</code> file. Add the following line:</p>
+<pre class="language-sh"><code class="language-sh">permit persist yourusername</code></pre>
+<h2>HTTPD</h2>
+<p>OpenBSD comes with a built-in web server called <code>httpd</code>. To set it up, you need to create a configuration file at <code>/etc/httpd.conf</code>. You also need to create a directory for your website:</p>
+<pre class="language-sh"><code class="language-sh"><span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /var/www/htdocs/mydomain.foo.bar
+<span class="token function">chown</span> yourusername /var/www/htdocs/mydomain.foo.bar</code></pre>
+<p>Here's my configuration for serving a static website:</p>
+<pre class="language-sh"><code class="language-sh">server <span class="token string">"mydomain.foo.bar"</span> <span class="token punctuation">{</span>
+  listen on <span class="token number">127.0</span>.0.1 port <span class="token number">8080</span>
+  root <span class="token string">"/htdocs/mydomain.foo.bar"</span>
+  log style forwarded
+  gzip-static
+  location <span class="token string">"/.well-known/acme-challenge/*"</span> <span class="token punctuation">{</span>
+    root <span class="token string">"/acme"</span>
+    request strip <span class="token number">2</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+server <span class="token string">"secure-redirect"</span> <span class="token punctuation">{</span>
+  listen on * port <span class="token number">80</span> block <span class="token builtin class-name">return</span> <span class="token number">301</span> <span class="token string">"https://<span class="token variable">$HTTP_HOST</span><span class="token variable">$REQUEST_URI</span>"</span>
+<span class="token punctuation">}</span></code></pre>
+<aside><p>Notice the gzip-static directive, which enables gzip compression for static files. You can gzip your assets using the following command when building your static website:</p>
+<pre class="language-sh"><code class="language-sh"><span class="token function">find</span> dist/ <span class="token parameter variable">-type</span> f <span class="token parameter variable">-exec</span> <span class="token function">gzip</span> <span class="token parameter variable">-9k</span> <span class="token string">"{}"</span> <span class="token punctuation">\</span><span class="token punctuation">;</span></code></pre>
+</aside>
+<p>To enable httpd and start it, run:</p>
+<pre class="language-sh"><code class="language-sh">rcctl <span class="token builtin class-name">enable</span> httpd
+rcctl start httpd</code></pre>
+<h2>Relayd</h2>
+<p>Relayd can act as a reverse proxy to httpd to handle TLS termination and add security headers and such. It's installed by default, but you will need to create a configuration file at <code>/etc/relayd.conf</code>.</p>
+<pre class="language-sh"><code class="language-sh"><span class="token assign-left variable">ipv4</span><span class="token operator">=</span><span class="token string">"your.ipv4.address"</span>
+table <span class="token operator">&lt;</span>local<span class="token operator">></span> <span class="token punctuation">{</span> <span class="token number">127.0</span>.0.1 <span class="token punctuation">}</span>
+
+http protocol https <span class="token punctuation">{</span>
+  tls keypair <span class="token string">"mydomain.foo.bar"</span>
+
+  tls ciphers <span class="token string">"ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256"</span>
+  
+  match request header append <span class="token string">"X-Forwarded-For"</span> value <span class="token string">"<span class="token variable">$REMOTE_ADDR</span>"</span>
+  match request header append <span class="token string">"X-Forwarded-Port"</span> value <span class="token string">"<span class="token variable">$REMOTE_PORT</span>"</span>
+  match response header <span class="token builtin class-name">set</span> <span class="token string">"Referrer-Policy"</span> value <span class="token string">"same-origin"</span>
+  match response header <span class="token builtin class-name">set</span> <span class="token string">"X-Frame-Options"</span> value <span class="token string">"deny"</span>
+  match response header <span class="token builtin class-name">set</span> <span class="token string">"X-XSS-Protection"</span> value <span class="token string">"1; mode=block"</span>
+  match response header <span class="token builtin class-name">set</span> <span class="token string">"X-Content-Type-Options"</span> value <span class="token string">"nosniff"</span>
+  match response header <span class="token builtin class-name">set</span> <span class="token string">"Strict-Transport-Security"</span> value <span class="token string">"max-age=31536000; includeSubDomains; preload"</span>
+  match response header <span class="token builtin class-name">set</span> <span class="token string">"Content-Security-Policy"</span> value <span class="token string">"default-src 'self'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com; script-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com 'sha256-1jAmyYXcRq6zFldLe/GCgIDJBiOONdXjTLgEFMDnDSM=' 'sha256-ZswfTY7H35rbv8WC7NXBoiC7WNu86vSzCDChNWwZZDM=';"</span>
+  match response header <span class="token builtin class-name">set</span> <span class="token string">"Permissions-Policy"</span> value <span class="token string">"accelerometer=()"</span>
+  match response header <span class="token builtin class-name">set</span> <span class="token string">"Cache-Control"</span> value <span class="token string">"max-age=86400"</span>
+  
+  <span class="token builtin class-name">return</span> error
+  pass
+<span class="token punctuation">}</span>
+relay wwwtls <span class="token punctuation">{</span>
+  listen on <span class="token variable">$ipv4</span> port <span class="token number">443</span> tls
+  protocol https
+  forward to <span class="token operator">&lt;</span>local<span class="token operator">></span> port <span class="token number">8080</span>
+<span class="token punctuation">}</span></code></pre>
+<aside>Make sure to replace `your.ipv4.address` with the actual IPv4 address of your server and adjust the `keypair` directive to match your TLS certificate setup.</aside>
+<p>To enable relayd and start it, run:</p>
+<pre class="language-sh"><code class="language-sh">rcctl <span class="token builtin class-name">enable</span> relayd
+rcctl start relayd</code></pre>
+<h2>ACME client</h2>
+<p>ACME client can be used to automatically obtain a certificate from, in this case, Let's Encrypt.</p>
+<pre class="language-sh"><code class="language-sh"><span class="token function">cat</span> <span class="token operator">&lt;&lt;</span>EOT <span class="token operator">>></span> /etc/acme-client.conf
+authority letsencrypt <span class="token punctuation">{</span>
+  api url <span class="token string">"https://acme-v02.api.letsencrypt.org/directory"</span>
+  account key <span class="token string">"/etc/acme/letsencrypt-privkey.pem"</span>
+<span class="token punctuation">}</span>
+
+domain mydomain.foo.bar <span class="token punctuation">{</span>
+  domain key <span class="token string">"/etc/ssl/private/mydomain.foo.bar.key"</span>
+  domain full chain certificate <span class="token string">"/etc/ssl/mydomain.foo.bar.fullchain.pem"</span>
+  sign with letsencrypt
+<span class="token punctuation">}</span>
+EOF</code></pre>
+<p>You can now fetch the certificate by running:</p>
+<pre class="language-sh"><code class="language-sh">acme-client <span class="token parameter variable">-v</span> mydomain.foo.bar</code></pre>
+<p>To automatically renew the certificate, add the following to <code>/etc/daily.local</code>:</p>
+<pre class="language-sh"><code class="language-sh">next_part <span class="token string">"Refreshing Let's Encrypt certificates:"</span>
+acme-client mydomain.foo.bar <span class="token operator">&amp;&amp;</span> rcctl reload relayd</code></pre>
+<h2>Rsync</h2>
+<p>To deploy your static website, you can use <code>rsync</code> to copy files to your OpenBSD server.</p>
+<p>First, install <code>rsync</code> if it's not already installed:</p>
+<pre class="language-sh"><code class="language-sh">pkg_add <span class="token function">rsync</span></code></pre>
+<p>Then, create the configuration file at <code>/etc/rsyncd.conf</code>:</p>
+<pre class="language-sh"><code class="language-sh"><span class="token punctuation">[</span>global<span class="token punctuation">]</span>
+use <span class="token function">chroot</span>  <span class="token operator">=</span> <span class="token function">yes</span>
+max connection <span class="token operator">=</span> <span class="token number">5</span>
+log <span class="token function">file</span> <span class="token operator">=</span> /var/log/rsyncd.log
+
+<span class="token punctuation">[</span>mydomain.foo.bar<span class="token punctuation">]</span>
+path <span class="token operator">=</span> /var/www/htdocs/mydomain.foo.bar/
+<span class="token builtin class-name">read</span> only <span class="token operator">=</span> <span class="token boolean">false</span>
+list <span class="token operator">=</span> <span class="token function">yes</span>
+uid <span class="token operator">=</span> <span class="token number">1000</span>
+gid <span class="token operator">=</span> <span class="token number">1</span></code></pre>
+<p>Finally, enable and start the rsync daemon:</p>
+<pre class="language-sh"><code class="language-sh">rcctl <span class="token builtin class-name">enable</span> rsyncd
+rcctl start rsyncd</code></pre>
+<h2>PF</h2>
+<p>For a basic firewall setup, you can use OpenBSD's Packet Filter (PF). You can find the PF configuration file at <code>/etc/pf.conf</code>. Here's an example that allows SSH, HTTP and HTTPS outbound.</p>
+<pre class="language-pf"><code class="language-pf">cat <<EOT>> /etc/pf.conf
+set skip on lo0
+block all
+pass in proto tcp to port { ssh http https }
+pass out proto { tcp udp } to port { 22 53 80 123 443 }
+pass out inet proto icmp icmp-type { echoreq }
+pass proto ipv6-icmp from any to any
+EOT
+pfctl -f /etc/pf.conf</EOT></code></pre>
+<h2>Conclusion</h2>
+<p>All in all this was a pretty painless experience. I was able to set up a copy of this website on OpenBSD with minimal effort using the built-in tools. Performance is generally pretty good, even though it's running in spinning disks that occassionally go to sleep.</p>
+<p>Using this relayd config I now get an A+ on <a href="https://securityheaders.com/">Security Headers</a>, another A+ on <a href="https://developer.mozilla.org/en-US/observatory">HTTP Observatory</a>, and yet another A+ on <a href="https://www.ssllabs.com/ssltest/">SSL Labs</a>.</p>
+<p>For my use, I'm not entirely sure yet whether I will keep this setup or not. Maybe I'll run my OpenBSD VM some place else like Hetzner or similar. It also depends on whether I actually want to deal with the sysadmin part of running a server. I do like the complete control I have over every single part of the stack.</p>
+
+
+    </main>
+
+    <footer aria-label="Site footer">
+  <p>Follow me using <a href="/feeds">RSS</a>, 
+    <a rel="me" href="https://toot.community/@mijndert" aria-label="Follow me on Mastodon">Mastodon</a>, 
+    or <a href="/connect" aria-label="Other connection options">other options</a>.</p>
+</footer>
+  </body>
+</html>
