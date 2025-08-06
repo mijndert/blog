@@ -204,7 +204,7 @@ pfctl -f /etc/pf.conf
 
 ## Conclusion
 
-All in all this was a pretty painless experience. I was able to set up a copy of this website on OpenBSD with minimal effort using the built-in tools. Performance is generally pretty good, even though it's running in spinning disks that occassionally go to sleep.
+All in all this was a pretty painless experience. I was able to set up a copy of this website on OpenBSD with minimal effort using the built-in tools. Performance is generally pretty good, even though it's running on spinning disks that occassionally go to sleep.
 
 Using this relayd config I now get an A+ on [Security Headers](https://securityheaders.com/), another A+ on [HTTP Observatory](https://developer.mozilla.org/en-US/observatory), and yet another A+ on [SSL Labs](https://www.ssllabs.com/ssltest/).
 
