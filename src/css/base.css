@@ -154,14 +154,18 @@ aside {
 aside::before {
   content: "💡";
   position: absolute;
-  left: var(--spacing-md);
+  left: var(--spacing-sm);
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.1em;
 }
 
 /* Lists */
-ul li {
+ul, ol {
+  margin: var(--spacing-md) 0;
+}
+
+ul li, ol li {
   margin: 0 0 var(--spacing-sm) var(--spacing-md);
 }
 
