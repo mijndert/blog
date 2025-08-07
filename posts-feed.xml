@@ -4,12 +4,31 @@
   <subtitle>Articles excluding week notes</subtitle>
   <link href="https://mijndertstuij.nl/posts-feed.xml" rel="self" />
   <link href="https://mijndertstuij.nl/" />
-  <updated>2025-08-06T14:00:00Z</updated>
+  <updated>2025-08-07T13:00:00Z</updated>
   <id>https://mijndertstuij.nl/</id>
   <author>
     <name>Mijndert Stuij</name>
     <email>mijndert@mijndertstuij.nl</email>
   </author>
+  <entry>
+    <title>Some running top tips</title>
+    <link href="https://mijndertstuij.nl/posts/some-running-top-tips/" />
+    <updated>2025-08-07T13:00:00Z</updated>
+    <id>https://mijndertstuij.nl/posts/some-running-top-tips/</id>
+    <content type="html">&lt;p&gt;Another blog post? The second one in two days. My mind has been occupied with running lately, so much so that it got me thinking about all the things I learned from running over the last 20 years.&lt;/p&gt;
+&lt;p&gt;I&#39;m not saying I&#39;m some sort of running expert, not at all actually, but I do know a thing or two by now. Running has been on the rise in popularity since COVID and I love to see it, but there&#39;s also a lot of these &lt;em&gt;runfluencers&lt;/em&gt; out there who are telling you absolutely need to run in a certain way, or that you need to buy certain gear or else you&#39;ll surely fail.&lt;/p&gt;
+&lt;p&gt;Anyway, here&#39;s a few things I learned over the years.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Stop me if you&#39;ve heard this one before, but &lt;strong&gt;RUN SLOWER&lt;/strong&gt; (and don&#39;t be embarrassed about it). I&#39;ve seen so many people burn out because they start running at maximum effort right away. Just kind of relax in zone 2, build up your mileage over time and don&#39;t worry about speed. Speed will come naturally over time, consistency is key.&lt;/li&gt;
+&lt;li&gt;Recovery is very very important. Running every single day isn&#39;t the way to go, your body needs some downtime too. An absolute recovery multiplier is &lt;strong&gt;sleep&lt;/strong&gt;. Get as much sleep in as possible as it will help bring down those recovery times by a lot.&lt;/li&gt;
+&lt;li&gt;I hate to say this, but please do a little bit of &lt;strong&gt;strength training&lt;/strong&gt;, at home if you like (no one wants to go to the gym). It will help build up some muscle to get you through the long runs a lot easier than you would otherwise. It really doesn&#39;t have to be much, just a few simple workouts a week will do.&lt;/li&gt;
+&lt;li&gt;If you use a Garmin watch for tracking your runs, there&#39;s a feature called &lt;strong&gt;Daily Suggested Workouts&lt;/strong&gt; which I use quite a bit. The things is though, these suggested workouts are, among other things, based on any upcoming events you put on your calendar in Garmin Connect. So if you&#39;re training for a 10k and put in a goal of 45 minutes, DSW will try to train you towards that goal, and it won&#39;t be fun. So if you use this feature, make sure to set your goals realistically, or just don&#39;t set any goals at all.&lt;/li&gt;
+&lt;li&gt;Speaking of Daily Suggested Workouts, &lt;strong&gt;listen to your body first and foremost&lt;/strong&gt;. If your watch says you should do a base run, but your stomach is upset, just skip it and get some rest. Maybe do a little strength training instead. Your body knows best, the watch just goes by the numbers.&lt;/li&gt;
+&lt;li&gt;This is going to be controversial but for the love of all that&#39;s holy, &lt;strong&gt;you don&#39;t need those running sunglasses and protein shakes&lt;/strong&gt; (especially when just starting out). I cringe every time I see a &lt;em&gt;runfluencer&lt;/em&gt; wear a pair of those running sunglasses. What are you even trying to optimize for? Aerodynamics? While doing a 6:30 kilometer? Stop it. Just wear a regular pair of sunglasses when the sun&#39;s out. And protein shakes? Just eat a banana or something (and have a bit of a healthy diet in general). Unless of course you&#39;re seriously training for a marathon, then sure it makes sense. But don&#39;t optimize prematurely.&lt;/li&gt;
+&lt;li&gt;Lastly, and this is arguably the most important one: &lt;strong&gt;don&#39;t compare yourself to others&lt;/strong&gt;. Don&#39;t watch those &lt;em&gt;runfluencer&lt;/em&gt; video&#39;s, don&#39;t listen to podcasts, don&#39;t sign up for Strava. Running isn&#39;t a social network or a contest. It&#39;s about you versus yourself. It&#39;s your own journey, your own progress. You&#39;ve won the moment you stepped out the door and started running. Don&#39;t let anyone tell you otherwise.&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+  </entry>
   <entry>
     <title>A static website on OpenBSD</title>
     <link href="https://mijndertstuij.nl/posts/static-website-on-openbsd/" />
