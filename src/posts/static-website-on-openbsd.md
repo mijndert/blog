@@ -202,6 +202,15 @@ EOT
 pfctl -f /etc/pf.conf
 ```
 
+## Shutdown
+
+To enable graceful shutdown of the VM, you need to install the qemu guest agent package. Without it you will not be able to properly shut down the VM from the Synology VMM interface.
+
+```sh
+pkg_add qemu-ga 
+rcctl enable qemu_ga
+```
+
 ## Conclusion
 
 All in all this was a pretty painless experience. I was able to set up a copy of this website on OpenBSD with minimal effort using the built-in tools. Performance is generally pretty good, even though it's running on spinning disks that occassionally go to sleep.
