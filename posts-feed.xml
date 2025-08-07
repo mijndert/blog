@@ -141,6 +141,10 @@ pass out inet proto icmp icmp-type { echoreq }
 pass proto ipv6-icmp from any to any
 EOT
 pfctl -f /etc/pf.conf&lt;/EOT&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Shutdown&lt;/h2&gt;
+&lt;p&gt;To enable graceful shutdown of the VM, you need to install the qemu guest agent package. Without it you will not be able to properly shut down the VM from the Synology VMM interface.&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;pkg_add qemu-ga 
+rcctl &lt;span class=&quot;token builtin class-name&quot;&gt;enable&lt;/span&gt; qemu_ga&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;All in all this was a pretty painless experience. I was able to set up a copy of this website on OpenBSD with minimal effort using the built-in tools. Performance is generally pretty good, even though it&#39;s running on spinning disks that occassionally go to sleep.&lt;/p&gt;
 &lt;p&gt;Using this relayd config I now get an A+ on &lt;a href=&quot;https://securityheaders.com/&quot;&gt;Security Headers&lt;/a&gt;, another A+ on &lt;a href=&quot;https://developer.mozilla.org/en-US/observatory&quot;&gt;HTTP Observatory&lt;/a&gt;, and yet another A+ on &lt;a href=&quot;https://www.ssllabs.com/ssltest/&quot;&gt;SSL Labs&lt;/a&gt;.&lt;/p&gt;
