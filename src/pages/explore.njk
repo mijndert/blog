@@ -6,7 +6,7 @@ permalink: /explore/
 eleventyExcludeFromCollections: true
 ---
 
-{% for page in collections.page %}
+{% for page in collections.page | sort(attribute="data.title") %}
 <a href="{{ page.url }}">{{ page.data.title }}</a>
 <p class="muted">
   {{ page.data.summary }}
