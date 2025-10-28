@@ -1,9 +1,6 @@
 ---
 title: Week notes 15
 date: 2025-04-11 15:00:00
-summary: A weekly summary of things that are on my mind.
-tags: 
-- week notes
 ---
 
 Another week has passed and it's time to share some notes.

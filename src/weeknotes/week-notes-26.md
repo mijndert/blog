@@ -1,9 +1,6 @@
 ---
 title: Week notes 26
 date: 2025-06-27 15:11:00
-summary: A weekly summary of things that are on my mind.
-tags:
-- week notes
 ---
 
 Week 26 was full of Kubernetes and getting a lot of work done in a very short amount of time. What else happened?

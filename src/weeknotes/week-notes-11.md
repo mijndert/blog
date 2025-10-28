@@ -1,9 +1,6 @@
 ---
 title: Week notes 11
 date: 2025-03-14 13:00:00
-summary: A weekly summary of things that are on my mind.
-tags: 
-- week notes
 ---
 
 - After many many months of noise coming from our eletric heat pump, I can safely say it's fixed! I gave the engineer who fixed it a nice bottle of whiskey that's how happy we are. We can finally sleep at night without turning the heat off.

@@ -9,7 +9,7 @@ permalink: /uses/
 
 <p class="compact">14" MacBook Pro (M2 Pro)</p>
 <p class="compact">Dell U4025QW</p>
-<p class="compact">iPhone 13 Pro</p>
+<p class="compact">iPhone 17 Pro</p>
 <p class="compact">Logitech Streamcam</p>
 <p class="compact">Logitech MX Ergo</p>
 <p class="compact">Magic Keyboard</p>
@@ -20,16 +20,17 @@ permalink: /uses/
 
 <p class="compact">Apple Notes, Calendar, Mail, Reminders</p>
 <p class="compact">Firefox</p>
+<p class="compact">Chrome (for work)</p>
 <p class="compact">VS Code</p>
-<p class="compact">Things</p>
 <p class="compact">Ghostty</p>
 <p class="compact">NetNewsWire</p>
 <p class="compact">1Password</p>
 <p class="compact">Rectangle</p>
 <p class="compact">Scroll Reverser</p>
-<p class="compact">Terraform</p>
+<p class="compact">Terraform + OpenTofu</p>
 <p class="compact">Orbstack</p>
 <p class="compact">Tailscale</p>
+<p class="compact">Spotify</p>
 
 ## Browser extensions
 

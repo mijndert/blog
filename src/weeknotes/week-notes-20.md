@@ -1,12 +1,9 @@
 ---
 title: Week notes 20
 date: 2025-05-16 09:12:41
-summary: A weekly summary of things that are on my mind.
-tags:
-- week notes
 ---
 
-Week 20 is almost done! A round number, I like round numbers. 
+Week 20 is almost done! A round number, I like round numbers.
 
 It's been a busy week again, with not much time to do anything besides work and puppy... things.
 

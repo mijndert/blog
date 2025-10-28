@@ -1,9 +1,6 @@
 ---
 title: Week notes 5
 date: 2025-01-31 10:00:00
-summary: A weekly summary of things that are on my mind.
-tags: 
-- week notes
 ---
 
 New (not so) boring week, new notes!
@@ -17,4 +14,3 @@ New (not so) boring week, new notes!
 ![My WFH setup in 2025](/img/week-notes-5-1.jpg)
 
 I'll leave you with a YouTube recommendation. Even when she worked at The Verge I would watch all of her videos, every last one of them. But now she's gone independent and her videos are somehow even better. I'm talking about [Becca Farsace](https://www.youtube.com/@BeccaFarsace/videos). She takes tech outside. Go watch her videos.
-

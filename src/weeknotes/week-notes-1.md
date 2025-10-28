@@ -1,9 +1,6 @@
 ---
 title: Week notes 1
 date: 2025-01-02 10:00:00
-summary: A weekly summary of things that are on my mind.
-tags: 
-- week notes
 ---
 
 This is my first ever entry in a new series. Just about every blog I follow does these week notes where they summarize what they've been up to. It's often very personal, sometimes it's about work or games or music. I always get something out of reading them, so I thought I'd give it a try myself. There's no particular format or structure and I'm trying to figure things out as I go. Bear with me.
@@ -19,6 +16,6 @@ Normally I'd publish these things on a Friday, but I just got back to work today
 - Still thinking of some new years resolutions, nothing is set in stone yet. I'm not going to make my life very hard or anything - I just want a quiet year with a bigger focus on myself and what my body needs.
 - Been listening to one of my favorite bands [Switchfoot](https://www.switchfoot.com/) quite a bit after a long stretch of not listening to them.
 
-That's it! I'll leave you with a playlist to listen to. 
+That's it! I'll leave you with a playlist to listen to.
 
 https://open.spotify.com/playlist/37i9dQZF1DZ06evO43TWtq?si=5e7cec9fa56146cf

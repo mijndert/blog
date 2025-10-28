@@ -1,9 +1,6 @@
 ---
 title: Week notes 24
 date: 2025-06-13 14:10:00
-summary: A weekly summary of things that are on my mind.
-tags:
-- week notes
 ---
 
 - After a good fews days with rain, the weather turned and we now have a lot of sunshine and heat. But with that, the seasonal allergies are making a huge comeback. I've been feeling terrible again and I'm so ready for the pollen to go away so I can start running again as well.

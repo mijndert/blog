@@ -1,9 +1,6 @@
 ---
 title: Week notes 4
 date: 2025-01-24 09:00:00
-summary: A weekly summary of things that are on my mind.
-tags: 
-- week notes
 ---
 
 It's the year of week notes on the desktop! (if you know, you know)
@@ -13,6 +10,6 @@ It's the year of week notes on the desktop! (if you know, you know)
 - [Ellie](https://ellie.wtf/) has given me access to try [Atuin](https://atuin.sh/) Desktop and it's just incredible. It's still early days so it's all a little rough around the edges, but the potential is definitly there. I'll be sharing some more thoughts in a separate post soon.
 - After the inauguration of the Orange Man, I decided to filter out a ton of words on Mastodon. My timeline is now a happy place once more.
 - Last time I talked about how we're planning to have some work done to our garage. We received the first quote and _wow_ is it a lot of money. I kind of expected it, but not _this much_. Anyway, we have a few more quotes coming in so we'll see how it goes.
-- Today I brought in my car for maintenance. Fingers crossed nothing unexpected pops up. 
+- Today I brought in my car for maintenance. Fingers crossed nothing unexpected pops up.
 
 That's it! Bit of a quiet week this one. Until next time!

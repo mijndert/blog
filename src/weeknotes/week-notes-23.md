@@ -1,9 +1,6 @@
 ---
 title: Week notes 23
 date: 2025-06-06 10:14:00
-summary: A weekly summary of things that are on my mind.
-tags:
-- week notes
 ---
 
 It's June already?! Times flies. Feels like last week that we were celebrating New Year's.

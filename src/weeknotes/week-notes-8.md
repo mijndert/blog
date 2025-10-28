@@ -1,9 +1,6 @@
 ---
 title: Week notes 8
 date: 2025-02-21 11:00:00
-summary: A weekly summary of things that are on my mind.
-tags: 
-- week notes
 ---
 
 - This week I finished reading [Extra Focus](https://www.extrafocusbook.com/). For me personally there wasn't a ton of new information in there, but it was nice to get some extra validation for all of the things I've been experiencing over the years.

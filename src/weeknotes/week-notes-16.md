@@ -1,9 +1,6 @@
 ---
 title: Week notes 16
 date: 2025-04-21 13:00:00
-summary: A weekly summary of things that are on my mind.
-tags: 
-- week notes
 ---
 
 Excuse me while I publish these weeks notes a little later than usual this time around. I've been busy gushing over Sam our new Corgi puppy. He's been an absolute joy to have around – he listens very well, is playful, and has a ton of personality.

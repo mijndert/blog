@@ -1,9 +1,6 @@
 ---
 title: Week notes 19
 date: 2025-05-09 16:14:55
-summary: A weekly summary of things that are on my mind.
-tags:
-- week notes
 ---
 
 It's Friday again! Time to look back at the week.
@@ -17,4 +14,4 @@ It's Friday again! Time to look back at the week.
 - I noticed when I share a post on Mastodon, it doesn't show an image or the summary of the post. I need to set aside some time to make it a bit more presentable. Coming up soon!
 
 ![My messy desk with a bunch of cables and my Kobo e-reader](/img/week-notes-19.jpeg)
-*This messy desk is pretty emblematic for the past week.*
+_This messy desk is pretty emblematic for the past week._
