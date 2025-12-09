@@ -1,5 +1,5 @@
 ---
-title: Mijndert Stuij
+title: Mijndert
 layout: layouts/page.html
 summary: Lead platform engineer. Runner. Minimalist.
 ---

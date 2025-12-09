@@ -63,11 +63,11 @@ export default async function(eleventyConfig) {
 		},
 		metadata: {
 			language: "en",
-			title: "Mijndert Stuij",
+			title: "Mijndert",
 			subtitle: "Lead platform engineer. Runner. Minimalist.",
 			base: "https://mijndertstuij.nl",
 			author: {
-				name: "Mijnder Stuij",
+				name: "Mijndert Stuij",
 				email: "mijndert@mijndertstuij.nl",
 			}
 		}
@@ -82,7 +82,7 @@ export default async function(eleventyConfig) {
     },
     metadata: {
       language: "en",
-      title: "Mijndert Stuij - Week Notes",
+      title: "Mijndert - Week Notes",
       subtitle: "Weekly notes and updates",
       base: "https://mijndertstuij.nl",
       author: {
@@ -101,7 +101,7 @@ export default async function(eleventyConfig) {
     },
     metadata: {
       language: "en",
-      title: "Mijndert Stuij - Blog posts",
+      title: "Mijndert - Blog posts",
       subtitle: "Articles excluding week notes",
       base: "https://mijndertstuij.nl",
       author: {
