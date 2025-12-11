@@ -179,7 +179,7 @@ ul li, ol li {
 nav ul {
   margin: var(--spacing-lg) 0 var(--spacing-xl) 0;
   padding: 0 0 var(--spacing-sm) 0;
-  border-bottom: var(--border);
+  /* border-bottom: var(--border); */
   list-style: none;
 }
 
@@ -205,13 +205,13 @@ nav a[aria-current="page"] {
 /* Header */
 header {
   margin: 0 0 var(--spacing-xl) 0;
-  border-bottom: var(--border);
-  padding-bottom: var(--spacing-xl);
+  /* border-bottom: var(--border); */
+  padding-bottom: var(--spacing-sm);
 }
 
 /* Topics */
 section.topics {
-  border-bottom: var(--border);
+  /* border-bottom: var(--border); */
   padding-bottom: var(--spacing-xl);
 }
 
@@ -226,7 +226,7 @@ section.topics li {
 
 /* Posts */
 section.posts.short {
-  padding-top: var(--spacing-lg);
+  /* padding-top: var(--spacing-lg); */
 }
 
 section.posts li {
@@ -244,7 +244,7 @@ section.posts time {
 footer {
   margin: var(--spacing-xl) 0;
   padding: var(--spacing-md) 0;
-  border-top: var(--border);
+  /* border-top: var(--border); */
 }
 
 /* Skill progress bars */
