@@ -2,7 +2,7 @@
   <!-- <h2>Latest posts</h2> -->
   <ul>
     {%- for post in collections.blogposts | reverse -%}
-      {%- if loop.index0 < 5 -%}
+      {%- if loop.index0 < 10 -%}
       <li>
         <time class="muted" datetime="{{ post.date | postDate }}">
           {{ post.date | postDate }}
