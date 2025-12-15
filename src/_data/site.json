@@ -1,5 +1,5 @@
 {
-  "title": "Mijndert",
+  "title": "Mijndert Stuij",
   "subtitle": "Lead platform engineer. Runner. Minimalist.",
   "language": "en",
   "url": "https://mijndertstuij.nl",
@@ -7,8 +7,7 @@
   "sitemap": "/sitemap.xml",
   "feeds": {
     "all": "/feed.xml",
-    "blogposts": "/posts-feed.xml",
-    "weeknotes": "/weeknotes-feed.xml"
+    "blogposts": "/posts-feed.xml"
   },
   "author": {
     "name": "Mijndert Stuij",

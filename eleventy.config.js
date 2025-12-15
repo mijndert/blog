@@ -63,7 +63,7 @@ export default async function(eleventyConfig) {
 		},
 		metadata: {
 			language: "en",
-			title: "Mijndert",
+			title: "Mijndert Stuij",
 			subtitle: "Lead platform engineer. Runner. Minimalist.",
 			base: "https://mijndertstuij.nl",
 			author: {
@@ -72,25 +72,6 @@ export default async function(eleventyConfig) {
 			}
 		}
 	});
-
-  // RSS feed for week notes
-  eleventyConfig.addPlugin(feedPlugin, {
-    type: "atom",
-    outputPath: "/weeknotes-feed.xml",
-    collection: {
-      name: "weeknotes"
-    },
-    metadata: {
-      language: "en",
-      title: "Mijndert - Week Notes",
-      subtitle: "Weekly notes and updates",
-      base: "https://mijndertstuij.nl",
-      author: {
-        name: "Mijndert Stuij",
-        email: "mijndert@mijndertstuij.nl",
-      }
-    }
-  });
 
   // RSS feed for all posts excluding week notes
   eleventyConfig.addPlugin(feedPlugin, {
@@ -101,7 +82,7 @@ export default async function(eleventyConfig) {
     },
     metadata: {
       language: "en",
-      title: "Mijndert - Blog posts",
+      title: "Mijndert Stuij - Blog posts",
       subtitle: "Articles excluding week notes",
       base: "https://mijndertstuij.nl",
       author: {
