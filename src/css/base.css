@@ -225,9 +225,9 @@ section.topics li {
 }
 
 /* Posts */
-section.posts.short {
-  /* padding-top: var(--spacing-lg); */
-}
+/* section.posts.short {
+  padding-top: var(--spacing-lg);
+} */
 
 section.posts li {
   margin: 0 0 var(--spacing-sm) 0;

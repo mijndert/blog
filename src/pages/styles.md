@@ -6,15 +6,18 @@ permalink: /styles/
 ---
 
 # H1 header
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet dignissim elit, non varius nulla. Vestibulum vehicula, velit non consequat faucibus, turpis diam fermentum magna, vestibulum tempor lacus sem eu tortor. Suspendisse id efficitur orci. Suspendisse ullamcorper eleifend neque, id efficitur quam. Ut porta libero orci, at faucibus diam rhoncus id. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet dignissim elit, non varius nulla. Vestibulum vehicula, velit non consequat faucibus, turpis diam fermentum magna, vestibulum tempor lacus sem eu tortor. Suspendisse id efficitur orci. Suspendisse ullamcorper eleifend neque, id efficitur quam. Ut porta libero orci, at faucibus diam rhoncus id.
 
 ## H2 header
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet dignissim elit, non varius nulla. Vestibulum vehicula, velit non consequat faucibus, turpis diam fermentum magna, vestibulum tempor lacus sem eu tortor. Suspendisse id efficitur orci. Suspendisse ullamcorper eleifend neque, id efficitur quam. Ut porta libero orci, at faucibus diam rhoncus id. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet dignissim elit, non varius nulla. Vestibulum vehicula, velit non consequat faucibus, turpis diam fermentum magna, vestibulum tempor lacus sem eu tortor. Suspendisse id efficitur orci. Suspendisse ullamcorper eleifend neque, id efficitur quam. Ut porta libero orci, at faucibus diam rhoncus id.
 
 ### H3 header
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet dignissim elit, non varius nulla. Vestibulum vehicula, velit non consequat faucibus, turpis diam fermentum magna, vestibulum tempor lacus sem eu tortor. Suspendisse id efficitur orci. Suspendisse ullamcorper eleifend neque, id efficitur quam. Ut porta libero orci, at faucibus diam rhoncus id. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet dignissim elit, non varius nulla. Vestibulum vehicula, velit non consequat faucibus, turpis diam fermentum magna, vestibulum tempor lacus sem eu tortor. Suspendisse id efficitur orci. Suspendisse ullamcorper eleifend neque, id efficitur quam. Ut porta libero orci, at faucibus diam rhoncus id. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet dignissim elit, non varius nulla. Vestibulum vehicula, velit non consequat faucibus, turpis diam fermentum magna, vestibulum tempor lacus sem eu tortor. Suspendisse id efficitur orci. Suspendisse ullamcorper eleifend neque, id efficitur quam. Ut porta libero orci, at faucibus diam rhoncus id.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet dignissim elit, non varius nulla. Vestibulum vehicula, velit non consequat faucibus, turpis diam fermentum magna, vestibulum tempor lacus sem eu tortor. Suspendisse id efficitur orci. Suspendisse ullamcorper eleifend neque, id efficitur quam. Ut porta libero orci, at faucibus diam rhoncus id.
 
 - Item 1
 - Item 2
@@ -22,8 +25,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet digni
 
 <aside>This is an aside used for calling out important information.</aside>
 
-![My messy desk with a bunch of cables and my Kobo e-reader](/img/week-notes-19.jpeg)
-*Image caption.*
+![My messy desk with a bunch of cables and my Kobo e-reader](/img/stroopwafel.png)
+_Image caption._
 
 > This is a blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet dignissim elit, non varius nulla. Vestibulum vehicula, velit non consequat faucibus, turpis diam fermentum magna, vestibulum tempor lacus sem eu tortor. Suspendisse id efficitur orci. Suspendisse ullamcorper eleifend neque, id efficitur quam. Ut porta libero orci, at faucibus diam rhoncus id.
 
