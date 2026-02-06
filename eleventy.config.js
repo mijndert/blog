@@ -73,6 +73,25 @@ export default async function(eleventyConfig) {
 		}
 	});
 
+  // RSS feed for week notes
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "atom",
+    outputPath: "/weeknotes-feed.xml",
+    collection: {
+      name: "weeknotes"
+    },
+    metadata: {
+      language: "en",
+      title: "Mijndert - Week Notes",
+      subtitle: "Weekly notes and updates",
+      base: "https://mijndertstuij.nl",
+      author: {
+        name: "Mijndert Stuij",
+        email: "mijndert@mijndertstuij.nl",
+      }
+    }
+  });
+
   // RSS feed for all posts excluding week notes
   eleventyConfig.addPlugin(feedPlugin, {
     type: "atom",
