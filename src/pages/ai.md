@@ -3,6 +3,7 @@ title: AI
 layout: layouts/page.html
 summary: How I use AI in my daily life, as responsibly as possible.
 permalink: /ai/
+eleventyExcludeFromCollections: true
 ---
 
 Every word on this site, and my others sites, was written by me, a human being. None of the images were generated with AI.

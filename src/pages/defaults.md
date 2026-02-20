@@ -3,6 +3,7 @@ title: Defaults
 layout: layouts/page.html
 summary: A list of the apps and services I use for various tasks.
 permalink: /defaults/
+eleventyExcludeFromCollections: true
 ---
 
 - **Bookmarks**: Firefox

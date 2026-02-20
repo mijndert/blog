@@ -3,6 +3,7 @@ title: About
 layout: layouts/page.html
 summary: Everything about me, my work, my skills, and my interests.
 permalink: /about/
+eleventyExcludeFromCollections: true
 ---
 
 I'm a [lead platform engineer](https://www.linkedin.com/in/mijndertstuij/) and solutions architect with over 17 years of experience building highly scalable infrastructure on top of public cloud providers. My extensive knowledge and interest into development practices make me a valuable asset for teams comprising of infrastructure engineers, developers, database administrators, and product managers. I always try to brigde the gap between technical and business requirements to come up with the best solutions that meet the overall company and team goals.
