@@ -39,3 +39,5 @@ CalAction Pro offers the following additional features:
 - **Full calendar export**: CalAction Pro allows you to export your entire calendar as an .ics file, which is useful for backup purposes or when moving to a different calendar service.
 
 If you're interested in trying CalAction, you can download it [from the App Store right here](https://apps.apple.com/nl/app/calaction/id6760361082). I also created a promotional website that lists all the features and answers some frequently asked questions, [which you can find here](https://calaction.mijndertstuij.nl/).
+
+If you try it out, please let me know what you think! Leaving a review on the App Store would also be greatly appreciated, as it helps other users discover the app and provides valuable feedback for future improvements.
