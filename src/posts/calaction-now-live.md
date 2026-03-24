@@ -23,9 +23,9 @@ To that end, CalAction offers multiple ways to import .ics files:
 
 CalAction however goes beyond merely importing the .ics file in your calendar. It also provides additional features that help you manage your imports more effectively.
 
-- **Duplicate detection**: CalAction detects duplicate events and gives you the option to skip, replace or keep both events.
-- **Video call links**: CalAction automatically detects video call links in the event details and adds them to the event, making it easier to join your meetings.
-- **Event creation**: CalAction allows you to create new events directly within the app.
+- **Duplicate detection**: detects duplicate events and gives you the option to skip, replace or keep both events.
+- **Video call links**: automatically detects video call links in the event details and adds them to the event, making it easier to join your meetings.
+- **Event creation**: allows you to create new events directly within the app.
 
 I'll also repeat what I said about the optional in-app purchase:
 
@@ -33,10 +33,10 @@ I'll also repeat what I said about the optional in-app purchase:
 
 CalAction Pro offers the following additional features:
 
-- **Smart conflict resolution**: CalAction Pro can find and resolve conflicts between events.
-- **Auto-routing rules**: CalAction Pro can automatically route events to specific calendars based on rules you define.
-- **Bulk operations**: CalAction Pro allows you to perform bulk operations on events, such as deleting or moving multiple events at once.
-- **Full calendar export**: CalAction Pro allows you to export your entire calendar as an .ics file, which is useful for backup purposes or when moving to a different calendar service.
+- **Smart conflict resolution** can find and resolve conflicts between events.
+- **Auto-routing rules** can automatically route events to specific calendars based on rules you define.
+- **Bulk operations** allow you to perform bulk operations on events, such as deleting or moving multiple events at once.
+- **Full calendar export** allows you to export your entire calendar as an .ics file, which is useful for backup purposes or when moving to a different calendar service.
 
 If you're interested in trying CalAction, you can download it [from the App Store right here](https://apps.apple.com/nl/app/calaction/id6760361082). I also created a promotional website that lists all the features and answers some frequently asked questions, [which you can find here](https://calaction.mijndertstuij.nl/).
 
