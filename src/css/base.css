@@ -2,7 +2,8 @@
   /* Colors */
   --color-bg: #eee9dc;
   --color-text: #15141A;
-  --color-link-hover: #003eaa;
+  --color-link: #003eaa;
+  --color-link-hover: #001d6e;
   --color-link-underline: #c8c8c8;
   --color-muted: #666;
   --color-blockquote-border: #5B5B66;
@@ -32,14 +33,15 @@
 
   /* Progress bars */
   --progress-bg: var(--border-color);
-  --progress-fill: var(--color-link-hover);
+  --progress-fill: var(--color-link);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #1a1b1e;
     --color-text: #e8e6e3;
-    --color-link-hover: #6c9fff;
+    --color-link: #6c9fff;
+    --color-link-hover: #a8c8ff;
     --color-link-underline: #555;
     --color-muted: #a0a0a0;
     --color-blockquote-border: #7a7a8c;
@@ -101,7 +103,7 @@ p.compact {
 
 /* Links */
 a {
-  color: inherit;
+  color: var(--color-link);
   text-decoration: underline;
   text-decoration-thickness: 0.05rem;
   text-underline-offset: 0.1875rem;
@@ -110,6 +112,7 @@ a {
 
 a:hover {
   color: var(--color-link-hover);
+  text-decoration-thickness: 0.125rem;
 }
 
 /* Images */
@@ -189,7 +192,7 @@ nav li {
 }
 
 nav li:first-child {
-  color: var(--color-link-hover);
+  color: var(--color-link);
   border-right: var(--border);
   padding-right: var(--spacing-md);
 }
