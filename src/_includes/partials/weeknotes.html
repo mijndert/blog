@@ -1,12 +1,8 @@
-<section class="posts">
-  <ul>
-    {%- for post in collections.weeknotes | reverse -%}
-    <li>
-      <time class="muted" datetime="{{ post.date | postDate }}">
-        {{ post.date | postDate }}
-      </time>
-      <a href="{{ post.url }}">{{ post.data.title }}</a>
-    </li>
-    {%- endfor -%}
-  </ul>
-</section>
+<div class="section">
+  {%- for post in collections.weeknotes | reverse -%}
+  <div class="post-row">
+    <a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a>
+    <time class="post-date" datetime="{{ post.date | dateToRfc3339 }}">{{ post.date | postDate }}</time>
+  </div>
+  {%- endfor -%}
+</div>

@@ -1,9 +1,9 @@
 ---
 title: Mijndert Stuij
 layout: layouts/page.html
-summary: Lead platform engineer. Runner. Minimalist.
+summary: Platform engineer. Runner. Maker of small things.
 ---
 
-{% include 'partials/topics.html' %}
-
 {% include 'partials/posts-short.html' %}
+
+{% include 'partials/projects.html' %}
