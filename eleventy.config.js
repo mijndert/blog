@@ -2,8 +2,22 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import embeds from "eleventy-plugin-embed-everything";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
+import { createHash } from "crypto";
+import { readFileSync } from "fs";
 
 export default async function(eleventyConfig) {
+
+  // Cache-busting filter: appends a content hash to asset URLs
+  eleventyConfig.addFilter("cacheBust", (url) => {
+    const filePath = `src${url}`;
+    try {
+      const content = readFileSync(filePath);
+      const hash = createHash("md5").update(content).digest("hex").slice(0, 8);
+      return `${url}?v=${hash}`;
+    } catch {
+      return url;
+    }
+  });
 
   // Add a filter to format dates
   eleventyConfig.addFilter("postDate", dateObj => {
