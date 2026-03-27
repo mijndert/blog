@@ -3,6 +3,12 @@
     "name": "CalAction",
     "description": "Calendar actions for iOS via App Intents. Available on the App Store.",
     "linkText": "View on App Store",
-    "linkUrl": "https://apps.apple.com/app/calaction/id6742495498"
+    "linkUrl": "https://apps.apple.com/nl/app/calaction/id6760361082"
+  },
+  {
+    "name": "AWS SCP Catalog",
+    "description": "A catalog of AWS Service Control Policies, implemented using OpenTofu.",
+    "linkText": "View on GitHub",
+    "linkUrl": "https://github.com/mijndert/aws-scp-catalog"
   }
 ]
