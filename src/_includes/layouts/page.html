@@ -1,13 +1,13 @@
-{% extends "layouts/base.html" %} 
+{% extends "layouts/base.html" %}
 {% block content %}
 {% if page.url == "/" %}
 {% else %}
-<h1>{{ title }}</h1>
-<span class="meta">
-  <p class="muted">
-    {{ summary }}
-  </p>
-</span>
+<h1 class="page-title">{{ title }}</h1>
+{% if summary %}
+<p class="page-meta">{{ summary }}</p>
 {% endif %}
+{% endif %}
+<div class="page-content">
 {{ content | safe }}
+</div>
 {% endblock %}

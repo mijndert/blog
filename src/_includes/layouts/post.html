@@ -1,10 +1,8 @@
-{% extends "layouts/base.html" %} 
+{% extends "layouts/base.html" %}
 {% block content %}
-<h1>{{ title }}</h1>
-<span class="meta">
-  <p class="muted">
-    {{ page.date | postDate }}
-  </p>
-</span>
+<h1 class="page-title">{{ title }}</h1>
+<p class="page-meta">{{ page.date | postDate }}</p>
+<div class="page-content">
 {{ content | safe }}
+</div>
 {% endblock %}

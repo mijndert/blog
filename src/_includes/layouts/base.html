@@ -31,7 +31,7 @@
     <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}" />
 
     <!-- Theme color -->
-    <meta name="theme-color" content="#eee9dc" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#F2F0EC" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1a1b1e" media="(prefers-color-scheme: dark)">
 
     <!-- Favicon -->
@@ -53,8 +53,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"></noscript>
+
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.jorijn.com/js/pa-hNgvbIwlQvVPWwOcTAulL.js"></script>
     <script>
@@ -63,19 +62,20 @@
     </script>
 
   </head>
-  
+
   <body>
-    {% include "partials/nav.html" %}
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="wrap">
+      {% include "partials/nav.html" %}
 
-    {% if page.url == "/" %}
-    {% include "partials/header.html" %}
-    {% else %}
-    {% endif %}
+      <main id="main-content">
+      {% if page.url == "/" %}
+      {% include "partials/header.html" %}
+      {% endif %}
+        {% block content %}{% endblock %}
+      </main>
 
-    <main>
-      {% block content %}{% endblock %}
-    </main>
-
-    {% include "partials/footer.html" %}
+      {% include "partials/footer.html" %}
+    </div>
   </body>
 </html>
