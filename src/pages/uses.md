@@ -7,43 +7,44 @@ permalink: /uses/
 
 ## Hardware
 
-<p class="compact">14" MacBook Pro (M2 Pro)</p>
-<p class="compact">Dell U4025QW</p>
-<p class="compact">iPhone 17 Pro</p>
-<p class="compact">Logitech Streamcam</p>
-<p class="compact">Logitech MX Ergo</p>
-<p class="compact">Magic Keyboard</p>
-<p class="compact">AirPods 3</p>
-<p class="compact">Sonos One</p>
+- MacBook Pro (M2 Pro, 14 inch)
+- MacBook Air (M4, 2025)
+- Dell U4025QW
+- iPhone 17 Pro
+- Logitech Streamcam
+- Logitech MX Ergo
+- Magic Keyboard
+- AirPods 3
+- Sonos One
 
 ## Software
 
-<p class="compact">Apple Notes, Calendar, Mail, Reminders</p>
-<p class="compact">Firefox</p>
-<p class="compact">Chrome (for work)</p>
-<p class="compact">VS Code</p>
-<p class="compact">Ghostty</p>
-<p class="compact">NetNewsWire</p>
-<p class="compact">1Password</p>
-<p class="compact">Rectangle</p>
-<p class="compact">Scroll Reverser</p>
-<p class="compact">Terraform + OpenTofu</p>
-<p class="compact">Orbstack</p>
-<p class="compact">Tailscale</p>
-<p class="compact">Spotify</p>
+- Apple Notes, Calendar, Mail, Reminders
+- Firefox
+- Chrome (for work)
+- VS Code
+- Ghostty
+- NetNewsWire
+- 1Password
+- Rectangle
+- Scroll Reverser
+- Terraform + OpenTofu
+- Orbstack
+- Tailscale
+- Spotify
 
 ## Browser extensions
 
-<p class="compact">uBlock Origin</p>
-<p class="compact">Facebook Containers</p>
-<p class="compact">1Password</p>
-<p class="compact">Awesome RSS</p>
-<p class="compact">Clear URLs</p>
-<p class="compact">Unhook</p>
+- uBlock Origin
+- Facebook Containers
+- 1Password
+- Awesome RSS
+- Clear URLs
+- Unhook
 
 ## Other
 
-<p class="compact">Synology DS723+</p>
-<p class="compact">Kobo Aura h2O Edition 2</p>
-<p class="compact">Garmin Forerunner 570</p>
-<p class="compact">Steam Deck OLED (1TB)</p>
+- Synology DS723+
+- Kobo Aura h2O Edition 2
+- Garmin Forerunner 570
+- Steam Deck OLED (1TB)
