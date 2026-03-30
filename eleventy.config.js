@@ -100,7 +100,9 @@ export default async function(eleventyConfig) {
   eleventyConfig.addFilter("totalWords", (collection) => {
     let total = 0;
     for (const post of collection) {
-      const text = (post.templateContent || "").replace(/<[^>]*>/g, "");
+      const raw = readFileSync(post.inputPath, "utf-8");
+      // Strip frontmatter and HTML tags, then count words
+      const text = raw.replace(/^---[\s\S]*?---/, "").replace(/<[^>]*>/g, "");
       total += text.split(/\s+/).filter(Boolean).length;
     }
     return Math.round(total / 1000);
