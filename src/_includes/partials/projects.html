@@ -2,11 +2,11 @@
   <h2 class="section-label">Projects</h2>
   <div class="projects-grid">
     {%- for project in projects -%}
-    <div class="proj-card">
+    <a class="proj-card" href="{{ project.linkUrl }}">
       <h3 class="proj-name">{{ project.name }}</h3>
       <div class="proj-desc">{{ project.description }}</div>
-      <a class="proj-link" href="{{ project.linkUrl }}">{{ project.linkText }}</a>
-    </div>
+      <span class="proj-link">{{ project.linkText }}</span>
+    </a>
     {%- endfor -%}
   </div>
 </div>

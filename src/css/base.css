@@ -351,9 +351,12 @@ nav {
 }
 
 .proj-card {
+  display: block;
   background: var(--color-card-bg);
   border-radius: var(--border-radius);
   padding: 18px 20px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .proj-card h3.proj-name {
@@ -380,7 +383,7 @@ nav {
   display: inline-block;
 }
 
-.proj-link:hover {
+.proj-card:hover .proj-link {
   color: var(--color-text);
 }
 
