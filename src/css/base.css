@@ -394,6 +394,7 @@ nav {
   font-size: 15px;
   line-height: 1.7;
   color: var(--color-text);
+  margin-bottom: 32px;
 }
 
 .page-content h2 {
