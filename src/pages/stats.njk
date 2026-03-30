@@ -32,7 +32,7 @@ permalink: /stats/
 
 <div class="tag-cloud">
 {%- for item in collections.tagsList | topTags(collections.posts) -%}
-  <a class="tag-pill" href="/topics/{{ item.tag }}/">{{ item.tag }} <span class="tag-count">{{ item.count }}</span></a>
+  <span class="tag-pill">{{ item.tag }} <span class="tag-count">{{ item.count }}</span></span>
 {%- endfor -%}
 </div>
 
