@@ -331,6 +331,11 @@ nav {
   content: ' \2192';
 }
 
+/* ===== Related posts ===== */
+.related-posts {
+  margin-top: 48px;
+}
+
 /* ===== Page content (sub-pages) ===== */
 .page-title {
   margin: 0 0 8px 0;

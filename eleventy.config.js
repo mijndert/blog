@@ -59,6 +59,21 @@ export default async function(eleventyConfig) {
 		return posts.filter(post => post.data.tags && post.data.tags.includes(tag));
 	});
 
+  // Related posts filter: finds posts sharing the most tags with the current post
+  eleventyConfig.addFilter("relatedPosts", (pageUrl, tags, collection) => {
+    if (!tags || !tags.length) return [];
+    return collection
+      .filter(p => p.url !== pageUrl && p.data.tags)
+      .map(p => ({
+        post: p,
+        shared: p.data.tags.filter(t => tags.includes(t)).length
+      }))
+      .filter(p => p.shared > 0)
+      .sort((a, b) => b.shared - a.shared || b.post.date - a.post.date)
+      .slice(0, 2)
+      .map(p => p.post);
+  });
+
   // Watch non-template files
   eleventyConfig.addWatchTarget("./src/_data");
 
