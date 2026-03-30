@@ -1,4 +1,38 @@
 <div class="hero">
   <h1 class="hero-title">{{ site.subtitle | safe }}</h1>
   <p class="hero-sub">{{ site.description | safe }}</p>
+  <div id="latest-toot-section" class="section" style="margin-top: 52px" hidden>
+    <h2 class="section-label">Latest toot</h2>
+  <a id="latest-toot" class="toot" href="{{ site.author.mastodonUrl }}" target="_blank" rel="noopener">
+    <div class="toot-header">
+      <img id="toot-avatar" class="toot-avatar" alt="" width="44" height="44" />
+      <div class="toot-meta">
+        <span class="toot-name">{{ site.author.name }}</span>
+        <span class="toot-handle">{{ site.author.mastodon }}</span>
+      </div>
+    </div>
+    <p id="toot-content" class="toot-content"></p>
+    <time id="toot-time" class="toot-time"></time>
+  </a>
+  </div>
 </div>
+<script>
+(async () => {
+  const section = document.getElementById('latest-toot-section');
+  try {
+    const acct = await fetch('https://toot.community/api/v1/accounts/lookup?acct=mijndert');
+    if (!acct.ok) return;
+    const account = await acct.json();
+    const res = await fetch(`https://toot.community/api/v1/accounts/${account.id}/statuses?limit=1&exclude_replies=true&exclude_reblogs=true`);
+    if (!res.ok) return;
+    const [toot] = await res.json();
+    if (!toot) return;
+    const text = toot.content.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
+    document.getElementById('toot-avatar').src = account.avatar;
+    document.getElementById('toot-content').textContent = text.length > 200 ? text.slice(0, 200) + '…' : text;
+    document.getElementById('toot-time').textContent = new Date(toot.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    document.getElementById('latest-toot').href = toot.url;
+    section.removeAttribute('hidden');
+  } catch {}
+})();
+</script>
