@@ -74,6 +74,38 @@ export default async function(eleventyConfig) {
       .map(p => p.post);
   });
 
+  // Stats helpers
+  eleventyConfig.addFilter("wordCount", (content) => {
+    return (content || "").split(/\s+/).filter(Boolean).length;
+  });
+
+  eleventyConfig.addFilter("postsPerYear", (collection) => {
+    const counts = {};
+    for (const post of collection) {
+      const year = post.date.getFullYear();
+      counts[year] = (counts[year] || 0) + 1;
+    }
+    return Object.entries(counts).sort((a, b) => b[0] - a[0]);
+  });
+
+  eleventyConfig.addFilter("topTags", (tagsList, collection) => {
+    return tagsList
+      .map(tag => ({
+        tag,
+        count: collection.filter(p => p.data.tags && p.data.tags.includes(tag)).length
+      }))
+      .sort((a, b) => b.count - a.count);
+  });
+
+  eleventyConfig.addFilter("totalWords", (collection) => {
+    let total = 0;
+    for (const post of collection) {
+      const text = (post.templateContent || "").replace(/<[^>]*>/g, "");
+      total += text.split(/\s+/).filter(Boolean).length;
+    }
+    return Math.round(total / 1000);
+  });
+
   // Watch non-template files
   eleventyConfig.addWatchTarget("./src/_data");
 

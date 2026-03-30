@@ -1,0 +1,48 @@
+---
+title: Stats
+summary: Some numbers about this blog.
+layout: layouts/page.html
+permalink: /stats/
+---
+
+<div class="stats-grid">
+  <div class="proj-card">
+    <h3 class="proj-name">Blog posts</h3>
+    <div class="stat-number">{{ collections.blogposts | length }}</div>
+  </div>
+  <div class="proj-card">
+    <h3 class="proj-name">Week notes</h3>
+    <div class="stat-number">{{ collections.weeknotes | length }}</div>
+  </div>
+  <div class="proj-card">
+    <h3 class="proj-name">Total posts</h3>
+    <div class="stat-number">{{ collections.posts | length }}</div>
+  </div>
+  <div class="proj-card">
+    <h3 class="proj-name">Topics</h3>
+    <div class="stat-number">{{ collections.tagsList | length }}</div>
+  </div>
+  <div class="proj-card">
+    <h3 class="proj-name">Words written</h3>
+    <div class="stat-number">~{{ collections.posts | totalWords }}k</div>
+  </div>
+</div>
+
+<h2>Top topics</h2>
+
+<div class="tag-cloud">
+{%- for item in collections.tagsList | topTags(collections.posts) -%}
+  <a class="tag-pill" href="/topics/{{ item.tag }}/">{{ item.tag }} <span class="tag-count">{{ item.count }}</span></a>
+{%- endfor -%}
+</div>
+
+<h2>Posts per year</h2>
+
+<div class="stats-grid">
+{%- for item in collections.posts | postsPerYear -%}
+  <div class="proj-card">
+    <h3 class="proj-name">{{ item[0] }}</h3>
+    <div class="stat-number">{{ item[1] }}</div>
+  </div>
+{%- endfor -%}
+</div>

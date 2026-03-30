@@ -331,9 +331,55 @@ nav {
   content: ' \2192';
 }
 
+/* ===== Stats ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-top: 4px;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-card-bg);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text);
+  border-bottom: none;
+  white-space: nowrap;
+}
+
+.tag-pill:hover {
+  color: var(--color-link-hover);
+}
+
+.tag-count {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
 /* ===== Related posts ===== */
 .related-posts {
   margin-top: 48px;
+  margin-bottom: 32px;
 }
 
 /* ===== Page content (sub-pages) ===== */
