@@ -355,6 +355,11 @@ nav {
   margin: 40px 0 16px;
 }
 
+.page-title ~ .page-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .page-content h3 {
   font-size: 14px;
   font-weight: 500;

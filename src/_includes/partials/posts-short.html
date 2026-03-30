@@ -1,7 +1,7 @@
 <div class="section">
   <h2 class="section-label">Recent writing</h2>
   {%- for post in collections.posts | reverse -%}
-    {%- if loop.index0 < 8 -%}
+    {%- if loop.index0 < 5 -%}
     <div class="post-row">
       <a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a>
       <time class="post-date" datetime="{{ post.date | dateToRfc3339 }}">{{ post.date | postDate }}</time>
