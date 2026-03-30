@@ -364,10 +364,7 @@ nav {
   color: var(--color-text);
   border-bottom: none;
   white-space: nowrap;
-}
-
-.tag-pill:hover {
-  color: var(--color-link-hover);
+  cursor: default;
 }
 
 .tag-count {
