@@ -151,7 +151,7 @@ ul li, ol li {
 
 /* ===== Navigation ===== */
 nav {
-  padding: 36px 0 20px;
+  padding: 36px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
