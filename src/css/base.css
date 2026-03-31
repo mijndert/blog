@@ -12,19 +12,14 @@
   --color-link-hover: #666;
   --color-link-underline: #D8D6D2;
   --color-code-bg: #e3e3e34f;
-  --color-aside-bg: #ECEAE6;
   --color-blockquote-border: #D0CEC9;
 
   /* Spacing */
-  --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
 
   /* Typography */
   --font-family: 'Instrument Sans', system-ui, sans-serif;
-  --font-size-base: 1rem;
   --font-size-sm: 0.8125rem;
   --line-height: 1.6;
 
@@ -44,14 +39,13 @@
     --color-link-hover: #aaa;
     --color-link-underline: #555;
     --color-code-bg: #2a2a2a4f;
-    --color-aside-bg: #252528;
     --color-blockquote-border: #555;
   }
 }
 
 html {
   font-family: var(--font-family);
-  font-size: var(--font-size-base);
+  font-size: 1rem;
   font-kerning: normal;
   line-height: var(--line-height);
   text-rendering: optimizeLegibility;
@@ -142,7 +136,7 @@ blockquote {
 aside {
   margin: var(--spacing-md) 0;
   padding: var(--spacing-md);
-  background-color: var(--color-aside-bg);
+  background-color: var(--color-card-bg);
   border-radius: var(--border-radius);
 }
 
@@ -179,8 +173,6 @@ nav {
   display: flex;
   gap: 24px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-links li {
@@ -240,10 +232,6 @@ nav {
   border-bottom: none;
 }
 
-.toot:hover {
-  border-bottom: none;
-}
-
 .toot:hover .toot-content {
   color: var(--color-text);
 }
@@ -295,15 +283,6 @@ nav {
 /* ===== Sections ===== */
 .section {
   margin-bottom: 52px;
-}
-
-.section-label {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-faint);
-  margin-bottom: 16px;
 }
 
 /* ===== Post rows ===== */
@@ -457,16 +436,25 @@ nav {
   margin-bottom: 32px;
 }
 
-.page-content h2 {
+.page-content h2:not(.section-label) {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.01em;
   margin: 40px 0 16px;
 }
 
-.page-title ~ .page-content h2 {
+.page-title ~ .page-content h2:not(.section-label) {
   font-size: 20px;
   font-weight: 600;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-faint);
+  margin-bottom: 16px;
 }
 
 .page-content h3 {
@@ -506,8 +494,6 @@ footer {
   display: flex;
   gap: 20px;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .footer-links li {
