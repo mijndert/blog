@@ -1,0 +1,7 @@
+{% macro cardLink(href, title, description, linkText) %}
+<a class="proj-card" href="{{ href }}">
+  <h3 class="proj-name">{{ title }}</h3>
+  <div class="proj-desc">{{ description }}</div>
+  <span class="proj-link">{{ linkText }}</span>
+</a>
+{% endmacro %}

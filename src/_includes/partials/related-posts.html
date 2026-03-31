@@ -1,14 +1,11 @@
+{% from "partials/card-link.html" import cardLink %}
 {%- set related = page.url | relatedPosts(tags, collections.posts) -%}
 {%- if related.length -%}
 <div class="related-posts">
   <h2 class="section-label">Related posts</h2>
   <div class="projects-grid">
     {%- for post in related -%}
-    <div class="proj-card">
-      <h3 class="proj-name">{{ post.data.title }}</h3>
-      <div class="proj-desc">{{ post.data.summary }}</div>
-      <a class="proj-link" href="{{ post.url }}">Read post</a>
-    </div>
+    {{ cardLink(post.url, post.data.title, post.data.summary, "Read post") }}
     {%- endfor -%}
   </div>
 </div>
