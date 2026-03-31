@@ -151,7 +151,7 @@ ul li, ol li {
 
 /* ===== Navigation ===== */
 nav {
-  padding: 36px 0 0;
+  padding: 36px 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -549,7 +549,6 @@ footer {
   }
 
   nav {
-    padding-top: 10px;
     margin-bottom: 40px;
   }
 
