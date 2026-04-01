@@ -1,7 +1,7 @@
 ---
 title: Goals for 2025
 date: 2025-01-03 14:00:00
-summary: New years resolutions for 2025. Or rather, goals.
+summary: "My goals for 2025: training for an ultra marathon, improving mental health, picking up photography again, and growing as a tech leader."
 tags: personal
 ---
 

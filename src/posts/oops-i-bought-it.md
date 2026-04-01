@@ -1,7 +1,7 @@
 ---
 title: Oops, I bought it
 date: 2025-02-18 15:00:00
-summary: I said I wouldn't buy the monitor, but I did it anyway
+summary: "Dell U4025QW review from someone who swore they wouldn't buy it. Spoiler: the 40-inch 5K ultrawide was absolutely worth the splurge."
 tags: gadgets
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Stop doing DevOps teams if you want to scale
 date: 2022-12-05 10:00:00
-summary: In which I make the case for separate developer and platform teams
+summary: Why integrated DevOps teams struggle at scale and how splitting into dedicated developer and platform teams can help your company grow
 tags: devops
 ---
 

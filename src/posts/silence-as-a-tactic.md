@@ -1,7 +1,7 @@
 ---
 title: Silence as a tactic
 date: 2025-04-08 10:00:00
-summary: Using silence to my advantage.
+summary: "How I learned to stop filling awkward silences in salary and promotion negotiations, and why staying quiet shows confidence and gets results"
 tags: personal
 ---
 

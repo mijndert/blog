@@ -1,7 +1,7 @@
 ---
 title: Obsidian doesn't click for me
 date: 2023-10-12 10:00:00
-summary: I really want to like and use Obsidian, but I'm unable to.
+summary: "An honest take on why Obsidian doesn't work for me despite loving the PARA method. The Electron feel and plugin overload get in the way."
 tags: productivity
 ---
 

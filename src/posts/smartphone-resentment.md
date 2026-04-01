@@ -1,7 +1,7 @@
 ---
 title: Smartphone resentment
 date: 2025-06-18 19:00:00
-summary: My phone addiction has been replaced by frustration and resentment.
+summary: How my phone addiction suddenly flipped into resentment, and why that unexpected shift might be the freedom from screen time I needed
 tags: minimalism
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Default apps 2024
 date: 2024-02-19 10:00:00
-summary: Joining the bandwagon of sharing my default apps for 2024.
+summary: "My default apps for 2024 as a minimalist: Apple Mail, Firefox, NetNewsWire, VS Code, 1Password, Overcast, and more across all categories."
 tags: productivity
 ---
 

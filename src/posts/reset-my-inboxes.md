@@ -1,7 +1,7 @@
 ---
 title: I need to reset my inboxes
 date: 2025-03-26 14:00:00
-summary: 
+summary: "How I'm fighting digital distraction by consolidating inboxes, scheduling check-in times, and being more mindful of information intake"
 tags: minimalism
 ---
 

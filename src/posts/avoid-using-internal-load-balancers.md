@@ -1,7 +1,7 @@
 ---
 title: Avoid using internal load balancers
 date: 2022-03-15 10:00:00
-summary: On avoiding internal load balancers in liue of AWS CloudMap.
+summary: "Replace internal load balancers with AWS CloudMap service discovery for Fargate. Simpler, cheaper, with CloudFormation examples."
 tags: aws
 ---
 

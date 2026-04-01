@@ -1,7 +1,7 @@
 ---
 title: Config-driven Terraform
 date: 2024-01-18 10:00:00
-summary: "Some improvements in Terraform 1.7: Config-driven Remove and Import block for_each."
+summary: "Terraform 1.7 adds for_each on import blocks and removed blocks for safer state management. Practical examples with DigitalOcean Spaces."
 tags: terraform
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 40 questions
 date: 2022-03-18 10:00:00
-summary: 40 questions to ask yourself every day.
+summary: "Stephan Ango's 40 questions for yearly self-reflection. A simple practice to spot life trends and understand yourself better over time."
 tags: personal
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Forever games
 date: 2025-06-12 10:00:00
-summary: Games that I can play in perpetuity
+summary: "My forever games I always come back to: OpenTTD, Civilization V, Dead Cells, Diablo, Hades II, Splatoon 3, Mario Kart, and Smash Bros."
 tags: games
 ---
 

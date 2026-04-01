@@ -1,7 +1,7 @@
 ---
 title: A static website on OpenBSD
 date: 2025-08-06 14:00:00
-summary: Running a copy of my 11ty website on OpenBSD using httpd and relayd.
+summary: "Step-by-step guide to hosting a static 11ty website on OpenBSD with httpd, relayd, Let's Encrypt, and an A+ security headers score"
 tags: openbsd
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Display waffling
 date: 2025-01-07 06:00:00
-summary: In which I waffle about computer monitors.
+summary: "Comparing ultrawide monitors for remote work: from the Dell P3421W to the HP Z38C, and why I didn't buy the Dell U4025QW 5K2K."
 tags: gadgets
 ---
 

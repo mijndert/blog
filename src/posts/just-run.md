@@ -1,7 +1,7 @@
 ---
 title: Just run
 date: 2026-01-11 09:10:00
-summary: My only new year's resolution is to just run. No stats, no plans, no comparisons.
+summary: "Why I'm ditching running data, Garmin stats, and pace goals to get back to running for the pure joy of it. Sometimes less tracking is more."
 tags: running
 ---
 

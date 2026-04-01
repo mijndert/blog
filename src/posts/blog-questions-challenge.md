@@ -1,7 +1,7 @@
 ---
 title: Blog questions challenge
 date: 2025-01-13 14:00:00
-summary: A new challenge. Why not? Some Q&A about my blog. Here we go.
+summary: "Answering the blog questions challenge: why I started blogging, my Eleventy setup, writing workflow, and plans for the future."
 tags: meta
 ---
 

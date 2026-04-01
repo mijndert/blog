@@ -1,7 +1,7 @@
 ---
 title: Some running top tips
 date: 2025-08-07 13:00:00
-summary: Some things I learned from the last 20 years of running.
+summary: "Seven honest running tips from 20 years of experience: run slower, prioritize sleep, skip the runfluencer gear, and stop comparing yourself"
 tags: running
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: I got promoted
 date: 2025-05-30 15:00:00
-summary: I recently got promoted to lead platform engineer. This is how and why.
+summary: "From senior DevOps engineer to lead platform engineer: 17 years of career lessons and why platform teams are the future of DevOps"
 tags: personal
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Introducing CalAction Beta
 date: 2026-03-18 11:02:00 +02:00
-summary: Introducing the app I've been working on, CalAction, which is now in beta testing.
+summary: "CalAction is a new iOS app that makes importing .ics calendar files easy via file, URL, clipboard, or QR code. Now available on TestFlight."
 tags: apps
 ---
 

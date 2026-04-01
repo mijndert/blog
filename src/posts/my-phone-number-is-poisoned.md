@@ -1,7 +1,7 @@
 ---
 title: My phone number is poisoned
 date: 2025-06-03 06:00:00
-summary: In which I lament the state of my phone number.
+summary: "After 20 years with the same phone number, recruiters won't stop calling thanks to leaked data. A plea for email over unsolicited cold calls."
 tags: personal
 ---
 

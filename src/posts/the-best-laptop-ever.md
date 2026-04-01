@@ -1,7 +1,7 @@
 ---
 title: The best laptop ever
 date: 2025-01-15 16:00:00
-summary: In which I gush over my M1 Macbook Air.
+summary: "Why the base model M1 MacBook Air is the best laptop I've ever owned, and why you don't need expensive hardware to get real work done"
 tags: gadgets
 ---
 
