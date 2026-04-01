@@ -1,11 +1,11 @@
 ---
-title: Garmin Forerunner 570
+title: Garmin Forerunner 570 vs 255
 date: 2025-06-04 13:26:00
 summary: "First impressions of the Garmin Forerunner 570 after upgrading from the 255S: AMOLED screen, battery life, weight, and build quality."
 tags: gadgets
 ---
 
-Two years ago I got myself my first Garmin watch, the [Forerunner 255S](https://www.garmin.com/nl-NL/p/780139/). I bought it at a heavy discount when the 265 was released. I didn't want to spend too much money on my first Garmin as it's always a bit of a gamble switching ecosystems like that. 
+Two years ago I got myself my first Garmin watch, the [Forerunner 255S](https://www.garmin.com/nl-NL/p/780139/). I bought it at a heavy discount when the 265 was released. I didn't want to spend too much money on my first Garmin as it's always a bit of a gamble switching ecosystems like that.
 
 I was quite happy with my FR 255 but over the past few weeks it started having some issues. Coincidentally Garmin just released the new [Forerunner 570](https://www.garmin.com/en-US/p/1464001/) and after some usual waffling I decided to treat myself to an upgrade and got the 42mm version in black.
 
