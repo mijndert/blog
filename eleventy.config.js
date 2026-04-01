@@ -28,19 +28,19 @@ function wrapText(text, maxCharsPerLine) {
 }
 
 function generateOgSvg(title) {
-  const lines = wrapText(title, 35);
-  const lineHeight = 68;
+  const lines = wrapText(title, 28);
+  const lineHeight = 76;
   const startY = 240;
   const titleLines = lines.map((line, i) =>
-    `<text x="80" y="${startY + i * lineHeight}" font-family="sans-serif" font-size="52" font-weight="700" fill="#1A1A1A">${escapeXml(line)}</text>`
+    `<text x="80" y="${startY + i * lineHeight}" font-family="sans-serif" font-size="64" font-weight="800" fill="#1A1A1A">${escapeXml(line)}</text>`
   ).join('\n    ');
 
   return `<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
     <rect width="1200" height="630" fill="#F2F0EC"/>
-    <rect x="0" y="0" width="1200" height="8" fill="#1A1A1A"/>
+    <circle cx="104" cy="108" r="24" fill="#0B4DC7"/>
     ${titleLines}
-    <text x="80" y="560" font-family="sans-serif" font-size="24" fill="#696969">mijndertstuij.nl</text>
-    <text x="1120" y="560" font-family="sans-serif" font-size="24" fill="#696969" text-anchor="end">Mijndert Stuij</text>
+    <text x="80" y="568" font-family="sans-serif" font-size="28" font-weight="500" fill="#696969">mijndertstuij.nl</text>
+    <text x="1120" y="568" font-family="sans-serif" font-size="28" font-weight="500" fill="#696969" text-anchor="end">Mijndert Stuij</text>
   </svg>`;
 }
 
