@@ -52,12 +52,20 @@
       {%- if summary %}
       "description": {{ summary | dump | safe }},
       {%- endif %}
+      "inLanguage": "en",
       "author": {
         "@type": "Person",
         "name": {{ site.author.name | dump | safe }},
         "url": {{ site.url | dump | safe }}
       },
+      "publisher": {
+        "@type": "Person",
+        "name": {{ site.author.name | dump | safe }},
+        "url": {{ site.url | dump | safe }}
+      },
       "datePublished": "{{ date | isoDate }}",
+      "dateModified": "{{ date | isoDate }}",
+      "mainEntityOfPage": "{{ site.url }}{{ page.url }}",
       "url": "{{ site.url }}{{ page.url }}",
       "image": "{{ site.url }}/og/{{ page.fileSlug }}.png"
     }
