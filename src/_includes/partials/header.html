@@ -27,7 +27,9 @@
     if (!res.ok) return;
     const [toot] = await res.json();
     if (!toot) return;
-    const text = toot.content.replace(/<[^>]*>/g, '').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"');
+    const tmp = document.createElement('div');
+    tmp.innerHTML = toot.content.replace(/<[^>]*>/g, '');
+    const text = tmp.textContent;
     document.getElementById('toot-avatar').src = account.avatar;
     document.getElementById('toot-content').textContent = text.length > 200 ? text.slice(0, 200) + '…' : text;
     document.getElementById('toot-time').textContent = new Date(toot.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
