@@ -1,7 +1,7 @@
 ---
 title: Scaling a Mastodon community to 27k people
 date: 2022-12-04 10:00:00
-summary: Scaling a Mastodon community to 27k people using Kubernetes and Digitalocean.
+summary: "How we scaled toot.community to 27k users with Kubernetes, Terraform, and event-driven autoscaling on DigitalOcean while keeping costs down"
 tags: mastodon
 ---
 

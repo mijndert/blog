@@ -1,7 +1,7 @@
 ---
 title: I'll read it
 date: 2025-01-08 13:00:00
-summary: Do you have a blog? Send it to me, I'll read it.
+summary: "Personal blogs keep the internet weird and independent. If you have one, send it my way and I'll be your reader. RSS feeds welcome."
 tags: meta
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Saving time using Terraform import blocks
 date: 2023-06-15 10:00:00
-summary: Stop creating resources yourself, use import blocks instead. A new feature in Terraform 1.5.
+summary: "How Terraform 1.5 import blocks let you bring existing resources under management and auto-generate config, replacing the old CLI workflow"
 tags: terraform
 ---
 

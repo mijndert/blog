@@ -1,7 +1,7 @@
 ---
 title: Log out
 date: 2025-12-12 14:00:00
-summary: I all but logged out of social media for mental health reasons
+summary: "Why I logged out of Mastodon and social media for my mental health, how dopamine and FOMO kept me hooked, and why I don't miss it at all"
 tags: personal
 ---
 

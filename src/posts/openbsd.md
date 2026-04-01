@@ -1,7 +1,7 @@
 ---
 title: OpenBSD
 date: 2021-11-01 10:00:00
-summary: Getting to know OpenBSD after 22+ years of using Linux.
+summary: "Switching from Linux to OpenBSD after 22 years: what makes it great for servers, its sane defaults, and why the transition is worth it"
 tags: openbsd
 ---
 

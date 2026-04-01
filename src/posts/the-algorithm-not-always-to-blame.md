@@ -1,7 +1,7 @@
 ---
 title: The algorithm isn't always to blame
 date: 2025-01-20 12:00:00
-summary: We can't blame the algorithm for the state of the internet, not for all of it.
+summary: "The algorithm drives negativity online, but my Hacker News and Lobsters experience showed that humans spread toxicity just fine without one"
 tags: internet
 ---
 

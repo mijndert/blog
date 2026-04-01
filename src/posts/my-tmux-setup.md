@@ -1,7 +1,7 @@
 ---
 title: My Tmux setup
 date: 2020-04-16 10:00:00
-summary: A quick Tmux tutorial.
+summary: "Practical Tmux configuration tips for beginners: custom meta key, status bar styling, window numbering, splits, and a consistent terminal setup"
 tags: productivity
 ---
 

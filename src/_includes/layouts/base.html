@@ -8,17 +8,11 @@
     <meta name="generator" content="{{ eleventy.generator }}">
 
     <!-- SEO -->
-    <title>
-      {% if page.url == "/" %}
-        {{ site.title }}
-      {% else %}
-        {{ title }} - {{ site.title }}
-      {% endif %}
-    </title>
-    {% if summary %}
+    <title>{%- if page.url == "/" %}{{ site.title }}{% else %}{{ title }} - {{ site.title }}{% endif -%}</title>
+    {%- if summary %}
     <meta name="description" content="{{ summary | escape }}" />
     <meta property="og:description" content="{{ summary | escape }}" />
-    {% endif %}
+    {%- endif %}
     <meta name="author" content="{{ site.author.name }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <meta name="robots" content="index, follow" />
@@ -29,6 +23,46 @@
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     <meta property="og:type" content="{% if page.url == '/' %}website{% else %}article{% endif %}" />
+    {%- if 'src/posts/' in page.inputPath or 'src/weeknotes/' in page.inputPath %}
+    <meta property="og:image" content="{{ site.url }}/og/{{ page.fileSlug }}.png" />
+    <meta property="article:published_time" content="{{ date | isoDate }}" />
+    {%- else %}
+    <meta property="og:image" content="{{ site.url }}/og/default.png" />
+    {%- endif %}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ title or metaTitle | safe }}" />
+    {%- if summary %}
+    <meta name="twitter:description" content="{{ summary | escape }}" />
+    {%- endif %}
+    {%- if 'src/posts/' in page.inputPath or 'src/weeknotes/' in page.inputPath %}
+    <meta name="twitter:image" content="{{ site.url }}/og/{{ page.fileSlug }}.png" />
+    {%- else %}
+    <meta name="twitter:image" content="{{ site.url }}/og/default.png" />
+    {%- endif %}
+
+    <!-- Structured data -->
+    {%- if 'src/posts/' in page.inputPath or 'src/weeknotes/' in page.inputPath %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": {{ title | dump | safe }},
+      {%- if summary %}
+      "description": {{ summary | dump | safe }},
+      {%- endif %}
+      "author": {
+        "@type": "Person",
+        "name": {{ site.author.name | dump | safe }},
+        "url": {{ site.url | dump | safe }}
+      },
+      "datePublished": "{{ date | isoDate }}",
+      "url": "{{ site.url }}{{ page.url }}",
+      "image": "{{ site.url }}/og/{{ page.fileSlug }}.png"
+    }
+    </script>
+    {%- endif %}
 
     <!-- Theme color -->
     <meta name="theme-color" content="#F2F0EC" media="(prefers-color-scheme: light)">

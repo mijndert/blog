@@ -1,7 +1,7 @@
 ---
 title: 2025 so far
 date: 2025-09-26 10:45:00
-summary: Looking back at the first 3 quarters of 2025. Looking ahead to the last quarter.
+summary: "A check-in on my 2025 goals after three quarters: running progress, a promotion to lead engineer, and refocusing on what matters."
 tags: personal
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: AWS SCP Catalog
 date: 2026-03-31 14:05:00
-summary: A Terraform/OpenTofu module for creating AWS Service Control Policies
+summary: "An open-source Terraform and OpenTofu module for managing AWS Service Control Policies across your organization with reusable, pre-built SCPs"
 tags:
   - aws
   - terraform

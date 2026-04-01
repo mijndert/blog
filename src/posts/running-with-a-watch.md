@@ -1,7 +1,7 @@
 ---
 title: On running with a watch
 date: 2023-12-08 10:00:00
-summary: I switched to a Garmin Forerunner 255S. Some thoughts.
+summary: "My honest review of the Garmin Forerunner 255S after switching from Apple Watch: training insights, app UX, and daily suggested workouts"
 tags: gadgets
 ---
 

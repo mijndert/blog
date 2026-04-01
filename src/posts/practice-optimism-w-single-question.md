@@ -1,7 +1,7 @@
 ---
 title: Practice optimism with a single question
 date: 2025-02-26 10:00:00
-summary: One single question is enough to practice optimism, "What was the most fun thing to happen today?"
+summary: "How one simple dinner table question helped me practice daily optimism, focus on the positives, and build gratitude as a family habit"
 tags: personal
 ---
 

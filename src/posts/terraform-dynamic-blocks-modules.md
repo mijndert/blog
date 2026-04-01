@@ -1,7 +1,7 @@
 ---
 title: Reusable Terraform modules using Dynamic blocks
 date: 2022-12-08 10:00:00
-summary: Stop repeating yourself and use Dynamic blocks in your Terraform resources
+summary: "Learn how Terraform Dynamic blocks help you write DRY, reusable modules with conditional resource properties, with a real-world example"
 tags: terraform
 ---
 

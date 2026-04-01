@@ -1,7 +1,7 @@
 ---
 title: A minimalist take on Vim
 date: 2022-04-15 10:00:00
-summary: How I use Vim without any (well, almost) plugins.
+summary: "A minimal Vim setup with almost no plugins: my .vimrc config, Vim 8 pack system for plugin management, and essential keyboard shortcuts."
 tags: productivity
 ---
 

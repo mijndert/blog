@@ -3,7 +3,46 @@ import embeds from "eleventy-plugin-embed-everything";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
 import { createHash } from "crypto";
-import { readFileSync } from "fs";
+import { readFileSync, mkdirSync, existsSync, readdirSync } from "fs";
+import { join, basename } from "path";
+
+function escapeXml(str) {
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+}
+
+function wrapText(text, maxCharsPerLine) {
+  const words = text.split(' ');
+  const lines = [];
+  let currentLine = '';
+  for (const word of words) {
+    const testLine = currentLine ? `${currentLine} ${word}` : word;
+    if (testLine.length > maxCharsPerLine && currentLine) {
+      lines.push(currentLine);
+      currentLine = word;
+    } else {
+      currentLine = testLine;
+    }
+  }
+  if (currentLine) lines.push(currentLine);
+  return lines.slice(0, 3);
+}
+
+function generateOgSvg(title) {
+  const lines = wrapText(title, 35);
+  const lineHeight = 68;
+  const startY = 240;
+  const titleLines = lines.map((line, i) =>
+    `<text x="80" y="${startY + i * lineHeight}" font-family="sans-serif" font-size="52" font-weight="700" fill="#1A1A1A">${escapeXml(line)}</text>`
+  ).join('\n    ');
+
+  return `<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="630" fill="#F2F0EC"/>
+    <rect x="0" y="0" width="1200" height="8" fill="#1A1A1A"/>
+    ${titleLines}
+    <text x="80" y="560" font-family="sans-serif" font-size="24" fill="#696969">mijndertstuij.nl</text>
+    <text x="1120" y="560" font-family="sans-serif" font-size="24" fill="#696969" text-anchor="end">Mijndert Stuij</text>
+  </svg>`;
+}
 
 export default async function(eleventyConfig) {
 
@@ -22,11 +61,16 @@ export default async function(eleventyConfig) {
   // Add a filter to format dates
   eleventyConfig.addFilter("postDate", dateObj => {
     const date = new Date(dateObj);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
     });
+  });
+
+  // ISO date filter for structured data and OG tags
+  eleventyConfig.addFilter("isoDate", dateObj => {
+    return new Date(dateObj).toISOString();
   });
 
 	// Create a collection for all posts
@@ -184,6 +228,33 @@ export default async function(eleventyConfig) {
 			decoding: "async",
 		},
 	});
+
+  // Generate OG images after build
+  eleventyConfig.on('eleventy.after', async ({ dir }) => {
+    const sharp = (await import('sharp')).default;
+    const ogDir = join(dir.output, 'og');
+    if (!existsSync(ogDir)) {
+      mkdirSync(ogDir, { recursive: true });
+    }
+
+    const contentDirs = [join(dir.input, 'posts'), join(dir.input, 'weeknotes')];
+    for (const contentDir of contentDirs) {
+      if (!existsSync(contentDir)) continue;
+      const files = readdirSync(contentDir).filter(f => f.endsWith('.md'));
+      for (const file of files) {
+        const slug = basename(file, '.md');
+        const content = readFileSync(join(contentDir, file), 'utf-8');
+        const titleMatch = content.match(/^title:\s*(.+)$/m);
+        const title = titleMatch ? titleMatch[1].trim().replace(/^["']|["']$/g, '') : slug;
+        const svg = generateOgSvg(title);
+        await sharp(Buffer.from(svg)).png().toFile(join(ogDir, `${slug}.png`));
+      }
+    }
+
+    // Default OG image for non-post pages
+    const defaultSvg = generateOgSvg('Mijndert Stuij');
+    await sharp(Buffer.from(defaultSvg)).png().toFile(join(ogDir, 'default.png'));
+  });
 
   // Copy assets
   eleventyConfig.addPassthroughCopy("src/css");

@@ -1,7 +1,7 @@
 ---
 title: Garmin Forerunner 570
 date: 2025-06-04 13:26:00
-summary: Initial thoughts on the brand new Garmin Forerunner 570.
+summary: "First impressions of the Garmin Forerunner 570 after upgrading from the 255S: AMOLED screen, battery life, weight, and build quality."
 tags: gadgets
 ---
 

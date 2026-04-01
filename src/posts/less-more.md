@@ -1,7 +1,7 @@
 ---
 title: Less, more
 date: 2025-12-23 10:00:00
-summary: Things to do less, things to do more.
+summary: "A simple list of habits to cut back on and habits to build: less scrolling and overthinking, more deep work, reading, and creating"
 tags: personal
 ---
 

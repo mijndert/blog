@@ -1,7 +1,7 @@
 ---
 title: Pro tips for remote working
 date: 2025-06-26 16:24:00
-summary: 
+summary: Practical remote work tips from two years of working from home, covering focus time, breaks, workspace setup, and staying productive
 tags: productivity
 ---
 

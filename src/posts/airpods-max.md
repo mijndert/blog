@@ -1,7 +1,7 @@
 ---
 title: AirPods Max
 date: 2022-03-04 10:00:00 +02:00
-summary: Some thoughts on AirPods Max and headphones in general.
+summary: "An honest AirPods Max review after 2 months of daily use: comfort, weight, the case situation, condensation, and whether they're worth it."
 tags: gadgets
 ---
 
