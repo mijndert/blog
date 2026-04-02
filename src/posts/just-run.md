@@ -7,7 +7,7 @@ tags: running
 
 As someone in IT, someone who spends a lot of time thinking about systems and optimizations and data, it's easy to fall into this trap of constantly looking at your running data and trying to optimize every single angle. I get paid to pour over data and find ways to make things better, more streamlined, more efficient. It's a natural inclination to want to do the same with running.
 
-By definition running is an activity that can be measured in a million differrent ways, and especially when you have a Garmin or similar watch, you have access to a ton of data points that ultimately can help you become a better runner.
+By definition running is an activity that can be measured in a million different ways, and especially when you have a Garmin or similar watch, you have access to a ton of data points that ultimately can help you become a better runner.
 
 But is _becoming a better runner_ really the goal here?
 

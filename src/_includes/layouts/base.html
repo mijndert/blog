@@ -78,6 +78,39 @@
       ]
     }
     </script>
+    {%- elif page.url == "/about/" %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@id": "{{ site.url }}/#person"
+      },
+      "url": "{{ site.url }}{{ page.url }}",
+      "name": {{ title | dump | safe }},
+      "isPartOf": {
+        "@id": "{{ site.url }}/#website"
+      }
+    }
+    </script>
+    {%- elif page.url == "/blog/" %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Blog - {{ site.title }}",
+      {%- if summary %}
+      "description": {{ summary | dump | safe }},
+      {%- endif %}
+      "url": "{{ site.url }}{{ page.url }}",
+      "isPartOf": {
+        "@id": "{{ site.url }}/#website"
+      },
+      "author": {
+        "@id": "{{ site.url }}/#person"
+      }
+    }
+    </script>
     {%- elif 'src/posts/' in page.inputPath or 'src/weeknotes/' in page.inputPath %}
     <script type="application/ld+json">
     {
@@ -89,20 +122,19 @@
       {%- endif %}
       "inLanguage": "en",
       "author": {
-        "@type": "Person",
-        "name": {{ site.author.name | dump | safe }},
-        "url": {{ site.url | dump | safe }}
+        "@id": "{{ site.url }}/#person"
       },
       "publisher": {
-        "@type": "Person",
-        "name": {{ site.author.name | dump | safe }},
-        "url": {{ site.url | dump | safe }}
+        "@id": "{{ site.url }}/#person"
       },
       "datePublished": "{{ date | isoDate }}",
       "dateModified": "{{ date | isoDate }}",
       "mainEntityOfPage": "{{ site.url }}{{ page.url }}",
       "url": "{{ site.url }}{{ page.url }}",
-      "image": "{{ site.url }}/og/{{ page.fileSlug }}.png"
+      "image": "{{ site.url }}/og/{{ page.fileSlug }}.png",
+      "isPartOf": {
+        "@id": "{{ site.url }}/#website"
+      }
     }
     </script>
     {%- endif %}

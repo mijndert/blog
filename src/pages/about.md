@@ -5,7 +5,7 @@ summary: Everything about me, my work, my skills, and my interests.
 permalink: /about/
 ---
 
-I'm a [lead platform engineer](https://www.linkedin.com/in/mijndertstuij/) and solutions architect with over 17 years of experience building highly scalable infrastructure on top of public cloud providers. My extensive knowledge and interest into development practices make me a valuable asset for teams comprising of infrastructure engineers, developers, database administrators, and product managers. I always try to brigde the gap between technical and business requirements to come up with the best solutions that meet the overall company and team goals.
+I'm a [lead platform engineer](https://www.linkedin.com/in/mijndertstuij/) and solutions architect with over 17 years of experience building highly scalable infrastructure on top of public cloud providers. My extensive knowledge and interest into development practices make me a valuable asset for teams comprising of infrastructure engineers, developers, database administrators, and product managers. I always try to bridge the gap between technical and business requirements to come up with the best solutions that meet the overall company and team goals.
 
 From a technical perspective, I always use the adage that if it's not in code, it might as well not exist. I love using Terraform to build out complex solutions using reusable modules that can transform any project into a well-managed Git repository where the code is clear enough to also act as the documentation.
 

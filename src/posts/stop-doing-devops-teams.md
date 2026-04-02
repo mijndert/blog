@@ -13,6 +13,6 @@ I'm here to argue that, while this model of integrated DevOps teams works well f
 
 My preliminary conclusion is that in order to scale, a company needs to embrace the silos of development and operations again. Now, I'm not arguing for dev and ops not to talk to each other anymore - to the contrary, I think operations needs to be serving the development team with pre-baked building blocks for any and all use-case. While we're at it, the operations team needs to be called the platform team as they provide the platform for the developers to build applications on. The developers should be able to use the building blocks like Lego and the platform team needs to be empowering the former.
 
-Again, DevOps teams are still the right solution for a lot of companies. But if you're serious about scaling your operation, you need to be thinking about seperating the two again. There's always the possibility that in a few years time I'll look back at this and come to the conclusion I was wrong, but for now it sounds like the right solution.
+Again, DevOps teams are still the right solution for a lot of companies. But if you're serious about scaling your operation, you need to be thinking about separating the two again. There's always the possibility that in a few years time I'll look back at this and come to the conclusion I was wrong, but for now it sounds like the right solution.
 
 Just a thought for now, I'll get back to this topic. I'd love to hear what others think so [send me a message](https://fosstodon.org/@mijndert).

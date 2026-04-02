@@ -7,7 +7,7 @@ tags:
   - terraform
 ---
 
-If you haven't worked with AWS before, or at least not to that extend, you might first want to know what Service Control Policies (SCPs) are. SCPs are a type of policy that you can apply on the organization level that allow or deny certain actions across all accounts that the SCP is applied to. This allows to deny certain actions, despite the fact that a role within a member account might have permissions to do so.
+If you haven't worked with AWS before, or at least not to that extent, you might first want to know what Service Control Policies (SCPs) are. SCPs are a type of policy that you can apply on the organization level that allow or deny certain actions across all accounts that the SCP is applied to. This allows to deny certain actions, despite the fact that a role within a member account might have permissions to do so.
 
 This is a great way to enforce certain security policies or to prevent certain actions from being taken, all managed from a single place.
 
