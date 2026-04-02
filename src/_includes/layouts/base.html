@@ -84,7 +84,16 @@
       "@context": "https://schema.org",
       "@type": "ProfilePage",
       "mainEntity": {
-        "@id": "{{ site.url }}/#person"
+        "@type": "Person",
+        "@id": "{{ site.url }}/#person",
+        "name": {{ site.author.name | dump | safe }},
+        "url": {{ site.url | dump | safe }},
+        "jobTitle": "Lead Platform Engineer",
+        "sameAs": [
+          "{{ site.author.mastodonUrl }}",
+          "{{ site.author.github }}",
+          "https://www.linkedin.com/in/mijndertstuij/"
+        ]
       },
       "url": "{{ site.url }}{{ page.url }}",
       "name": {{ title | dump | safe }},
