@@ -3,12 +3,13 @@ title: Explore
 summary: A list of all pages on this website.
 layout: layouts/page.html
 permalink: /explore/
-eleventyExcludeFromCollections: true
 ---
 
 {% for item in collections.page | sort(attribute="data.title") %}
+{% if item.url != "/explore/" %}
 <a href="{{ item.url }}">{{ item.data.title }}</a>
 <p class="muted">
   {{ item.data.summary }}
 </p>
+{% endif %}
 {% endfor %}

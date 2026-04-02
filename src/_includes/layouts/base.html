@@ -43,7 +43,42 @@
     {%- endif %}
 
     <!-- Structured data -->
-    {%- if 'src/posts/' in page.inputPath or 'src/weeknotes/' in page.inputPath %}
+    {%- if page.url == "/" %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "name": {{ site.title | dump | safe }},
+      "url": {{ site.url | dump | safe }},
+      "description": "Lead platform engineer. Avid runner. Side project enthusiast.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "{{ site.url }}/#person"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "{{ site.url }}/#person",
+      "name": {{ site.author.name | dump | safe }},
+      "url": {{ site.url | dump | safe }},
+      "jobTitle": "Lead Platform Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Otrium",
+        "url": "https://www.otrium.com"
+      },
+      "sameAs": [
+        "{{ site.author.mastodonUrl }}",
+        "{{ site.author.github }}",
+        "https://www.linkedin.com/in/mijndertstuij/"
+      ]
+    }
+    </script>
+    {%- elif 'src/posts/' in page.inputPath or 'src/weeknotes/' in page.inputPath %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
