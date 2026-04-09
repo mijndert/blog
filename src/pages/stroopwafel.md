@@ -1,7 +1,7 @@
 ---
 title: Stroopwafel
 layout: layouts/page.html
-summary: The only cookie you can accept on this website.
+summary: No tracking cookies here, just a stroopwafel. The only cookie you can accept on this website.
 permalink: /stroopwafel/
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Now
 layout: layouts/page.html
-summary: What I am focused on now.
+summary: What I'm up to right now including current work, projects, and interests.
 permalink: /now/
 ---
 

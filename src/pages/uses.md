@@ -1,7 +1,7 @@
 ---
 title: Uses
 layout: layouts/page.html
-summary: A list of hardware and software I use on a daily basis.
+summary: The hardware, software, and tools I use daily for platform engineering and personal projects.
 permalink: /uses/
 ---
 

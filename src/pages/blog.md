@@ -1,7 +1,7 @@
 ---
 title: Blog
 layout: layouts/page.html
-summary: Some random thoughts on technology, running and minimalism.
+summary: Articles on cloud engineering, Terraform, AWS, DevOps, running, and minimalism.
 permalink: /blog/
 ---
 

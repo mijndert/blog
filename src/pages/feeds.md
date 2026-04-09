@@ -1,7 +1,7 @@
 ---
 title: Feeds
 layout: layouts/page.html
-summary: All RSS feeds available on this website.
+summary: Subscribe to RSS feeds for blog posts, week notes, or all content from this site.
 permalink: /feeds/
 ---
 

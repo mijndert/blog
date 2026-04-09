@@ -1,7 +1,7 @@
 ---
 title: Mijndert Stuij
 layout: layouts/page.html
-summary: Lead platform engineer. Avid runner. Side project enthusiast.
+summary: A lead platform engineer writing about cloud infrastructure, DevOps, running, and minimalism.
 ---
 
 {% include 'partials/posts-short.html' %}

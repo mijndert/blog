@@ -1,7 +1,7 @@
 ---
 title: Blogroll
 layout: layouts/page.html
-summary: A collection of links to interesting blogs I follow.
+summary: Blogs I recommend on tech, development, indie web, and personal writing.
 permalink: /blogroll/
 ---
 

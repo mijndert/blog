@@ -1,7 +1,7 @@
 ---
 title: Week notes
 layout: layouts/page.html
-summary: A weekly summary of things that are on my mind.
+summary: Weekly notes with short updates on work, running, side projects, and life.
 permalink: /weeknotes/
 ---
 

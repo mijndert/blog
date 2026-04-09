@@ -1,7 +1,7 @@
 ---
 title: Colophon
 layout: layouts/page.html
-summary: The tools and services used to create this website.
+summary: How this site is built with Eleventy, Cloudflare Pages, and the design choices behind it.
 permalink: /colophon/
 ---
 

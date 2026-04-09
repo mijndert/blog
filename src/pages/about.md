@@ -1,7 +1,7 @@
 ---
 title: About
 layout: layouts/page.html
-summary: Everything about me, my work, my skills, and my interests.
+summary: Lead platform engineer and AWS solutions architect with 17+ years of experience in cloud infrastructure, Terraform, and Kubernetes.
 permalink: /about/
 ---
 

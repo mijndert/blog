@@ -1,7 +1,7 @@
 ---
 title: Connect
 layout: layouts/page.html
-summary: How to connect with me through various channels.
+summary: Get in touch via email, Mastodon, LinkedIn, or GitHub.
 permalink: /connect/
 ---
 
