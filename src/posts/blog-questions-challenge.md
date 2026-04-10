@@ -4,7 +4,6 @@ date: 2025-01-13 14:00:00
 summary: "Answering the blog questions challenge: why I started blogging, my Eleventy setup, writing workflow, and plans for the future."
 tags:
   - meta
-  - development
 ---
 
 **1. Why did you start blogging in the first place?**

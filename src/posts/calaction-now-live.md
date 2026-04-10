@@ -4,7 +4,6 @@ date: 2026-03-24 06:45:00 +02:00
 summary: CalAction is now available for download on the App Store, making it easy to import .ics files into your calendar and manage your events.
 tags:
   - apps
-  - development
 ---
 
 I'm very particular when it comes to software development and UI design. When working on CalAction, I wanted to make sure that the app not only provided useful features, but also had a clean user interface that's easy to navigate, and that all bugs were ironed out. It took me a lot of time, effort and many builds to get to the point where I now feel confident releasing the app to a wider audience.

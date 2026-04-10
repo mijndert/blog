@@ -2,7 +2,9 @@
 title: Responsive images on a static Hugo website
 date: 2022-12-06 10:00:00
 summary: "How to set up automatic responsive image resizing in Hugo using shortcodes, generating optimized WebP and JPEG files for your static site"
-tags: development
+tags:
+  - hugo
+  - development
 ---
 
 <aside>

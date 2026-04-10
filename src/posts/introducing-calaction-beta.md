@@ -4,7 +4,6 @@ date: 2026-03-18 11:02:00 +02:00
 summary: "CalAction is a new iOS app that makes importing .ics calendar files easy via file, URL, clipboard, or QR code. Now available on TestFlight."
 tags:
   - apps
-  - development
 ---
 
 Some time ago my wife came to me with a problem: she wanted to import a calendar file from the Gmail app into our shared iCloud calendar. The process however was not straightforward and involved a lot of steps, including downloading the .ics file, finding it in the Files app, and then importing it into the Calendar app. This was not ideal, especially for someone who is not very tech-savvy. I decided to create an app that would simplify this process, and thus CalAction was born.

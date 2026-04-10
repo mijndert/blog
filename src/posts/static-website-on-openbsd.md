@@ -4,7 +4,7 @@ date: 2025-08-06 14:00:00
 summary: "Step-by-step guide to hosting a static 11ty website on OpenBSD with httpd, relayd, Let's Encrypt, and an A+ security headers score"
 tags:
   - openbsd
-  - development
+  - devops
 ---
 
 Back in 2021 I was dipping my toes into the [world of OpenBSD](https://mijndertstuij.nl/posts/openbsd/). A few days ago I got the itch to try OpenBSD again, mostly because I'm kind of fed up with how little control I have over security headers and such on GitHub Pages. Since I have a Synology NAS with 32GB of RAM and plenty of storage, I decided to install VMM (Virtual Machine Manager) and run it there for a while.

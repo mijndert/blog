@@ -2,7 +2,9 @@
 title: Responsive images in Hugo using Render Hooks
 date: 2026-04-09 16:32:00
 summary: "Replace Hugo shortcodes with Render Hooks for automatic responsive image generation — a modern approach using WebP-first srcset with JPEG fallback"
-tags: development
+tags:
+  - hugo
+  - development
 ---
 
 Back in 2022 I [wrote about automatically generating responsive images](https://mijndertstuij.nl/posts/hugo-responsive-images/) in both JPEG and WebP formats using Hugo shortcodes. In those days, browser support for WebP was still quite spotty so we had to generate both formats and do a little magic to let the browser fall back to JPEG if needed.
