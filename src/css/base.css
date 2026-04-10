@@ -137,6 +137,7 @@ aside {
   margin: var(--spacing-md) 0;
   padding: var(--spacing-md);
   background-color: var(--color-card-bg);
+  border-left: 3px solid var(--color-border-strong);
   border-radius: var(--border-radius);
 }
 
