@@ -2,7 +2,9 @@
 title: Goals for 2025
 date: 2025-01-03 14:00:00
 summary: "My goals for 2025: training for an ultra marathon, improving mental health, picking up photography again, and growing as a tech leader."
-tags: personal
+tags:
+  - personal
+  - running
 ---
 
 2024 has not been the best year for me and my family. My wife got diagnosed with a chronic illness called MS, which has turned our life upside down in a number of ways. Death has also been a big theme last year. I didn't think I'd already be dealing this much with it at 37, but here we are. 

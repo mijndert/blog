@@ -2,7 +2,9 @@
 title: The algorithm isn't always to blame
 date: 2025-01-20 12:00:00
 summary: "The algorithm drives negativity online, but my Hacker News and Lobsters experience showed that humans spread toxicity just fine without one"
-tags: internet
+tags:
+  - internet
+  - personal
 ---
 
 Everyone is a victim of The Algorithm in one way or another. I'm still on Instagram (yes, I know) and I quite often fall into the trap of looking at Reels (super short videos) for too long. 

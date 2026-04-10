@@ -2,7 +2,9 @@
 title: Reusable Terraform modules using Dynamic blocks
 date: 2022-12-08 10:00:00
 summary: "Learn how Terraform Dynamic blocks help you write DRY, reusable modules with conditional resource properties, with a real-world example"
-tags: terraform
+tags:
+  - terraform
+  - devops
 ---
 
 In the realm of Amazon Web Services there's this thing called a [Landing Zone](https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-aws-environment/understanding-landing-zones.html), a set of infrastructure as code modules built to deploy new environments faster. You can build a Landing Zone using [CloudFormation](https://aws.amazon.com/cloudformation/), [CDK](https://aws.amazon.com/cdk/), [Terraform](https://www.terraform.io), or any other tool you like. The point is that you have a starting point for as many use-cases as possible. For a Landing Zone to work you have to write reusable generalized code that could work for any client and any combination of infrastructure.

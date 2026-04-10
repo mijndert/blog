@@ -2,7 +2,10 @@
 title: Log out
 date: 2025-12-12 14:00:00
 summary: "Why I logged out of Mastodon and social media for my mental health, how dopamine and FOMO kept me hooked, and why I don't miss it at all"
-tags: personal
+tags:
+  - personal
+  - minimalism
+  - internet
 ---
 
 For a lot of different reasons, I love the internet. I love it because it connects me to people I wouldn't otherwise get to know, because it gives me access to all kinds of information, because it lets me share my thoughts and creations with a wider audience, and because it entertains me in countless ways. But for me personally there's a dark side to the internet as well, and I'm not the first one to talk about this but here's my take on it and why I stepped back from social media for a while.

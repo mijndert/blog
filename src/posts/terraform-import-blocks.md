@@ -2,7 +2,9 @@
 title: Saving time using Terraform import blocks
 date: 2023-06-15 10:00:00
 summary: "How Terraform 1.5 import blocks let you bring existing resources under management and auto-generate config, replacing the old CLI workflow"
-tags: terraform
+tags:
+  - terraform
+  - devops
 ---
 
 Anyone who uses Terraform must be familiar with the `import` command; it allows you to gather existing resources and put them into your statefile. This way, existing resources which were previously not created using Terraform are now under management of your infrastructure as code.

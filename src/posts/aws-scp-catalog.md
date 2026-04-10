@@ -5,6 +5,7 @@ summary: "An open-source Terraform and OpenTofu module for managing AWS Service 
 tags:
   - aws
   - terraform
+  - devops
 ---
 
 If you haven't worked with AWS before, or at least not to that extent, you might first want to know what Service Control Policies (SCPs) are. SCPs are a type of policy that you can apply on the organization level that allow or deny certain actions across all accounts that the SCP is applied to. This allows to deny certain actions, despite the fact that a role within a member account might have permissions to do so.

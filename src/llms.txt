@@ -1,0 +1,36 @@
+# Mijndert Stuij
+
+> Lead platform engineer writing about cloud infrastructure, DevOps, running, and minimalism.
+
+Personal blog of Mijndert Stuij, a lead platform engineer at Otrium based in the Netherlands with 17+ years of experience in AWS, Terraform, Kubernetes, and cloud architecture.
+
+## Topics covered
+
+- AWS and cloud infrastructure (SCPs, Fargate, service discovery, load balancers)
+- Terraform and OpenTofu (modules, import blocks, dynamic blocks, config-driven workflows)
+- OpenBSD (hosting, httpd, relayd, security)
+- Hugo and static site development (responsive images, render hooks)
+- iOS app development (CalAction)
+- Running and fitness gear (Garmin)
+- Minimalism and productivity
+- DevOps culture and engineering leadership
+
+## Key posts
+
+- [AWS SCP Catalog](https://mijndertstuij.nl/posts/aws-scp-catalog/): Open-source Terraform module for managing AWS Service Control Policies
+- [A static website on OpenBSD](https://mijndertstuij.nl/posts/static-website-on-openbsd/): Hosting a static site on OpenBSD with httpd, relayd, Let's Encrypt, and PF
+- [Responsive images in Hugo using Render Hooks](https://mijndertstuij.nl/posts/hugo-responsive-images-using-render-hooks/): Modern WebP-first responsive images with Hugo render hooks
+- [Config-driven Terraform](https://mijndertstuij.nl/posts/config-driven-terraform/): Using for_each on import blocks in Terraform 1.7
+- [Reusable Terraform modules using Dynamic blocks](https://mijndertstuij.nl/posts/terraform-dynamic-blocks-modules/): Writing DRY Terraform with conditional dynamic blocks
+- [Saving time using Terraform import blocks](https://mijndertstuij.nl/posts/terraform-import-blocks/): Config-driven import in Terraform 1.5
+- [Avoid using internal load balancers](https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/): AWS CloudMap service discovery as an alternative to internal ALBs
+- [Stop doing DevOps teams if you want to scale](https://mijndertstuij.nl/posts/stop-doing-devops-teams/): Why dedicated DevOps teams are an anti-pattern
+- [Scaling a Mastodon community to 27k people](https://mijndertstuij.nl/posts/scaling-mastodon-community/): Running toot.community on AWS infrastructure
+- [CalAction is now available on the App Store](https://mijndertstuij.nl/posts/calaction-now-live/): iOS app for importing .ics calendar files
+- [Garmin Forerunner 570 vs 255](https://mijndertstuij.nl/posts/garmin-forerunner-570/): First impressions upgrading from FR 255S to 570
+
+## Feeds
+
+- All posts: https://mijndertstuij.nl/feed.xml
+- Blog posts only: https://mijndertstuij.nl/posts-feed.xml
+- Week notes only: https://mijndertstuij.nl/weeknotes-feed.xml

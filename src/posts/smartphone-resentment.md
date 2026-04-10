@@ -2,7 +2,9 @@
 title: Smartphone resentment
 date: 2025-06-18 19:00:00
 summary: How my phone addiction suddenly flipped into resentment, and why that unexpected shift might be the freedom from screen time I needed
-tags: minimalism
+tags:
+  - minimalism
+  - personal
 ---
 
 I am (was?) definitely addicted to my phone; I would check it every 15 minutes in hopes of seeing new content or notifications. I would aimlessly scroll through short videos, my Mastodon timeline or Reddit. I'm someone who can't let a notification badge just sit there, I have to clear them all.

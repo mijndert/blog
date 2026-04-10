@@ -2,7 +2,9 @@
 title: On running with a watch
 date: 2023-12-08 10:00:00
 summary: "My honest review of the Garmin Forerunner 255S after switching from Apple Watch: training insights, app UX, and daily suggested workouts"
-tags: gadgets
+tags:
+  - gadgets
+  - running
 ---
 
 Anyone that knows me well can attest to me being a dreadful sports person in almost every category; except for one: running. I've been running for a very long time, I could at one point run a 5k in 20 minutes and a 10k in less than 50 minutes. I never really had a plan, I just go out for a run and don't think about it too much. To the chagrin of some of my friends, running comes natural to me. I naturally have a rather high vo2max and I'm not super prone to injuries so I can just keep running for a good while before I hit my limits.

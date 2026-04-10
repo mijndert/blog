@@ -2,7 +2,9 @@
 title: Information processing
 date: 2021-02-15 10:00:00
 summary: "My productivity system for working from home: using Pocket, Things, Apple Notes, and Obsidian to manage articles, todos, notes, and knowledge"
-tags: productivity
+tags:
+  - productivity
+  - minimalism
 ---
 
 Ever since this COVID-19 thing hit I've been working from home non-stop. That's almost a full year of working remotely and being fully in charge of my own productivity. To be honest, I could keep this going forever - I've never been more productive in my life.

@@ -2,7 +2,9 @@
 title: Pro tips for remote working
 date: 2025-06-26 16:24:00
 summary: Practical remote work tips from two years of working from home, covering focus time, breaks, workspace setup, and staying productive
-tags: productivity
+tags:
+  - productivity
+  - personal
 ---
 
 For the past two years I've been working remotely most of the time. I sometimes go the office in Amsterdam, but I vastly prefer working from home. Being at the office is really nice for a change of scenery, working together with others, and having lunch together, but I find that I get more stuff done when I'm at home just because I have a difficult time focusing when there are other people around.

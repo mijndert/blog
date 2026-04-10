@@ -2,7 +2,9 @@
 title: Forever games
 date: 2025-06-12 10:00:00
 summary: "My forever games I always come back to: OpenTTD, Civilization V, Dead Cells, Diablo, Hades II, Splatoon 3, Mario Kart, and Smash Bros."
-tags: games
+tags:
+  - games
+  - personal
 ---
 
 Today I want to talk about my forever games. I don't mean games that never end, like Minecraft, but rather games that I keep coming back to and play in perpetuity. All of these games are the ones that will always be installed on whatever gaming system I have at hand. 

@@ -2,7 +2,9 @@
 title: I need to reset my inboxes
 date: 2025-03-26 14:00:00
 summary: "How I'm fighting digital distraction by consolidating inboxes, scheduling check-in times, and being more mindful of information intake"
-tags: minimalism
+tags:
+  - minimalism
+  - productivity
 ---
 
 In the [Getting Things Done](https://en.wikipedia.org/wiki/Getting_Things_Done) (GTD) productivity system there's this concept of an _inbox_. People often think of their inbox as just their email, but in GTD an inbox is anything where you collect things that need to be processed. If you're not careful you'll quickly end up with too many of them.

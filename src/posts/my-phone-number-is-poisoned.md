@@ -2,7 +2,9 @@
 title: My phone number is poisoned
 date: 2025-06-03 06:00:00
 summary: "After 20 years with the same phone number, recruiters won't stop calling thanks to leaked data. A plea for email over unsolicited cold calls."
-tags: personal
+tags:
+  - personal
+  - internet
 ---
 
 Oh, my phone number. It's been with me through half a dozen phone companies, countless devices, and many different life stages. I've had this exact same number for the past 20 odd years which means it's utterly intertwined with my life. All kinds of services are linked to it, the government has it, my bank has it, and of course, so do all my friends and family.

@@ -2,7 +2,9 @@
 title: 2025 so far
 date: 2025-09-26 10:45:00
 summary: "A check-in on my 2025 goals after three quarters: running progress, a promotion to lead engineer, and refocusing on what matters."
-tags: personal
+tags:
+  - personal
+  - running
 ---
 
 It's almost October, which means we're three quarters into 2025 already. Time dilation is real when you're getting older and a year becomes an increasingly smaller portion of your life.

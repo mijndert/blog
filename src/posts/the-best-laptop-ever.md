@@ -2,7 +2,9 @@
 title: The best laptop ever
 date: 2025-01-15 16:00:00
 summary: "Why the base model M1 MacBook Air is the best laptop I've ever owned, and why you don't need expensive hardware to get real work done"
-tags: gadgets
+tags:
+  - gadgets
+  - minimalism
 ---
 
 A laptop for just €950 is bound to be crappy, have some issues, and not last very long. Or so you’d think.

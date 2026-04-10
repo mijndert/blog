@@ -2,7 +2,9 @@
 title: I got promoted
 date: 2025-05-30 15:00:00
 summary: "From senior DevOps engineer to lead platform engineer: 17 years of career lessons and why platform teams are the future of DevOps"
-tags: personal
+tags:
+  - personal
+  - devops
 ---
 
 Over the past 17 years I've been working in IT, I've had the opportunity to work in many different roles and companies. I started out as a systems administrator at a digital agency, working on ColdFusion, MS SQL, Linux and VMware. I then transitioned to a role where I had to work a lot with the Microsoft stack, including Windows Server, IIS, MS SQL and Exchange. 

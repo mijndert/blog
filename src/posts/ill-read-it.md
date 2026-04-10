@@ -2,7 +2,9 @@
 title: I'll read it
 date: 2025-01-08 13:00:00
 summary: "Personal blogs keep the internet weird and independent. If you have one, send it my way and I'll be your reader. RSS feeds welcome."
-tags: meta
+tags:
+  - meta
+  - internet
 ---
 
 I think with the ever growing power of mega corporations on the internet, writing a personal blog is a good way to keep the internet weird. It doesn't matter if it's about personal experiences, some very specific topic, or just random thoughts. 

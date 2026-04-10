@@ -2,7 +2,9 @@
 title: Some running top tips
 date: 2025-08-07 13:00:00
 summary: "Seven honest running tips from 20 years of experience: run slower, prioritize sleep, skip the runfluencer gear, and stop comparing yourself"
-tags: running
+tags:
+  - running
+  - personal
 ---
 
 Another blog post? The second one in two days. My mind has been occupied with running lately, so much so that it got me thinking about all the things I learned from running over the last 20 years.

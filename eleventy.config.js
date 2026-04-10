@@ -261,6 +261,7 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/favicon/");
   eleventyConfig.addPassthroughCopy("src/scripts");
   eleventyConfig.addPassthroughCopy({ 'src/CNAME': '/CNAME' });
+  eleventyConfig.addPassthroughCopy({ 'src/llms.txt': '/llms.txt' });
 
   // Set templating engine and input/output directories
   return {

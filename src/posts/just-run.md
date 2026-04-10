@@ -2,7 +2,9 @@
 title: Just run
 date: 2026-01-11 09:10:00
 summary: "Why I'm ditching running data, Garmin stats, and pace goals to get back to running for the pure joy of it. Sometimes less tracking is more."
-tags: running
+tags:
+  - running
+  - minimalism
 ---
 
 As someone in IT, someone who spends a lot of time thinking about systems and optimizations and data, it's easy to fall into this trap of constantly looking at your running data and trying to optimize every single angle. I get paid to pour over data and find ways to make things better, more streamlined, more efficient. It's a natural inclination to want to do the same with running.

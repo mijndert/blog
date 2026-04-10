@@ -2,7 +2,9 @@
 title: Oops, I bought it
 date: 2025-02-18 15:00:00
 summary: "Dell U4025QW review from someone who swore they wouldn't buy it. Spoiler: the 40-inch 5K ultrawide was absolutely worth the splurge."
-tags: gadgets
+tags:
+  - gadgets
+  - productivity
 ---
 
 Remember me [waffling about computer monitors](https://mijndertstuij.nl/posts/display-waffling/)? That was just six weeks ago. I have a confession to make: I bought it (yes this was shared in [week notes 5](https://mijndertstuij.nl/posts/week-notes-5/) already, but I have some more things to say now).

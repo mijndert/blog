@@ -2,7 +2,9 @@
 title: Config-driven Terraform
 date: 2024-01-18 10:00:00
 summary: "Terraform 1.7 adds for_each on import blocks and removed blocks for safer state management. Practical examples with DigitalOcean Spaces."
-tags: terraform
+tags:
+  - terraform
+  - devops
 ---
 
 Some time ago I wrote about [config-driven import](https://mijndertstuij.nl/posts/terraform-import-blocks/) which became available in Terraform 1.5. Import blocks are a way to import existing resources into the statefile, which is useful when you have a bunch of infrastructure that was created manually. Yesterday [Terraform 1.7 was released](https://www.hashicorp.com/blog/terraform-1-7-adds-test-mocking-and-config-driven-remove) that extends this functionality with a `for_each` argument.

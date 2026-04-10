@@ -2,7 +2,9 @@
 title: I love shaving yaks
 date: 2025-08-02 13:00:00
 summary: "Why yak shaving in software engineering is actually valuable: tackling tech debt, writing docs, and refactoring code delivers constant small wins"
-tags: development
+tags:
+  - development
+  - devops
 ---
 
 There are apparently two definitions of _yak shaving_:

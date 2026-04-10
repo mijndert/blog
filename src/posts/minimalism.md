@@ -2,7 +2,9 @@
 title: On minimalism
 date: 2019-01-28 10:00:00
 summary: "Minimalism isn't about owning fewer things. It's about making deliberate choices about what you buy and keeping only what serves a purpose."
-tags: minimalism
+tags:
+  - minimalism
+  - personal
 ---
 
 Places like Reddit and Twitter are filled with people who practice their version of minimalism. The most prevalent method is to just have less of everything. Some groups of people even go so far as to think they can only have a fixed amount of things in their lives.
