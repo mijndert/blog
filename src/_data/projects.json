@@ -10,5 +10,11 @@
     "description": "A catalog of AWS Service Control Policies, implemented using OpenTofu.",
     "linkText": "View on GitHub",
     "linkUrl": "https://github.com/mijndert/aws-scp-catalog"
+  },
+  {
+    "name": "RSS FullText",
+    "description": "Rewrite RSS feeds to include the full article text.",
+    "linkText": "View on GitHub",
+    "linkUrl": "https://github.com/mijndert/rss-fulltext"
   }
 ]
