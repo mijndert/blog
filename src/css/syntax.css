@@ -60,7 +60,8 @@ pre[class*="language-"] {
 	color: #fab387;
 }
 
-.token.property {
+.token.property,
+.token.key {
 	color: #89b4fa;
 }
 
@@ -73,11 +74,16 @@ pre[class*="language-"] {
 }
 
 .token.comment {
-	color: #9399b2;
+	color: #6c7086;
+	font-style: italic;
 }
 
 .token.tag {
 	color: #89b4fa;
+}
+
+.token.tag .token.punctuation {
+	color: #9399b2;
 }
 
 .token.attr-name {
@@ -132,4 +138,3 @@ pre[class*="language-"] {
 .token.italic {
 	font-style: italic;
 }
-
