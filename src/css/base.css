@@ -150,6 +150,30 @@ ul li, ol li {
   margin: 0 0 var(--spacing-sm) var(--spacing-md);
 }
 
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  margin: var(--spacing-md) 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: var(--font-size-sm);
+}
+
+th, td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+th {
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-border-strong);
+}
+
 /* ===== Navigation ===== */
 nav {
   padding: 36px 0 0;

@@ -5,7 +5,6 @@ summary: "A check-in on my 2025 goals after three quarters: running progress, a 
 tags:
   - personal
   - running
-  - devops
 ---
 
 It's almost October, which means we're three quarters into 2025 already. Time dilation is real when you're getting older and a year becomes an increasingly smaller portion of your life.
