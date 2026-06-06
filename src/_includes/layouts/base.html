@@ -172,11 +172,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 
-    <!-- Privacy-friendly analytics by Plausible -->
-    <script async src="https://plausible.jorijn.com/js/pa-hNgvbIwlQvVPWwOcTAulL.js"></script>
+    <!-- Privacy-friendly analytics by Plausible (proxied via Cloudflare Worker) -->
+    <script async src="/assets/main.js"></script>
     <script>
       window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init()
+      plausible.init({ endpoint: "/assets/event" })
     </script>
 
   </head>
