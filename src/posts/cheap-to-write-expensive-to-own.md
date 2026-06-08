@@ -5,7 +5,6 @@ summary: "Creating code with AI is cheap, owning it will always be expensive."
 tags:
   - AI
   - devops
-draft: true
 ---
 
 I'm sorry, but we have to talk about AI. Especially AI use in engineering teams.
