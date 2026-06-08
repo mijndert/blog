@@ -1,6 +1,6 @@
 ---
 title: "Cheap to write, expensive to own"
-date: 2026-06-08 08:45:00
+date: 2026-06-08 12:55:00
 summary: "Creating code with AI is cheap, owning it will always be expensive."
 tags:
   - AI
