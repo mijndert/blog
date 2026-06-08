@@ -6,6 +6,8 @@ tags:
   - productivity
 ---
 
+> _Update: a reader sent some great pushback on how I measured "fast" here, and on a couple of my recommendations. I wrote a [follow-up](/posts/what-i-got-wrong-about-fast-terminals/) on benchmarking shells properly and where this post falls short._
+
 Practically all of my work happens inside a terminal. Git, kubectl, tmux, ssh'ing into a server, open practically the entire day. Something I use that much has to be fast. Any lag in opening a new tab, typing a character or hitting tab for a completion is something I feel hundreds of times a day. It's death by a thousand cuts.
 
 My shell starts in about 30 milliseconds:
