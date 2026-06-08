@@ -1,22 +1,29 @@
 # Mijndert Stuij
 
-> Lead platform engineer writing about cloud infrastructure, DevOps, running, and minimalism.
+> Lead platform engineer writing about cloud infrastructure, Kubernetes, DevOps, running, photography, and minimalism.
 
 Personal blog of Mijndert Stuij, a lead platform engineer at Otrium based in the Netherlands with 17+ years of experience in AWS, Terraform, Kubernetes, and cloud architecture.
 
 ## Topics covered
 
 - AWS and cloud infrastructure (SCPs, Fargate, service discovery, load balancers)
+- Kubernetes (KEDA scale-to-zero, Envoy Gateway, Gateway API, ingress-nginx migration, EKS)
 - Terraform and OpenTofu (modules, import blocks, dynamic blocks, config-driven workflows)
 - OpenBSD (hosting, httpd, relayd, security)
 - Hugo and static site development (responsive images, render hooks)
+- AI in software engineering (cost of ownership, reviewing AI-generated code)
+- Terminal and shell tooling (zsh startup performance, tmux, vim)
+- Self-hosted tools (rss-fulltext, full-text RSS feeds)
 - iOS app development (CalAction)
 - Running and fitness gear (Garmin)
+- Photography (Sony RX100, JPEG-first workflow, Fuji-like presets)
 - Minimalism and productivity
 - DevOps culture and engineering leadership
 
 ## Key posts
 
+- [Scale Kubernetes deployments to zero using KEDA](https://mijndertstuij.nl/posts/scale-to-zero-keda-cron-scaler/): Using KEDA's cron scaler to put dev, QA and staging clusters to sleep overnight, including the ArgoCD gotchas
+- [Migrating from ingress-nginx to Envoy Gateway](https://mijndertstuij.nl/posts/migrating-ingress-nginx-envoy-gateway/): Moving to Envoy Gateway and the Gateway API after the ingress-nginx retirement — shared Gateways, HTTPRoutes, and ReferenceGrants
 - [AWS SCP Catalog](https://mijndertstuij.nl/posts/aws-scp-catalog/): Open-source Terraform module for managing AWS Service Control Policies
 - [A static website on OpenBSD](https://mijndertstuij.nl/posts/static-website-on-openbsd/): Hosting a static site on OpenBSD with httpd, relayd, Let's Encrypt, and PF
 - [Responsive images in Hugo using Render Hooks](https://mijndertstuij.nl/posts/hugo-responsive-images-using-render-hooks/): Modern WebP-first responsive images with Hugo render hooks
@@ -25,9 +32,13 @@ Personal blog of Mijndert Stuij, a lead platform engineer at Otrium based in the
 - [Saving time using Terraform import blocks](https://mijndertstuij.nl/posts/terraform-import-blocks/): Config-driven import in Terraform 1.5
 - [Avoid using internal load balancers](https://mijndertstuij.nl/posts/avoid-using-internal-load-balancers/): AWS CloudMap service discovery as an alternative to internal ALBs
 - [Stop doing DevOps teams if you want to scale](https://mijndertstuij.nl/posts/stop-doing-devops-teams/): Why dedicated DevOps teams are an anti-pattern
+- [Cheap to write, expensive to own](https://mijndertstuij.nl/posts/cheap-to-write-expensive-to-own/): Why generating code with AI is cheap but owning it is always expensive
+- [Life is too short for a slow terminal](https://mijndertstuij.nl/posts/life-is-too-short-for-a-slow-terminal/): Getting zsh to start in 30 milliseconds without a framework, and how to profile your own shell
+- [Fixing headline-only RSS feeds with rss-fulltext](https://mijndertstuij.nl/posts/introducing-rss-fulltext/): A self-hosted tool that rebuilds headline-only RSS feeds with full article text using readability
 - [Scaling a Mastodon community to 27k people](https://mijndertstuij.nl/posts/scaling-mastodon-community/): Running toot.community on AWS infrastructure
 - [CalAction is now available on the App Store](https://mijndertstuij.nl/posts/calaction-now-live/): iOS app for importing .ics calendar files
 - [Garmin Forerunner 570 vs 255](https://mijndertstuij.nl/posts/garmin-forerunner-570/): First impressions upgrading from FR 255S to 570
+- [My Sony RX100 IV takes better photos now](https://mijndertstuij.nl/posts/sony-rx100-fuji-like-presets/): Three Fuji-inspired Creative Style recipes for shooting JPEG straight out of the camera
 
 ## Feeds
 
