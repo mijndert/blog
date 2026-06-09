@@ -1,5 +1,5 @@
 ---
-title: What I got wrong about fast terminals
+title: I was wrong about fast terminals
 date: 2026-06-08 15:39:00
 summary: "A reader pushed back on my fast-terminal post, and they were right about more than I'd like. On benchmarking shells properly, modern zsh, and the difference between a shell that is fast and one that feels fast."
 tags:
@@ -7,11 +7,11 @@ tags:
   - minimalism
 ---
 
-A couple of days ago I published [Life is too short for a slow terminal](/posts/life-is-too-short-for-a-slow-terminal/). It got quite a bit of traffic, and someone sent me the kind of feedback you actually hope for.
+A couple of days ago I published [Life is too short for a slow terminal](/posts/life-is-too-short-for-a-slow-terminal/). It got quite a bit of traffic, and someone sent me some really good feedback.
 
 The gist of it: A stripped-down config isn't the only way to a fast shell anymore. I simply didn't know about a lot of this stuff, I just worked with what I knew. Luckily, the Zsh community has a lot of smart people.
 
-So here's where the post falls short, point by point, because a correction is more useful than a defense.
+So here's where the post falls short, point by point.
 
 ## I measured the wrong thing
 
@@ -25,7 +25,7 @@ $ for i in {1..5}; do /usr/bin/time zsh -i -c exit; done
 
 [zsh-bench](https://github.com/romkatv/zsh-bench) measures the things you actually feel: time to first prompt, time until the first command runs, command lag, and input lag. If I were writing the measurement section again, that's what I'd point people at, not a `time` loop.
 
-The bigger miss is [instant prompt](https://github.com/romkatv/zsh-bench#instant-prompt). It renders a cached prompt the moment the shell starts, before `.zshrc` has finished, so you're typing while the rest of init happens behind you. Once a shell does that, the exit-time number I was so proud of is close to irrelevant, because perceived startup is near zero regardless of what init costs. My 30ms shell and a 300ms shell with instant prompt feel the same at the only moment that matters: when you sit down to type.
+The bigger miss is [instant prompt](https://github.com/romkatv/zsh-bench#instant-prompt). It renders a cached prompt the moment the shell starts, before `.zshrc` has finished, so you're typing while the rest of init happens behind you. Once a shell does that, the exit-time number I was so proud of is close to irrelevant, because perceived startup is near zero regardless of what init costs.
 
 ## "Plugin managers add overhead" was too broad
 
@@ -41,7 +41,7 @@ In a post about input latency, I source `zsh-syntax-highlighting`. That's a litt
 
 ## So what's actually left of the argument?
 
-What I actually like is that I can read my entire `.zshrc` in one sitting. There's no framework deciding things for me, no plugin I didn't choose, nothing to bisect when a shell misbehaves. When something is slow I can find it, because there's so little there. That's a real preference, but it's a preference for _simplicity_, and simplicity happening to be fast is a side effect. You can absolutely have a fast, instant-feeling shell with all the features. There's just different ways of getting there.
+What I actually like is that I can read my entire `.zshrc` in one sitting. There's no framework deciding things for me, no plugin I didn't choose. When something is slow I can find it, because there's so little there. That's a real preference, but it's a preference for _simplicity_, and simplicity happening to be fast is a side effect. You can absolutely have a fast, instant-feeling shell with all the features. There's just different ways of getting there.
 
 So I'll stand by the minimal setup, just for honest reasons now: I keep it small because I want to understand it, not because it's the only road to going fast.
 
