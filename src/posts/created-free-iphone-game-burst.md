@@ -12,7 +12,7 @@ After [CalAction](https://calaction.mijndertstuij.nl) I wanted to experiment a b
 
 With [Burst](https://burst.mijndertstuij.nl/) I wanted to do things differently. The bubble shooter genre (if you can call it that) has a lot of games in the App Store currently, but again most are either overrun with ads and scammy in-app purchases, or they haven't been maintained in many years.
 
-Burst has zero ads, doesn't track you in any way, and certainly doesn't have any in-app purchases.
+Burst has zero ads, doesn't track you in any way, and certainly doesn't have any in-app purchases. I nice alternative to doomscrolling and apps that try to sell you something at every turn.
 
 There's a couple of features and things included:
 
