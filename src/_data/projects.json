@@ -1,9 +1,15 @@
 [
   {
     "name": "CalAction",
-    "description": "Calendar actions for iOS via App Intents. Available on the App Store.",
+    "description": "Easily import ICS invites into your calendar from anywhere. 8 ways of importing included.",
     "linkText": "View on App Store",
     "linkUrl": "https://apps.apple.com/nl/app/calaction/id6760361082"
+  },
+  {
+    "name": "RSS FullText",
+    "description": "Rewrite RSS feeds to include the full article text. Open source and self-hosted.",
+    "linkText": "View on GitHub",
+    "linkUrl": "https://github.com/mijndert/rss-fulltext"
   },
   {
     "name": "AWS SCP Catalog",
@@ -12,9 +18,9 @@
     "linkUrl": "https://github.com/mijndert/aws-scp-catalog"
   },
   {
-    "name": "RSS FullText",
-    "description": "Rewrite RSS feeds to include the full article text.",
-    "linkText": "View on GitHub",
-    "linkUrl": "https://github.com/mijndert/rss-fulltext"
+    "name": "Burst",
+    "description": "A free, no ads, bubble shooter game for iPhone with coding-inspired color themes.",
+    "linkText": "View on App Store",
+    "linkUrl": "https://apps.apple.com/app/id6780505549"
   }
 ]
