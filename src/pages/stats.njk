@@ -26,6 +26,14 @@ permalink: /stats/
     <h3 class="proj-name">Words written</h3>
     <div class="stat-number">~{{ collections.posts | totalWords }}k</div>
   </div>
+  <div class="proj-card">
+    <h3 class="proj-name">Avg. words / post</h3>
+    <div class="stat-number">{{ collections.blogposts | avgWords }}</div>
+  </div>
+  <div class="proj-card">
+    <h3 class="proj-name">Reading time</h3>
+    <div class="stat-number">{{ collections.posts | readingTime }}</div>
+  </div>
 </div>
 
 <h2>Tags</h2>
@@ -45,4 +53,32 @@ permalink: /stats/
     <div class="stat-number">{{ item[1] }}</div>
   </div>
 {%- endfor -%}
+</div>
+
+<h2>Posts by weekday</h2>
+
+<div class="stats-grid">
+{%- for item in collections.posts | postsByWeekday -%}
+  <div class="proj-card">
+    <h3 class="proj-name">{{ item.day }}</h3>
+    <div class="stat-number">{{ item.count }}</div>
+  </div>
+{%- endfor -%}
+</div>
+
+<h2>Longest &amp; shortest post</h2>
+
+{%- set longest = collections.blogposts | extremePost("longest") -%}
+{%- set shortest = collections.blogposts | extremePost("shortest") -%}
+<div class="stats-grid">
+  <div class="proj-card">
+    <h3 class="proj-name">Longest post</h3>
+    <div class="stat-number">{{ longest.words }}</div>
+    <div class="stat-sub">words · {{ longest.title }}</div>
+  </div>
+  <div class="proj-card">
+    <h3 class="proj-name">Shortest post</h3>
+    <div class="stat-number">{{ shortest.words }}</div>
+    <div class="stat-sub">words · {{ shortest.title }}</div>
+  </div>
 </div>

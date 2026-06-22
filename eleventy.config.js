@@ -119,9 +119,22 @@ export default async function(eleventyConfig) {
   });
 
   // Stats helpers
-  eleventyConfig.addFilter("wordCount", (content) => {
-    return (content || "").split(/\s+/).filter(Boolean).length;
-  });
+
+  // Count the prose words in a single post (strips frontmatter, code, HTML
+  // and markdown syntax so every word stat on the stats page agrees).
+  const WORDS_PER_MINUTE = 200;
+  function postWords(post) {
+    const raw = readFileSync(post.inputPath, "utf-8");
+    const text = raw
+      .replace(/^---[\s\S]*?---/, "")        // frontmatter
+      .replace(/```[\s\S]*?```/g, " ")        // fenced code blocks
+      .replace(/`[^`]*`/g, " ")               // inline code
+      .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")  // images
+      .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1") // links -> keep link text
+      .replace(/<[^>]*>/g, " ")               // HTML tags
+      .replace(/[#>*_~`-]/g, " ");            // markdown syntax markers
+    return text.split(/\s+/).filter(Boolean).length;
+  }
 
   eleventyConfig.addFilter("postsPerYear", (collection) => {
     const counts = {};
@@ -142,14 +155,42 @@ export default async function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("totalWords", (collection) => {
-    let total = 0;
-    for (const post of collection) {
-      const raw = readFileSync(post.inputPath, "utf-8");
-      // Strip frontmatter and HTML tags, then count words
-      const text = raw.replace(/^---[\s\S]*?---/, "").replace(/<[^>]*>/g, "");
-      total += text.split(/\s+/).filter(Boolean).length;
-    }
+    const total = collection.reduce((sum, post) => sum + postWords(post), 0);
     return Math.round(total / 1000);
+  });
+
+  // Average words per post, rounded to the nearest whole word.
+  eleventyConfig.addFilter("avgWords", (collection) => {
+    if (!collection.length) return 0;
+    const total = collection.reduce((sum, post) => sum + postWords(post), 0);
+    return Math.round(total / collection.length);
+  });
+
+  // Total reading time across a collection, formatted as a friendly string
+  // ("2.6h" for long collections, "12 min" for short ones).
+  eleventyConfig.addFilter("readingTime", (collection) => {
+    const total = collection.reduce((sum, post) => sum + postWords(post), 0);
+    const minutes = total / WORDS_PER_MINUTE;
+    if (minutes >= 60) return `${(minutes / 60).toFixed(1)} hours`;
+    return `${Math.round(minutes)} min`;
+  });
+
+  // The longest or shortest post by word count: { title, words }.
+  eleventyConfig.addFilter("extremePost", (collection, which) => {
+    if (!collection.length) return null;
+    const ranked = collection
+      .map(post => ({ title: post.data.title, words: postWords(post) }))
+      .sort((a, b) => a.words - b.words);
+    return which === "longest" ? ranked[ranked.length - 1] : ranked[0];
+  });
+
+  // Posts grouped by weekday, ordered Monday -> Sunday with counts.
+  eleventyConfig.addFilter("postsByWeekday", (collection) => {
+    const names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const counts = new Array(7).fill(0);
+    for (const post of collection) counts[post.date.getDay()]++;
+    const order = [1, 2, 3, 4, 5, 6, 0]; // Mon first, Sun last
+    return order.map(i => ({ day: names[i], count: counts[i] }));
   });
 
   // Watch non-template files
