@@ -8,6 +8,8 @@ tags:
   - burst
 ---
 
+> **Update**: Since this post, I submitted a new version of Burst (1.2.2) which will go live soon. It removes the tip jar as it obviously gave off the wrong signal with the in-app purchase label in the App Store listing. This post also made it to [Hacker News](https://news.ycombinator.com/item?id=48805885)
+
 A little over two weeks ago I released [Burst](https://burst.mijndertstuij.nl/) and since then I added in a ton of bug fixes, and a completely new Zen mode for people who want to play without sweating the leader boards. Zen mode was born from the realisation that I was wrong about game development.
 
 I thought making a game was all about what it looked like, how it played and how it felt. And in thinking that, I was so close to the truth, but also so far away. The thing I overlooked and underestimated was how hard it is to get the difficulty level of the game _just right_. Burst only has a couple of levers to pull to make the game easier or more challenging, but even with those few levers, I still got it wrong the first time.
