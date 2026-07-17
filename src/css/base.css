@@ -1,18 +1,43 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  /* Colors */
-  --color-bg: #F2F0EC;
-  --color-text: #1A1A1A;
-  --color-muted: #696969;
-  --color-faint: #888;
-  --color-border: #E8E6E2;
-  --color-border-strong: #1A1A1A;
-  --color-card-bg: #ECEAE6;
-  --color-link-hover: #666;
-  --color-link-underline: #D8D6D2;
-  --color-code-bg: #e3e3e34f;
-  --color-blockquote-border: #D0CEC9;
+  /* ===== Catppuccin Latte (light) ===== */
+  --ctp-base:     #eff1f5;
+  --ctp-mantle:   #e6e9ef;
+  --ctp-crust:    #dce0e8;
+  --ctp-surface0: #ccd0da;
+  --ctp-surface1: #bcc0cc;
+  --ctp-surface2: #acb0be;
+  --ctp-overlay0: #9ca0b0;
+  --ctp-overlay1: #8c8fa1;
+  --ctp-overlay2: #7c7f93;
+  --ctp-subtext0: #6c6f85;
+  --ctp-subtext1: #5c5f77;
+  --ctp-text:     #4c4f69;
+  --ctp-mauve:    #8839ef;
+  --ctp-red:      #d20f39;
+  --ctp-peach:    #fe640b;
+  --ctp-yellow:   #df8e1d;
+  --ctp-green:    #40a02b;
+  --ctp-teal:     #179299;
+  --ctp-sky:      #04a5e5;
+  --ctp-blue:     #1e66f5;
+  --ctp-pink:     #ea76cb;
+
+  /* Semantic colors — mapped onto the Catppuccin palette so both flavors
+     re-skin the whole site just by swapping the --ctp-* tokens above/below. */
+  --color-bg: var(--ctp-base);
+  --color-text: var(--ctp-text);
+  --color-muted: var(--ctp-subtext0);
+  --color-faint: var(--ctp-overlay1);
+  --color-border: var(--ctp-surface0);
+  --color-border-strong: var(--ctp-text);
+  --color-card-bg: var(--ctp-mantle);
+  --color-link-hover: var(--ctp-subtext1);
+  --color-link-underline: var(--ctp-surface1);
+  --color-code-bg: var(--ctp-mantle);
+  --color-blockquote-border: var(--ctp-surface2);
+  --color-accent: var(--ctp-mauve);
 
   /* Spacing */
   --spacing-sm: 0.5rem;
@@ -29,17 +54,28 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #1a1b1e;
-    --color-text: #e8e6e3;
-    --color-muted: #aaa;
-    --color-faint: #8e8e8e;
-    --color-border: #333;
-    --color-border-strong: #e8e6e3;
-    --color-card-bg: #252528;
-    --color-link-hover: #aaa;
-    --color-link-underline: #555;
-    --color-code-bg: #2a2a2a4f;
-    --color-blockquote-border: #555;
+    /* ===== Catppuccin Mocha (dark) — same palette used by Burst ===== */
+    --ctp-base:     #1e1e2e;
+    --ctp-mantle:   #181825;
+    --ctp-crust:    #11111b;
+    --ctp-surface0: #313244;
+    --ctp-surface1: #45475a;
+    --ctp-surface2: #585b70;
+    --ctp-overlay0: #6c7086;
+    --ctp-overlay1: #7f849c;
+    --ctp-overlay2: #9399b2;
+    --ctp-subtext0: #a6adc8;
+    --ctp-subtext1: #bac2de;
+    --ctp-text:     #cdd6f4;
+    --ctp-mauve:    #cba6f7;
+    --ctp-red:      #f38ba8;
+    --ctp-peach:    #fab387;
+    --ctp-yellow:   #f9e2af;
+    --ctp-green:    #a6e3a1;
+    --ctp-teal:     #94e2d5;
+    --ctp-sky:      #89dceb;
+    --ctp-blue:     #89b4fa;
+    --ctp-pink:     #f5c2e7;
   }
 }
 
@@ -91,16 +127,17 @@ p {
   color: var(--color-muted);
 }
 
-/* Links */
+/* Links — prose links carry the Catppuccin mauve accent; chrome links
+   (nav, footer, cards) override this with their own neutral colors below. */
 a {
-  color: var(--color-muted);
+  color: var(--color-accent);
   text-decoration: none;
   border-bottom: 1px solid var(--color-link-underline);
 }
 
 a:hover {
-  color: var(--color-text);
-  border-bottom-color: var(--color-text);
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }
 
 /* Images */
@@ -137,7 +174,7 @@ aside {
   margin: var(--spacing-md) 0;
   padding: var(--spacing-md);
   background-color: var(--color-card-bg);
-  border-left: 3px solid var(--color-border-strong);
+  border-left: 3px solid var(--color-accent);
   border-radius: var(--border-radius);
 }
 
@@ -222,6 +259,7 @@ nav {
 .nav-links a[aria-current="page"] {
   color: var(--color-text);
   font-weight: 500;
+  border-bottom-color: var(--color-accent);
 }
 
 /* ===== Hero (homepage) ===== */
@@ -296,6 +334,7 @@ nav {
   line-height: 1.6;
   color: var(--color-muted);
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .toot-time {
@@ -335,7 +374,7 @@ nav {
 }
 
 .post-row a.post-title:hover {
-  color: var(--color-link-hover);
+  color: var(--color-accent);
 }
 
 .post-date {
@@ -388,7 +427,7 @@ nav {
 }
 
 .proj-card:hover .proj-link {
-  color: var(--color-text);
+  color: var(--color-accent);
 }
 
 .proj-link::after {
@@ -570,7 +609,7 @@ footer {
 
 .skill-fill {
   height: 100%;
-  background-color: var(--color-muted);
+  background-color: var(--color-accent);
   border-radius: 3px;
   transition: width 0.3s ease;
 }

@@ -1,132 +1,136 @@
+/* Prism token colors mapped onto the Catppuccin palette defined in base.css.
+   The --ctp-* tokens swap Latte (light) <-> Mocha (dark) with prefers-color-scheme,
+   so highlighted code re-flavors along with the rest of the site. */
+
 code[class*="language-"],
 pre[class*="language-"] {
-	color: #cdd6f4;
+	color: var(--ctp-text);
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #181825;
+	background: var(--ctp-mantle);
 }
 
 /* https://prismjs.com/tokens.html */
 
 .token.keyword {
-	color: #cba6f7;
+	color: var(--ctp-mauve);
 }
 
 .token.builtin {
-	color: #f38ba8;
+	color: var(--ctp-red);
 }
 
 .token.class-name {
-	color: #f9e2af;
+	color: var(--ctp-yellow);
 }
 
 .token.function {
-	color: #89b4fa;
+	color: var(--ctp-blue);
 }
 
 .token.boolean,
 .token.number {
-	color: #fab387;
+	color: var(--ctp-peach);
 }
 
 .token.string,
 .token.char {
-	color: #a6e3a1;
+	color: var(--ctp-green);
 }
 
 .token.symbol {
-	color: #f9e2af;
+	color: var(--ctp-yellow);
 }
 
 .token.regex {
-	color: #f5c2e7;
+	color: var(--ctp-pink);
 }
 
 .token.url {
-	color: #a6e3a1;
+	color: var(--ctp-green);
 }
 
 .token.operator {
-	color: #89dceb;
+	color: var(--ctp-sky);
 }
 
 .token.variable {
-	color: #cdd6f4;
+	color: var(--ctp-text);
 }
 
 .token.constant {
-	color: #fab387;
+	color: var(--ctp-peach);
 }
 
 .token.property,
 .token.key {
-	color: #89b4fa;
+	color: var(--ctp-blue);
 }
 
 .token.punctuation {
-	color: #9399b2;
+	color: var(--ctp-overlay2);
 }
 
 .token.important {
-	color: #cba6f7;
+	color: var(--ctp-mauve);
 }
 
 .token.comment {
-	color: #6c7086;
+	color: var(--ctp-overlay0);
 	font-style: italic;
 }
 
 .token.tag {
-	color: #89b4fa;
+	color: var(--ctp-blue);
 }
 
 .token.tag .token.punctuation {
-	color: #9399b2;
+	color: var(--ctp-overlay2);
 }
 
 .token.attr-name {
-	color: #f9e2af;
+	color: var(--ctp-yellow);
 }
 
 .token.attr-value {
-	color: #a6e3a1;
+	color: var(--ctp-green);
 }
 
 .token.namespace {
-	color: #f9e2af;
+	color: var(--ctp-yellow);
 }
 
 .token.prolog,
 .token.doctype {
-	color: #cba6f7;
+	color: var(--ctp-mauve);
 }
 
 .token.cdata {
-	color: #94e2d5;
+	color: var(--ctp-teal);
 }
 
 .token.entity {
-	color: #f38ba8;
+	color: var(--ctp-red);
 }
 
 .token.atrule {
-	color: #cba6f7;
+	color: var(--ctp-mauve);
 }
 
 .token.selector {
-	color: #89b4fa;
+	color: var(--ctp-blue);
 }
 
 /* Diff */
 
 .token.deleted {
-	color: #f38ba8;
+	color: var(--ctp-red);
 }
 
 .token.inserted {
-	color: #a6e3a1
+	color: var(--ctp-green);
 }
 
 /* Other */
