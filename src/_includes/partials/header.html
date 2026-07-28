@@ -20,10 +20,10 @@
 (async () => {
   const section = document.getElementById('latest-toot-section');
   try {
-    const acct = await fetch('https://toot.community/api/v1/accounts/lookup?acct=mijndert');
+    const acct = await fetch('https://fosstodon.org/api/v1/accounts/lookup?acct=mijndert');
     if (!acct.ok) return;
     const account = await acct.json();
-    const res = await fetch(`https://toot.community/api/v1/accounts/${account.id}/statuses?limit=1&exclude_replies=true&exclude_reblogs=true`);
+    const res = await fetch(`https://fosstodon.org/api/v1/accounts/${account.id}/statuses?limit=1&exclude_replies=true&exclude_reblogs=true`);
     if (!res.ok) return;
     const [toot] = await res.json();
     if (!toot) return;

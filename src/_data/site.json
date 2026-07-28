@@ -14,8 +14,8 @@
   "author": {
     "name": "Mijndert Stuij",
     "email": "mijndert@mijndertstuij.nl",
-    "mastodon": "@mijndert@toot.community",
-    "mastodonUrl": "https://toot.community/@mijndert",
+    "mastodon": "@mijndert@fosstodon.org",
+    "mastodonUrl": "https://fosstodon.org/@mijndert",
     "github": "https://github.com/mijndert"
   }
 }
