@@ -7,44 +7,40 @@ permalink: /uses/
 
 ## Hardware
 
-- MacBook Pro (M2 Pro, 14 inch)
-- MacBook Air (M4, 2025)
+- MacBook Pro (M2 Pro, 16GB)
+- MacBook Air (M4, 32GB)
 - Dell U4025QW
 - iPhone 17 Pro
 - Logitech Streamcam
 - Logitech MX Ergo
 - Magic Keyboard
 - AirPods 3
-- Sonos One
 
 ## Software
 
 - Apple Notes, Calendar, Mail, Reminders
-- Firefox
+- Safari
 - Chrome (for work)
-- VS Code
+- VS Code / Helix
 - Ghostty
 - NetNewsWire
 - 1Password
 - Rectangle
 - Scroll Reverser
-- Terraform + OpenTofu
-- Orbstack
+- OpenTofu
+- Orbstack / Apple Container
 - Tailscale
 - Spotify
-
-## Browser extensions
-
-- uBlock Origin
-- Facebook Containers
-- 1Password
-- Awesome RSS
-- Clear URLs
-- Unhook
+- Calibre
+- Obsidian
 
 ## Other
 
 - Synology DS723+
 - Kobo Aura h2O Edition 2
 - Garmin Forerunner 570
+- Garmin Cirqa
 - Steam Deck OLED (1TB)
+- Nintendo Switch 2
+- Xbox Series X
+- Sony RX100 IV
