@@ -7,6 +7,13 @@
     "linkUrl": "https://apps.apple.com/nl/app/calaction/id6760361082"
   },
   {
+    "name": "Burst",
+    "featured": true,
+    "description": "A free, no ads, bubble shooter game for iPhone with coding-inspired color themes.",
+    "linkText": "View on App Store",
+    "linkUrl": "https://apps.apple.com/app/id6780505549"
+  },
+  {
     "name": "RSS FullText",
     "description": "Rewrite RSS feeds to include the full article text. Open source and self-hosted.",
     "linkText": "View on GitHub",
@@ -19,10 +26,9 @@
     "linkUrl": "https://github.com/mijndert/aws-scp-catalog"
   },
   {
-    "name": "Burst",
-    "featured": true,
-    "description": "A free, no ads, bubble shooter game for iPhone with coding-inspired color themes.",
-    "linkText": "View on App Store",
-    "linkUrl": "https://apps.apple.com/app/id6780505549"
+    "name": "AWS TF Reference",
+    "description": "A reference architecture for AWS using OpenTofu",
+    "linkText": "View on GitHub",
+    "linkUrl": "https://github.com/mijndert/aws-tf-reference"
   }
 ]
