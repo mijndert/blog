@@ -1,9 +1,10 @@
-{% from "partials/card-link.html" import cardLink %}
+{% set projectItems = projects | selectattr("featured") %}
+{% if projectItems.length %}
 <div class="section">
-  <h2 class="section-label">Projects</h2>
-  <div class="projects-grid">
-    {%- for project in projects -%}
-    {{ cardLink(project.linkUrl, project.name, project.description, project.linkText) }}
-    {%- endfor -%}
+  <div class="section-head">
+    <h2 class="section-label">Projects</h2>
+    <a class="section-more" href="/projects/">All projects</a>
   </div>
+  {% include 'partials/projects-list.html' %}
 </div>
+{% endif %}

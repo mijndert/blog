@@ -1,6 +1,7 @@
 [
   {
     "name": "CalAction",
+    "featured": true,
     "description": "Easily import ICS invites into your calendar from anywhere. 8 ways of importing included.",
     "linkText": "View on App Store",
     "linkUrl": "https://apps.apple.com/nl/app/calaction/id6760361082"
@@ -19,6 +20,7 @@
   },
   {
     "name": "Burst",
+    "featured": true,
     "description": "A free, no ads, bubble shooter game for iPhone with coding-inspired color themes.",
     "linkText": "View on App Store",
     "linkUrl": "https://apps.apple.com/app/id6780505549"

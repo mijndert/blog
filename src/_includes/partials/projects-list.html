@@ -1,0 +1,6 @@
+{% from "partials/card-link.html" import cardLink %}
+<div class="projects-grid">
+  {%- for project in projectItems -%}
+  {{ cardLink(project.linkUrl, project.name, project.description, project.linkText) }}
+  {%- endfor -%}
+</div>
