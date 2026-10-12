@@ -1,7 +1,20 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-:root {
-  /* ===== Catppuccin Latte (light) ===== */
+/* ===== Themes =====
+   Every theme defines the full --ctp-* set. The semantic --color-* tokens
+   below map onto it, and syntax.css reads --ctp-* directly, so swapping the
+   palette re-skins the whole site including code blocks. For non-Catppuccin
+   themes "mauve" simply means "this theme's accent".
+
+   1. :root            Catppuccin Latte, the default.
+   2. Media query      Catppuccin Mocha when the OS is dark and no theme is set.
+   3. html[data-theme] Explicit picks from the theme picker. (0,1,1) beats
+                       :root (0,1,0), so these always win. */
+
+/* ===== Catppuccin Latte (light) ===== */
+:root,
+html[data-theme="latte"] {
+  color-scheme: light;
   --ctp-base:     #eff1f5;
   --ctp-mantle:   #e6e9ef;
   --ctp-crust:    #dce0e8;
@@ -23,38 +36,13 @@
   --ctp-sky:      #04a5e5;
   --ctp-blue:     #1e66f5;
   --ctp-pink:     #ea76cb;
-
-  /* Semantic colors — mapped onto the Catppuccin palette so both flavors
-     re-skin the whole site just by swapping the --ctp-* tokens above/below. */
-  --color-bg: var(--ctp-base);
-  --color-text: var(--ctp-text);
-  --color-muted: var(--ctp-subtext0);
-  --color-faint: var(--ctp-overlay1);
-  --color-border: var(--ctp-surface0);
-  --color-border-strong: var(--ctp-text);
-  --color-card-bg: var(--ctp-mantle);
-  --color-link-hover: var(--ctp-subtext1);
-  --color-link-underline: var(--ctp-surface1);
-  --color-code-bg: var(--ctp-mantle);
-  --color-blockquote-border: var(--ctp-surface2);
-  --color-accent: var(--ctp-mauve);
-
-  /* Spacing */
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-
-  /* Typography */
-  --font-family: 'Instrument Sans', system-ui, sans-serif;
-  --font-size-sm: 0.8125rem;
-  --line-height: 1.6;
-
-  /* Borders */
-  --border-radius: 6px;
 }
 
+/* ===== Catppuccin Mocha (dark) — same palette used by Burst =====
+   Kept in two places: the OS-preference fallback and the explicit pick. */
 @media (prefers-color-scheme: dark) {
-  :root {
-    /* ===== Catppuccin Mocha (dark) — same palette used by Burst ===== */
+  html:not([data-theme]) {
+    color-scheme: dark;
     --ctp-base:     #1e1e2e;
     --ctp-mantle:   #181825;
     --ctp-crust:    #11111b;
@@ -79,6 +67,192 @@
   }
 }
 
+html[data-theme="mocha"] {
+  color-scheme: dark;
+  --ctp-base:     #1e1e2e;
+  --ctp-mantle:   #181825;
+  --ctp-crust:    #11111b;
+  --ctp-surface0: #313244;
+  --ctp-surface1: #45475a;
+  --ctp-surface2: #585b70;
+  --ctp-overlay0: #6c7086;
+  --ctp-overlay1: #7f849c;
+  --ctp-overlay2: #9399b2;
+  --ctp-subtext0: #a6adc8;
+  --ctp-subtext1: #bac2de;
+  --ctp-text:     #cdd6f4;
+  --ctp-mauve:    #cba6f7;
+  --ctp-red:      #f38ba8;
+  --ctp-peach:    #fab387;
+  --ctp-yellow:   #f9e2af;
+  --ctp-green:    #a6e3a1;
+  --ctp-teal:     #94e2d5;
+  --ctp-sky:      #89dceb;
+  --ctp-blue:     #89b4fa;
+  --ctp-pink:     #f5c2e7;
+}
+
+/* ===== Nord ===== */
+html[data-theme="nord"] {
+  color-scheme: dark;
+  --ctp-base:     #2e3440;
+  --ctp-mantle:   #3b4252;
+  --ctp-crust:    #242933;
+  --ctp-surface0: #434c5e;
+  --ctp-surface1: #4c566a;
+  --ctp-surface2: #616e88;
+  --ctp-overlay0: #7b88a1;
+  --ctp-overlay1: #8a97b0;
+  --ctp-overlay2: #a3b0c4;
+  --ctp-subtext0: #c2c9d6;
+  --ctp-subtext1: #d8dee9;
+  --ctp-text:     #eceff4;
+  --ctp-mauve:    #88c0d0;
+  --ctp-red:      #bf616a;
+  --ctp-peach:    #d08770;
+  --ctp-yellow:   #ebcb8b;
+  --ctp-green:    #a3be8c;
+  --ctp-teal:     #8fbcbb;
+  --ctp-sky:      #81a1c1;
+  --ctp-blue:     #5e81ac;
+  --ctp-pink:     #b48ead;
+}
+
+/* ===== Gruvbox Dark ===== */
+html[data-theme="gruvbox"] {
+  color-scheme: dark;
+  --ctp-base:     #282828;
+  --ctp-mantle:   #32302f;
+  --ctp-crust:    #1d2021;
+  --ctp-surface0: #3c3836;
+  --ctp-surface1: #504945;
+  --ctp-surface2: #665c54;
+  --ctp-overlay0: #7c6f64;
+  --ctp-overlay1: #928374;
+  --ctp-overlay2: #a89984;
+  --ctp-subtext0: #bdae93;
+  --ctp-subtext1: #d5c4a1;
+  --ctp-text:     #ebdbb2;
+  --ctp-mauve:    #fabd2f;
+  --ctp-red:      #fb4934;
+  --ctp-peach:    #fe8019;
+  --ctp-yellow:   #fabd2f;
+  --ctp-green:    #b8bb26;
+  --ctp-teal:     #8ec07c;
+  --ctp-sky:      #83a598;
+  --ctp-blue:     #83a598;
+  --ctp-pink:     #d3869b;
+}
+
+/* ===== Dracula ===== */
+html[data-theme="dracula"] {
+  color-scheme: dark;
+  --ctp-base:     #282a36;
+  --ctp-mantle:   #21222c;
+  --ctp-crust:    #191a21;
+  --ctp-surface0: #44475a;
+  --ctp-surface1: #565869;
+  --ctp-surface2: #6272a4;
+  --ctp-overlay0: #7a84b3;
+  --ctp-overlay1: #8e97c0;
+  --ctp-overlay2: #a2aacc;
+  --ctp-subtext0: #bfc2d4;
+  --ctp-subtext1: #dcdee8;
+  --ctp-text:     #f8f8f2;
+  --ctp-mauve:    #ff79c6;
+  --ctp-red:      #ff5555;
+  --ctp-peach:    #ffb86c;
+  --ctp-yellow:   #f1fa8c;
+  --ctp-green:    #50fa7b;
+  --ctp-teal:     #8be9fd;
+  --ctp-sky:      #8be9fd;
+  --ctp-blue:     #bd93f9;
+  --ctp-pink:     #ff79c6;
+}
+
+/* ===== Rosé Pine ===== */
+html[data-theme="rosepine"] {
+  color-scheme: dark;
+  --ctp-base:     #191724;
+  --ctp-mantle:   #1f1d2e;
+  --ctp-crust:    #16141f;
+  --ctp-surface0: #26233a;
+  --ctp-surface1: #403d52;
+  --ctp-surface2: #524f67;
+  --ctp-overlay0: #6e6a86;
+  --ctp-overlay1: #7f7b99;
+  --ctp-overlay2: #908caa;
+  --ctp-subtext0: #a19dbf;
+  --ctp-subtext1: #c9c6e0;
+  --ctp-text:     #e0def4;
+  --ctp-mauve:    #ebbcba;
+  --ctp-red:      #eb6f92;
+  --ctp-peach:    #f6c177;
+  --ctp-yellow:   #f6c177;
+  --ctp-green:    #9ccfd8;
+  --ctp-teal:     #9ccfd8;
+  --ctp-sky:      #9ccfd8;
+  --ctp-blue:     #c4a7e7;
+  --ctp-pink:     #eb6f92;
+}
+
+/* ===== Solarized Light ===== */
+html[data-theme="solarized"] {
+  color-scheme: light;
+  --ctp-base:     #fdf6e3;
+  --ctp-mantle:   #eee8d5;
+  --ctp-crust:    #e4ddc6;
+  --ctp-surface0: #e6dfc8;
+  --ctp-surface1: #d6cfb8;
+  --ctp-surface2: #c5bea8;
+  --ctp-overlay0: #93a1a1;
+  --ctp-overlay1: #7d8e90; /* upstream #839496, darkened to clear 3:1 */
+  --ctp-overlay2: #657b83;
+  --ctp-subtext0: #586e75;
+  --ctp-subtext1: #4a5d63;
+  --ctp-text:     #073642;
+  --ctp-mauve:    #268bd2;
+  --ctp-red:      #dc322f;
+  --ctp-peach:    #cb4b16;
+  --ctp-yellow:   #b58900;
+  --ctp-green:    #859900;
+  --ctp-teal:     #2aa198;
+  --ctp-sky:      #2aa198;
+  --ctp-blue:     #268bd2;
+  --ctp-pink:     #d33682;
+}
+
+:root {
+  /* Semantic colors — mapped onto the --ctp-* palette so every theme
+     re-skins the whole site just by swapping the tokens above. */
+  --color-bg: var(--ctp-base);
+  --color-text: var(--ctp-text);
+  --color-muted: var(--ctp-subtext0);
+  --color-faint: var(--ctp-overlay1);
+  --color-border: var(--ctp-surface0);
+  --color-border-strong: var(--ctp-text);
+  --color-card-bg: var(--ctp-mantle);
+  --color-link-hover: var(--ctp-subtext1);
+  --color-link-underline: var(--ctp-surface1);
+  --color-code-bg: var(--ctp-mantle);
+  --color-blockquote-border: var(--ctp-surface2);
+  --color-accent: var(--ctp-mauve);
+
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-section: 72px;
+
+  /* Typography */
+  --font-family: "Geist", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, Menlo, Consolas, monospace;
+  --font-size-sm: 0.8125rem;
+  --line-height: 1.65;
+
+  /* Borders */
+  --border-radius: 6px;
+}
+
 html {
   font-family: var(--font-family);
   font-size: 1rem;
@@ -88,6 +262,10 @@ html {
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-bg);
   color: var(--color-text);
+}
+
+body {
+  background-color: var(--color-bg);
 }
 
 /* Focus styles */
@@ -102,9 +280,9 @@ a:focus-visible {
 
 /* Layout */
 .wrap {
-  max-width: 680px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 64px 24px var(--spacing-section);
 }
 
 /* Typography */
@@ -127,8 +305,8 @@ p {
   color: var(--color-muted);
 }
 
-/* Links — prose links carry the Catppuccin mauve accent; chrome links
-   (nav, footer, cards) override this with their own neutral colors below. */
+/* Links — prose links carry the theme accent; chrome links
+   (nav, footer, cards) override this with their own colors below. */
 a {
   color: var(--color-accent);
   text-decoration: none;
@@ -213,28 +391,48 @@ th {
 
 /* ===== Navigation ===== */
 nav {
-  padding: 36px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  border-bottom: 2px solid var(--color-border-strong);
-  margin-bottom: 56px;
+  gap: 16px 32px;
+  margin-bottom: var(--spacing-section);
 }
 
 .nav-name {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 600;
   color: var(--color-text);
   border-bottom: none;
 }
 
+.nav-name:hover {
+  color: var(--color-text);
+}
+
+.nav-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+}
+
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 28px;
   list-style: none;
+  margin: 0;
 }
 
 .nav-links li {
@@ -242,49 +440,131 @@ nav {
 }
 
 .nav-links a {
-  font-size: 12px;
-  padding: 8px 4px;
   display: inline-block;
+  padding: 4px 0;
+  font-size: 15px;
   color: var(--color-muted);
-  border-bottom: 1px solid transparent;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  border-bottom: none;
 }
 
 .nav-links a:hover {
-  color: var(--color-text);
-  border-bottom: 1px solid var(--color-text);
+  color: var(--color-accent);
 }
 
 .nav-links a[aria-current="page"] {
   color: var(--color-text);
   font-weight: 500;
-  border-bottom-color: var(--color-accent);
+}
+
+/* ===== Theme picker ===== */
+.theme-picker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-picker[hidden],
+.theme-options[hidden],
+.theme-swatch[hidden] {
+  display: none;
+}
+
+.theme-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .theme-options {
+    animation: theme-reveal 180ms ease-out;
+  }
+}
+
+@keyframes theme-reveal {
+  from { opacity: 0; transform: translateX(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.theme-swatch {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--swatch-bg) 50%, var(--swatch-accent) 50%);
+}
+
+/* Enlarge the hit area without changing the drawn size. */
+button.theme-swatch::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 999px;
+}
+
+button.theme-swatch:hover,
+button.theme-swatch:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 3.5px var(--color-text);
+}
+
+.theme-swatch--current {
+  width: 14px;
+  height: 14px;
+}
+
+/* Outlined like the project cards so the control reads as a button. */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 24px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  font: inherit;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle[aria-expanded="true"] {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 /* ===== Hero (homepage) ===== */
 .hero {
-  margin-bottom: 64px;
+  margin-bottom: var(--spacing-section);
 }
 
 .hero-title,
 .page-title {
-  font-size: 42px;
-  font-weight: 300;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  max-width: 640px;
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
   color: var(--color-text);
 }
 
 .hero-title {
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
 .hero-sub {
-  font-size: 13px;
+  max-width: 560px;
+  margin: 0;
+  font-size: 18px;
   color: var(--color-muted);
-  line-height: 1.7;
-  max-width: 360px;
 }
 
 .toot {
@@ -346,7 +626,7 @@ nav {
 
 /* ===== Sections ===== */
 .section {
-  margin-bottom: 52px;
+  margin-bottom: var(--spacing-section);
 }
 
 .section-head {
@@ -354,7 +634,7 @@ nav {
   justify-content: space-between;
   align-items: baseline;
   gap: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .section-head .section-label {
@@ -362,43 +642,47 @@ nav {
 }
 
 .section-more {
-  font-size: 12px;
-  color: var(--color-muted);
+  font-size: 15px;
+  color: var(--color-accent);
   border-bottom: none;
   white-space: nowrap;
 }
 
 .section-more:hover {
-  color: var(--color-accent);
-  border-bottom: none;
+  color: var(--color-text);
 }
 
 .section-more::after {
   content: ' \2192';
 }
 
+.section-more--below {
+  display: inline-block;
+  margin-top: 12px;
+}
+
 /* ===== Post rows ===== */
 .post-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
+  gap: 2px 24px;
   padding: 14px 0;
   border-top: 1px solid var(--color-border);
 }
 
-.post-row:last-child {
+.post-row:last-of-type {
   border-bottom: 1px solid var(--color-border);
 }
 
 .post-row a.post-title {
-  font-size: 14px;
-  color: var(--color-text);
-  font-weight: 400;
-  border-bottom: none;
+  flex: 1 1 20rem;
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-text);
+  border-bottom: none;
 }
 
 .post-row a.post-title:hover {
@@ -406,81 +690,73 @@ nav {
 }
 
 .post-date {
-  font-size: 12px;
-  color: var(--color-faint);
-  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 13px;
   font-variant-numeric: tabular-nums;
-  flex-shrink: 0;
-  margin-left: 24px;
+  color: var(--color-muted);
+  white-space: nowrap;
 }
 
 /* ===== Projects grid ===== */
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 16px;
 }
 
 .proj-card {
-  display: block;
-  background: var(--color-card-bg);
-  border-radius: var(--border-radius);
-  padding: 18px 20px;
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
   color: inherit;
+  text-decoration: none;
+}
+
+a.proj-card:hover {
+  color: inherit;
+  border-color: var(--color-accent);
 }
 
 .proj-card h3.proj-name {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--color-text);
-  margin: 0 0 4px 0;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
   letter-spacing: -0.01em;
+  line-height: 1.3;
+  color: var(--color-text);
 }
 
 .proj-desc {
-  font-size: 12px;
+  flex: 1 1 auto;
+  font-size: 16px;
   color: var(--color-muted);
-  line-height: 1.5;
-  margin-bottom: 12px;
 }
 
 .proj-link {
-  font-size: 12px;
-  color: var(--color-muted);
-  letter-spacing: 0.03em;
-  border-bottom: none;
-  padding: 8px 0 0;
-  display: inline-block;
-}
-
-.proj-card:hover .proj-link {
+  font-size: 15px;
   color: var(--color-accent);
-}
-
-.proj-link::after {
-  content: ' \2192';
 }
 
 /* ===== Stats ===== */
 .stats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 16px;
 }
 
 .stat-number {
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.02em;
-  margin-top: 4px;
 }
 
 .stat-sub {
   font-size: 12px;
   color: var(--color-muted);
   line-height: 1.4;
-  margin-top: 6px;
 }
 
 .tag-cloud {
@@ -513,8 +789,7 @@ nav {
 
 /* ===== Related posts ===== */
 .related-posts {
-  margin-top: 48px;
-  margin-bottom: 32px;
+  margin: var(--spacing-section) 0;
 }
 
 /* ===== Page content (sub-pages) ===== */
@@ -523,16 +798,17 @@ nav {
 }
 
 .page-meta {
+  font-family: var(--font-mono);
   font-size: 13px;
   color: var(--color-muted);
   margin-bottom: 40px;
 }
 
 .page-content {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
   color: var(--color-text);
-  margin-bottom: 32px;
+  margin-bottom: var(--spacing-section);
 }
 
 .page-content h2:not(.section-label) {
@@ -548,12 +824,13 @@ nav {
 }
 
 .section-label {
+  margin: 0 0 8px;
+  font-family: var(--font-mono);
   font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  font-weight: 400;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-faint);
-  margin-bottom: 16px;
+  color: var(--color-muted);
 }
 
 .page-content h3 {
@@ -572,26 +849,24 @@ nav {
 
 .page-content li {
   margin-bottom: 4px;
-  font-size: 15px;
 }
 
 /* ===== Footer ===== */
 footer {
-  border-top: 1px solid var(--color-border);
-  padding: 16px 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.footer-copy {
-  font-size: 12px;
-  color: var(--color-faint);
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+  font-size: 14px;
+  color: var(--color-muted);
 }
 
 .footer-links {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   list-style: none;
   margin: 0;
 }
@@ -601,16 +876,14 @@ footer {
 }
 
 .footer-links a {
-  font-size: 12px;
-  color: var(--color-muted);
-  border-bottom: 1px solid transparent;
-  padding: 8px 4px;
   display: inline-block;
+  padding: 4px 0;
+  color: var(--color-muted);
+  border-bottom: none;
 }
 
 .footer-links a:hover {
-  color: var(--color-text);
-  border-bottom: 1px solid var(--color-text);
+  color: var(--color-accent);
 }
 
 /* ===== Skill progress bars ===== */
@@ -645,27 +918,29 @@ footer {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .wrap {
-    padding: 0 20px;
+    padding: 32px 20px var(--spacing-section);
   }
 
-  nav {
-    padding-top: 10px;
-    margin-bottom: 40px;
+  /* Touch-sized swatches. */
+  .theme-picker,
+  .theme-options {
+    gap: 14px;
   }
 
-  .hero-title,
-  .page-title {
-    font-size: 32px;
+  .theme-swatch {
+    width: 20px;
+    height: 20px;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .theme-swatch--current {
+    width: 14px;
+    height: 14px;
   }
 
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+  /* No room for links and six swatches on one line: while the picker is
+     open, the swatches take the links' place. */
+  .nav-right:has(.theme-toggle[aria-expanded="true"]) .nav-links {
+    display: none;
   }
 }
 

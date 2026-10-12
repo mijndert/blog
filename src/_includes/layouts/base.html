@@ -163,6 +163,20 @@
     <link rel="alternate" type="application/atom+xml" href="{{ site.url }}{{ site.feeds.blogposts }}" />
     <link rel="alternate" type="application/atom+xml" href="{{ site.url }}{{ site.feeds.weeknotes }}" />
 
+    <!-- Theme: apply the stored theme before first paint. Without one,
+         data-theme stays unset and prefers-color-scheme decides. -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t && /^(?:{% for theme in themes %}{{ theme.id }}{% if not loop.last %}|{% endif %}{% endfor %})$/.test(t)) {
+            document.documentElement.setAttribute('data-theme', t);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <script defer src="{{ '/scripts/theme.js' | cacheBust }}"></script>
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ '/css/base.css' | cacheBust }}" />
     <link rel="stylesheet" href="{{ '/css/syntax.css' | cacheBust }}" />
@@ -170,7 +184,7 @@
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
 
     <!-- Privacy-friendly analytics by Plausible (proxied via Cloudflare Worker) -->
     <script async src="/assets/main.js"></script>

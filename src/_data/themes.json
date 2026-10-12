@@ -1,0 +1,9 @@
+[
+  { "id": "mocha",     "label": "Catppuccin Mocha", "bg": "#1e1e2e", "accent": "#cba6f7" },
+  { "id": "latte",     "label": "Catppuccin Latte", "bg": "#eff1f5", "accent": "#8839ef" },
+  { "id": "nord",      "label": "Nord",             "bg": "#2e3440", "accent": "#88c0d0" },
+  { "id": "gruvbox",   "label": "Gruvbox Dark",     "bg": "#282828", "accent": "#fabd2f" },
+  { "id": "dracula",   "label": "Dracula",          "bg": "#282a36", "accent": "#ff79c6" },
+  { "id": "rosepine",  "label": "Rosé Pine",        "bg": "#191724", "accent": "#ebbcba" },
+  { "id": "solarized", "label": "Solarized Light",  "bg": "#fdf6e3", "accent": "#268bd2" }
+]

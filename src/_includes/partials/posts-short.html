@@ -4,8 +4,9 @@
     {%- if loop.index0 < 5 -%}
     <div class="post-row">
       <a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a>
-      <time class="post-date" datetime="{{ post.date | dateToRfc3339 }}">{{ post.date | postDate }}</time>
+      <time class="post-date" datetime="{{ post.date | dateToRfc3339 }}">{{ post.date | isoDay }}</time>
     </div>
     {%- endif -%}
   {%- endfor -%}
+  <a class="section-more section-more--below" href="/blog/">All writing</a>
 </div>
