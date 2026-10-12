@@ -5,5 +5,6 @@
   { "id": "gruvbox",   "label": "Gruvbox Dark",     "bg": "#282828", "accent": "#fabd2f" },
   { "id": "dracula",   "label": "Dracula",          "bg": "#282a36", "accent": "#ff79c6" },
   { "id": "rosepine",  "label": "Rosé Pine",        "bg": "#191724", "accent": "#ebbcba" },
+  { "id": "tokyonight", "label": "Tokyo Night",     "bg": "#1a1b26", "accent": "#7aa2f7" },
   { "id": "solarized", "label": "Solarized Light",  "bg": "#fdf6e3", "accent": "#268bd2" }
 ]

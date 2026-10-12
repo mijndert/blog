@@ -196,6 +196,32 @@ html[data-theme="rosepine"] {
   --ctp-pink:     #eb6f92;
 }
 
+/* ===== Tokyo Night ===== */
+html[data-theme="tokyonight"] {
+  color-scheme: dark;
+  --ctp-base:     #1a1b26;
+  --ctp-mantle:   #16161e;
+  --ctp-crust:    #111118;
+  --ctp-surface0: #292e42;
+  --ctp-surface1: #3b4261;
+  --ctp-surface2: #414868;
+  --ctp-overlay0: #545c7e;
+  --ctp-overlay1: #737aa2;
+  --ctp-overlay2: #828bb8;
+  --ctp-subtext0: #9aa5ce;
+  --ctp-subtext1: #a9b1d6;
+  --ctp-text:     #c0caf5;
+  --ctp-mauve:    #7aa2f7;
+  --ctp-red:      #f7768e;
+  --ctp-peach:    #ff9e64;
+  --ctp-yellow:   #e0af68;
+  --ctp-green:    #9ece6a;
+  --ctp-teal:     #73daca;
+  --ctp-sky:      #7dcfff;
+  --ctp-blue:     #7aa2f7;
+  --ctp-pink:     #bb9af7;
+}
+
 /* ===== Solarized Light ===== */
 html[data-theme="solarized"] {
   color-scheme: light;
