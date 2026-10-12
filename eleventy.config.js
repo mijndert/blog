@@ -68,6 +68,14 @@ export default async function(eleventyConfig) {
     });
   });
 
+  // Short ISO day (YYYY-MM-DD) for post lists. Uses the same local date
+  // parts as postDate so both filters always agree on the day.
+  eleventyConfig.addFilter("isoDay", dateObj => {
+    const date = new Date(dateObj);
+    const pad = n => String(n).padStart(2, '0');
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
+  });
+
   // ISO date filter for structured data and OG tags
   eleventyConfig.addFilter("isoDate", dateObj => {
     return new Date(dateObj).toISOString();

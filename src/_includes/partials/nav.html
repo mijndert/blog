@@ -1,12 +1,25 @@
 <header>
   <nav aria-label="Main navigation">
-    <a class="nav-name" href="/">{{ site.title }}</a>
-    <ul class="nav-links">
-      {% for link in nav %}
-        {% if link.url != "/" %}
-        <li><a href="{{ link.url }}" {% if page.url == link.url %}aria-current="page"{% endif %}>{{ link.text }}</a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+    <a class="nav-name" href="/"><span class="nav-dot" aria-hidden="true"></span>{{ site.title }}</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        {% for link in nav %}
+          {% if link.url != "/" %}
+          <li><a href="{{ link.url }}" {% if page.url == link.url %}aria-current="page"{% endif %}>{{ link.text }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <div class="theme-picker" data-theme-picker hidden>
+        <div class="theme-options" id="theme-options" hidden>
+          {%- for theme in themes %}
+          <button type="button" class="theme-swatch" data-theme-value="{{ theme.id }}" aria-label="{{ theme.label }}" style="--swatch-bg: {{ theme.bg }}; --swatch-accent: {{ theme.accent }};"></button>
+          {%- endfor %}
+        </div>
+        <button type="button" class="theme-toggle" aria-expanded="false" aria-controls="theme-options">
+          <span class="theme-swatch theme-swatch--current" aria-hidden="true"></span>
+          <span class="theme-toggle-text">Theme</span>
+        </button>
+      </div>
+    </div>
   </nav>
 </header>
