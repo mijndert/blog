@@ -15,7 +15,6 @@
   var options = picker.querySelector('.theme-options');
   var swatches = Array.prototype.slice.call(options.querySelectorAll('[data-theme-value]'));
   var toggle = picker.querySelector('.theme-toggle');
-  var currentSwatch = toggle.querySelector('.theme-swatch--current');
 
   function activeTheme() {
     return root.getAttribute('data-theme') || (systemDark.matches ? 'mocha' : 'latte');
@@ -38,17 +37,13 @@
     }
   }
 
-  // Sync the toggle swatch, hide the active theme's button and update
+  // Hide the active theme's button and update the toggle label and
   // theme-color. Called on load, on pick and on OS scheme changes.
   function render() {
     var active = swatchFor(activeTheme());
     swatches.forEach(function (btn) {
       btn.hidden = btn === active;
     });
-    if (active) {
-      currentSwatch.style.setProperty('--swatch-bg', active.style.getPropertyValue('--swatch-bg'));
-      currentSwatch.style.setProperty('--swatch-accent', active.style.getPropertyValue('--swatch-accent'));
-    }
     updateLabel();
     updateThemeColor();
   }
@@ -66,8 +61,8 @@
     toggle.setAttribute('aria-expanded', String(open));
     options.hidden = !open;
     if (open) {
-      // The swatches sit before the toggle in the DOM, so move focus onto the
-      // first one; Tab then walks through them and back to the toggle.
+      // Move focus onto the first swatch; Tab walks through the rest and
+      // leaving the popover closes it.
       var first = options.querySelector('[data-theme-value]:not([hidden])');
       if (first) first.focus();
     } else if (returnFocus) {
@@ -114,5 +109,4 @@
   });
 
   render();
-  picker.hidden = false;
 })();

@@ -425,10 +425,13 @@ nav {
   margin-bottom: var(--spacing-section);
 }
 
-.nav-name {
+.nav-brand {
   display: inline-flex;
   align-items: center;
   gap: 12px;
+}
+
+.nav-name {
   font-size: 16px;
   font-weight: 600;
   color: var(--color-text);
@@ -440,18 +443,11 @@ nav {
 }
 
 .nav-dot {
+  display: block;
   width: 10px;
   height: 10px;
   border-radius: 999px;
   background: var(--color-accent);
-  flex-shrink: 0;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px 28px;
 }
 
 .nav-links {
@@ -482,23 +478,34 @@ nav {
   font-weight: 500;
 }
 
-/* ===== Theme picker ===== */
+/* ===== Theme picker =====
+   The accent dot next to the site name is the toggle. Swatches open in a
+   popover beneath it so the nav never reflows. */
 .theme-picker {
+  position: relative;
   display: flex;
-  align-items: center;
-  gap: 12px;
 }
 
-.theme-picker[hidden],
 .theme-options[hidden],
 .theme-swatch[hidden] {
   display: none;
 }
 
 .theme-options {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -12px;
+  z-index: 10;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
+  width: max-content;
+  max-width: calc(100vw - 40px);
+  padding: 10px 12px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -508,7 +515,7 @@ nav {
 }
 
 @keyframes theme-reveal {
-  from { opacity: 0; transform: translateX(10px); }
+  from { opacity: 0; transform: translateY(-6px); }
   to   { opacity: 1; transform: none; }
 }
 
@@ -525,7 +532,22 @@ nav {
   background: linear-gradient(135deg, var(--swatch-bg) 50%, var(--swatch-accent) 50%);
 }
 
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.theme-toggle:focus-visible {
+  outline: none;
+}
+
 /* Enlarge the hit area without changing the drawn size. */
+.theme-toggle::before,
 button.theme-swatch::before {
   content: "";
   position: absolute;
@@ -533,37 +555,16 @@ button.theme-swatch::before {
   border-radius: 999px;
 }
 
+.theme-toggle::before {
+  inset: -10px;
+}
+
 button.theme-swatch:hover,
-button.theme-swatch:focus-visible {
+button.theme-swatch:focus-visible,
+.theme-toggle:hover .nav-dot,
+.theme-toggle:focus-visible .nav-dot,
+.theme-toggle[aria-expanded="true"] .nav-dot {
   box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 3.5px var(--color-text);
-}
-
-.theme-swatch--current {
-  width: 14px;
-  height: 14px;
-}
-
-/* Outlined like the project cards so the control reads as a button. */
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 24px;
-  padding: 6px 12px;
-  background: transparent;
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  font: inherit;
-  font-size: 15px;
-  line-height: 1.4;
-  color: var(--color-muted);
-  cursor: pointer;
-}
-
-.theme-toggle:hover,
-.theme-toggle[aria-expanded="true"] {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
 }
 
 /* ===== Hero (homepage) ===== */
@@ -947,8 +948,20 @@ footer {
     padding: 32px 20px var(--spacing-section);
   }
 
+  /* Tighter spacing keeps the name and links on one line on phones. */
+  nav {
+    column-gap: 16px;
+  }
+
+  .nav-brand {
+    gap: 10px;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
   /* Touch-sized swatches. */
-  .theme-picker,
   .theme-options {
     gap: 14px;
   }
@@ -956,17 +969,6 @@ footer {
   .theme-swatch {
     width: 20px;
     height: 20px;
-  }
-
-  .theme-swatch--current {
-    width: 14px;
-    height: 14px;
-  }
-
-  /* No room for links and six swatches on one line: while the picker is
-     open, the swatches take the links' place. */
-  .nav-right:has(.theme-toggle[aria-expanded="true"]) .nav-links {
-    display: none;
   }
 }
 
