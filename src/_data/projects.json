@@ -14,6 +14,18 @@
     "linkUrl": "https://apps.apple.com/app/id6780505549"
   },
   {
+    "name": "Garmin MCP",
+    "description": "A simple MCP for the Garmin Connect API. Built in Go.",
+    "linkText": "GitHub ↗",
+    "linkUrl": "https://github.com/mijndert/garmin-mcp"
+  },
+  {
+    "name": "Maandplanner",
+    "description": "A monthly planner for kids who struggle with anxiety and need a visual overview of their month.",
+    "linkText": "Website ↗",
+    "linkUrl": "https://maandplanner.mijndertstuij.nl"
+  },
+  {
     "name": "RSS FullText",
     "description": "Rewrite RSS feeds to include the full article text. Open source and self-hosted.",
     "linkText": "GitHub ↗",
