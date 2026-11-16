@@ -8,8 +8,9 @@ permalink: /uses/
 ## Hardware
 
 - MacBook Pro (M2 Pro, 16GB)
-- MacBook Air (M4, 32GB)
+- MacBook Air (M4, 24GB)
 - Dell U4025QW
+- ACT AC8340 monitor arm
 - iPhone 17 Pro
 - Logitech Streamcam
 - Logitech MX Ergo
@@ -19,8 +20,8 @@ permalink: /uses/
 ## Software
 
 - Apple Notes, Calendar, Mail, Reminders
-- Safari
-- Chrome (for work)
+- Firefox (non-work)
+- Chrome (work)
 - VS Code / Helix
 - Ghostty
 - NetNewsWire
@@ -28,7 +29,7 @@ permalink: /uses/
 - Rectangle
 - Scroll Reverser
 - OpenTofu
-- Orbstack / Apple Container
+- Orbstack
 - Tailscale
 - Spotify
 - Calibre
@@ -36,7 +37,7 @@ permalink: /uses/
 
 ## Other
 
-- Synology DS723+
+- Synology DS723+ (2x6TB / 500 GB NVMe / 32GB RAM)
 - Kobo Aura h2O Edition 2
 - Garmin Forerunner 570
 - Garmin Cirqa
