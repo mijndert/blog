@@ -37,7 +37,7 @@ permalink: /uses/
 
 ## Other
 
-- Synology DS723+ (2x6TB / 500 GB NVMe / 32GB RAM)
+- Synology DS723+ (2x8TB / 500 GB NVMe / 32GB RAM)
 - Kobo Aura h2O Edition 2
 - Garmin Forerunner 570
 - Garmin Cirqa
